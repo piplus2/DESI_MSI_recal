@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import *
 from PIL import Image, ImageDraw
 
 from typing import Union, List
-import numpy
+import numpy as np
 from sklearn.preprocessing import minmax_scale
 
 from tools.dbl_slider import QRangeSlider
@@ -23,10 +23,10 @@ from tools._colpicker import MplColorHelper
 def data_to_qpixmap(img, set_alpha: bool = True):
 
     def _scale(values):
-        if numpy.min(values) < 0:
-            values = (minmax_scale(values, axis=0) * 255).astype(numpy.uint8)
+        if np.var(values) == 0:
+            values = np.zeros(values.shape, dtype=np.uint8)
         else:
-            values = (values / numpy.max(values) * 255).astype(numpy.uint8)
+            values = (minmax_scale(values, axis=0) * 255).astype(np.uint8)
         return values
 
     if set_alpha:
@@ -38,20 +38,20 @@ def data_to_qpixmap(img, set_alpha: bool = True):
             _rgb = False
 
         if _rgb:
-            img = numpy.reshape(img, (-1, 3))
+            img = np.reshape(img, (-1, 3))
             img = _scale(img)
-            is_black = (numpy.sum(img, axis=1) == 0)
-            img = numpy.c_[
-                img, 255 * numpy.ones(img.shape[0], dtype=numpy.uint8)]
+            is_black = (np.sum(img, axis=1) == 0)
+            img = np.c_[
+                img, 255 * np.ones(img.shape[0], dtype=np.uint8)]
         else:
-            img = numpy.reshape(img, (-1,))
+            img = np.reshape(img, (-1,))
             img = _scale(img)
             is_black = (img == 0)
-            img = minmax_scale(img.astype(numpy.float))
+            img = minmax_scale(img.astype(np.float))
             colpick = MplColorHelper('viridis', start_val=0, stop_val=1)
-            img = (colpick.get_rgb(img) * 255).astype(numpy.uint8)
+            img = (colpick.get_rgb(img) * 255).astype(np.uint8)
         img[is_black, 3] = 0
-        img = numpy.reshape(img, (h, w, 4))
+        img = np.reshape(img, (h, w, 4))
     height, width, channel = img.shape
     bytesPerLine = 4 * width
     qimg = QImage(
@@ -68,8 +68,8 @@ class SelectableImage(QWidget):
     drawing: bool
     image: Union[None, QPixmap]
     last_point: Union[None, QPoint]
-    roi: Union[None, numpy.ndarray]
-    temp_roi: Union[None, numpy.ndarray]
+    roi: Union[None, np.ndarray]
+    temp_roi: Union[None, np.ndarray]
     temp_contour: list
 
     def __init__(self, title: str, parent):
@@ -99,14 +99,14 @@ class SelectableImage(QWidget):
 
     def __empty_mask(self):
         s = self.image.size()
-        return numpy.zeros((s.height(), s.width()), dtype=numpy.int)
+        return np.zeros((s.height(), s.width()), dtype=np.int)
 
     def __gen_polygon(self):
         if len(self.temp_contour) == 0:
             return
         else:
             s = self.imageWidget.size()
-            points = numpy.array(self.temp_contour)
+            points = np.array(self.temp_contour)
             points = points.ravel().tolist()
             poly_img = Image.new(
                 "L", [s.width(), s.height()], self.__MASK_NO_LBL)
@@ -114,16 +114,16 @@ class SelectableImage(QWidget):
             ImageDraw.Draw(poly_img).polygon(
                 points, outline=self.draw_value + 1,
                 fill=self.draw_value + 1)
-            self.temp_roi = numpy.array(poly_img)
+            self.temp_roi = np.array(poly_img)
 
     # TODO: use hex color
     def __mask_to_rgb(self):
         # Map the colors of the labels
         h, w = self.roi.shape
-        mask_img = numpy.zeros((h * w, 3), dtype=numpy.uint8)
+        mask_img = np.zeros((h * w, 3), dtype=np.uint8)
         mask_img[self.roi.flatten() == 1, 0] = 255
         mask_img[self.roi.flatten() == 2, 1] = 255
-        mask_img = numpy.reshape(mask_img, (h, w, 3))
+        mask_img = np.reshape(mask_img, (h, w, 3))
         return mask_img
 
     def add_selection(self):
@@ -173,21 +173,23 @@ class SelectableImage(QWidget):
         self.imageWidget.update()
 
     def plot_image_and_mask_overlay(self):
-        mask_img = self.__mask_to_rgb()
-        mask_qpixmap = data_to_qpixmap(mask_img)
+        if self.roi is not None:
+            mask_img = self.__mask_to_rgb()
+            mask_qpixmap = data_to_qpixmap(mask_img)
+            mode = QPainter.CompositionMode_SourceOver
+            self.imageWidget.clear()
 
-        mode = QPainter.CompositionMode_SourceOver
-        self.imageWidget.clear()
-
-        pixmap = QPixmap(self.image.size())
-        pixmap.fill(Qt.transparent)
-        painter = QPainter(pixmap)
-        painter.drawPixmap(0, 0, self.image)
-        painter.setCompositionMode(mode)
-        painter.setOpacity(0.6)
-        painter.drawPixmap(0, 0, mask_qpixmap)
-        painter.end()
-        self.imageWidget.setPixmap(pixmap)
+            pixmap = QPixmap(self.image.size())
+            pixmap.fill(Qt.transparent)
+            painter = QPainter(pixmap)
+            painter.drawPixmap(0, 0, self.image)
+            painter.setCompositionMode(mode)
+            painter.setOpacity(0.6)
+            painter.drawPixmap(0, 0, mask_qpixmap)
+            painter.end()
+            self.imageWidget.setPixmap(pixmap)
+        else:
+            self.plot_image()
 
     def reset_mask(self):
         if self.image is None:
@@ -211,7 +213,7 @@ class SelectableImage(QWidget):
 
 
 class RangeColorBar(QWidget):
-    data: Union[None, numpy.ndarray]
+    data: Union[None, np.ndarray]
     wig_image: QLabel
     __nch: int
     __rgb: bool
@@ -275,7 +277,7 @@ class RangeColorBar(QWidget):
 
 class ImageWithColorbar(QWidget):
     rangebar: RangeColorBar
-    data: numpy.ndarray
+    data: np.ndarray
     __rgb: bool
 
     def __init__(self, title: str, colorbar_title: List[str], parent=None):
@@ -297,11 +299,11 @@ class ImageWithColorbar(QWidget):
             h, w, ch = data.shape
             for ch in range(ch):
                 minmax.append(
-                    [numpy.min(data[:, :, ch]), numpy.max(data[:, :, ch])])
+                    [np.min(data[:, :, ch]), np.max(data[:, :, ch])])
             self.__rgb = True
         except ValueError:
             for i in range(1):
-                minmax.append([numpy.min(data), numpy.max(data)])
+                minmax.append([np.min(data), np.max(data)])
             self.__rgb = False
 
         self.rangebar.update_minmax(minmax=minmax)
@@ -329,4 +331,4 @@ class ImageWithColorbar(QWidget):
             data_[data_ > e_] = e_
 
         self.canvas.image = data_to_qpixmap(data_)
-        self.canvas.plot_image()
+        self.canvas.plot_image_and_mask_overlay()

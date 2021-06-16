@@ -65,6 +65,11 @@ def rem_small_obj_roi(roi_mat: np.ndarray, min_size: int) -> np.ndarray:
     return roi_mat
 
 
+class LabelSignal(Enum):
+    BACKGROUND = 0
+    SAMPLE = 1
+
+
 # noinspection PyUnresolvedReferences
 class PredictThread(QThread):
     curr_operation = pyqtSignal(str)
@@ -205,11 +210,6 @@ class BusySpinner(QWidget):
         self.close()
 
 
-class LabelSignal(Enum):
-    BACKGROUND = 0
-    SAMPLE = 1
-
-
 # noinspection PyUnresolvedReferences
 class LabelsBox(QWidget):
     signal_lbl = pyqtSignal(LabelSignal)
@@ -223,20 +223,20 @@ class LabelsBox(QWidget):
         self.btn_sm = QRadioButton('Sample')
         self.btn_sm.toggled.connect(self.emit_value)
 
-        self.btn_bg_col = QPushButton()
-        self.btn_bg_col.setFixedSize(24, 24)
-        self.btn_bg_col.setStyleSheet("background-color: red")
-
-        self.btn_sm_col = QPushButton()
-        self.btn_sm_col.setFixedSize(24, 24)
-        self.btn_sm_col.setStyleSheet("background-color: blue")
+        # self.btn_bg_col = QPushButton()
+        # self.btn_bg_col.setFixedSize(24, 24)
+        # self.btn_bg_col.setStyleSheet("background-color: red")
+        #
+        # self.btn_sm_col = QPushButton()
+        # self.btn_sm_col.setFixedSize(24, 24)
+        # self.btn_sm_col.setStyleSheet("background-color: blue")
 
         internal_widget = QGroupBox('Labels')
-        layout_labels = QGridLayout(internal_widget)
-        layout_labels.addWidget(self.btn_bg, 0, 0)
-        layout_labels.addWidget(self.btn_bg_col, 0, 1)
-        layout_labels.addWidget(self.btn_sm, 1, 0)
-        layout_labels.addWidget(self.btn_sm_col, 1, 1)
+        layout_labels = QVBoxLayout(internal_widget)
+        layout_labels.addWidget(self.btn_bg)
+        # layout_labels.addWidget(self.btn_bg_col, 0, 1)
+        layout_labels.addWidget(self.btn_sm)
+        # layout_labels.addWidget(self.btn_sm_col, 1, 1)
 
         main_layout = QVBoxLayout(self)
         main_layout.addWidget(internal_widget)
@@ -408,12 +408,12 @@ class MainWindow(QMainWindow):
         self.btnProcess.clicked.connect(self.process_data)
         self.btnSave.clicked.connect(self.save_mask)
 
-        group_preview = QGroupBox('Preview')
-        layout_preview = QVBoxLayout(group_preview)
-        self.preview.setFixedSize(100, 100)
-        self.preview.setStyleSheet('border:1px solid rgb(0, 0, 0);')
-        layout_preview.addWidget(self.preview)
-        layout_preview.setAlignment(Qt.AlignCenter)
+        # group_preview = QGroupBox('Preview')
+        # layout_preview = QVBoxLayout(group_preview)
+        # self.preview.setFixedSize(100, 100)
+        # self.preview.setStyleSheet('border:1px solid rgb(0, 0, 0);')
+        # layout_preview.addWidget(self.preview)
+        # layout_preview.setAlignment(Qt.AlignCenter)
 
         self.resetInterface(enable=False)
 
@@ -430,7 +430,7 @@ class MainWindow(QMainWindow):
         layout_panel.addWidget(self.btnProcess)
         layout_panel.addWidget(self.btnSave)
         layout_panel.addStretch()
-        layout_panel.addWidget(group_preview)
+        # layout_panel.addWidget(group_preview)
 
         layout = QGridLayout(self.mainWidget)
         layout.addWidget(self.imageWidget, 0, 0)
