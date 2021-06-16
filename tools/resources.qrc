@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="file-open.svg">resources/folder-open.svg</file>
+    <file alias="add.svg">resources/add.svg</file>
+    <file alias="remove.svg">resources/remove.svg</file>
+    <file alias="close.svg">resources/close.svg</file>
+    <file alias="exit.svg">resources/logout.svg</file>
+    <file alias="edit.svg">resources/edit.svg</file>
+    <file alias="eraser.svg">resources/eraser.svg</file>
+    <file alias="delete.svg">resources/delete.svg</file>
+    <file alias="neural.svg">resources/neural.svg</file>
+    <file alias="busy.gif">resources/busy.gif</file>
+    <file alias="restore-default.svg">resources/restore-default.svg</file>
+</qresource>
+</RCC>
