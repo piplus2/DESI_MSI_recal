@@ -10,6 +10,8 @@
 import numpy as np
 from .msi import MSI
 from joblib import Parallel, delayed
+from joblib import Memory
+import tempfile
 
 
 class MSBinner:
@@ -39,7 +41,8 @@ class MSBinner:
 
         # Bin the spectra intensities: skip empty objects
         print("Binning intensities ...")
-        bin_yi_list = Parallel(n_jobs=-1, require='sharedmem')(
+        tempdir = tempfile.mkdtemp()
+        bin_yi_list = Parallel(n_jobs=-1, temp_folder=tempdir)(
             delayed(self.thread)(msp)
             for msp in list_msx)
 
@@ -49,6 +52,8 @@ class MSBinner:
             binned_intensities[idx, :] = bin_yi_list[i]
 
         del bin_yi_list
+        memory = Memory(tempdir, verbose=0)
+        memory.clear(warn=False)
 
         return binned_intensities
 
