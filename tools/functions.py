@@ -5,8 +5,7 @@
 #   "MIT License Agreement".
 #   Please see the LICENSE file that should have been included as part of this
 #   package.
-
-
+import bisect
 import os
 from typing import Union
 from tqdm import tqdm
@@ -61,8 +60,18 @@ def search_ref_masses(msiobj, ref_masses, max_tolerance,
         else:
             top_idx = np.arange(msp.shape[0])
         for m in ref_masses:
-            hits = top_idx[np.where((msp[top_idx, 0] >= m - tol_masses[m]) & (
-                    msp[top_idx, 0] <= m + tol_masses[m]))[0]]
+            mass_search = msp[top_idx, 0]
+            left = m - tol_masses[m]
+            right = m + tol_masses[m]
+            if right < mass_search[0]:
+                continue
+            if left > mass_search[-1]:
+                continue
+            hit_left = bisect.bisect_left(mass_search, left)
+            hit_right = bisect.bisect_right(mass_search, right)
+            hits = top_idx[hit_left:hit_right]
+            # hits = top_idx[np.where((msp[top_idx, 0] >= m - tol_masses[m]) & (
+            #         msp[top_idx, 0] <= m + tol_masses[m]))[0]]
             if len(hits) == 0:
                 continue
             if len(hits) > 1:
@@ -95,7 +104,8 @@ def gen_ref_list(ion_mode, verbose: bool):
 
     db_masses = pd.DataFrame()
     for lipid_class in lipid_classes:
-        tmp = pd.read_csv(os.path.join('./db/{}_curated.csv'.format(lipid_class)))
+        tmp = pd.read_csv(
+            os.path.join('./db/{}_curated.csv'.format(lipid_class)))
         db_masses = db_masses.append(tmp)
         del tmp
     db_masses = np.sort(db_masses['MASS'].to_numpy())
@@ -248,7 +258,6 @@ def fit_shift_model(x, y, max_degree=5, model='ols', error: str = 'mse',
 
 
 def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
-
     # Determine hits with close error in ppm
     ppm = ((x_fit - y_fit) / y_fit * 1e6)
     mad = median_abs_deviation(ppm)
