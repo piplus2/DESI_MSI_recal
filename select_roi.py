@@ -14,6 +14,7 @@ from typing import Union
 
 import cv2
 import matplotlib.pyplot as plt
+import matplotlib
 import numpy as np
 from PyQt5.Qt import *
 from PyQt5.QtGui import *
@@ -596,21 +597,30 @@ class MainWindow(QMainWindow):
             sample_mask = rem_small_obj_roi(save_mask, min_size=int(
                 self.boxMinRoi.value()))
 
+            rgb_im = self.rgb_im
+            for ch in range(rgb_im.shape[2]):
+                rgb_im[:, :, ch] = minmax_scale(rgb_im[:, :, ch])
+                rgb_im[:, :, ch] = np.clip(rgb_im[:, :, ch], 0, 1)
             plt.figure(dpi=150)
-            plt.imshow(
-                minmax_scale(self.rgb_im.flatten()).reshape(self.rgb_im.shape),
-                interpolation='none')
-            plt.imshow(
-                (sample_mask != 0).astype(float).reshape(self.rgb_im.shape[:2]),
-                cmap='gray', alpha=0.5,
-                interpolation='none')
+            plt.imshow(rgb_im, interpolation='none')
+            mask_im = (sample_mask != 0).astype(float)
+            mask_im[mask_im == 0] = np.nan
+            mask_im = np.clip(mask_im, 0, 1)
+            plt.imshow(mask_im.reshape(self.rgb_im.shape[:2]),
+                       cmap='gray', alpha=0.5, interpolation='none')
             plt.title('ROI overlap')
             plt.savefig(os.path.join(self.save_dir, 'roi_overlap.png'))
             plt.close()
 
+            n_ticks = len(np.unique(sample_mask))
+            cmap = matplotlib.cm.get_cmap('Set1', n_ticks)
             plt.figure(dpi=150)
-            im = plt.imshow(sample_mask.astype(int), cmap='Set1')
-            plt.colorbar(im)
+            im = plt.imshow(sample_mask.astype(int), cmap=cmap)
+            cbar = plt.colorbar(im)
+            tick_locs = (np.arange(n_ticks) + 0.5) * (n_ticks - 1) / n_ticks
+            cbar.set_ticks(tick_locs)
+            cbar.set_ticklabels(np.arange(n_ticks))
+            cbar.set_label('Label')
             plt.title('ROI')
             plt.savefig(os.path.join(self.save_dir, 'roi.png'))
             plt.close()
