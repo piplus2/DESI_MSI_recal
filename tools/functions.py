@@ -9,7 +9,7 @@
 
 import bisect
 import os
-from typing import Union
+from typing import Union, Dict, Tuple
 from tqdm import tqdm
 import numpy as np
 import pandas as pd
@@ -32,11 +32,11 @@ def del_all_files_dir(dirname: str) -> None:
             os.unlink(file_path)
 
 
-def dppm_to_dmz(dppm, refmz):
+def dppm_to_dmz(dppm: float, refmz: float) -> float:
     return dppm * refmz / 1e6
 
 
-def dmz_to_dppm(dmz, refmz):
+def dmz_to_dppm(dmz: float, refmz: float) -> float:
     return dmz / refmz * 1e6
 
 
@@ -44,7 +44,7 @@ def dmz_to_dppm(dmz, refmz):
 # in ppm. The search is performed in the N most intense peaks or, optionally,
 # in all peaks (top_n = -1)
 def search_ref_masses(msiobj, ref_masses, max_tolerance,
-                      top_n: Union[int, str] = 100):
+                      top_n: Union[int, str] = 100) -> Dict:
     # top_n = -1: search in all peaks
     # top_n = 'upper': search in peaks with intensity > 0.9 quantile
     # top_n = int: search in int highest peaks
@@ -92,7 +92,7 @@ def search_ref_masses(msiobj, ref_masses, max_tolerance,
     return matches
 
 
-def gen_ref_list(ion_mode, verbose: bool):
+def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
     adducts = {'ES+': [1.0073, 22.9892],
                'ES-': [-1.0073]}
 
@@ -145,7 +145,8 @@ def gen_ref_list(ion_mode, verbose: bool):
     return ref_list
 
 
-def find_kde_max(x, y, kde_values, remove_zeros=True):
+def find_kde_max(x: np.ndarray, y: np.ndarray, kde_values: np.ndarray,
+                 remove_zeros: bool = True) -> Tuple[np.ndarray, np.ndarray]:
     # Remove all zeros
     if remove_zeros:
         all_zeros = np.all(kde_values == 0, axis=0)
@@ -156,7 +157,8 @@ def find_kde_max(x, y, kde_values, remove_zeros=True):
     return x[~all_zeros], y[max_kde[~all_zeros]]
 
 
-def fit_spline_kde(pixels, match_masses, ref_mass):
+def fit_spline_kde(pixels: np.ndarray, match_masses: np.ndarray,
+                   ref_mass: float) -> Tuple[np.ndarray, bool]:
     if np.var(match_masses) == 0:
         spline = UnivariateSpline(x=pixels, y=match_masses)
         use_kde = False
@@ -203,12 +205,12 @@ class SMWrapper(BaseEstimator, RegressorMixin):
         return self.results_.predict(X)
 
 
-def poly_regression(degree):
+def poly_regression(degree: int):
     return Pipeline([('poly', PolynomialFeatures(degree=degree)),
                      ('regressor', SMWrapper(sm.OLS))])
 
 
-def poly_weighted(degree):
+def poly_weighted(degree: int):
     return Pipeline([('poly', PolynomialFeatures(degree=degree)),
                      ('regressor', SMWrapper(sm.WLS))])
 
@@ -266,7 +268,7 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     in_mask = np.abs(ppm - np.median(ppm)) <= mad
 
     # Calculate weights
-    w = 1 / np.abs(ppm[in_mask])
+    w = 1 / np.abs(ppm[in_mask] - np.median(ppm[in_mask]))
     w[ppm[in_mask] == 0] = np.inf
 
     if transform == 'sqrt':

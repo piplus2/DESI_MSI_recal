@@ -11,6 +11,7 @@ import matplotlib.colors
 import matplotlib.cm
 
 
+# https://stackoverflow.com/a/26109298/14070201
 class MplColorHelper:
     def __init__(self, cmap_name, start_val, stop_val):
         self.cmap_name = cmap_name
