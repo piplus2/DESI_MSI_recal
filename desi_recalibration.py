@@ -24,13 +24,13 @@ def __parse_arg():
     parser_ = argparse.ArgumentParser(description='DESI-MSI recalibration tool')
     parser_.add_argument('input', type=str, help='Input imzML file.')
     parser_.add_argument('output', type=str, help='Output imzML file.')
-    parser_.add_argument('roi', type=str, help='Sample ROI mask CSV file.')
+    parser_.add_argument('roi', type=str,
+                         help='Sample ROI mask CSV file. If set equal to '
+                              '\'full\', the entire image is analyzed.')
     parser_.add_argument('--analyzer', choices=['tof', 'orbitrap'],
                          help='MS analyzer.')
     parser_.add_argument('--ion-mode', choices=['pos', 'neg'],
                          help='ES Polarization mode.')
-    parser_.add_argument('--tissue', default='na', type=str,
-                         help='Sample tissue type')
     parser_.add_argument('--search-tol', default='auto',
                          help='Search tolerance expressed in ppm. If \'auto\', '
                               'default value for MS analyzer is used.')
@@ -48,7 +48,6 @@ def set_params_dict(args_) -> Dict:
         'roi': args_.roi,
         'analyzer': args_.analyzer,
         'ion_mode': 'ES-' if args_.ion_mode == 'neg' else 'ES+',
-        'tissue': args_.tissue,
         'max_tol': args_.search_tol if args_.search_tol != 'auto' else
         default_max_tol[args_.analyzer],
         'min_cov': args_.min_coverage,
@@ -67,10 +66,16 @@ def main():
     # Load MSI
     msi = MSI(imzml=params['input'], meta=params)
     # Load ROI
-    roi = np.loadtxt(params['roi'], delimiter=',')
-    if not np.all(roi.shape == msi.dim_xy[::-1]):
-        raise ValueError('ROI has incompatible dimensions.')
-    print('Num. ROI pixels = {}'.format(int(np.sum(roi))))
+    if params['roi'] != 'full':
+        roi = np.loadtxt(params['roi'], delimiter=',')
+        if not np.all(roi.shape == msi.dim_xy[::-1]):
+            raise ValueError('ROI has incompatible dimensions.')
+        print('Num. ROI pixels = {}'.format(int(np.sum(roi))))
+        # Remove non-ROI pixels
+        outpx = np.where(roi.ravel() == 0)[0]
+        delpx = np.where(np.isin(msi.pixels_indices, outpx))[0]
+        delpx = np.sort(delpx)
+        msi.del_pixel(list(delpx))
 
     # Creating match images dir
     plots_dir = os.path.join(
@@ -80,12 +85,6 @@ def main():
         os.makedirs(plots_dir)
     else:
         del_all_files_dir(plots_dir)
-
-    # Remove non-ROI pixels
-    outpx = np.where(roi.ravel() == 0)[0]
-    delpx = np.where(np.isin(msi.pixels_indices, outpx))[0]
-    delpx = np.sort(delpx)
-    msi.del_pixel(list(delpx))
 
     # RECALIBRATION ---------------------------
 
@@ -120,7 +119,7 @@ def main():
         mad_resid = 1.4826 * np.median(np.abs(residuals[m]))
         inliers[m] = np.abs(residuals[m]) <= 2 * mad_resid
         inliers_px[m] = matches[m]['pixel'][inliers[m]]
-        disp_ppm[m] = np.max(2 * np.abs(mad_resid) / (shift_preds + m) * 1e6)
+        disp_ppm[m] = np.max(2 * mad_resid / (shift_preds + m) * 1e6)
         inliers_pct[m] = len(np.unique(inliers_px[m])) / len(msi.pixels_indices)
 
     # Select by coverage percentage and dispersion
@@ -191,11 +190,9 @@ def main():
         x_fit = mz_pred[i, arg_sort]
         y_fit = mass_theor.copy()
         x_pred = msi.msdata[i][:, 0].copy()
-
         mz_corrected, mdl = recal_pixel(x_fit=x_fit, y_fit=y_fit, x_pred=x_pred,
                                         transform=params['transform'],
                                         max_degree=params['max_degree'])
-
         msi.msdata[i][:, 0] = mz_corrected
 
     print('Saving recalibrated ROI imzML ...')
