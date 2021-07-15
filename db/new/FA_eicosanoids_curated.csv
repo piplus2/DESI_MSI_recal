@@ -1,0 +1,155 @@
+,MASS,COMMON_NAME,FORMULA
+0,276.2089,"8Z,11Z,14Z,17Z-octadecatetraenoic acid",C18H28O2
+1,278.1882,12-KHT,C17H26O3
+2,280.2038,12S-HHTrE,C17H28O3
+3,290.1518,clavirin I;clavirin II,C17H22O4
+4,296.3079,Thromboxane,C20H40O
+5,298.178,Tetranor-PGD1;Tetranor-PGE1 ,C16H26O5
+6,300.1937,Tetranor-PGF1alpha ,C16H28O5
+7,300.2089,"5Z,8Z,10E,12E,14Z,17Z-eicosahexaenoic acid",C20H28O2
+8,302.2246,"7Z,10Z,13Z,16Z,19Z-eicosapentaenoic acid",C20H30O2
+9,304.2402,"7Z,10Z,13Z,16Z-eicosatraenoic acid",C20H32O2
+10,310.2144,-,C18H30O4
+11,310.2872,Prostanoic acid skeleton,C20H38O2
+12,312.2301,-,C18H32O4
+13,316.2038,"12-deoxy-J2-IsoP;15-deoxy-delta-12,14-PGA2;15-deoxy-delta-12,14-PGJ2;5-deoxy-J2-IsoP;8-deoxy-J2-IsoP ;PGA2 1,15-lactone;ent-12-deoxy-J2-IsoP;ent-15-deoxy-J2-IsoP;ent-5-deoxy-J2-IsoP;ent-8-deoxy-J2-IsoP;preclavulone lactone I;preclavulone lactone II",C20H28O3
+14,318.2195,"(+/-)-11-HEPE;(+/-)-12-HEPE;(+/-)-15-HEPE;(+/-)-18-HEPE;(+/-)-5-HEPE;(+/-)-8-HEPE;(+/-)-9-HEPE;(5Z,8R,11Z,14Z)-8,9-epoxy-5,9,11,14-eicosatetraenoic acid;11(12)-EpETE;11-oxo-5E,8Z,12Z,14Z-Eicosatetraenoic acid;11R-HEPE;11S-HEPE;12-oxo-ETE;12R-HEPE;12S-HEPE;14(15)-EpETE;14,15-LTA4;14-HEPE;15-Oxo-ETE;15R-HEPE;15S-HEPE;15d-PGA1;16-HEPE;17(18)-EpETE;17R,18S-EpETE;18R-HEPE;18S-HEPE;4,5-LTA4;5-Oxo-ETE;5-epi-LTA4;5R-HEPE;5S-HEPE;6-epi-LTA4;8(9)-EpETE;8-oxo-5E,9Z,11Z,14Z-eicosatetraenoic acid;8R-HEPE;8S-HEPE;9-oxo-5E,7Z,11Z,14Z-eicosatetraenoic acid;9S-HEPE;LTA4",C20H30O3
+15,320.2285,"15-deoxy-delta-12,14-PGJ2-d4",C20H24D4O3
+16,320.2351,"(+/-)11,12-EpETrE;(+/-)14,15-EpETrE;(+/-)5,6-EpETrE;(+/-)8,9-EpETrE;10-HETE;10S-Hydroxy-arachidonic acid;11,12-EpETrE;11,12-Epoxyeicosatrienoic acid;11-HETE;11-hydroxy-5E,8Z,12Z,14Z-eicosatetraenoic acid;11R,12S-EpETrE;11R-HETE;11R-hydroxy-5E,8Z,12Z,14Z-eicosatetraenoic acid;11S,12R-EpETrE;11S-HETE;12-HETE;12-hydroxy-5E,8Z,10Z,14Z-eicosatetraenoic acid;12R-HETE;12S-HETE;12S-hydroxy-5E,8Z,10Z,14Z-eicosatetraenoic acid;13-HETE;13R-HETE;14-hydroxy-5E,8Z,11Z,15Z-eicosatetraenoic acid;14R,15S-EpETrE;14S,15R-EpETrE;15-HETE;15-hydroxy-5E,8Z,11Z,13Z-eicosatetraenoic acid;15R-HETE;15R-hydroxy-5E,8Z,11Z,13Z-eicosatetraenoic acid;15S-HETE;16-HETE;16R-HETE;17-HETE;18-HETE;18-hydroxy-arachidonic acid;19-HETE;19S-HETE;20-HETE;20-hydroxy-eicosatetraenoic acid;3R-HETE;5-HETE;5R,6S-EpETrE;5R-HETE;5S,6R-EpETrE;5S-HETE;6-hydroxy-4E,8Z,11Z,14Z-eicosatetraenoic acid;8-HETE;8-hydroxy-5E,9Z,11Z,14Z-eicosatetraenoic acid;8R,9S-EpETrE;8R-HETE;8S,9R-EpETrE;8S-HETE;9-HETE;9-hydroxy-5E,7Z,11Z,14Z-eicosatetraenoic acid;9R-HETE;9R-hydroxy-5E,7Z,11Z,14Z-eicosatetraenoic acid;9S-HETE",C20H32O3
+17,322.2508,12R-HETrE;15-HETrE;15S-HETrE;5-HETrE;5S-HETrE;8(S)-HETrE;8-HETrE;8S-HETrE,C20H34O3
+18,324.1937,Dinor-PGD2;Dinor-PGE2,C18H28O5
+19,324.2664,11R-HEDE;11S-HEDE;15R-HEDE;20-HEDE,C20H36O3
+20,325.2627,5-Oxo-ETE-d7,C20H23D7O3
+21,326.1649,Egregiachloride A,C18H27ClO3
+22,326.2093,"-;2,3-Dinor-8-iso-PGF2alpha;2,3-dinor-11b-PGF2alpha;2,3-dinor-PGE1;Dinor-PGF2alpha",C18H30O5
+23,326.2722,20-HETE-d6,C20H26D6O3
+24,328.1522,Prostaglandin M;Tetranor-PGEM;tetranor-PGDM,C16H24O7
+25,328.1805,Egregiachloride B,C18H29ClO3
+26,328.225,"-;9S,11R,15S-trihydroxy-2,3-dinor-13E-prostaenoic acid-cyclo[8S,12R]",C18H32O5
+27,328.2845,"(+/-)11,12-EpETrE-d8;(+/-)14,15-EpETrE-(d8);(+/-)8,9-EpETrE-(d8);12S-HETE-d8;15S-HETE-d8;5S-HETE-d8",C20H24D8O3
+28,330.1679,Tetranor-PGFM,C16H26O7
+29,332.1736,Tetranor-PGEM-d6,C16H16D6O7
+30,332.1988,"5S,6-Ep-18S-HEPE;5S,6S-epoxy-18R-HEPE;PGA3;PGB3;PGE3 1,15-lactone;PGJ3;Ptilodene",C20H28O4
+31,334.2144,"-;11,18-di-HEPE;11-epi-8-A2-IsoP;11-epi-8-J2-IsoP;12,18-di-HEPE;12-A2-IsoP;12-J2-IsoP;12-epi-12-A2-IsoP;12-epi-12-J2-IsoP;12-oxo-LTB4;12S-HpEPE;13,14-dihydro-15-keto-PGA2;14,15-dehydro-LTB4;14,15-epoxy,13-HETE;14,15-epoxy,16-HETE;14-HpEPE;15-A2-IsoP;15-J2-IsoP;15-deoxy-delta-12,14-PGD2;15-epi-15-A2-IsoP;15-epi-15-J2-IsoP;15R-PGA2;15S-HpEPE;18R-HpEPE;18R-Resolvin E3;18S-Resolvin E2;18S-Resolvin E3;5,12-diepi-12-A2-IsoP;5,12-diepi-12-J2-IsoP;5,6-Ep-15S-HETE;5,8-diepi-5-A2-IsoP;5,8-diepi-5-J2-IsoP;5-A2-IsoP;5-J2-IsoP;5-Oxo-6-trans-leukotriene B4;5-epi-12-A2-IsoP;5-epi-12-J2-IsoP;5-epi-5-A2-IsoP;5-epi-5-J2-IsoP;5-trans-PGA2;5E-PGB2;5R-HpEPE;5S-HpEPE;8,11-diepi-8-A2-IsoP;8,11-diepi-8-J2-IsoP;8,15-diepi-15-A2-IsoP;8,15-diepi-15-J2c-IsoP;8,15-diepi-15-J2t-IsoP;8,18-di-HEPE;8,9-epoxy,7-HETE;8-A2-IsoP;8-J2-IsoP ;8-epi-15-A2-IsoP;8-epi-15-J2-IsoP;8-epi-5-A2-IsoP;8-epi-5-J2-IsoP;8-epi-8-A2-IsoP;8-epi-8-J2-IsoP;9S-HpEPE;LTB5;PGA2;PGB2;PGC2;PGE2 1,15-lactone;PGF3alpha-1,15-lactone;PGJ2;Resolvin E2;Resolvin E4;bicyclo-PGE2;delta-12-PGJ2;ent-11-epi-8-A2-IsoP;ent-11-epi-8-J2-IsoP;ent-12-A2-IsoP;ent-12-J2-IsoP;ent-12-epi-12-A2-IsoP;ent-12-epi-12-J2-IsoP;ent-15-A2-IsoP;ent-15-J2-IsoP;ent-15-epi-15-A2-IsoP;ent-15-epi-15-J2-IsoP;ent-5,12-diepi-12-A2-IsoP;ent-5,12-diepi-12-J2-IsoP;ent-5,8-diepi-5-A2-IsoP;ent-5,8-diepi-5-J2-IsoP;ent-5-A2-IsoP;ent-5-J2-IsoP;ent-5-epi-12-A2-IsoP;ent-5-epi-12-J2-IsoP;ent-5-epi-5-A2-IsoP;ent-5-epi-5-J2-IsoP;ent-8,11-diepi-8-A2-IsoP;ent-8,11-diepi-8-J2-IsoP;ent-8-A2-IsoP;ent-8-J2-IsoP;ent-8-epi-5-A2-IsoP;ent-8-epi-5-J2-IsoP;ent-8-epi-8-A2-IsoP;ent-8-epi-8-J2-IsoP",C20H30O4
+32,336.2301,"(+/-)11,12-Ep-15S-HETrE;(11S,12R)-Ep-15S-HETrE;(13R,14R)-Ep-15S-HETrE;(5E)-13,14-dihydro-PGB2;(5Z,8Z,11Z,13E)-15-hydroperoxyeicosa-5,8,11,13-tetraenoic acid;-;10,11-dihydro-12-oxo-LTB4;11,12-DiHETE;11,12-epoxy-8-hydroxyeicosa-5,9,14-trienoic acid;11-HpETE;11-deoxy-13,14-dihydro-15-keto-PGE2;11-deoxy-PGE2;11R-HpETE;12-epi-LTB4;12R-HpETE;12S-HpETE;13,14-dihydro-PGB2;14,15-DiHETE;14,15-Ep-11-HETrE;14,15-HxA3 (11S);14,15-HxB3 (13R);14,15-dihydroxy-5,8,10,12-eicosatetraenoic acid;14-hydroperoxy-5Z,8Z,11Z,15E-eicosatetraenoic acid;15-epi-PGA1;15S-HpETE;17,18-DiHETE;5,12-DiHETE;5,15-DiHETE;5-HPETE;5R,8S-diHETE;5S,11R-DiHETE;5S,12S-DiHETE;5S,15R-diHETE;5S,15S-DiHETE;5S,6R-DiHETE;5S,6S-DiHETE;5S-HpETE;6,7-dihydro-5-oxo-12-epi-LTB4;6-hydroperoxy-4E,8Z,11Z,14Z-eicosatetraenoic acid;6-trans-12-epi-LTB4;6-trans-LTB4;7S,8R-diHETE;8,15-DiHETE;8,15-diHETE(n-3);8,15-dihydroxy-5,9,11,13-eicosatetraenoic acid;8,9-DiHETE;8-iso-PGA1;8R-HpETE;8S,15S-DiHETE;8S-HpETE;9-HpETE;9S-HpETE;Delta(6)-trans,Delta(8)-cis-leukotriene B4;Hepoxilin A3;Hepoxilin B3;LTB4;PGA1;PGB1;PGC1;PGF2alpha-1,11-lactone;PGF2alpha-1,15-lactone;PGF2alpha-1,9-lactone",C20H32O4
+33,338.2457,"(+/-)11,12-DiHETrE;(+/-)14,15-DiHETrE;(+/-)5,6-DiHETrE;(+/-)8,9-DiHETrE;10,11-dihydro-leukotriene B4;11-deoxy-PGE1;11-deoxy-PGF2a;11-deoxy-PGF2beta;12-keto-10,11,14,15-tetrahydro-LTB4;5,6-dihydroxy-8,11,14-eicosatrienoic acid;6,7-dihydro-12-epi-LTB4;8,9-dihydroxy-5,11,14-eicosatrienoic acid;8R,9S-cis-epoxy-10S-hydroxy-eicosa-11Z,14Z-dienoic acid.",C20H34O4
+34,340.1886,"11-dehydro-2,3-dinor-TXB2",C18H28O6
+35,340.2548,LTB4-d4,C20H28D4O4
+36,340.2614,11-deoxy-PGF1a;11-deoxy-PGF1b;PGE1 alcohol;PGF2alpha alcohol,C20H36O4
+37,342.2042,"2,3-Dinor-TXB2;2,3-dinor, 6-keto-PGF1alpha",C18H30O6
+38,342.2406,"2,3-Dinor-TXB1",C19H34O5
+39,342.277,PGF1a alcohol,C20H38O4
+40,344.2351,"1a,1b-dihomo-15-deoxy-delta-12,14-PGJ2",C22H32O3
+41,348.1937,"12-oxo-Resolvin E1;18-oxo-Resolvin E1;4R,12S-dihydroxy-9-oxo-5E,7Z,10Z,14Z-prostatetraenoic acid-cyclo[8,12]",C20H28O5
+42,348.2301,"11-deoxy-11-methylene-15-keto-PGD2;Methyl-(10R)-hydroxy-(11S,12S)-epoxy-(5Z,8Z,14Z,17Z)-eicosatetraenoate;Methyl-(10S)-hydroxy-(11S,12S)-epoxy-(5Z,8Z,14Z,17Z)-eicosatetraenoate;methyl 11-hydroperoxy-5,8,12,14,17-eicosapentaenoate;methyl 6-hydroperoxy-4,8,11,14,17-eicosapentaenoate;methyl 8-hydroperoxy-5,9,11,14,17-eicosapentaenoate;methyl 9-hydroperoxy-5,7,11,14,17-eicosapentaenoate",C21H32O4
+43,350.2093,"10,11-dihydro-12-oxo-Resolvin E1;12-Oxo-20-hydroxy-leukotriene B4;15-Epi-lipoxin B5;15-Oxo-lipoxin A4;15-dehydro-prostaglandin I2;15-keto-PGD2;15-keto-PGE2;15-oxo-LXA4;18S-Resolvin E1;19-hydroxy-PGA2;19-hydroxy-PGB2;19R-hydroxy-PGA2;19R-hydroxy-PGB2;20-oxo-leukotriene B4;5,6,18-triHEPE;5S-Hp-18R-HEPE;5S-Hp-18S-HEPE;6-trans-5,12,18-triHEPE;8-iso-15-keto-PGE2;PGD3;PGE3;PGI3;PGK2;Resolvin E1;TXA3",C20H30O5
+44,350.2457,"11-deoxy-11-methylene-PGD2;11-deoxyprostaglandin E2 methyl ester;13,14-dihydro-PGB2 methyl ester;9-deoxy-9-methylene-PGE2;Methyl-(10R)-hydroxy-(11S,12S)-epoxy-(5Z,8Z,14Z)-eicosatrienoate;Methyl-(10S)-hydroxy-(11S,12S)-epoxy-(5Z,8Z,14Z)-eicosatrienoate",C21H34O4
+45,352.1805,Egregiachloride C;Eiseniachloride C,C20H29ClO3;C20H29O3Cl
+46,352.225,"10,11-dihydro-Resolvin E1;11-epi-8-D2c-IsoP;11-epi-8-D2t-IsoP;11-epi-8-E2c-IsoP;11-epi-8-E2t-IsoP;11beta-PGE2;12-D2c-IsoP;12-D2t-IsoP;12-E2c-IsoP;12-E2t-IsoP;12-epi-12-D2c-IsoP;12-epi-12-D2t-IsoP;12-epi-12-E2c-IsoP;12-epi-12-E2t-IsoP;12-epi-12-iso-LGD2;12-epi-12-iso-LGE2;12-iso-LGD2;12-iso-LGE2;13,14-Dihydro-15-oxo-lipoxin A4;13,14-dihydro-15-keto-LXA4;13,14-dihydro-15-keto-PGD2;13,14-dihydro-15-keto-PGE2;15-D2c-IsoP;15-D2t-IsoP;15-E2c-IsoP;15-epi-15-D2c-IsoP;15-epi-15-D2t-IsoP;15-epi-15-E2c-IsoP;15-epi-15-E2t-IsoP;15-epi-15-iso-LGD2;15-epi-15-iso-LGE2;15-epi-lipoxin A4;15-iso-LGD2;15-iso-LGE2;15-keto-PGE1;15-keto-PGF2alpha;15R-PGD2;15R-PGE2;15R-hydroxy-12S,14R-dioxolane-5Z,8Z,10E-eicosatrienoic acid;20-hydroxy LTB4;5,12-diepi-12-D2c-IsoP;5,12-diepi-12-D2t-IsoP;5,12-diepi-12-E2c-IsoP;5,12-diepi-12-E2t-IsoP;5,8-diepi-5-D2c-IsoP;5,8-diepi-5-D2t-IsoP;5-D2c-IsoP;5-D2t-IsoP;5-E2c-IsoP;5-E2t-IsoP;5-epi-12-D2c-IsoP;5-epi-12-D2t-IsoP;5-epi-12-E2c-IsoP;5-epi-12-E2t-IsoP;5-epi-5-D2c-IsoP;5-epi-5-D2t-IsoP;5-epi-5-E2c-IsoP;5-epi-5-E2t-IsoP;5-epi-5-iso-LGD2;5-epi-5-iso-LGE2;5-iso-LGD2;5-iso-LGE2;5-trans-PGE2;8,11-diepi-8-D2c-IsoP;8,11-diepi-8-D2t-IsoP;8,11-diepi-8-E2c-IsoP;8,11-diepi-8-E2t-IsoP;8,15-diepi-15-D2c-IsoP;8,5-diepi-5-E2c-IsoP;8,5-diepi-5-E2t-IsoP;8-D2c-IsoP;8-D2t-IsoP;8-E2c-IsoP;8-E2t-IsoP;8-epi-15-D2c-IsoP;8-epi-15-E2c-IsoP;8-epi-5-D2c-IsoP;8-epi-5-D2t-IsoP;8-epi-5-E2c-IsoP;8-epi-5-E2t-IsoP;8-epi-8-D2c-IsoP;8-epi-8-D2t-IsoP ;8-epi-8-E2c-IsoP;8-epi-8-E2t-IsoP;8-epi-8-iso-LGD2;8-epi-8-iso-LGE2;8-iso-15-keto-PGF2alpha;8-iso-LGD2;8-iso-LGE2;8-iso-PGE2;8-iso-PGF3alpha;D17 PGE1;Dioxolane A3 ;LGD2;LGE2;Lipoxin A4;Lipoxin B4;PGD2;PGE2;PGF3alpha;PGH2;PGI2;PGK1;TXA2;delta-12-PGD2;ent-11-epi-8-D2c-IsoP;ent-11-epi-8-D2t-IsoP;ent-11-epi-8-E2c-IsoP;ent-11-epi-8-E2t-IsoP;ent-12-D2c-IsoP;ent-12-D2t-IsoP;ent-12-E2c-IsoP;ent-12-E2t-IsoP;ent-12-epi-12-D2c-IsoP;ent-12-epi-12-D2t-IsoP;ent-12-epi-12-E2c-IsoP;ent-12-epi-12-E2t-IsoP;ent-12-epi-12-iso-LGD2;ent-12-epi-12-iso-LGE2;ent-12-iso-LGD2;ent-12-iso-LGE2;ent-15-D2c-IsoP;ent-15-D2t-IsoP;ent-15-E2c-IsoP;ent-15-E2t-IsoP;ent-15-epi-15-D2c-IsoP;ent-15-epi-15-D2t-IsoP;ent-15-epi-15-E2c-IsoP;ent-15-epi-15-E2t-IsoP;ent-15-epi-15-iso-LGD2;ent-15-epi-15-iso-LGE2;ent-15-iso-LGD2;ent-15-iso-LGE2;ent-5,12-diepi-12-D2c-IsoP;ent-5,12-diepi-12-D2t-IsoP;ent-5,12-diepi-12-E2c-IsoP;ent-5,12-diepi-12-E2t-IsoP;ent-5,8-diepi-5-D2c-IsoP;ent-5,8-diepi-5-D2t-IsoP;ent-5-D2c-IsoP;ent-5-D2t-IsoP;ent-5-E2c-IsoP;ent-5-E2t-IsoP;ent-5-epi-12-D2c-IsoP;ent-5-epi-12-D2t-IsoP;ent-5-epi-12-E2c-IsoP;ent-5-epi-12-E2t-IsoP;ent-5-epi-5-D2c-IsoP;ent-5-epi-5-D2t-IsoP;ent-5-epi-5-E2c-IsoP;ent-5-epi-5-E2t-IsoP;ent-5-epi-5-iso-LGD2;ent-5-epi-5-iso-LGE2;ent-5-iso-LGD2;ent-5-iso-LGE2;ent-8,11-diepi-8-D2c-IsoP;ent-8,11-diepi-8-D2t-IsoP;ent-8,11-diepi-8-E2c-IsoP;ent-8,11-diepi-8-E2t-IsoP;ent-8,15-diepi-15-D2c-IsoP;ent-8,15-diepi-15-D2t-IsoP;ent-8,15-diepi-15-E2t-IsoP;ent-8,5-diepi-5-E2c-IsoP;ent-8,5-diepi-5-E2t-IsoP;ent-8-D2c-IsoP;ent-8-D2t-IsoP;ent-8-E2c-IsoP;ent-8-E2t-IsoP;ent-8-epi-15-D2c-IsoP;ent-8-epi-15-E2c-IsoP;ent-8-epi-5-D2c-IsoP;ent-8-epi-5-D2t-IsoP;ent-8-epi-5-E2c-IsoP;ent-8-epi-5-E2t-IsoP;ent-8-epi-8-D2c-IsoP;ent-8-epi-8-D2t-IsoP;ent-8-epi-8-E2c-IsoP;ent-8-epi-8-E2t-IsoP;ent-8-epi-8-iso-LGD2;ent-8-epi-8-iso-LGE2;ent-8-iso-LGD2;ent-8-iso-LGE2;ent-PGD2;ent-PGE2;epi-Lipoxin A4;epi-Lipoxin B4;isoLGD2;isoLGE2",C20H32O5
+47,354.2406,"(+/-) 5-iPF2alpha-VI;(5Z,9E,12S,14Z)-8,11,12-trihydroxyicosa-5,9,14-trienoic acid;11,12,15-TriHETRE;11,12,15S-trihydroxy-5Z,8Z,13E-eicosatrienoic acid;11,14,15-trihydroxy-5Z,8Z,12E-eicosatrienoic acid;11-beta-PGE1;11-epi-8-F2c-IsoP;11-epi-8-F2t-IsoP;11beta-13,14-dihydro-15-keto PGF2alpha;11beta-PGF2;12-F2c-IsoP;12-F2t-IsoP;12-epi-12-F2c-IsoP;12-epi-12-F2t-IsoP;13,14-Dihydro-lipoxin A4;13,14-dihydro-15-keto-PGE1;13,14-dihydro-15-keto-PGF2alpha;15-F2c-IsoP;15-F2t-IsoP;15-epi-15-F2c-IsoP;15-epi-15-F2t-IsoP;15-keto-PGF1alpha;15R-PGE1;15R-PGF2alpha;5,12-diepi-12-F2c-IsoP;5,12-diepi-12-F2t-IsoP;5-F2c-IsoP;5-F2t-IsoP;5-epi-12-F2c-IsoP;5-epi-12-F2t-IsoP;5-epi-5-F2c-IsoP;5-epi-5-F2t-IsoP;5-trans-PGF2alpha;6alpha-PGI1;6beta-PGI1;8,11-diepi-8-F2c-IsoP;8,11-diepi-8-F2t-IsoP;8,15-diepi-15-F2c-IsoP;8,5-diepi-5-F2c-IsoP;8,5-diepi-5-F2t-IsoP;8-F2c-IsoP;8-F2t-IsoP;8-epi-15-F2c-IsoP;8-epi-5-F2c-IsoP;8-epi-5-F2t-IsoP;8-epi-8-F2c-IsoP;8-epi-8-F2t-IsoP;8-iso-13,14-dihydro-15-keto-PGF2alpha;8-iso-PGE1;8-iso-PGF2beta;PGD1;PGE1;PGF2alpha;PGF2beta;PGH1;Trioxilin A3;Troxilin B3;ent-11-epi-8-F2c-IsoP;ent-11-epi-8-F2t-IsoP;ent-12-F2c-IsoP;ent-12-F2t-IsoP;ent-12-epi-12-F2c-IsoP;ent-12-epi-12-F2t-IsoP;ent-15-F2c-IsoP;ent-15-F2t-IsoP;ent-15-epi-15-F2c-IsoP;ent-15-epi-15-F2t-IsoP;ent-5,12-diepi-12-F2c-IsoP;ent-5,12-diepi-12-F2t-IsoP;ent-5-F2c-IsoP;ent-5-F2t-IsoP;ent-5-epi-12-F2c-IsoP;ent-5-epi-12-F2t-IsoP;ent-5-epi-5-F2c-IsoP;ent-5-epi-5-F2t-IsoP;ent-8,11-diepi-8-F2c-IsoP;ent-8,11-diepi-8-F2t-IsoP;ent-8,15-diepi-15-F2c-IsoP;ent-8,15-diepi-15-F2t-IsoP;ent-8,5-diepi-5-F2c-IsoP;ent-8,5-diepi-5-F2t-IsoP;ent-8-F2c-IsoP;ent-8-F2t-IsoP;ent-8-epi-15-F2c-IsoP;ent-8-epi-5-F2c-IsoP;ent-8-epi-5-F2t-IsoP;ent-8-epi-8-F2c-IsoP;ent-8-epi-8-F2t-IsoP;ent-PGF2alpha",C20H34O5
+48,354.277,PGF2alpha methyl ether,C21H38O4
+49,356.2497,"13,14-dihydro-15-keto-PGD2-d4;PGD2-d4;PGE2-d4",C20H28D4O5
+50,356.2563,"13,14-dihydro-15-keto-PGF1alpha;13,14-dihydro-PGE1;13,14-dihydro-PGF2alpha;PGF1alpha;PGF1beta",C20H36O5
+51,358.2653,"11beta-PGF2alpha-d4;13,14-dihydro-15-keto-PGF2alpha-d4;PGF2alpha-d4",C20H30D4O5
+52,362.2457,"16,16-dimethyl-PGA2;1a,1b-dihomo-15-deoxy-delta-12,14-PGD2;1a,1b-dihomo-PGJ2",C22H34O4
+53,363.2773,LTB4 dimethyl amide,C22H37NO3
+54,364.1886,12-Oxo-20-carboxy-leukotriene B4,C20H28O6
+55,364.2614,"11-deoxy-16,16-dimethyl-PGE2;16,16-dimethyl-PGA1",C22H36O4
+56,365.3086,(+/-) 5-iPF2alpha-VI-(d11),C20H23D11O5
+57,366.2042,"11-dehydro-TXB3;12-oxo-10,11-dihydro-20-COOH-LTB4;12-oxo-20-dihydroxy-leukotriene B4;19-hydroxy-Resolvin E1;20-carboxy-LTB4;20-hydroxy-Resolvin E1;ox-LGD2",C20H30O6
+58,366.2406,15-methyl-15R-PGD2;15-methyl-15R-PGE2;15-methyl-15S-PGD2;15-methyl-15S-PGE2;15R-PGE2 methyl ester,C21H34O5
+59,367.3086,PGE2alpha dimethyl amine,C22H41NO3
+60,368.2199,"11-Dehydro-thromboxane B2;11-dehydro-TXB2;15S-hydroperoxy-PGD2;15S-hydroperoxy-PGE2;19R-hydroxy-PGE2;20-COOH-10,11-dihydro-LTB4;20-dihydroxyleukotriene B4;20-hydroxy-PGD2;20-hydroxy-PGE2;5(6)-Epoxy Prostaglandin E1;5,12-diHPETE;5,15-diHPETE;5S,15S-diHPETE;6-keto PGE1;8,15-diHPETE;8S,15S-diHPETE;D17, 6-keto PGF1a;PGG2;TXB3;Thromboxane B3",C20H32O6
+61,368.2563,15-methyl-15R-PGF2alpha;15-methyl-15S-PGE1;15-methyl-15S-PGF2alpha;PGF2alpha methyl ester,C21H36O5
+62,370.2355,"(5R,8R,11R)-d6-9-IsoF[9R,12R];(5R,8R,11R)-d6-9-IsoF[9R,12S];(5R,8R,11R)-d6-9-IsoF[9S,12R];(5R,8R,11R)-d6-9-IsoF[9S,12S];(5R,8R,11S)-d6-9-IsoF[9R,12R];(5R,8R,11S)-d6-9-IsoF[9R,12S];(5R,8R,11S)-d6-9-IsoF[9S,12R];(5R,8R,11S)-d6-9-IsoF[9S,12S];(5R,8R,12R)-d10-6-IsoF[6R,9R];(5R,8R,12R)-d10-6-IsoF[6R,9S];(5R,8R,12R)-d10-6-IsoF[6S,9R];(5R,8R,12R)-d10-6-IsoF[6S,9S];(5R,8R,12S)-d10-6-IsoF[6R,9R];(5R,8R,12S)-d10-6-IsoF[6R,9S];(5R,8R,12S)-d10-6-IsoF[6S,9R];(5R,8R,12S)-d10-6-IsoF[6S,9S];(5R,8S,11R)-d6-9-IsoF[9R,12R];(5R,8S,11R)-d6-9-IsoF[9R,12S];(5R,8S,11R)-d6-9-IsoF[9S,12R];(5R,8S,11R)-d6-9-IsoF[9S,12S];(5R,8S,11S)-d6-9-IsoF[9R,12R];(5R,8S,11S)-d6-9-IsoF[9R,12S];(5R,8S,11S)-d6-9-IsoF[9S,12R];(5R,8S,11S)-d6-9-IsoF[9S,12S];(5R,8S,12R)-d10-6-IsoF[6R,9R];(5R,8S,12R)-d10-6-IsoF[6R,9S];(5R,8S,12R)-d10-6-IsoF[6S,9R];(5R,8S,12R)-d10-6-IsoF[6S,9S];(5R,8S,12S)-d10-6-IsoF[6R,9R];(5R,8S,12S)-d10-6-IsoF[6R,9S];(5R,8S,12S)-d10-6-IsoF[6S,9R];(5R,8S,12S)-d10-6-IsoF[6S,9S];(5R,9R,12R)-d6-8-IsoF[8R,11R];(5R,9R,12R)-d6-8-IsoF[8R,11S];(5R,9R,12R)-d6-8-IsoF[8s,11R];(5R,9R,12R)-d6-8-IsoF[8s,11S];(5R,9R,12S)-d6-8-IsoF[8R,11R];(5R,9R,12S)-d6-8-IsoF[8R,11S];(5R,9R,12S)-d6-8-IsoF[8s,11R];(5R,9R,12S)-d6-8-IsoF[8s,11S];(5R,9S,12R)-d6-8-IsoF[8R,11R];(5R,9S,12R)-d6-8-IsoF[8R,11S];(5R,9S,12R)-d6-8-IsoF[8s,11R];(5R,9S,12R)-d6-8-IsoF[8s,11S];(5R,9S,12S)-d6-8-IsoF[8R,11R];(5R,9S,12S)-d6-8-IsoF[8R,11S];(5R,9S,12S)-d6-8-IsoF[8s,11R];(5R,9S,12S)-d6-8-IsoF[8s,11S];(5S,8R,11R)-d6-9-IsoF[9R,12R];(5S,8R,11R)-d6-9-IsoF[9R,12S];(5S,8R,11R)-d6-9-IsoF[9S,12R];(5S,8R,11R)-d6-9-IsoF[9S,12S];(5S,8R,11S)-d6-9-IsoF[9R,12R];(5S,8R,11S)-d6-9-IsoF[9R,12S];(5S,8R,11S)-d6-9-IsoF[9S,12R];(5S,8R,11S)-d6-9-IsoF[9S,12S];(5S,8R,12R)-d10-6-IsoF[6R,9R];(5S,8R,12R)-d10-6-IsoF[6R,9S];(5S,8R,12R)-d10-6-IsoF[6S,9R];(5S,8R,12R)-d10-6-IsoF[6S,9S];(5S,8R,12S)-d10-6-IsoF[6R,9R];(5S,8R,12S)-d10-6-IsoF[6R,9S];(5S,8R,12S)-d10-6-IsoF[6S,9R];(5S,8R,12S)-d10-6-IsoF[6S,9S];(5S,8S,11R)-d6-9-IsoF[9R,12R];(5S,8S,11R)-d6-9-IsoF[9R,12S];(5S,8S,11R)-d6-9-IsoF[9S,12R];(5S,8S,11R)-d6-9-IsoF[9S,12S];(5S,8S,11S)-d6-9-IsoF[9R,12R];(5S,8S,11S)-d6-9-IsoF[9R,12S];(5S,8S,11S)-d6-9-IsoF[9S,12R];(5S,8S,11S)-d6-9-IsoF[9S,12S];(5S,8S,12R)-d10-6-IsoF[6R,9R];(5S,8S,12R)-d10-6-IsoF[6R,9S];(5S,8S,12R)-d10-6-IsoF[6S,9R];(5S,8S,12R)-d10-6-IsoF[6S,9S];(5S,8S,12S)-d10-6-IsoF[6R,9R];(5S,8S,12S)-d10-6-IsoF[6R,9S];(5S,8S,12S)-d10-6-IsoF[6S,9R];(5S,8S,12S)-d10-6-IsoF[6S,9S];(5S,9R,12R)-d6-8-IsoF[8R,11R];(5S,9R,12R)-d6-8-IsoF[8R,11S];(5S,9R,12R)-d6-8-IsoF[8s,11R];(5S,9R,12R)-d6-8-IsoF[8s,11S];(5S,9R,12S)-d6-8-IsoF[8R,11R];(5S,9R,12S)-d6-8-IsoF[8R,11S];(5S,9R,12S)-d6-8-IsoF[8s,11R];(5S,9R,12S)-d6-8-IsoF[8s,11S];(5S,9S,12R)-d6-8-IsoF[8R,11R];(5S,9S,12R)-d6-8-IsoF[8R,11S];(5S,9S,12R)-d6-8-IsoF[8s,11R];(5S,9S,12R)-d6-8-IsoF[8s,11S];(5S,9S,12S)-d6-8-IsoF[8R,11R];(5S,9S,12S)-d6-8-IsoF[8R,11S];(5S,9S,12S)-d6-8-IsoF[8s,11R];(5S,9S,12S)-d6-8-IsoF[8s,11S];(6R,9R,12R)-d10-5-IsoF[5R,8R];(6R,9R,12R)-d10-5-IsoF[5R,8S];(6R,9R,12R)-d10-5-IsoF[5S,8R];(6R,9R,12R)-d10-5-IsoF[5S,8S];(6R,9R,12S)-d10-5-IsoF[5R,8R];(6R,9R,12S)-d10-5-IsoF[5R,8S];(6R,9R,12S)-d10-5-IsoF[5S,8R];(6R,9R,12S)-d10-5-IsoF[5S,8S];(6R,9S,12R)-d10-5-IsoF[5R,8R];(6R,9S,12R)-d10-5-IsoF[5R,8S];(6R,9S,12R)-d10-5-IsoF[5S,8R];(6R,9S,12R)-d10-5-IsoF[5S,8S];(6R,9S,12S)-d10-5-IsoF[5R,8R];(6R,9S,12S)-d10-5-IsoF[5R,8S];(6R,9S,12S)-d10-5-IsoF[5S,8R];(6R,9S,12S)-d10-5-IsoF[5S,8S];(6S,9R,12R)-d10-5-IsoF[5R,8R];(6S,9R,12R)-d10-5-IsoF[5R,8S];(6S,9R,12R)-d10-5-IsoF[5S,8R];(6S,9R,12R)-d10-5-IsoF[5S,8S];(6S,9R,12S)-d10-5-IsoF[5R,8R];(6S,9R,12S)-d10-5-IsoF[5R,8S];(6S,9R,12S)-d10-5-IsoF[5S,8R];(6S,9R,12S)-d10-5-IsoF[5S,8S];(6S,9S,12R)-d10-5-IsoF[5R,8R];(6S,9S,12R)-d10-5-IsoF[5R,8S];(6S,9S,12R)-d10-5-IsoF[5S,8R];(6S,9S,12R)-d10-5-IsoF[5S,8S];(6S,9S,12S)-d10-5-IsoF[5R,8R];(6S,9S,12S)-d10-5-IsoF[5R,8S];(6S,9S,12S)-d10-5-IsoF[5S,8R];(6S,9S,12S)-d10-5-IsoF[5S,8S];(8R,11R,14R)-d9-12-IsoF[12R,15R];(8R,11R,14R)-d9-12-IsoF[12R,15S];(8R,11R,14R)-d9-12-IsoF[12S,15R];(8R,11R,14R)-d9-12-IsoF[12S,15S];(8R,11R,14S)-d9-12-IsoF[12R,15R];(8R,11R,14S)-d9-12-IsoF[12R,15S];(8R,11R,14S)-d9-12-IsoF[12S,15R];(8R,11R,14S)-d9-12-IsoF[12S,15S];(8R,11R,15R)-d13-9-IsoF[9R,12R];(8R,11R,15R)-d13-9-IsoF[9R,12S];(8R,11R,15R)-d13-9-IsoF[9S,12R];(8R,11R,15R)-d13-9-IsoF[9S,12S];(8R,11R,15S)-d13-9-IsoF[9R,12R];(8R,11R,15S)-d13-9-IsoF[9R,12S];(8R,11R,15S)-d13-9-IsoF[9S,12R];(8R,11R,15S)-d13-9-IsoF[9S,12S];(8R,11S,14R)-d9-12-IsoF[12R,15R];(8R,11S,14R)-d9-12-IsoF[12R,15S];(8R,11S,14R)-d9-12-IsoF[12S,15R];(8R,11S,14R)-d9-12-IsoF[12S,15S];(8R,11S,14S)-d9-12-IsoF[12R,15R];(8R,11S,14S)-d9-12-IsoF[12R,15S];(8R,11S,14S)-d9-12-IsoF[12S,15R];(8R,11S,14S)-d9-12-IsoF[12S,15S];(8R,11S,15R)-d13-9-IsoF[9R,12R];(8R,11S,15R)-d13-9-IsoF[9R,12S];(8R,11S,15R)-d13-9-IsoF[9S,12R];(8R,11S,15R)-d13-9-IsoF[9S,12S];(8R,11S,15S)-d13-9-IsoF[9R,12R];(8R,11S,15S)-d13-9-IsoF[9R,12S];(8R,11S,15S)-d13-9-IsoF[9S,12R];(8R,11S,15S)-d13-9-IsoF[9S,12S];(8R,12R,15R)-d9-11-IsoF[11R,14R];(8R,12R,15R)-d9-11-IsoF[11R,14S];(8R,12R,15R)-d9-11-IsoF[11S,14R];(8R,12R,15R)-d9-11-IsoF[11S,14S];(8R,12R,15S)-d9-11-IsoF[11R,14R];(8R,12R,15S)-d9-11-IsoF[11R,14S];(8R,12R,15S)-d9-11-IsoF[11S,14R];(8R,12R,15S)-d9-11-IsoF[11S,14S];(8R,12S,15R)-d9-11-IsoF[11R,14R];(8R,12S,15R)-d9-11-IsoF[11R,14S];(8R,12S,15R)-d9-11-IsoF[11S,14R];(8R,12S,15R)-d9-11-IsoF[11S,14S];(8R,12S,15S)-d9-11-IsoF[11R,14R];(8R,12S,15S)-d9-11-IsoF[11R,14S];(8R,12S,15S)-d9-11-IsoF[11S,14R];(8R,12S,15S)-d9-11-IsoF[11S,14S];(8S,11R,14R)-d9-12-IsoF[12R,15R];(8S,11R,14R)-d9-12-IsoF[12R,15S];(8S,11R,14R)-d9-12-IsoF[12S,15R];(8S,11R,14R)-d9-12-IsoF[12S,15S];(8S,11R,14S)-d9-12-IsoF[12R,15R];(8S,11R,14S)-d9-12-IsoF[12R,15S];(8S,11R,14S)-d9-12-IsoF[12S,15R];(8S,11R,14S)-d9-12-IsoF[12S,15S];(8S,11R,15R)-d13-9-IsoF[9R,12R];(8S,11R,15R)-d13-9-IsoF[9R,12S];(8S,11R,15R)-d13-9-IsoF[9S,12R];(8S,11R,15R)-d13-9-IsoF[9S,12S];(8S,11R,15S)-d13-9-IsoF[9R,12R];(8S,11R,15S)-d13-9-IsoF[9R,12S];(8S,11R,15S)-d13-9-IsoF[9S,12R];(8S,11R,15S)-d13-9-IsoF[9S,12S];(8S,11S,14R)-d9-12-IsoF[12R,15R];(8S,11S,14R)-d9-12-IsoF[12R,15S];(8S,11S,14R)-d9-12-IsoF[12S,15R];(8S,11S,14R)-d9-12-IsoF[12S,15S];(8S,11S,14S)-d9-12-IsoF[12R,15R];(8S,11S,14S)-d9-12-IsoF[12R,15S];(8S,11S,14S)-d9-12-IsoF[12S,15R];(8S,11S,14S)-d9-12-IsoF[12S,15S];(8S,11S,15R)-d13-9-IsoF[9R,12R];(8S,11S,15R)-d13-9-IsoF[9R,12S];(8S,11S,15R)-d13-9-IsoF[9S,12R];(8S,11S,15R)-d13-9-IsoF[9S,12S];(8S,11S,15S)-d13-9-IsoF[9R,12R];(8S,11S,15S)-d13-9-IsoF[9R,12S];(8S,11S,15S)-d13-9-IsoF[9S,12R];(8S,11S,15S)-d13-9-IsoF[9S,12S];(8S,12R,15R)-d9-11-IsoF[11R,14R];(8S,12R,15R)-d9-11-IsoF[11R,14S];(8S,12R,15R)-d9-11-IsoF[11S,14R];(8S,12R,15R)-d9-11-IsoF[11S,14S];(8S,12R,15S)-d9-11-IsoF[11R,14R];(8S,12R,15S)-d9-11-IsoF[11R,14S];(8S,12R,15S)-d9-11-IsoF[11S,14R];(8S,12R,15S)-d9-11-IsoF[11S,14S];(8S,12S,15R)-d9-11-IsoF[11R,14R];(8S,12S,15R)-d9-11-IsoF[11R,14S];(8S,12S,15R)-d9-11-IsoF[11S,14R];(8S,12S,15R)-d9-11-IsoF[11S,14S];(8S,12S,15S)-d9-11-IsoF[11R,14R];(8S,12S,15S)-d9-11-IsoF[11R,14S];(8S,12S,15S)-d9-11-IsoF[11S,14R];(8S,12S,15S)-d9-11-IsoF[11S,14S];(9R,12R,15R)-d13-8-IsoF[8R,11R];(9R,12R,15R)-d13-8-IsoF[8R,11S];(9R,12R,15R)-d13-8-IsoF[8S,11R];(9R,12R,15R)-d13-8-IsoF[8S,11S];(9R,12R,15S)-d13-8-IsoF[8R,11R];(9R,12R,15S)-d13-8-IsoF[8R,11S];(9R,12R,15S)-d13-8-IsoF[8S,11R];(9R,12R,15S)-d13-8-IsoF[8S,11S];(9R,12S,15R)-d13-8-IsoF[8R,11R];(9R,12S,15R)-d13-8-IsoF[8R,11S];(9R,12S,15R)-d13-8-IsoF[8S,11R];(9R,12S,15R)-d13-8-IsoF[8S,11S];(9R,12S,15S)-d13-8-IsoF[8R,11R];(9R,12S,15S)-d13-8-IsoF[8R,11S];(9R,12S,15S)-d13-8-IsoF[8S,11R];(9R,12S,15S)-d13-8-IsoF[8S,11S];(9S,12R,15R)-d13-8-IsoF[8R,11R];(9S,12R,15R)-d13-8-IsoF[8R,11S];(9S,12R,15R)-d13-8-IsoF[8S,11R];(9S,12R,15R)-d13-8-IsoF[8S,11S];(9S,12R,15S)-d13-8-IsoF[8R,11R];(9S,12R,15S)-d13-8-IsoF[8R,11S];(9S,12R,15S)-d13-8-IsoF[8S,11R];(9S,12R,15S)-d13-8-IsoF[8S,11S];(9S,12S,15R)-d13-8-IsoF[8R,11R];(9S,12S,15R)-d13-8-IsoF[8R,11S];(9S,12S,15R)-d13-8-IsoF[8S,11R];(9S,12S,15R)-d13-8-IsoF[8S,11S];(9S,12S,15S)-d13-8-IsoF[8R,11R];(9S,12S,15S)-d13-8-IsoF[8R,11S];(9S,12S,15S)-d13-8-IsoF[8S,11R];(9S,12S,15S)-d13-8-IsoF[8S,11S];10,11-dihydro-20-dihydroxy-LTB4;13,14-dihydro-6,15-diketo-PGF1alpha;19R-hydroxy-PGE1;19R-hydroxy-PGF2alpha;20-hydroxy-PGE1;20-hydroxy-PGF2alpha;6-keto-PGF1alpha;TXB2;delta10-5-IsoF;delta10-6-IsoF;delta13-8-IsoF;delta13-9-IsoF;delta6-8-IsoF;delta6-9-IsoF;delta9-11-IsoF;delta9-12-IsoF",C20H34O6
+63,372.1937,16-phenyl-tetranor-PGE2;clavulolactone I;clavulolactone II;clavulolactone III,C22H28O5
+64,372.2446,11-dehydro-TXB2-d4,C20H28D4O6
+65,372.2512,"13,14-dihydro-19R-hydroxyPGE1;19R-hydroxy-PGF1alpha;TXB1",C20H36O6
+66,374.2602,6k-PGF1alpha-d4;TXB2-d4,C20H30D4O6
+67,378.277,"9-deoxy-9-methylene-16,16-dimethyl -PGE2",C23H38O4
+68,379.2723,LTB4 ethanol amide,C22H37NO4
+69,380.1754,chlorovulone I;chlorovulone II;chlorovulone III;chlorovulone IV,C21H29ClO4
+70,380.2563,"16,16-dimethyl-PGD2;16,16-dimethyl-PGE2;1a,1b-dihomo-PGD2;1a,1b-dihomo-PGE2;20-ethyl-PGE2;Dihomo-PGI2",C22H36O5
+71,381.2879,PGF2alpha dimethyl amide,C22H39NO4
+72,382.1992,12-Oxo-20-trihydroxy-leukotriene B4,C20H30O7
+73,382.2719,"10,13-diepi-10-F2c-dihomo-IsoP;10,13-diepi-10-F2t-dihomo-IsoP;10,17-diepi-17-F2c-dihomo-IsoP;10,17-diepi-17-F2t-dihomo-IsoP;10,7-diepi-7-F2c-dihomo-IsoP;10,7-diepi-7-F2t-dihomo-IsoP;10-F2c-dihomo-IsoP;10-F2t-dihomo-IsoP;10-epi-17-F2c-dihomo-IsoP;10-epi-7-F2c-dihomo-IsoP;10-epi-7-F2t-dihomo-IsoP;12-epi-14-F2c-dihomo-IsoP;12-epi-14-F2t-dihomo-IsoP;13-epi-10-F2c-dihomo-IsoP;13-epi-10-F2t-dihomo-IsoP;14,7-diepi-14-F2c-dihomo-IsoP;14,7-diepi-14-F2t-dihomo-IsoP;14-F2-dihomo-IsoP;14-F2c-dihomo-IsoP;14-F2t-dihomo-IsoP;14-epi-14-F2c-dihomo-IsoP;14-epi-14-F2t-dihomo-IsoP;15-epi-17-F2c-dihomo-IsoP;15-epi-17-F2t-dihomo-IsoP;15-methyl-15R-PGF2alpha methyl ester;16,16-dimethyl-PGE1;16,16-dimethyl-PGF2beta;17-F2-dihomo-IsoP;17-F2c-dihomo-IsoP;17-F2t-dihomo-IsoP;1a,1b-dihomo-PGE1;1a,1b-dihomo-PGF2alpha;20-ethyl PGF2alpha;5-epi-7-F2c-dihomo-IsoP;5-epi-7-F2t-dihomo-IsoP;7-F2-dihomo-IsoP;7-F2c-dihomo-IsoP;7-F2t-dihomo-IsoP;8-epi-10-F2c-dihomo-IsoP;8-epi-10-F2t-dihomo-IsoP;ent-10,13-diepi-10-F2c-dihomo-IsoP;ent-10,13-diepi-10-F2t-dihomo-IsoP;ent-10,17-diepi-17-F2c-dihomo-IsoP;ent-10,17-diepi-17-F2t-dihomo-IsoP;ent-10,7-diepi-7-F2c-dihomo-IsoP;ent-10,7-diepi-7-F2t-dihomo-IsoP;ent-10-F2c-dihomo-IsoP;ent-10-F2t-dihomo-IsoP;ent-10-epi-17-F2c-dihomo-IsoP;ent-10-epi-17-F2t-dihomo-IsoP;ent-10-epi-7-F2c-dihomo-IsoP;ent-10-epi-7-F2t-dihomo-IsoP;ent-12-epi-14-F2c-dihomo-IsoP;ent-12-epi-14-F2t-dihomo-IsoP;ent-13-epi-10-F2c-dihomo-IsoP;ent-13-epi-10-F2t-dihomo-IsoP;ent-14,7-diepi-14-F2c-dihomo-IsoP;ent-14,7-diepi-14-F2t-dihomo-IsoP;ent-14-F2c-dihomo-IsoP;ent-14-F2t-dihomo-IsoP;ent-14-epi-14-F2c-dihomo-IsoP;ent-14-epi-14-F2t-dihomo-IsoP;ent-15-epi-17-F2c-dihomo-IsoP;ent-15-epi-17-F2t-dihomo-IsoP;ent-17-F2c-dihomo-IsoP;ent-17-F2t-dihomo-IsoP;ent-5-epi-7-F2c-dihomo-IsoP;ent-5-epi-7-F2t-dihomo-IsoP;ent-7-F2c-dihomo-IsoP;ent-7-F2t-dihomo-IsoP;ent-8-epi-10-F2c-dihomo-IsoP;ent-8-epi-10-F2t-dihomo-IsoP;unoprostone",C22H38O5
+74,384.2148,20-Trihydroxy-leukotriene-B4,C20H32O7
+75,386.2093,17-phenyl-trinor-PGE2,C23H30O5
+76,386.2305,"10,11-dihydro-20-trihydroxy-leukotriene B4",C20H34O7
+77,387.1352,"14-carboxy-15,16,17,18,19,20-hexanor-leukotriene E3",C17H25NO7S
+78,387.241,17-phenyl-trinor-PGF2alpha amide,C23H33NO4
+79,388.225,17-phenyl-trinor-PGF2alpha,C23H32O5
+80,390.2018,20-trifluoro-LTB4,C20H29O4F3
+81,390.2406,"15R-PGA2 methyl ester, 15-acetate",C23H34O5
+82,393.2879,PGH2-EA,C23H39NO4
+83,395.2672,PGD2-EA;PGE2-EA;PGI2-EA,C22H37NO5
+84,396.1704,"10,11-epoxy-chlorovulone I",C21H29ClO5
+85,396.2512,PGF2alpha-11-acetate,C22H36O6
+86,396.2876,10-F2-dihomo-IsoP;PGF2alpha isopropyl ester,C23H40O5
+87,397.2828,11beta-PGF2alpha-EA;8-iso-PGF2alpha III-EA;PGE1-EA;PGF2alpha-EA,C22H39NO5
+88,401.3075,PGF2alpha-EA(d4),C22H35D4NO5
+89,402.2254,5S-HETE di-endoperoxide,C20H34O8
+90,408.2512,"15R-PGE2 methyl ester, 15-acetate",C23H36O6
+91,409.2464,15-isoLG hydroxylactam-ethanolamine,C22H35NO6
+92,410.2305,Sarcoehrendin G,C22H34O7
+93,410.2668,PGF2alpha-11-acetate methyl ester,C23H38O6
+94,413.1508,"13E-Tetranor-16-carboxy-LTE4;16-carboxy-Delta(13)-17,18,19,20-tetranor-leukotriene E4",C19H27NO7S
+95,414.2254,"methyl 6,8-epidioxy-5,15-dihydroperoxy-9,11,13-eicosatrienoate;methyl 9,11-epidioxy-12,15-dihydroperoxy-5,7,13-eicosatrienoate",C21H34O8
+96,415.1665,"16-carboxy-17,18,19,20-tetranor-leukotriene E3",C19H29NO7S
+97,418.3083,Dichotellate A;Dichotellate B,C26H42O4
+98,424.1249,Bromovulone I,C21H29O4Br
+99,424.2461,Sarcoehrendin E,C23H36O7
+100,425.2777,PGD2-dihydroxypropanylamine;PGE2-dihydroxypropanylamine,C23H39NO6
+101,426.2618,1(3)-glyceryl-PGD2;1(3)-glyceryl-PGE2;1(3)-glyceryl-PGH2;2-glyceryl-PGD2;2-glyceryl-PGE2;2-glyceryl-PGH2,C23H38O7
+102,427.2934,PGF2alpha-dihydroxypropanylamine,C23H41NO6
+103,428.2774,1(3)-glyceryl-PGF2alpha;2-glyceryl-PGF2alpha,C23H40O7
+104,430.1369,"6-iodo-5-hydroxy-eicosa-8Z,11Z,14Z-trienoic acid gamma lactone",C20H31IO2
+105,430.2719,17-phenyl-trinor-PGF2alpha isopropyl ester,C26H38O5
+106,438.1809,punaglandin 7,C23H31O6Cl
+107,439.2392,"11-trans-LTE4;14,15-LTE4;LTE4;Leukotriene E4",C23H37NO5S
+108,440.1966," 7-Acetoxy-7,8-dihydrochlorovulone II ;punaglandin 8",C23H33ClO6;C23H33O6Cl
+109,441.1821,"18-Carboxy-dinor-LTE4;18-carboxy-19,20-dinor-leukotriene E4",C21H31NO7S
+110,441.2549,Leukotriene E3,C23H39NO5S
+111,444.2148,"17,18-dehydro-clavulone I",C25H32O7
+112,444.2723,1(3)-glyceryl-6-keto-PGF1alpha;2-glyceryl-6-keto-PGF1alpha,C23H40O8
+113,446.2305,4-epi-clavulone II;4-epi-clavulone III;clavulone I;clavulone II;clavulone III;clavulone IV,C25H34O7
+114,448.2825,"Ethyl-(5R,12S)-diacetoxy-(6E,8E,10E,14Z)-eicosatetraenoate;Ethyl-(5S,12S)-diacetoxy-(6E,8E,10E,14Z)-eicosatetraenoate",C26H40O6
+115,452.241,Sarcoehrendin H,C24H36O8
+116,452.2774,Sarcoehrendin I,C25H40O7
+117,453.2185,20-Oxo-leukotriene E4,C23H35NO6S
+118,454.205,3-O-(alpha-L-arabinopyranosyl-(1->6)-beta-D-glucopyranosyl) butyl 3S-hydroxybutanoate,C19H34O12
+119,454.2567,18-acetoxy-PGF2alpha-11-acetate,C24H38O8
+120,454.2931,Sarcoehrendin J,C25H42O7
+121,455.2342,20-Hydroxy-leukotriene E4;20-hydroxy-LTE4;Lipoxin E4,C23H37NO6S
+122,457.2498,"10,11-Dihydro-12R-hydroxy-leukotriene E4",C23H39NO6S
+123,466.2567,Sarcoehrendin F,C25H38O8
+124,468.2723,18-acetoxy-PGF2alpha-11-acetate methyl ester,C25H40O8
+125,469.2134,20-COOH-leukotriene E4,C23H35NO7S
+126,472.1111,Iodovulone I,C21H29O4I
+127,481.2498,N-Acetyl-leukotriene E4;N-acetyl-LTE4;N-acetylleukotriene E4,C25H39NO6S
+128,484.1461," 7-Acetoxy-7,8-dihydrobromovulone I ; 7-Acetoxy-7,8-dihydrobromovulone II ",C23H33BrO6
+129,494.2451,Leukotriene D5,C25H38N2O6S
+130,496.1864,7Z-punaglandin 3;punaglandin 3,C25H33ClO8;C25H33O8Cl
+131,496.2607,"11-trans-LTD4;14,15-LTD4;LTD4",C25H40N2O6S
+132,498.202,7Z-punaglandin 4;punaglandin 4;punaglandin 5,C25H35ClO8;C25H35O8Cl
+133,500.2177,punaglandin 6,C25H37O8Cl
+134,504.2359,20-acetoxy-clavulone I;20-acetoxy-clavulone II;20-acetoxy-clavulone III,C27H36O9
+135,508.2672,Sarcoehrendin D,C27H40O9
+136,510.2829,Sarcoehrendin A;Sarcoehrendin C,C27H42O9
+137,512.1813,"10S,11R-epoxy-punaglandin 3",C25H33O9Cl
+138,512.2556,Lipoxin D4,C25H40N2O7S
+139,514.197,"10S,11R-epoxy-punaglandin 4",C25H35O9Cl
+140,514.2713,"14,15-HxA3-D(11S)",C25H42N2O7S
+141,532.1322," 7-Acetoxy-7,8-dihydroiodovulone I ; 7-Acetoxy-7,8-dihydroiodovulone II ",C23H33IO6
+142,538.197,12R-acetoxy-7Z-punaglandin 3;12R-acetoxy-punaglandin 3,C27H35ClO9;C27H35O9Cl
+143,540.2126,12R-acetoxy-7Z-punaglandin 4;12R-acetoxy-punaglandin 4;12S-acetoxy-punaglandin 5,C27H37O9Cl
+144,552.2935,Sarcoehrendin B,C29H44O10
+145,556.2075,punaglandin 1,C27H37O10Cl
+146,558.2232,punaglandin 2,C27H39O10Cl
+147,568.2818,LTF4;leukotriene F4,C28H44N2O8S
+148,597.272,FOG7;TOG10,C28H43N3O9S
+149,598.2181,12S-acetoxy-punaglandin 1,C29H39O11Cl
+150,600.2337,12S-acetoxy-punaglandin 2,C29H41O11Cl
+151,625.3033,"11-trans-LTC4;14,15-LTC4;LTC4",C30H47N3O9S
+152,641.2982,Lipoxin C4,C30H47N3O10S
+153,643.3139,"14,15-HxA3-C(11S)",C30H49N3O10S

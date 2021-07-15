@@ -1,0 +1,76 @@
+,MASS,COMMON_NAME,FORMULA
+0,225.2093,Xestoaminol B,C14H27NO
+1,227.2249,Halaminol A;Xestoaminol A,C14H29NO
+2,229.2406,Xestoaminol C,C14H31NO
+3,241.2042,"(4E,6E,d14:2) sphingosine",C14H27NO2
+4,243.2198,C14 sphingosine,C14H29NO2
+5,253.2406,Obscuraminol B;Obscuraminol C,C16H31NO
+6,255.2562,Obscuraminol D;Obscuraminol E;Obscuraminol F,C16H33NO
+7,265.2042,Micropine,C16H27NO2
+8,271.2511,C16 Sphingosine,C16H33NO2
+9,273.2668,C16 Sphinganine,C16H35NO2
+10,277.2406,Crucigasterin 277;Obscuraminol A,C18H31NO
+11,283.2511,Prosafrinine,C17H33NO2
+12,285.2668,"C17 Sphingosine;anteiso (4E,14-methyl-d16:1) sphingosine;iso (4E,15-methyl-d16:1) sphingosine",C17H35NO2
+13,285.3032,Spisulosine,C18H39NO
+14,287.246,Prosopinine,C16H33NO3
+15,287.2824,C17 Sphinganine,C17H37NO2
+16,295.2511,"(4E,8E,10E-d18:3)sphingosine",C18H33NO2
+17,297.2668,"(4E,8E,d18:2) sphingosine;(4E,8Z,d18:2) sphingosine;-;3-ketosphingosine;4E,14Z-Sphingadiene;Lepadin D",C18H35NO2
+18,299.2824,"(8Z,d18:1) sphingosine;3-ketosphinganine;5-hydroxy,3E-sphingosine;Sphingosine",C18H37NO2
+19,301.2981,Enigmol;Safingol ( L-threo-sphinganine);Sphinganine,C18H39NO2
+20,305.2719,Clavepictine B,C20H35NO
+21,307.2511,R-Dysidazirine,C19H33NO2
+22,309.2668,"(9Me,4E,8E,10E-d19:3)sphingosine",C19H35NO2
+23,311.2824,"(4E,8E,9Me-d19:2)sphingosine",C19H37NO2
+24,313.3345,-,C20H43NO
+25,315.2773,4-hydroxy-8cis-sphingenine;6-hydroxysphingosine;Dehydrophytosphingosine,C18H37NO3
+26,317.293,Phytosphingosine,C18H39NO3
+27,327.3137,"N,N-dimethylsphingosine",C20H41NO2
+28,329.293,Penaresidin A;Penaresidin B,C19H39NO3
+29,329.3294,"N,N-dimethyl-Safingol",C20H43NO2
+30,342.3372,"N,N,N-trimethyl-sphingosine",C21H44NO2
+31,351.2175,C16 Sphingosine-1-phosphate,C16H34NO5P
+32,351.2443,Capnine,C17H37NO4S
+33,353.2331,C16 Sphinganine-1-phosphate,C16H36NO5P
+34,365.2331,C17 Sphingosine-1-phosphate,C17H36NO5P
+35,367.2488,C17 Sphinganine-1-phosphate,C17H38NO5P
+36,369.2151,Pramanicin,C19H31NO6
+37,369.3243,Aplidiasphingosine,C22H43NO3
+38,369.3607,Penazetidine A,C23H47NO2
+39,379.2488,Sphingosine-1-phosphate,C18H38NO5P
+40,379.3086,Calicogorgin A,C23H41NO3
+41,381.2185,Heptadeacsphing-6E-enine 4R-sufate,C17H35NO6S
+42,381.2644,Sphinganine-phosphate,C18H40NO5P
+43,389.2777,Sphingofungin B,C20H39NO6
+44,393.2644,C19 Sphingosine-1-phosphate,C19H40NO5P
+45,395.2342,Sphing-6E-enine 4R-sufate,C18H37NO6S
+46,397.2593,Phytosphingosine 1-phosphate,C18H40NO6P
+47,401.2777,Myriocin;Sphingofungin F,C21H39NO6
+48,417.2727,Sphingofungin E,C21H39NO7
+49,431.2883,Sphingofungin C;Sphingofungin D,C22H41NO7
+50,431.2995,Sphingofungin A,C21H41N3O6
+51,433.0252,S-Antazirine,C17H25Br2NO2
+52,439.224,Sulfamisterin,C19H37NO8S
+53,450.3223,C17 sphingosine-1-phosphocholine,C22H47N2O5P
+54,464.3379,Sphingosine-1-phosphocholine,C23H49N2O5P
+55,466.3536,Sphinganine-1-phosphocholine,C23H51N2O5P
+56,472.4029,Leucettamol A,C30H52N2O2
+57,486.4397,Calyxinin;Oceanin,C28H58N2O4
+58,511.3298,Scyphostatin A,C31H45NO5
+59,563.4397,Hypoculoside,C30H61NO8
+60,575.4583,N-(13-methyl-tetradecanoyl)-capnine,C32H65NO5S
+61,605.5747,Hemsleyin imine A,C39H75NO3
+62,607.4482,N-(2-hydroxy-13-methyl-tetradecanoyl)-4-hydroxycapnine,C32H65NO7S
+63,646.5132,Rhizochalinin D,C35H70N2O8
+64,661.4587,-,C35H67NO8S
+65,675.383,Fumonisin C4,C33H57NO13
+66,689.3986,Fumonisin B4,C34H59NO13
+67,691.3779,Fumonisin C2;Fumonisin C3,C33H57NO14
+68,705.3936,Fumonisin B2;Fumonisin B3,C34H59NO14
+69,707.3728,Fumonisin C1,C33H57NO15
+70,721.3885,Fumonisin B1,C34H59NO15
+71,736.5238,Oceanalin A,C41H72N2O9
+72,763.399,Fumonisin A1,C36H61NO16
+73,947.7789,Plakoside A,C57H105NO9
+74,973.7946,Plakoside B,C59H107NO9

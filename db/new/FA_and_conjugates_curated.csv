@@ -1,0 +1,763 @@
+,MASS,COMMON_NAME,FORMULA
+0,60.0211,Acetic acid,C2H4O2
+1,72.0211,Acrylic acid,C3H4O2
+2,74.0368,Propionic acid,C3H6O2
+3,86.0368,Crotonic acid;Isocrotonic acid;Vinyl acetic acid;but-2-enoic acid,C4H6O2
+4,88.016,Pyruvic acid,C3H4O3
+5,88.0524,Butyric acid;Isobutyric acid,C4H8O2
+6,93.9822,2-chloro-acetic acid,C2H3ClO2
+7,98.0368,"beta-vinyl acrylic acid;penta-2,4-dienoic acid",C5H6O2
+8,100.0524,"2-ethyl acrylic acid;Allyl acetic acid;Angelic acid;Isopropenylacetic acid;Tiglic acid;beta,beta-dimethyl acrylic acid;beta-ethyl acrylic acid;beta-penteic acid;cis-pent-2-enoic acid;cis-pent-3-enoic acid",C5H8O2
+9,102.0317,(S)-Methylmalonic acid semialdehyde;2-methyl-3-oxo-propanoic acid;3-hydroxybut-2-enoic acid;3-methyl pyruvic acid;4-hydroxy-crotonic acid;Acetoacetic acid,C4H6O3
+10,102.0681,Isovaleric acid;Pivalic acid;Valeric acid;alpha-methyl butyric Acid,C5H10O2
+11,103.0633,(R)-b-amino-isobutyric acid;(S)-b-amino-isobutyric acid;2-amino-isobutyric acid;2R-amino-butanoic acid;2S-amino-butanoic acid;3-amino-isobutanoic acid;4-amino-butanoic acid,C4H9NO2
+12,104.011,Malonic acid,C3H4O4
+13,104.0473,(+/-)alpha-hydoxy butyric acid;(R)-2-hydroxybutyric acid;(S)-3-Hydroxybutyric acid;2S-Hydroxybutanoic acid;3R-hydroxy-butanoic acid;3R-hydroxy-isobutyric acid;4-hydroxy-butyric acid;D(-)-beta-hydroxy butyric acid;alpha-hydroxy-isobutyric acid,C4H8O3
+14,104.0586,"2,3-diamino-propionic acid",C3H8N2O2
+15,105.0426,2-Amino-3-hydroxypropanoic acid,C3H7NO3
+16,105.9822,(E)-3-chloroacrylic acid;2-chloroacrylic acid,C3H3ClO2
+17,112.0524,"(2Z,4Z)-hexa-2,4-dienoic acid;3,5-hexadienoic acid;3-hexynoic acid;4-hexynoic acid;5-hexynoic acid;Aleprolic acid;Sorbic acid;hexa-2,4-dienoic acid",C6H8O2
+18,114.0317,3-oxo-4-pentenoic acid,C5H6O3
+19,114.0681,"2,2-dimethyl-3-butenoic acid;2-Methyl-2-pentenoic acid;2-Methyl-4-pentenoic acid;2Z-Hexenoic acid;3-Methyl-3Z-Pentenoic Acid;3-isopropyl acrylic acid;3-methyl-2Z-pentenoic acid;3-methyl-4-pentenoic acid;4-Methyl-2-pentenoic acid;4-methyl-4-pentenoic acid;Hydrosorbic acid;Isohydrosorbic acid;Pyroterebic acid;cis-hex-3-enoic acid;delta-hexenoic acid;gamma-hexenoic acid;trimethyl acrylic acid",C6H10O2
+20,116.0473,2-keto valeric acid;2methyl-3-ketovaleric acid;3-keto valeric acid;3-methyl-2-oxo-butanoic acid;5-oxo-pentanoic acid;Levulinic acid,C5H8O3
+21,116.0837,"2-methyl valeric acid;3,3-dimethyl-butanoic acid;3-methyl valeric acid;Caproic acid;Isocaproic acid;diethyl acetic acid;dimethyl ethyl acetic acid",C6H12O2
+22,117.0426,2S-amino-3-oxo-butanoic acid,C4H7NO3
+23,117.079,2-Amino-3-methylbutanoic acid;2S-amino-pentanoic acid;4-amino-pentanoic acid;4R-aminopentanoic acid;4S-aminopentanoic acid;5-amino-pentanoic acid,C5H11NO2
+24,118.0266,Methylmalonic acid;Succinic acid;xi-3-Hydroxy-2-oxobutanoic acid,C4H6O4
+25,118.063,"2-Hydroxy-3-methylbutyric acid;2-ethyl-hydracrylic acid;2-hydroxy-2-methyl-butyric acid;2-hydroxy-3-methyl-butyric acid;2-methyl-3-hydroxybutyric acid;3-Hydroxy-2-methyl-[R-(R,S)]-butanoic acid;3-Hydroxy-2-methyl-[S-(R,R)]-butanoic acid;3-hydroxy valeric acid;3-hydroxy-2-methyl-[R-(R,S)]-butanoic acid;3-hydroxy-isovaleric acid;4-hydroxy-isovaleric acid;4-hydroxy-valeric acid;5-hydroxy valeric acid;DL-2-hydroxy valeric acid",C5H10O3
+26,118.0742,"2,4-diamino-butyric acid",C4H10N2O2
+27,120.0245,3-methyl-thiopropionic acid,C4H8O2S
+28,120.0423,"(S)-3,4-Dihydroxybutyric acid;2,4-dihydroxy-butanoic acid;3S,4-dihydroxy-butyric acid;4-deoxy-erythronic acid;a,b-dihydroxy-isobutyric acid",C4H8O4
+29,124.0524,"cis,trans-hepta-2,4,6-trienoic acid;trans,trans-hepta-2,4,6-trienoic acid",C7H8O2
+30,126.0681,"3-heptynoic acid;4-Methyl-3Z,5-hexadienoic acid;4-heptynoic acid;6-heptynoic acid",C7H10O2
+31,127.9432,Dichloroacetic acid,C2H2Cl2O2
+32,128.011,Glutinic acid,C5H4O4
+33,128.0473,"(2Z,4Z)-2-hydroxyhexa-2,4-dienoic acid;2-Oxo-4E-hexenoic acid;6-hydroxy-2-hexynoic acid;C11354",C6H8O3
+34,128.0586,2-amino-4-cyano-butanoic acid;4-amino-4-cyano-butanoic acid,C5H8N2O2
+35,128.0837,"2,2-dimethyl-4-pentenoic acid;2,4-Dimethyl-2-pentenoic acid;2-butyl acrylic acid;2-isopropyl trans-crotonic acid;2-methyl-2E-hexenoic acid;2-methyl-2Z-hexenoic acid;3-Methyl-2E-hexenoic acid;3-Methyl-2Z-hexenoic acid;3-isopropyl-3-butenoic acid;4,4-dimethyl-2E-pentenoic acid;4,4-dimethyl-2Z-pentenoic acid;4Z-heptenoic acid;5-methyl-5-hexenoic acid;alpha-heptenoic acid;beta-heptenoic acid;delta-heptenoic acid;epsilon-heptenoic acid;gamma-heptenoic acid",C7H12O2
+36,128.1201,oct-1-en-3S-ol,C8H16O
+37,130.0266,Citraconic acid;Glutaconic acid;Itaconic acid;Mesaconic acid;cis-Glutaconic acid,C5H6O4
+38,130.063,2-keto-n-caproic acid;2oxo-3R-methyl-pentanoic acid;3-keto-n-caproic acid;3-oxo-4-methyl-pentanoic acid;3S-methyl-2-oxo-pentanoic acid;4-keto-n-caproic acid;5-keto-n-caproic acid,C6H10O3
+39,130.0994,"2-ethyl-2-methyl-butanoic acid;2-methyl-hexanoic acid;3,4-dimethyl valeric acid;3-methyl-hexanoic acid;4,4-dimethyl valeric acid;4-methyl-hexanoic acid;5-methyl-hexanoic acid;Heptylic acid;alpha,alpha-dimethyl valeric acid;alpha-ethyl valeric acid;beta,beta-dimethyl valeric acid",C7H14O2
+40,131.0219,Iminoaspartic acid,C4H5NO4
+41,131.0582,2-amino-4-oxo-pentanoic acid;2-oxo-5-amino-pentanoic acid;5-amino-levulinic acid,C5H9NO3
+42,131.0946,2-Amino-4-methylpentanoic acid;2S-Amino-3S-methylpentanoic acid;2S-amino-hexanoic acid;6-amino-hexanoic acid,C6H13NO2
+43,132.0059,2-hydroxy-2-butenedioic acid;Oxalacetic acid,C4H4O5
+44,132.0211,"2,4,6-Octatriynoic acid",C8H4O2
+45,132.0423,(S)-2-Acetolactate;(S)-4-hydroxy-2-oxopentanoic acid;2-Acetolactate;2-Hydroxy-4-oxopentanoic acid;3-hydroxy-3-methyl-2-oxo-butanoic acid;Ethylmalonic acid;Methylsuccinic acid;dimethyl-malonic acid,C5H8O4
+46,132.0786,"(2R,3S)-2-hydroxy-3-methylpentanoic acid;(2S,3R)-3-hydroxy-2-methylpentanoic acid;(S)-3-hydroxyhexanoic acid;2-ethyl-2-hydroxy-butyric acid;2-hydroxy-3-methyl-pentanoic acid;3R-hydroxy-hexanoic acid;5-hydroxy caproic acid;5R-hydroxy-hexanoic acid;6-hydroxy caproic acid;D-Leucic acid;DL-2-hydroxy caproic acid;DL-3-hydroxy caproic acid;DL-4-hydroxy caproic acid;L-Isoleucic acid;Leucinic acid;hydroxy-isocaproic acid",C6H12O3
+47,132.0899,"2,5-Diaminopentanoic acid",C5H12N2O2
+48,134.0368,"6E-Octene-2,4-diynoic acid;6Z-Octene-2,4-diynoic acid",C8H6O2
+49,134.0579,"(R)-2,3-Dihydroxy-isovalerate;2,3-Dihydroxy-2-methylbutanoic acid;2,3-dihydroxy-valeric acid",C5H10O4
+50,135.0532,"(+)-threo-2-Amino-3,4-dihydroxybutanoic acid",C4H9NO4
+51,136.0291,5-chloropentanoic acid,C5H9O2Cl
+52,137.9316,2-bromoacetic acid,C2H3BrO2
+53,139.9432,"(Z)-2,3-dichloroacrylic acid;3,3-dichloroacrylic acid",C3H2Cl2O2
+54,140.0837,"2-octynoic acid;2E,7-Octadienoic acid;4Z,7-octadienoic acid;5,7-octadienoic acid;7-octynoic acid;Alepramic acid",C8H12O2
+55,141.0426,2-aminomuconic acid semialdehyde,C6H7NO3
+56,141.9588,"3,3-dichloro-propionic acid",C3H4Cl2O2
+57,142.0266,"(2E,4Z)-2-hydroxy-6-oxohexa-2,4-dienoic acid;(2E,4Z)-4-hydroxy-6-oxohexa-2,4-dienoic acid;2-hydroxy-6-oxohexa-2,4-dienoic acid;cis,cis-muconic acid;trans-trans-muconic acid",C6H6O4
+58,142.063,7-hydroxy-5-heptynoic acid,C7H10O3
+59,142.0994,"(3E)-2-Propylpent-3-enoic acid;(3Z)-2-Propylpent-3-enoic acid;(E)-4-Octenoic acid;2,4-Dimethyl-2-hexenoic acid;2-ene-Valproic acid;2-ethyl-3E-hexenoic acid;2-methyl-2E-heptenoic acid;3-Methyl-2E-heptenoic acid;3-Methyl-2Z-heptenoic acid;3-Methyl-3E-heptenoic acid;3-Methyl-3Z-heptenoic acid;3-Methyleneheptanoic acid;3-tert-butyl-3-butenoic acid;4-ene-Valproic acid;6-methyl-5-heptenoic acid;7-octenoic acid;cis-alpha-octenoic acid;cis-beta-octenoic acid;cis-delta-octenoic acid;cis-epsilon-octenoic acid;cis-gamma-octenoic acid;trans-alpha-octenoic acid;trans-beta-octenoic acid;trans-delta-octenoic acid;trans-epsilon-octenoic acid",C8H14O2
+60,144.0423,(E)-hex-2-enedioic acid;2-methylideneglutaric acid;2E-methyl-glutaconic acid;3-hexenedioic acid;3E-methylglutaconic acid,C6H8O4
+61,144.0786,2-Keto-n-heptylic acid;3-butyrl propionic acid;4-propionyl butyric acid;5-aceto valeric acid;n-valeryl acetic acid,C7H12O3
+62,144.115,"2,2-dimethyl-hexanoic acid;2-Methylheptanoic acid;2-ethyl-2-methyl valeric ccid;3-methyl-heptanoic acid;3R-Methylheptanoic acid;4-ethyl-hexanoic acid;5-methyl-heptanoic acid;Caprylic acid;Isocaprylic acid;Valproic acid;alpha-ethyl caproic acid",C8H16O2
+63,145.0739,3-oxo-5S-amino-hexanoic acid,C6H11NO3
+64,145.1103,2-amino-heptanoic acid;2R-aminoheptanoic acid;2S-aminoheptanoic acid,C7H15NO2
+65,146.0579,"(R)-3-hydroxy-3-methyl-2-oxopentanoic acid;(R)-4-Dehydropantoate;(S)-3-hydroxy-3-methyl-2-oxopentanoic acid;(S)-4-hydroxy-2-oxohexanoic acid;2,2-dimethyl-succinic acid;2-methyl-glutaric acid;2-oxo-4-hydroxy-hexanoic acid;2S-acetyl-2-hydroxy-butanoic acid;3-hydroxy-3-methyl-2-oxo-pentanoic acid;Acetohydroxybutyrate;Adipic acid;Methylglutaric acid",C6H10O4
+66,146.0943,2-hydroxy enanthoic acid;4-hydroxy enanthoic acid;6-hydroxy-heptanoic acid;6R-hydroxy-heptanoic acid;delta-hydroxy enanthoic acid;omega-hydroxy enanthoic acid,C7H14O3
+67,147.0895,"(2R,3R,4R)-2-Amino-4-hydroxy-3-methylpentanoic acid",C6H13NO3
+68,148.0008,dihydroxy-fumaric acid,C4H4O6
+69,148.0194,2-oxo-4-methylthio-butanoic acid,C5H8O3S
+70,148.0372,2-dehydro-3-deoxy-D-arabinonic acid;2-dehydro-3-deoxy-L-arabinonic acid;2-hydroxyglutaric acid,C5H8O5
+71,148.0736,"(R) 2,3-Dihydroxy-3-methylvalerate;2,3-Dihydroxy-3-methylpentanoic acid;Mevalonic acid",C6H12O4
+72,149.9316,3-bromo-2E-acrylic acid,C3H3BrO2
+73,150.0351,2-Hydroxy-4-(methylthio)butanoic acid,C5H10O3S
+74,150.0528,2-Deoxyribonic acid;2-deoxy-ribonic acid,C5H10O5
+75,154.0994,"2,6-nonadienoic acid;2-nonynoic acid;2E,6Z-nonadienoic acid;2Z,4E-nonadienoic acid;4-nonynoic acid;5,7-nonadienoic acid;5-nonynoic acid;6-nonynoic acid;7-nonynoic acid;8-nonynoic acid;Dendryphiellic acid A",C9H14O2
+76,156.0786,"5-oxo-7-octenoic acid;8-hydroxy-5,6-Octadienoic acid",C8H12O3
+77,156.115,"2,6-Dimethyl-5-heptenoic acid;2-amyl 3-butenoic acid;2E-nonenoic acid;3Z-nonenoic acid;4E-nonenoic acid;6-methyl-5-octenoic acid;6E-nonenoic acid;6Z-Nonenoic acid;8-nonylenic acid;alpha-nonylenic acid;beta-nonylenic acid",C9H16O2
+78,157.0375,2-amino-muconic acid,C6H7NO4
+79,158.0215,"(Z)-5-oxohex-2-enedioic acid;2-methylene-4-oxo-pentanedioic acid;3-hydroxy-cis,cis-muconic acid;fumarylacetic acid",C6H6O5
+80,158.0368,Dehydromatricaric acid ,C10H6O2
+81,158.0579,hept-2-enedioic acid,C7H10O4
+82,158.0943,2-keto-n-caprylic acid;3-keto-n-caprylic acid;4-keto-n-caprylic acid;5-Keto-n-caprylic acid;6-keto-n-caprylic acid;7-Formylheptanoic acid;7-keto-n-caprylic acid;Mycinonic acid I,C8H14O3
+83,158.1307,"2-isopropyl-hexanoic acid;2-methyl-octanoic acid;3,5,5-trimethyl-hexanoic acid;3-methyl-octanoic acid;4-methyl-octanoic acid;5-methyl-octanoic acid;6S-methyl-octanoic acid;7:0(6Me,6Me);Anteisononanoic acid;Isononanoic acid;Pelargonic acid",C9H18O2
+84,159.0895,5-Acetamidovalerate,C7H13NO3
+85,159.1259,3-amino-octanoic acid;8-aminocaprylic acid;DL-2-amino-octanoic acid,C8H17NO2
+86,160.0372,3-oxo-adipic acid;Oxoadipic acid,C6H8O5
+87,160.0524,"Matricaric acid;Z,E-Matricaric acid;Z,Z-Matricaric acid;methyl 2Z,8Z-nonadien-4,6-diynoate",C10H8O2
+88,160.0736,"3,3-dimethyl-glutaric acid;3-methyl-adipic acid;Pimelic acid",C7H12O4
+89,160.1099,(S)-3-hydroxyoctanoic acid;2-hydroxy caprylic acid;2R-hydroxy-octanoic acid;3-Hydroxyvalproic acid;3-hydroxy caprylic acid;3-hydroxy-isoheptanoic acid;3R-hydroxy-octanoic acid;4-Hydroxyvalproic acid;4-hydroxy-octanoic acid;4R-hydroxy-octanoic acid;5-hydroxy-octanoic acid;6-hydroxy caprylic acid;7-hydroxy-octanoic acid;7R-hydroxy-octanoic acid;7S-hydroxy-octanoic acid;8-hydroxy caprylic acid,C8H16O3
+90,161.0688,Aminoadipic acid,C6H11NO4
+91,162.0448,7-chloro-2E-heptenoic acid,C7H11ClO2
+92,162.0528,"(R)-2-ethylmalic acid;2,3-dimethylmalic acid;2-Hydroxyadipic acid;2S-hydroxyadipic acid;3-hydroxy-adipic acid;3-hydroxymethyl-glutaric acid",C6H10O5
+93,162.0681,8Z-Dihydromatricaria acid;cis-Lachnophyllic acid,C10H10O2
+94,163.0667,S-(2-carboxypropyl)-Cysteamine,C6H13NO2S
+95,163.9473,2-bromo-2-butenoic acid,C4H5BrO2
+96,164.0473,"9-hydroxy-7E-Nonene-3,5-diynoic acid;9-hydroxy-7Z-Nonene-3,5-diynoic acid",C9H8O3
+97,164.0685,Digitoxic acid,C6H12O5
+98,164.0837,"2,4-decadiynoic acid",C10H12O2
+99,165.9629,3S-bromobutanoic acid,C4H7BrO2
+100,166.0994,"2,4,7-Decatrienoic acid;2E,4E,6Z-Decatrienoic acid;2E,6E,8E-decatrienoic acid;2E,6Z,8E-decatrienoic acid;2Z,4E,6Z-Decatrienoic acid;3E,5Z,7E-Decatrienoic acid;3Z,5E,7E-Decatrienoic acid",C10H14O2
+101,168.115,"2,3-decadienoic acid;2,5-decadienoic acid;2E,4E-decadienoic acid;2E,6E-decadienoic acid;2E,6Z-decadienoic acid;2E,7E-decadienoic acid;2E,7Z-decadienoic acid;2Z,4E-decadienoic acid;2Z,6E-decadienoic acid;2Z,6Z-decadienoic acid;3,4-decadienoic acid;3,5-decadienoic acid;3-decynoic acid;3E,5Z-decadienoic acid;3Z,5E-decadienoic acid;4,8-decadienoic acid;4-decynoic acid;4E,6E-decadienoic acid;4E,9-decadienoic acid;5-decynoic acid;5E,8E-decadienoic acid;5E,9-decadienoic acid;6-decynoic acid;6E,8E-decadienoic acid;7,9-decadienoic acid;7-decynoic acid;8-decynoic acid;9-decynoic acid;Aleprestic acid;Geranic acid;Nerolic acid;cis, cis-stillingic acid;trans, cis-stillingic acid",C10H16O2
+102,170.0943,4-oxo-2E-nonenoic acid;Dendryphiellic acid B,C9H14O3
+103,170.1307,"(E)-6-decenoic acid;2,7-dimethyl-6-octenoic acid;2-decylenic acid;3,7-dimethyl-2-octenoic acid;3-decylenic acid;3-methyl-2-nonenoic acid;3Z-decenoic acid;4Z-decenoic acid;5-Decenoic acid;8-Methylnonenoate;Caproleic acid;Citronellic acid;Isodecenoic acid;Obtusilic acid;cis-dec-2-enoic acid",C10H18O2
+104,171.8927,2-Bromo-2-chloroacetic acid,C2H2BrClO2
+105,172.0524,"4E-Undecene-6,8,10-triynoic acid;Drosophilin C;Drosophilin D",C11H8O2
+106,172.0736,"2-octenedioic acid;4,7-dioxo-octanoic acid;cis-4-octenedioic acid",C8H12O4
+107,172.1099,3-caproyl propionic acid;3-oxo-nonanoic acid;4-n-valeryl butyric acid;6-propionyl n-caproic acid;7-methyl-3-oxooctanoic acid;7-methyl-4-oxo-octanoic acid;7-methyl-6-oxo-octanoic acid;8-oxo-nonanoic acid;9-hydroxy-5Z-nonenoic acid;9-oxo-nonanoic acid;n-butyrl n-valeric acid;n-heptanoyl acetic acid,C9H16O3
+108,172.1463,2-methyl nonaoic acid;3-methyl-nonanoic acid;4-Ethyloctanoic acid;4-Methylpelargonic acid;7-methyl-nonanoic acid;Capric acid;Isocapric acid,C10H20O2
+109,173.1416,3R-aminononanoic acid;9-amino-nonanoic acid,C9H19NO2
+110,174.0528,"3-oxopimelic acid;6,7-dihydroxy-4-oxo-2-heptenoic acid",C7H10O5
+111,174.0681,"2E,8Z-Undecadiene-4,6-diynoic acid",C11H10O2
+112,174.0892,Ethyladipic acid;Suberic acid,C8H14O4
+113,174.1256,(+)-3-hydroxy pelargonic acid;(R)-2-hydroxynonanoic acid;2-hydroxy pelargonic acid;4-hydroxy pelargonic acid;6-hydroxy-nonanoic acid;7-hydroxy pelargonic acid;8-hydroxy-nonanoic acid;8R-hydroxy-nonanoic acid;9-hydroxy pelargonic acid,C9H18O3
+114,175.0481,2-amino-3-oxo-hexanedioic acid,C6H9NO5
+115,175.9876,"(E,E)-3-chloromuconic acid;(Z,Z)-3-chloromuconic acid;2-chloromuconic acid;3-chloro-cis,cis-muconic acid;3-chloromuconic acid",C6H5O4Cl
+116,176.0321,"(4S,5S)-4,5-dihydroxy-2,6-dioxohexanoic acid;2-hydroxy-3-oxoadipic acid;3-deoxy-D-glycero-hexo-2,5-diulosonic acid",C6H8O6
+117,176.0473,"10-hydroxy-2E,8E-Decadiene-4,6-diynoic acid;10-hydroxy-2E,8Z-Decadiene-4,6-diynoic acid;10-hydroxy-2Z,8Z-Decadiene-4,6-diynoic acid;10-hydroxy-8E-Decene-2,4,6-triynoic acid;8,9-Epoxy-2Z-decene-4,6-diynoic acid",C10H8O3
+118,176.0685,"2,3-dimethyl-3-hydroxy-glutaric acid;2-isopropyl-malic acid;3-propylmalic acid",C7H12O5
+119,176.1049,"6,8-dihydroxy-octanoic acid",C8H16O4
+120,178.0477,2-Keto-3-deoxy-D-gluconic acid;2-dehydro-3-deoxy-D-gluconic acid,C6H10O6
+121,178.063,"10-hydroxy-8E-Decene-4,6-diynoic acid;10-hydroxy-8Z-Decene-4,6-diynoic acid;8S-hydroxy-2-Decene-4,6-diynoic acid;8S-hydroxy-2E-Decene-4,6-diynoic acid;9-oxo-2,4,5,7-decatetraenoic acid;Antibiotic LA-1",C10H10O3
+122,180.0634,Fuconic acid ,C6H12O6
+123,182.0943,"10-oxo-5,8-decadienoic acid;5-oxo-7-decynoic acid",C10H14O3
+124,182.1307,"10-undecynoic acid;2-undecynoic acid;2E,4E-undecadienoic acid;3-Methyl-2Z,4E-decadienoic acid;3-undecynoic acid;4-undecynoic acid;5-undecynoic acid;6-undecynoic acid;7-undecynoic acid;8-undecynoic acid;9-undecynoic acid",C11H18O2
+125,184.0736,4-Formyl-3-(formylmethyl)-4-hexenoic acid,C9H12O4
+126,184.1099,(3R)-3-isopropenyl-6-oxoheptanoic acid;(3S)-3-isopropenyl-6-oxoheptanoic acid;(E)-10-Oxo-8-decenoic acid;5-oxo-7E-decenoic acid;9-oxo-2E-decenoic acid;9-oxo-2Z-decenoic acid;Curvulalic acid;Gallicynoic acid I;Ieodomycin D;Mycinonic acid II,C10H16O3
+127,184.1463,"2,7-dimethyl-6-nonenoic acid;2-hendecenoic acid;2Z-undecenoic acid;3E-undecenoic acid;4-ethyl-2-methyl-2-octenoic acid;4-undecenoic acid;5E-undecenoic acid;5Z-undecenoic acid;6-undecenoic acid;6Z-undecenoic acid;7-undecenoic acid;8Z-undecenoic acid;9-hendecenoic acid;9Z-undecenoic acid;Cascarillic acid;Undecylenic acid;cis-2-(2-hexylcyclopropyl)-acetic acid",C11H20O2
+128,185.9178,Iodoacetic acid,C2H3IO2
+129,186.0164,"2-carboxy-cis,cis-muconic acid;3-maleylpyruvic acid",C7H6O6
+130,186.1256,-;10-hydroxy-2E-decenoic acid;10-hydroxy-2Z-decenoic acid;10-hydroxy-8E-decenoic acid;10-oxo-decanoic acid;2-oxo capric acid;3-oxo capric acid;4-oxo capric acid;5-oxo capric acid;6-hydroxy-3-isopropenylheptanoic acid;6-oxo capric acid;7-oxo-decanoic acid;8-oxo capric acid;9-hydroxy-2E-decenoic acid;9-oxo capric acid;9R-hydroxy-2E-decenoic acid;9S-hydroxy-2E-decenoic acid,C10H18O3
+131,186.162,"2-methyl-decanoic acid;3,3-dimethyl-nonanoic acid;3-methyl-decanoic acid;4,8-dimethyl-nonanoic acid;4-methyl-decanoic acid;5-methyl-decanoic acid;5R-methyl-decanoic acid;6-methyl-decanoic acid;7-methyl-decanoic acid;9-methyl-decanoic acid;9:0(8Me,8Me);Anteisoundecanoic acid;Undecylic acid",C11H22O2
+132,187.1208,7-Keto-8-aminopelargonic acid;7-oxo-8-amino-nonanoic acid,C9H17NO3
+133,187.1572,10-amino-decanoic acid;2-amino-decanoic acid;3S-aminodecanoic acid;9-amino-decanoic acid,C10H21NO2
+134,188.0321,"(2E)-2-(methoxycarbonylmethyl)but-2-enedioic acid;but-1-ene-1,2,4-tricarboxylic acid",C7H8O6
+135,188.0837,"5,8,11-dodecatriynoic acid",C12H12O2
+136,188.1049,3-Methylsubericacid;Azelaic acid,C9H16O4
+137,188.1412,"10-hydroxy capric acid;2-hydroxy capric acid;2S-hydroxy-decanoic acid;3-hydroxy-decanoic acid;3R-hydroxy-decanoic acid;3S-hydroxy-decanoic acid;4-hydroxy capric acid;5-hydroxy capric acid;6-hydroxy-3,7-dimethyloctanoic acid;6-hydroxy-decanoic acid;7-hydroxy-decanoic acid;9-hydroxy-decanoic acid;9R-hydroxy-decanoic acid;9S-hydroxy-decanoic acid",C10H20O3
+138,188.1525,"7,8-diaminononanoic acid",C9H20N2O2
+139,190.0266,"Deca-2,4,6-triynedioic acid",C10H6O4
+140,190.0477,"2,4-dihydroxy-2-heptenedioc acid;3,7-dideoxy-D-threo-hepto-2,6-diuolosonic acid;4-hydroxy-2-oxo-Heptanedioic acid",C7H10O6
+141,190.063,"Nemotinic acid;methyl 8S,9R-epoxy-2Z-decen-4,6-diynoate;methyl 8S,9S-epoxy-2Z-decen-4,6-diynoate",C11H10O3
+142,190.0841,3-hydroxy-suberic acid,C8H14O5
+143,190.0954,diamino-pimelic acid,C7H14N2O4
+144,190.0994,"3,5,7,9,11-dodecapentaenoic acid;Ajenoic acid",C12H14O2
+145,190.1369,10-fluoro-capric acid,C10H19FO2
+146,191.0794,"2-amino-2,3,7-trideoxy-D-lyxo-hept-6-ulosonic acid",C7H13NO5
+147,192.027,"2,5-didehydro-D-gluconic acid;diketo-gulonic acid",C6H8O7
+148,192.0423,"2,10-dihydroxy-4,6,8-decatriynoic acid",C10H8O4
+149,192.115,"2E,4E,8Z,10E-dodecatetraenoic acid;2E,6E,8E,10E-dodecatetraenoic acid;2E,6E,8Z,10E-dodecatetraenoic acid;5,11-dodecadiynoic acid",C12H16O2
+150,194.0579,"2E,4E,6E,8E-Decatetraenedioic acid;2E,4E,6Z,8Z-Decatetraenedioic acid;2E,4Z,6Z,8Z-Decatetraenedioic acid",C10H10O4
+151,195.9371,bromosuccinic acid,C4H5O4Br
+152,196.1099,"11-oxo-undeca-5,8-dienoic acid;11-oxo-undeca-5,9-dienoic acid;5S,6S-epoxy-7-undecynoic acid",C11H16O3
+153,196.1463,"10-dodecynoic acid;11-dodecynoic acid;2E,4E-dodecadienoic acid;2E,6Z-dodecadienoic acid;2E,8E-dodecadienoic acid;2E,8Z-dodecadienoic acid;2Z,8E-dodecadienoic acid;2Z,8Z-dodecadienoic acid;3-dodecynoic acid;4-dodecynoic acid;5-dodecynoic acid;5E,7E-dodecadienoic acid;6-dodecynoic acid;7-dodecynoic acid;7Z,9E-dodecadienoic acid;8-dodecynoic acid;8E,10E-dodecadienoic acid;8Z,10E-dodecadienoic acid;9-dodecynoic acid;Aleprylic acid;cis,cis-dodeca-3,6-dienoic acid",C12H20O2
+154,197.9178,3-iodo-2E-acrylic acid,C3H3IO2
+155,198.0681,Isomycomycin;Mycomycin,C13H10O2
+156,198.162,10-Lauroleic acid;10Z-dodecenoic acid;11-lauroleic acid;2-lauroleic acid;2E-Lauroleic acid;2Z-dodecenoic acid;5-methyl-2-undecenoic acid;5E-dodecenoic acid;6-lauroleic acid;6Z-dodecenoic acid;7-lauroleic acid;7Z-dodecenoic acid;9-lauroleic acid;Cyclopropanenonanoic acid;Lauroleic acid;Lauroleinic acid;Linderic acid;cis-dodec-3-enoic acid;trans-dodec-3-enoic acid,C12H22O2
+157,200.0321,"4-fumarylacetoacetic acid;5-formyl-2-hydroxyhepta-2,4-dienedioic acid;Maleylacetoacetic acid",C8H8O6
+158,200.1049,"2,6R-Dimethyl-2E-octen-1,8-dioic acid;2E-Decenedioic acid;3,6-dioxo-decanoic acid;4E-Decenedioic acid;4Z-Decenedioic acid;6,9-dioxo-decanoic acid;Callosobruchusic acid;Cladosporacid E",C10H16O4
+159,200.1412,(S)-9-Hydroxy-10-undecenoic acid;2-hydroxy-10-undecenoic acid;2-oxo-undecanoic acid;2R-hydroxy-10-undecenoic acid;2S-hydroxy-10-undecenoic acid;3-capryl propionic acid;4-heptanoyl butyric acid;8-propionyl caprylic acid;9-acetyl pelargonic acid;Pelargonyl acetic acid,C11H20O3
+160,200.1776,"2-methyl-undecanoic acid;3-methyl-undecanoic acid;3R-methyl-undecanoic acid;4,9-dimethyldecanoic acid;4-methyl-undecanoic acid;5-methyl-undecanoic acid;6-methyl-undecanoic acid;8-methyl-undecanoic acid;9-methyl-undecanoic acid;Isolauric acid;Lauric acid",C12H24O2
+161,201.1729,11-amino-undecanoic acid,C11H23NO2
+162,202.0114,"4-carboxy-2-hydroxy-cis,cis-muconic acid",C7H6O7
+163,202.1205,"2,6-Dimethyl-1,8-octanedioic acid;9,10-dihydroxy-2-decenoic acid;Sebacic acid",C10H18O4
+164,202.1569,10-hydroxy-undecanoic acid;2-hydroxy hendecanoic acid;2-methoxydecanoic acid;3-hydroxy-undecanoic acid;3S-hydroxy-undecanoic acid;4-hydroxy-undecanoic acid;omega-hydroxy hendecanoic acid,C11H22O3
+165,203.1962,Lauric acid(d3),C12H21D3O2
+166,203.9786,7-bromo-5-heptynoic acid,C7H9BrO2
+167,204.0786,Odyssic acid,C12H12O3
+168,204.0998,2-hydroxy-7-methyl-Octanedioic acid,C9H16O5
+169,204.1362,"3,10-dihydroxydecanoic acid;6,6-dimethoxy-octanoic acid",C10H20O4
+170,205.9942,3-bromo-2E-heptenoic acid;3-bromo-2Z-heptenoic acid,C7H11BrO2
+171,206.0427,"(2R,3S)-2-methylcitric acid;(2S,3R)-3-hydroxybutane-1,2,3-tricarboxylic acid",C7H10O7
+172,206.0435,Lipoic acid,C8H14O2S2
+173,206.0579,"methyl 10-hydroxy-8,9-epoxy-2Z-decen-4,6-diynoate",C11H10O4
+174,206.1307,7-phenyl heptanoic acid,C13H18O2
+175,208.0219,Garcinia acid,C6H8O8
+176,208.0592,(S)-dihydrolipoic acid,C8H16O2S2
+177,208.1099,"12-oxo-5E,8E,10Z-dodecatrienoic acid;12-oxo-dodeca-5,8,10-trienoic acid",C12H16O3
+178,209.9487,"2,4-dichloro-cis,cis-muconic acid;2,4-dichloromuconic acid",C6H4O4Cl2
+179,210.0376,Galactaric acid;Glucaric acid,C6H10O8
+180,210.1256,2-furan-octanoic acid,C12H18O3
+181,210.162,"10-tridecynoic acid;11-Methyl-2Z,5Z-dodecadienoic acid;11-tridecynoic acid;12-tridecynoic acid;3-tridecynoic acid;3E,5E-tridecadienoic acid;3Z,5E-tridecadienoic acid;4-tridecynoic acid;5-tridecynoic acid;6-tridecynoic acid;7-tridecynoic acid;8-tridecynoic acid;9-tridecynoic acid",C13H22O2
+182,212.0837,"(-)-Mycomycin;2E,4E,6E,12E-Tetradecatetraene-8,10-diynoic acid;2E,4E,6E,12Z-Tetradecatetraene-8,10-diynoic acid",C14H12O2
+183,212.1412,"10-Hydroxy-3,7-dimethyl-2E,6E-decadienoic acid;12-hydroxy-3Z,6Z-dodecadienoic acid;12-oxo-10Z-dodecenoic acid;7-oxo-11-Dodecenoic acid;8-Hydroxy-4,8-dimethyl-4E,9-decadienoic acid;9Z-traumatiin;Traumatin",C12H20O3
+184,212.1776,"11-methyl-2E-dodecenoic acid;11-methyl-2Z-dodecenoic acid;12-tridecenoic acid;13:1(8);2-methyl-2-dodecenoic acid;2-methylene dodecanoic acid;2Z-tridecenoic acid;3,4-methylenedodecanoic acid;3-n-decyl acrylic acid;7-tridecenoic acid;9Z-tridecenoic acid;Isotridecenoic acid;Lyngbyoic acid;cis-4-(2-hexylcyclopropyl)-butanoic acid",C13H24O2
+185,214.0994,"4E,6E,12Z-Tetradecatriene-8,10-diynoic acid",C14H14O2
+186,214.1205,Pantheric Acid C,C11H18O4
+187,214.1569,10-hydroxy-11-dodecenoic acid;11-oxo-dodecanoic acid;12-hydroxy-10-dodecenoic acid;12-hydroxy-3Z-dodecenoic acid;12-oxo-dodecanoic acid;2-oxo-dodecanoic acid;3-oxo-dodecanoic acid;3R-hydroxy-5Z-dodecenoic acid;4-keto lauric acid;5-Oxododecanoic acid;7-Oxododecanoic acid;9-keto lauric acid,C12H22O3
+188,214.1933,"11:0(10Me,10Me);2,6-dimethyl-undecanoic acid;2-methyl lauric acid;2R-methyl-dodecanoic acid;3-methyl lauric acid;4-methyl lauric acid;4S-methyl-dodecanoic acid;5-methyl lauric acid;6-methyl lauric acid;7-methyl lauric acid;8-methyl lauric acid;9-methyl lauric acid;Anteisotri­decanoic acid;Isotridecanoic acid;Tridecylic acid",C13H26O2
+189,215.1158,"2-amino-8-oxo-9,10-epoxy-decanoic acid",C10H17NO4
+190,215.1885,12-amino-dodecanoic acid,C12H25NO2
+191,215.8422,"2,2-dibromoacetic acid",C2H2Br2O2
+192,216.115,"10E,12E-tetradecadiene-4,6-diynoic acid;7E,11E-tetradecadiene-5,9-diynoic acid;Anacyclic acid",C14H16O2
+193,216.1362,Undecanedioic acid,C11H20O4
+194,216.1725,11-hydroxy-dodecanoic acid;11R-hydroxy-dodecanoic acid;2R-hydroxylauric acid;2S-hydroxylauric acid;3R-hydroxy-dodecanoic acid;3S-hydroxy-dodecanoic acid;4-hydroxy lauric acid;4R-hydroxylauric acid;4S-hydroxylauric acid;7-hydroxy-dodecanoic acid;9-hydroxy-dodecanoic acid;Sabinic acid;alpha-hydroxy lauric acid;beta-hydroxylauric acid;xi-5-Hydroxydodecanoic acid,C12H24O3
+195,218.1154,2-hydroxy-decanedioic acid;3-hydroxy-sebacic acid,C10H18O5
+196,218.1307,"2-[5]-ladderane ethanoic acid;5,7,9,11,13-tetradecapentaenoic acid",C14H18O2
+197,218.1518,"9,9-dimethoxy-nonanoic acid",C11H22O4
+198,218.8948,2-chloro-2-iodoacetamide,C2H3ClINO
+199,220.0219,"2-hydroxy-4-oxobutane-1,2,4-tricarboxylic acid",C7H8O8
+200,220.1463,"2-[3]-ladderane ethanoic acid;Tetradecan-7,9-diynoic acid",C14H20O2
+201,222.0892,"2E,4E,8E,10E-Dodecatetraenedioic acid",C12H14O4
+202,224.0604,Aurantoic acid,C12H13O2Cl
+203,224.0685,4-methyl-5-carboxyethyl-2-furanacrylic acid,C11H12O5
+204,224.1412,"11-hydroxy-4-methyl-2E,4E,6E-dodecatrienoic acid;13-Oxo-9,11-tridecadienoic acid",C13H20O3
+205,224.1776,"10-tetradecynoic acid;10Z,12E-tetradecadienoic acid;11-tetradecynoic acid;12-tetradecynoic acid;13-tetradecynoic acid;14:2(6,9);2E,4E-tetradecadienoic acid;3,4-tetradecadienoic acid;3-tetradecynoic acid;3Z,5E-tetradecadienoic acid;3Z,5Z-tetradecadienoic acid;4-tetradecynoic acid;5,8-tetradecadienoic acid;5-tetradecynoic acid;6-tetradecynoic acid;7-tetradecynoic acid;8-tetradecynoic acid;9-tetradecynoic acid;Alepric acid;Goshuyic acid;Megatomic acid",C14H24O2
+206,225.9436,"2,5-Dichloro-4-oxohex-2-enedioate",C6H4Cl2O5
+207,225.9491,Ethyl 3-iodo-2E-acrylate,C5H7IO2
+208,226.0841,"3,4-dimethyl-5-carboxymethyl-2-furanpropanoic acid;3-(3-methylfuran-2,5-diyl)-dipropionic acid",C11H14O5
+209,226.1205,"3,7-Dimethyl-2E,6E-decadien-1,10-dioic acid ",C12H18O4
+210,226.1933,"2,4-dimethyl-2E-dodecenoic acid;2-tetradecenoic acid;2Z-tetradecenoic acid;3E-tetradecenoic acid;5,6-methylene-tridecanoic acid;5-methyl-2E-tridecenoic acid;5E-Tetradecenoic acid;6Z-tetradecenoic acid;7E-tetradecenoic acid;7Z-tetradecenoic acid;8Z-tetradecenoic acid;Myristelaidic acid;Myristoleic acid;Physeteric acid;Tsuzuic acid;cis-tetradec-11-enoic acid;trans-tetradec-11-enoic acid",C14H26O2
+211,227.2249,Myristamide,C14H29NO
+212,227.8422,"3,3-dibromoacrylic acid",C3H2Br2O2
+213,228.0399,Mevalonate-P,C6H13O7P
+214,228.0998,Asperitaconic acid C,C11H16O5
+215,228.1362,"2Z-Dodecenedioic acid;3Z-dodecenedioic acid;9,12-dioxo-dodecanoic acid;9-hydroxy-traumatin;Cladosporacid D;Gallicynoic acid G;Ieodomycin C;Traumatic acid",C12H20O4
+216,228.1725,10-keto tridecanoic acid;11-Hydroxy-9-tridecenoic acid;12-keto tridecanoic acid;2-keto tridecanoic acid;3-oxo-tridecanoic acid;7(S)-methoxy-dodedec-4E-enoic acid;7-methoxy-dodec-4-enoic acid,C13H24O3
+217,228.2089,"2,4,6,8-tetramethyl-decanoic acid;2,4-dimethyl-dodecanoic acid;2,5-dimethyl-dodecanoic acid;2,6,10-trimethyl-undecanoic acid;2,6-dimethyl-dodecanoic acid;2-ethyl-dodecanoic acid;2-methyl-tridecanoic acid;3,5-Dimethyldodecanoic acid;3-methyl-tridecanoic acid;3R,5S-Dimethyldodecanoic acid;4,10-dimethyldodecanoic acid;4,11-dimethyldodecanoic acid;4,8-dimethyl-dodecanoic acid;4-methyl-tridecanoic acid;6-ethyl-dodecanoic acid;9-methyl-tridecanoic acid;Anteisomyristic acid;Isomyristic acid;Myristic acid",C14H28O2
+218,229.0586,"5-(L-alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",C9H11NO6
+219,229.2042,13-amino-tridecanoic acid;2-amino-tridecanoic acid;2R-aminotridecanoic acid;2S-amino-tridecanoic acid,C13H27NO2
+220,230.1307,"15-octadecene-9,11,13-triynoic acid;6,8,10-Pentadecatriynoic acid  ",C15H18O2
+221,230.1518,Cladosporacid A;Cladosporacid B;Cladosporacid C;Dodecanedioic acid,C12H22O4
+222,230.1882,13-hydroxy-tridecanoic acid;2-hydroxy-tridecanoic acid;3-hydroxy-tridecanoic acid;3R-hydroxy-tridecanoic acid;4-hydroxy-tridecanoic acid,C13H26O3
+223,231.2275,Myristic acid(d3),C14H25D3O2
+224,232.1099,"6-hydroxytetradeca-7,8-dien-10,12-diynoic acid",C14H16O3
+225,232.1463,"10E-Pentadecen-6,8-diynoic acid",C15H20O2
+226,233.1739,Hypusine,C10H23N3O3
+227,234.0255,3-bromo-2E-nonenoic acid;3-bromo-2Z-nonenoic acid,C9H15BrO2
+228,234.1387,12-chloro-dodecanoic acid,C12H23ClO2
+229,234.162,9-phenyl nonanoic acid,C15H22O2
+230,236.0412,2-bromo-nonanoic acid;9-bromo-nonanoic acid,C9H17BrO2
+231,238.0841,"3,4-dimethyl-5-carboxyethyl-2-furanacrylic acid;3-carboxy-4-methyl-5-propylene-2-furanpropanoic acid",C12H14O5
+232,238.1569,"3-(3,4-dimethyl-5-pentylfuran-2-yl)-propanoic acid;5-oxo-6E,8E-tetradecadienoic acid;5-oxo-6E,8Z-tetradecadienoic acid;7-oxo-11E,13-Tetradecadienoic acid",C14H22O3
+233,238.1933,"14-pentadecynoic acid;3-pentadecynoic acid;3S,7,11-Trimethyl-6,10-dodecadienoic acid",C15H26O2
+234,240.0998,"2-carboxyethyl-5-furanpentanoic acid;3,4-dimethyl-5-carboxyethyl-2-furanpropanoic acid;3-carboxy-4-methyl-5-propyl-2-furanpropanoic acid;3-methyl-5-carboxypropyl-2-furanpropanoic acid",C12H16O5
+235,240.1362,Mycinonic acid III,C13H20O4
+236,240.1514,"(7E,9E,15E)-heptadeca-7,9,15-trien-11,13-diyn-4-one",C17H20O
+237,240.1725,7-oxo-11E-Tetradecenoic acid;7-oxo-11Z-Tetradecenoic acid,C14H24O3
+238,240.2089,"10Z-pentadecenoic acid;14-pentadecenoic acid;15:1(7Z);15:1(9Z);2,5-dimethyl-2E-tridecenoic acid;2-pentadecenoic acid;2Z-pentadecenoic acid;5,6-methylenetetradecanoic acid;5Z-pentadecenoic acid;6-pentadecenoic acid;6Z-pentadecenoic acid",C15H28O2
+239,242.1307,"6E,8E,14E-Hexadecatriene-10,12-diynoic acid;6E,8E,14Z-Hexadecatriene-10,12-diynoic acid",C16H18O2
+240,242.1518,Ieodomycin A,C13H22O4
+241,242.1671,"(9E,15E)-heptadec-9,15-trien-11,13-diyn-4-one",C17H22O
+242,242.1882,10-keto myristic acid;12-hydroxy-13-tetradecenoic acid;12-methyl-10-oxo-tridecanoic acid;13-keto myristic acid;14-hydroxy-12-tetradecenoic acid;14-hydroxy-12Z-tetradecenoic acid;14-hydroxy-5Z-tetradecenoic acid;2-oxo-tetradecanoic acid;3-oxo-tetradecanoic acid;4-keto myristic acid;6-oxo-tetradecanoic acid;7-Oxotetradecanoic acid,C14H26O3
+243,242.2246,"11-methyl-tetradecanoic acid;13:0(12Me,12Me);2-methyl-tetradecanoic acid;3,5-Dimethyltridecanoic acid;3-methyl-tetradecanoic acid;4,12-dimethyl-tridecanoic acid;Farnesylic acid;Isopentadecylic acid;Pentadecylic acid;Sarcinic acid",C15H30O2
+244,243.2198,2-amino-tetradecanoic acid,C14H29NO2
+245,243.9097,"2,3,5-trichloro-cis,cis-muconic acid",C6H3O4Cl3
+246,244.0736,5-((E)-hept-4-en-2-yne-1-one-1-yl)-2-furanacrylic acid,C14H12O4
+247,244.0947,Tensyuic acid A;Tensyuic acid F,C11H16O6
+248,244.1059,"(2S,4S)-Pinnatanine",C10H16N2O5
+249,244.1311,Asperitaconic acid A,C12H20O5
+250,244.1463,"6E,8E,12E,14E-Hexadecatetraen-10-ynoic acid;6E,8E,12E-Hexadecatrien-10-ynoic acid",C16H20O2
+251,244.1675,2-methyl-dodecanedioic acid;3-methyl-dodecanedioic acid;4-methyl-dodecanedioic acid;6-methyl-dodecanedioic acid;Brassylic acid;Cladosporester A;Cladosporester B,C13H24O4
+252,244.2038,10-hydroxy-tetradecanoic acid;11-hydroxy-tetradecanoic acid;11S-hydroxy-tetradecanoic acid;2-Hydroxymyristic acid;3-hydroxy-tetradecanoic acid;3R-hydroxy-tetradecanoic acid;3S-hydroxy-tetradecanoic acid;5-hydroxy-tetradecanoic acid;6-hydroxy-tetradecanoic acid;9-Hydroxymyristic acid;Butolic acid;alpha-hydroxy myristic acid;omega-hydroxy myristic acid,C14H28O3
+253,245.2431,Pentadecylic acid(d3),C15H27D3O2
+254,246.0892,Corticrocin,C14H14O4
+255,246.1256,Phomallenic acid A,C15H18O3
+256,246.1467,3-hydroxy-dodecanedioic acid,C12H22O5
+257,246.162,"11Z-Hexadecen-7,9-diynoic acid;4-[5]-ladderane-butanoic acid;4Z,7Z,9E,11E,13Z-hexadecapentaenoic acid",C16H22O2
+258,246.1995,14-fluoro-myristic acid,C14H27FO2
+259,248.0685,"methyl 10-acetoxy-8,9-epoxy-2Z-decen-4,6-diynoate",C13H12O5
+260,248.1776,"(6Z,10E)-hexadec-6,10-dien-8-ynoic acid;16:4(4Z,7Z,10Z,13Z);16:4(6,9,12,15);16:4(6Z,9Z,12Z,15Z);2,6-hexadecadiynoic acid;2E,6Z,8Z,12E-hexadecatetraenoic acid;2E,6Z,8Z,12Z-hexadecatetraenoic acid;2Z,5Z,8Z,11Z-Hexadecatetraenoic acid;2Z,6Z,8Z,12E-hexadecatetraenoic acid;2Z,6Z,8Z,12Z-hexadecatetraenoic acid;3,9-hexadecadiynoic acid;4,7,11,14-hexadecatetraenoic acid;4,8,12,16-hexadecatetraenoic acid;4-[3]-ladderane-butanoic acid;7,10-hexadecadiynoic acid;8,10-hexadecadiynoic acid",C16H24O2
+261,250.0568,10-bromo-decanoic acid;2-bromo-decanoic acid;9-bromo-decanoic acid,C10H19BrO2
+262,250.1569,Mumiamicin,C15H22O3
+263,250.1933,"(Z)-hexadec-13-en-11-ynoic acid;11-(2-cyclopenten-1-yl)-4Z-Undecenoic acid;11-(2-cyclopenten-1-yl)-9Z-undecenoic acid;16:3(6Z,9Z,12Z);4,7,10,13-Hexadecatetraenoic acid;4,7,10-hexadecatrienoic acid;5E,8E,11E-hexadecatrienoic acid;6,9,12-Hexadecatrienoic acid;6,9,12-hexadecatrienoic acid;6Z,10Z,14Z-Hexadecatrienoic acid;7,10,13-hexadecatrienoic acid;7Z,11Z,14Z-Hexadecatrienoic acid;9,12,15-hexadecatrienoic acid;9Z,12Z,15Z-hexadecatrienoic acid;Hiragonic acid;Manaoic acid",C16H26O2
+264,252.1725,"5-(3-methyl-5-pentylfuran-2-yl)-pentanoic acid;9-(3,5-dimethylfuran-2-yl)-nonanoic acid",C15H24O3
+265,252.2089,"10-hexadecynoic acid;10Z,12E-hexadecadienoic acid;14-methyl-5Z,9Z-pentadecadienoic acid;2-hexadecynoic acid;2E,4E-hexadecadienoic acid;2E,4Z-hexadecadienoic acid;3Z,9Z-hexadecadienoic acid;4-hexadecynoic acid;4Z,7Z-Hexadecadienoic acid;5Z,9Z-hexadecadienoic acid;6,9-hexadecadienoic acid;6Z,9Z-hexadecadienoic acid;7,10-hexadecadienoic acid;7-hexadecynoic acid;7Z,10Z-hexadecadienoic acid;8Z,10Z-hexadecadienoic acid;9,12-hexadecadienoic acid;Hydnocarpic acid;Palmitolinoleic acid",C16H28O2
+266,254.1154,"3,4-dimethyl-5-carboxyethyl-2-furanbutanoic acid;4-methyl-5-carboxyethyl-2-furanpentanoic acid;methyl 4-[2-(2-formyl-vinyl)-3-hydroxy-5-oxo-cyclopentyl]-butanoate",C13H18O5
+267,254.1518,Gallicynoic acid A,C14H22O4
+268,254.2246,"-;10-hexadecenoic acid;11-Cycloheptylnonanoic acid;13-hexadecenoic acid;13Z-hexadecenoic acid;14-methyl-4-pentadecenoic acid;14-methyl-6Z-pentadecenoic acid;15:1(4)(13Me);16:1(4);16:1(5Z);2,4-dimethyl-2E-tetradecenoic acid;2-hexyl-2-decenoic acid;2Z-hexadecenoic acid;3E-hexadecenoic acid;6,7-methylene-pentadecanoic acid;6-isopentyl-9-methyl-5-decenoic acid;6E-Hexadecenoic acid;7Z-palmitoleic acid;8E-hexadecenoic acid;8Z-Hexadecenoic acid;Gaidic acid;Hypogeic acid;Lycopodic acid;Sapienic acid;cis-10-palmitoleic acid;cis-9-palmitoleic acid;cis-Palmitvaccenic acid;trans-9-palmitoleic acid",C16H30O2
+269,256.0947,3-carboxy-4-methyl-5-(1-hydroxypropyl)-2-furanpropionic acid,C12H16O6
+270,256.2038,11-keto pentadecanoic acid;14-keto pentadecanoic acid;2-oxo-pentadecanoic acid;3-oxo-pentadecanoic acid;4-keto pentadecanoic acid;Lyngbic acid,C15H28O3
+271,256.2402,"14:0(10Me,13Me);2,12-dimethyltetradecanoic acid;2,13-dimethyltetradecanoic acid;2,4-dimethyl-tetradecanoic acid;2,6-dimethyl-tetradecanoic acid;2,8-dimethyl-tetradecanoic acid;2-ethyl-2-butyl-decanoic acid;2-heptyl-nonanoic acid;2-hexyl-decanoic acid;2-propyl-tridecanoic acid;3,5-dimethyl-tetradecanoic acid;3-ethyl-3-methyl-tridecanoic acid;3-methyl-pentadecanoic acid;4,12-dimethyltetradecanoic acid;4,13-dimethyltetradecanoic acid;4,8,12-trimethyl-tridecanoic acid;4-hexyl-decanoic acid;6-ethyl-tetradecanoic acid;Anteisohexa­decanoic acid;Isopalmitic acid;Neopalmitic acid;Palmitic acid",C16H32O2
+272,258.1103,Tensyuic acid B,C12H18O6
+273,258.162,"5,8,11-heptadecatriynoic acid;8E,15E-heptadecadien-11,13-diynoic acid;Phomallenic acid B",C17H22O2
+274,258.1831,2-methyl-tridecanedioic acid;3-methyl-tridecanedioic acid;4-methyl-tridecanedioic acid;Tetradecanedioic acid,C14H26O4
+275,258.2195,15-hydroxy-pentadecanoic acid;2-hydroxy-pentadecanoic acid;2-methoxytetradecanoic acid;2R-hydroxy-pentadecanoic acid;3-hydroxy-pentadecanoic acid;3R-hydroxy-pentadecanoic acid;3R-hydroxymyristic acid methyl ester;3S-hydroxy-pentadecanoic acid;4-hydroxy-pentadecanoic acid;9-hydroxy-pentadecanoic acid;Convolvulinolic acid,C15H30O3
+276,259.2588,Palmitic acid(d3),C16H29D3O2
+277,260.1776,11-phenyl-7E-undecenoic acid,C17H24O2
+278,260.1988,2-methoxy-4-oxatetradecanoic acid;Ipurolic acid,C14H28O4
+279,260.214,6-[1]-ladderane hexanol,C18H28O
+280,262.1416,Phaseolic acid,C12H22O6
+281,262.1933,"(7Z,11E)-heptadec-7,11-dien-9-ynoic acid;10E,16-heptadecadien-8-ynoic acid;11-Phenylundecanoic acid;14:4(2E,4E,8E,10E)(4Me,6Me[S],12Me[S]);14:4(2E,4E,8E,10E)(6Me[S],9Me,12Me[S]);5,8-heptadecadiynoic acid;6,9-heptadecadiynoic acid;7,10-heptadecadiynoic acid",C17H26O2
+282,262.8443,2-Bromo-2-iodoacetamide,C2H3BrINO
+283,263.8283,2-Bromo-2-iodoacetic acid,C2H2BrIO2
+284,264.0725,11-bromo-undecanoic acid,C11H21BrO2
+285,264.1725,"all-trans-7-hydroxyhexadeca-2,4,8,10-tetraenoic acid",C16H24O3
+286,264.2089,"(Z)-heptadec-14-en-11-ynoic acid;5Z,9Z,12Z-heptadecatrienoic acid;Norlinolenic acid;Pyrulic acid",C17H28O2
+287,266.0919,10-phospho-2E-decenoic acid,C10H19O6P
+288,266.1154,"3,4-dimethyl-5-carboxyethylene-2-furanpentanoic acid",C14H18O5
+289,266.1307,Protegenin A,C18H18O2
+290,266.1882,"(2E,6E,10R,11S)-10,11-epoxy-3,7,11-trimethyltrideca-2,6-dienoic acid;-;10,11-epoxy-3,7,11-trimethyl-2E,6E-tridecadienoic acid;13,14-epoxy-7Z,10Z-Hexadecenoic acid;5-(3,4-dimethyl-5-pentylfuran-2-yl)-pentanoic acid;7-Hydroxy-10E-Hexadecen-8-ynoic acid;9S-HHTrE;Tetranor-12R-HETE",C16H26O3
+291,266.2246,"-;12-heptadecynoic acid;16-heptadecynoic acid;7-heptadecynoic acid;8-heptadecynoic acid;9,12-Heptadecadienoic acid ;9-heptadecynoic acid;Methyl 7Z,11Z-Hexadecadienoate;Norlinoleic acid;anteiso-heptadeca-9,13-dienoic acid",C17H30O2
+292,268.1311,"3,4-dimethyl-5-carboxyethyl-2-furanpentanoic acid;3-carboxy-4-methyl-5-pentyl-2-furanpropanoic acid",C14H20O5
+293,268.1463,"(E)-octadeca-15,17-dien-9,11,13-triynoic acid;5,8,11,14-Octadecatetraynoic acid;Protegenin C",C18H20O2
+294,268.1675,Gallicynoic acid B,C15H24O4
+295,268.1827,"(4E,10E,12E)-nonadec-4,10,12-trien-6,8-diyn-2-one",C19H24O
+296,268.2038,"-;10,11-Epoxy-7Z-hexadecenoic acid;9-oxo-7E-hexadecenoic acid",C16H28O3
+297,268.2402,"10-methyl-9-hexadecenoic acid;10E-heptadecenoic acid;10Z-heptadecenoic acid;11-Cycloheptyldecanoic acid;11-Cyclohexylundecanoic acid;11-Heptadecenoic acid;14-methyl-8E-hexadecenoic acid;14R-methyl-8Z-hexadecenoic acid;14S-methyl-8Z-hexadecenoic acid;15-methyl-11-Hexadecenoic acid;15-methyl-11Z-hexadecenoic acid;16-heptadecenoic acid;16:1(10Z)(15Me);16:1(6Z)(15Me);16:1(8Z)(15Me);16:1(9Z)(15Me);17:1(11Z);17:1(12Z);2-heptadecylenic acid;2Z-heptadecenoic acid;3-heptadecenoic acid;6Z-heptadecenoic acid;7,8-methylenehexanoic acid;7-heptadecenoic acid;7-methyl-6E-hexadecenoic acid;7R,8S-methylenehexanoic acid;7Z-heptadecenoic acid;8E-heptadecenoic acid;9,10-Methylenehexadecanoic acid;9-methyl-10Z-hexadecenoic acid;9E-heptadecenoic acid;Civetic acid;Margaroleic acid;cis-9,10-methylene-hexadecanoic acid",C17H32O2
+298,269.1627,Tetranor-5-NO2-CLA;Tetranor-8-NO2-CLA,C14H23NO4
+299,270.162,"(E)-octadeca-15-en-9,11,13-triynoic acid;Octadeca-9-en-12,14,16-triynoic acid;Protegenin D",C18H22O2
+300,270.2195,(+)-12-hydroxy-9Z-hexadecenoic acid;10-keto palmitic acid;10-oxo-14-methyl-pentadecanoic acid;11-keto palmitic acid;15-oxo-hexadecanoic acid;16-hydroxy-5-hexadecenoic acid;16-hydroxy-6-hexadecenoic acid;16-hydroxy-9E-hexadecenoic acid;16-hydroxy-9Z-hexadecenoic acid;2-keto palmitic acid;2-methyl-4-oxo-pentadecanoic acid;3-keto palmitic acid;4-keto palmitic acid;5-keto palmitic acid;7-keto palmitic acid;8-keto palmitic acid;9-keto palmitic acid;9S-hydroxy-7E-hexadecenoic acid;Ambrettolic acid,C16H30O3
+301,270.2559,"10-methyl-hexadecanoic acid;11-methyl-hexadecanoic acid;12-methyl-hexadecanoic acid;13-methyl-hexadecanoic acid;2,6-dimethyl-pentadecanoic acid;2-methyl-hexadecanoic acid;3,5-Dimethylpentadecanoic acid;3-methyl-hexadecanoic acid;4,8-dimethyl-pentadecanoic acid;4-methyl-hexadecanoic acid;4R-methyl-hexadecanoic acid;5-methyl-hexadecanoic acid;7-methyl-hexadecanoic acid;8,14-dimethyl-pentadecanoic acid;8-methyl-hexadecanoic acid;9,14-dimethylpentadecanoic acid;9-methyl-hexadecanoic acid;Anteisoheptadecanoic acid;Isoheptadecanoic acid;Margaric acid",C17H34O2
+302,271.2511,2-amino-hexadecanoic acid;2R-aminohexadecanoic acid;2S-aminohexadecanoic acid,C16H33NO2
+303,272.126,Asperitaconic acid B;Tensyuic acid C;Tensyuic acid D,C13H20O6
+304,272.1776,"(13E,15E)-octadeca-13,15-dien-9,11-diynoic acid;13E,17-Octadecadiene-9,11-diynoic acid ;13Z,17-Octadecadiene-9,11-diynoic acid;5,8,11-octadecatriynoic acid;6,9,12-octadecatriynoic acid;8,11,14-octadecatriynoic acid;9,11,13-Octadecatriynoic acid;Octadeca-8,10,12-triynoic acid;Octadeca-9,16-dien-12,14-diynoic acid;Phomallenic acid C",C18H24O2
+305,272.1988,3-methyl-tetradecanedioic acid;5-methyl-tetradecanedioic acid;Pentadecanedioic acid,C15H28O4
+306,272.2152,16-fluoro-7Z-hexadecenoic acid;16-fluoro-9Z-hexadecenoic acid,C16H29FO2
+307,272.2351,(+)-15S-hydroxy-hexadecanoic acid;11-hydroxy palmitic acid;14-hydroxy palmitic acid;14S-hydroxy-hexadecanoic acid;15-hydroxy-hexadecanoic acid;2-hydroxy palmitic acid;2R-hydroxypalmitic acid;2S-hydroxypalmitic acid;3-hydroxy-hexadecanoic acid;3R-hydroxypalmitic acid;3S-hydroxypalmitic acid;5-hydroxy-hexadecanoic acid;5R-hydroxy-hexadecanoic acid;5S-hydroxy-hexadecanoic acid;7R-hydroxy-hexadecanoic acid;8-Hydroxypalmitic acid;8S-hydroxy-hexadecanoic acid;9-methoxy-pentadecanoic acid;Jalapinolic acid;Juniperic acid;Kerrolic acid,C16H32O3
+308,273.2744,Margaric acid(d3),C17H31D3O2
+309,274.1205,Collimonin C;Collimonin D,C16H18O4
+310,274.178,3-hydroxy-tetradecanedioic acid,C14H26O5
+311,274.1933,"(10Z,14E,16E)-10,14,16-Octadecatrien-12-ynoic acid;(Z)-octadeca-9,17-dien-12,14-diyne-1,16-diol;12Z-Octadecen-7,9-diynoic acid;3,6,9,12,15-octadecapentaenoic acid;3Z,6Z,9Z,12Z,15Z-octadecapentaenoic acid;5E-Octadecene-7,9-diynoic acid;5Z-Octadecene-7,9-diynoic acid;6-[1]-ladderane hexanoic acid;6-[5]-ladderane-hexanoic acid;9-Octadecene-12,14,16-triynoic acid;9Z-Octadecene-12,14-diynoic acid;Bolekic acid;Dicranin;Exocarpic acid;Heterofibrin A1;Isanic acid",C18H26O2
+312,274.2144,"2,15-dihydroxy-pentadecylic acid;Turpetholic acid A;Turpetholic acid B",C15H30O4
+313,274.2308,16-fluoro-hexadecanoic acid;2-fluoro-hexadecanoic acid,C16H31FO2
+314,276.2089,"10,12-octadecadiynoic acid;10,13-octadecadiynoic acid;10,14-octadecadiynoic acid;11,14-octadecadiynoic acid;11,15-octadecadiynoic acid;11E,13E-octadecadien-9-ynoic acid;11E,17-Octadecadien-9-ynoic acid;12,14-octadecadiynoic acid;12,15-octadecadiynoic acid;12,16-octadecadiynoic acid;12-phenyl dodecanoic acid;13,16-octadecadiynoic acid;13,17-octadecadiynoic acid;14,15-Dehydrocrepenynic acid;14,17-octadecadiynoic acid;2,5-octadecadiynoic acid;2,6-octadecadiynoic acid;2,7-octadecadiynoic acid;2E,4E,6E,11Z-octadecatetraenoic acid;3,6-octadecadiynoic acid;3,7-octadecadiynoic acid;3,8-octadecadiynoic acid;3E,9Z,12Z,15Z-octadecatetraenoic acid;4,6-octadecadiynoic acid;4,7-octadecadiynoic acid;4,8-octadecadiynoic acid;4,9-octadecadiynoic acid;5,10-octadecadiynoic acid;5,12-octadecadiynoic acid;5,7-octadecadiynoic acid;5,8,11,14-octadecatetraenoic acid;5,8-octadecadiynoic acid;5,9-octadecadiynoic acid;5Z,8Z,11Z,14Z-octadecatetraenoic acid;6,10-octadecadiynoic acid;6,11-octadecadiynoic acid;6,12-octadecadiynoic acid;6,8-octadecadiynoic acid;6,9,12,15-octadecatetraenoic acid;6,9-octadecadiynoic acid;6-[3]-ladderane-hexanoic acid;7,10-octadecadiynoic acid;7,11-octadecadiynoic acid;7,12-octadecadiynoic acid;7,9-octadecadiynoic acid;8,10-octadecadiynoic acid;8,11-octadecadiynoic acid;8,12-octadecadiynoic acid;8E,10E-Octadecadien-12-ynoic acid;9,11-octadecadiynoic acid;9,12,15,17-octadecatetraenoic acid;9,12-octadecadiynoic acid;9,13-octadecadiynoic acid;9Z,11Z,13E,15E-octadecatetraenoic acid;9Z,12Z-Octadecadien-6-ynoic acid;Coniferonic acid;Dehydrocrepenynic acid ;Heisteric acid;Stearidonic acid;beta-parinaric acid;cis-parinaric acid",C18H28O2
+315,277.8707,"tetrachloro-cis,cis-muconic acid",C6H2O4Cl4
+316,278.0881,11-bromo-dodecanoic acid;12-bromo-dodecanoic acid;2-bromo-dodecanoic acid,C12H23BrO2
+317,278.1882,"12-oxo-5E,8E,10Z-heptadecatrienoic acid;7-hydroxy-10E,16-heptadecadien-8-ynoic acid",C17H26O3
+318,278.2246,"(E)-octadec-13-en-11-ynoic acid;(R)-lamenallenic acid;(S)-lamenallenic acid;-;10,12,14-octadecatrienoic acid;10,12,15-octadecatrienoic acid;11Z-octadecen-9-ynoic acid;13-(2-Cyclopentenyl)-9Z-tridecenoic acid;16-methyl-6Z,9Z,12Z-heptadecatrienoic acid;17-octadecen-9-ynoic acid;2-(1,2-tetra-decadienyl)-cyclopropanecarboxylic acid;2E,9Z,12Z-octadecatrienoic acid;3Z,9Z,12Z-Octadecatrienoic acid;5,8,11-octadecatrienoic acid;5,9,12-octadecatrienoic acid;5Z,9Z,12E-octadecatrienoic acid;6,10,14-octadecatrienoic acid;7E,9Z,12Z-octadecatrienoic acid;7E-Octadecen-9-ynoic acid;7Z,9Z,12Z-octadecatrienoic acid;9,12,14-octadecatrienoic acid;9E,11Z,13E-octadecatrienoic acid;9E,11Z,13Z-octadecatrienoic acid;9E,12E,15Z-octadecatrienoic acid;9E,12Z,15E-octadecatrienoic acid;9E,12Z,15Z-octadecatrienoic acid;9E-Octadecen-12-ynoic acid;9Z,12E,15E-octadecatrienoic acid;9Z,12E,15Z-octadecatrienoic acid;9Z,12Z,15E-octadecatrienoic acid;Alvaradoic acid;Alvaradonic acid;Caleic acid;Catalpic acid;Columbinic acid;Crepenynic acid;Elaidolinolenic acid;Gorlic acid;Isogorlic acid;Jacaric acid;Octadec-17-en-7-ynoic acid;Pinolenic acid;Pseudoeleostearic acid;Punicic acid;Scleropyric acid;Ximenynic acid;Xionenynic acid;alpha-Linolenic acid;alpha-calendic acid;alpha-eleostearic acid;beta-calendic acid;beta-eleostearic acid;gamma-Linolenic acid;octadeca-11E,13E,15Z-trienoic acid;octadeca-9Z,11E,14Z-trienoic acid",C18H30O2
+319,280.1099,"6-hydroxy-7E,9E-Octadecadiene-11,13,15,17-tetraynoic acid;6-hydroxy-7E,9Z-Octadecadiene-11,13,15,17-tetraynoic acid;6-hydroxy-7Z,9E-Octadecadiene-11,13,15,17-tetraynoic acid;Caryoynencin A;Caryoynencin B;Caryoynencin C",C18H16O3
+320,280.1675,"5-Acetoxy-tetradeca-2E,4E,6E-trienoic acid;7-Acetoxy-2E,4E,6E-tetradecatrienoic acid",C16H24O4
+321,280.2038,"12-hydroxy-5,8,10-heptadecatrienoic acid;3,4-dimethyl-5-propyl-2-furanoctanoic acid; ;5-(3-methyl-5-heptylfuran-2-yl)-pentanoic acid;7-(3-methyl-5-pentylfuran-2-yl)-heptanoic acid;7-hydroxy-10E-Heptadecen-8-ynoic acid;9-(3-methyl-5-propylfuran-2-yl)-nonanoic acid;methyl (2E,6E,10R,11S)-10,11-epoxy-3,7,11-trimethyltrideca-2,6-dienoate",C17H28O3
+322,280.2402,"(R)-laballenic acid;(S)-laballenic acid;10,13-Octadecadienoic acid;10-octadecynoic acid;10E,12Z-octadecadienoic acid;10E,14E-octadecadienoic acid;10Z,12E-Octadecadienoic acid;10Z,12Z-octadecadienoic acid;10Z,13Z-octadecadienoic acid;10Z,14Z-octadecadienoic acid;11-octadecynoic acid;11Z,14Z-octadecadienoic acid;11Z,15Z-octadecadienoic acid;12-octadecynoic acid;12E,16E-octadecadienoic acid;12Z,15Z-octadecadienoic acid;13,16-Octadecadienoic acid;13-octadecynoic acid;13E,17-octadecadienoic acid;13Z,16Z-octadecadienoic acid;14,17-Octadecadienoic acid;14-octadecynoic acid;14Z,17-octadecadienoic acid;15-octadecynoic acid;16-methyl-6Z,9Z-heptadecadienoic acid;16-methyl-9Z,12Z-heptadecadienoic acid;16-octadecynoic acid;16:2(2E,4E)(4Me,6Me[S]);16:2(2E,4E)(5Me,7Me[S]);17-octadecynoic acid;2,4-octadecadienoic acid;2-Cyclopentene-1S-tridecanoic acid;2-octadecynoic acid;2E,6E-octadecadienoic acid;2Z,5Z-octadecadienoic acid;2Z,6Z-octadecadienoic acid;3-octadecynoic acid;3E,7E-octadecadienoic acid;3Z,12Z-octadecadienoic acid;3Z,6Z-octadecadienoic acid;3Z,7Z-octadecadienoic acid;4,9-octadecadienoic acid;4-Methyl-7,11-heptadecadienoic acid;4-octadecynoic acid;4E,8E-octadecadienoic acid;4R-methyl-7Z,11Z-heptadecadienoic acid;4Z,11Z-octadecadienoic acid;4Z,7Z-octadecadienoic acid;4Z,8Z-octadecadienoic acid;5,10-octadecadienoic acid;5,11-octadecadienoic acid;5,6-octadecadienoic acid;5-octadecynoic acid;5E,12E-octadecadienoic acid;5E,12Z-octadecadienoic acid;5E,9Z-octadecadienoic acid;5Z,12E-octadecadienoic acid;5Z,12Z-octadecadienoic acid;5Z,9E-octadecadienoic acid;6,11-octadecadienoic acid;6,8-octadecadienoic acid;6E,10E-octadecadienoic acid;6E,11Z-octadecadienoic acid;6E,12E-octadecadienoic acid;6E,9E-octadecadienoic acid;6Z,9Z-octadecadienoic acid;7,10-Octadecadienoic acid;7-octadecynoic acid;7-trans,9-cis-octadecadienoic acid;7E,12E-octadecadienoic acid;7Z,10Z-octadecadienoic acid;7Z,11Z-octadecadienoic acid;8,11-octadecadienoic acid;8,12-octadecadienoic acid;8-octadecynoic acid;8E,10E-octadecadienoic acid;8Z,11Z-octadecadienoic acid;9,13-octadecadienoic acid;9E,12Z-octadecadienoic acid;9Z,12E-octadecadienoic acid;Adiantic acid;Chaulmoogric acid;Cilienic acid;Ephedrenic acid ;Linoelaidic acid;Linoleic acid;Malvalic acid;Mangold's acid;Mikusch's acid;Ricinenic acid;Rumenic acid;Sebaleic acid;Stearolic acid;Tariric acid;Taxoleic acid",C18H32O2
+323,282.1103,3-carboxy-4-methyl-5-(4-oxopentyl)-2-furanpropanoic acid,C14H18O6
+324,282.1153,"3,4-dichloro-tridecanoic acid",C13H24Cl2O2
+325,282.1256,R-Protegenin B;S-Protegenin B,C18H18O3
+326,282.1467,"3,4-dimethyl-5-carboxyethyl-2-furanhexanoic acid;3,4-dimethyl-5-carboxypropyl-2-furanpentanoic acid",C15H22O5
+327,282.1831,9S-HpHtrE;Gallicynoic acid C,C16H26O4
+328,282.2195,"12-hydroxy-8E,10E-heptadecadienoic acid;12S-hydroxy-16-heptadecynoic acid;7-hydroxy-10-heptadecen-8-ynoic acid;7-methoxy-hexadec-(4E,8E)-dienoic acid",C17H30O3
+329,282.2559,10-Octadecenoic acid;10E-octadecenoic acid;11-Cycloheptylundecanoic acid;13Z-octadecenoic acid;15E-octadecenoic acid;15Z-octadecenoic acid;16E-octadecenoic acid;16Z-octadecenoic acid;17-octadecenoic acid;17:1(12)(7Me);17:1(4)(15Me);17:1(4)(16Me);17:1(6)(9Me);18:1(13E);18:1(14E);18:1(14Z);2-methyl-16-heptadecenoic acid;2Z-octadecenoic acid;3-octadecylenic acid;3Z-octadecenoic acid;4-octadecylenic acid;4Z-octadecenoic acid;5Z-octadecenoic acid;7E-octadecenoic acid;7Z-octadecenoic acid;9-elaidic acid;Cyclopentanetridecanoic acid;Dihydromalvalic acid;Isooctadecenoic acid;Oleic acid;Petroselaidic acid;Petroselinic acid;Thalictric acid;cis-10-oleic acid;cis-12-oleic acid;cis-8-oleic acid;cis-vaccenic acid;trans-12-elaidic acid;trans-2-oleic acid;trans-8-elaidic acid;trans-vaccenic acid,C18H34O2
+330,283.9048,"3,3-Dibromo-2-n-butylacrylic acid",C7H10Br2O2
+331,284.126,3-carboxy-4-methyl-5-(4-hydroxypentyl)-2-furanpropanoic acid,C14H20O6
+332,284.1412,Minquartynoic acid,C18H20O3
+333,284.1988,Gallicynoic acid H,C16H28O4
+334,284.2351,16-oxo-heptadecanoic acid;2-methoxy-5Z-hexadecenoic acid;2-methoxy-6Z-hexadecenoic acid;2-oxo-heptadecanoic acid;3-oxo-heptadecanoic acid;9-Keto heptadecylic acid,C17H32O3
+335,284.2649,Linoleic acid(d4),C18H28D4O2
+336,284.2682,Oleic acid(d2),C18H32D2O2
+337,284.2715,"10,15-dimethyl-hexadecanoic acid;10-methyl-heptadecanoic acid;11,15-dimethyl-hexadecanoic acid;12,15-dimethyl-hexadecanoic acid;14-Methylheptadecanoic acid;15-methyl-heptadecanoic acid;2,14-dimethyl-hexadecanoic acid;2,6-dimethyl-hexadecanoic acid;4,14-dimethyl-hexadecanoic acid;4,8-dimethyl-hexadecanoic acid;6,14-dimethyl-hexadecanoic acid;Isostearic acid;Stearic acid;lambda isostearic acid;neostearic acid",C18H36O2
+338,286.1416,Tensyuic acid E,C14H22O6
+339,286.1569,"(E)-15,16-dihydrominquartynoic acid;(Z)-16-oxo-octadeca-9,17-dien-12,14-diynoic acid;8R,9R-epoxy-13Z,15Z-eicosadien-4,6-diynoic acid;8R,9R-epoxy-octadec-4,6,16-triynoic acid",C18H22O3
+340,286.1933,"15:6(2E,4E,6Z,8E,12E,14)(6Me,10Me[S],8Me,13Me);15:6(2Z,4E,6Z,8E,12E,14)(6Me,8Me,10Me[S],13Me);8,11,14-nonadecatriynoic acid",C19H26O2
+341,286.2144,10-hydroxy-16-oxo-hexadecanoic acid;9-hydroxy-16-oxo-hexadecanoic acid;Thapsic acid,C16H30O4
+342,286.2508,(R)-2-methoxyhexadecanoic acid;17-hydroxy-heptadecanoic acid;2-hydroxy-3-methylhexadecanoic acid;2-hydroxy-heptadecanoic acid;2-methoxy-hexadecanoic acid;3-hydroxypalmitic acid methyl ester,C17H34O3
+343,287.2868,Oleic acid (d5),C18H29D5O2
+344,287.2901,Stearic acid(d3),C18H33D3O2
+345,288.1573,Cladosporester C,C14H24O6
+346,288.1725,"(Z)-16-hydroxyoctadeca-9,17-dien-12,14-diynoic acid;8-Oxo-17-octadecen-10,12-diynoic acid;8-hydroxy-13E,17-Octadecadiene-9,11-diynoic acid;8R,9R-epoxy-17-octadecen-4,6-diynoic acid;Dendrotrifidic acid;Ketoisanic acid",C18H24O3
+347,288.2089,13-phenyl-7E-tridecenoic acid;13-phenyl-9E-tridecenoic acid;Heterofibrin B1,C19H28O2
+348,288.2301,"10,16-dihydroxy-palmitic acid;3,12-dihydroxy palmitic acid;3,16-dihydroxypalmitic acid;9,10-dihydroxy-hexadecanoic acid;9,16-dihydroxy-palmitic acid;Turpetholic acid C;Ustilic acid A",C16H32O4
+349,288.2453,8-[1]-ladderane octanol,C20H32O
+350,290.1882,"5,6-Epoxyoctadeca-7,9-diynoic acid;8-Oxo-10,12-octadecadiynoic acid ;Athanacalvic acid;Bolekolic acid ",C18H26O3
+351,290.2013,2-chloro-palmitic acid,C16H31ClO2
+352,290.2246,"10,13-nonadecadiynoic acid;13-Phenyltridecanoic acid;16:4(2E,4E,8E,10E)(7Me[R],9Me,14Me[R]);Sterculynic acid",C19H30O2
+353,290.261,8-[1]-ladderane octanol,C20H34O
+354,291.8596,Ethyl 2-Bromo-2-iodoacetate,C4H6BrIO2
+355,292.2038,"6-Hydroxyoctadeca-7,9-diynoic acid",C18H28O3
+356,292.2214,"2,2-difluoro-hexadecanoic acid",C16H30F2O2
+357,292.2402,"16-methyl-octadeca-5Z,9Z,12Z-trienoic acid",C19H32O2
+358,294.2195,"(E)-7,9-diene-11-carbonyl stearic acid;10-(5-butylfuran-2-yl)-decanoic acid;12-keto-8E,10E-octadecadienoic acid;3-methyl-5-pentyl-2-furanoctanoic acid ;5-heptylfuran-2-yl-heptanoic acid;5-keto-6E,8E-octadecadienoic acid;7-(3,4-dimethyl-5-pentylfuran-2-yl)-heptanoic acid;9,10-Epoxy-12-octadecynoic acid;9-(3,4-dimethyl-5-propylfuran-2-yl)-nonanoic acid;9-(5-pentylfuran-2-yl)-nonanoic acid;9-hydroxy-10-Octadecen-12-ynoic acid;9S,10R-epoxy-octadec-12-ynoic acid;Agonandric acid;Furocarpic acid;Ketochaulmoogric acid;Macaene",C18H30O3
+359,294.2559,"-;10E,13E-nonadecadienoic acid;10Z,13Z-nonadecadienoic acid;18-nonadecynoic acid;18:2(5Z,9Z)(16Me);18:2(5Z,9Z)(17Me);19:2(5Z,9Z);Sterculic acid",C19H34O2
+360,296.131,"5,6-dichloro-tetradecanoic acid",C14H26Cl2O2
+361,296.1624,"3,4-dimethyl-5-carboxybutyl-2-furanpentanoic acid",C16H24O5
+362,296.1776,"4,8,11,14-Eicosatetraynoic acid;5,8,11,14-Eicosatetraynoic acid",C20H24O2
+363,296.2351,"-;10-oxo-11E-octadecenoic acid;13-keto-9Z-octadecenoic acid;7-Methoxy-9-methyl-4E,8E-hexadecadienoic acid;7-keto-11-Octadecenoic acid",C18H32O3
+364,296.2715,"10-methyl-9Z-octadecenoic acid;10-methylene-octadecanoic acid;10E-nonadecenoic acid;10Z-nonadecenoic acid;11-methyl-12Z-octadecenoic acid;13-Cyclohexyltridecanoic acid;17-methyl-6Z-octadecenoic acid;18:1(12E)(11Me);18:1(13Z)(17Me);18:1(7Z)(17Me);19:1(11Z);19:1(12Z);19:1(13Z);19:1(16Z);19:1(6Z);19:1(9Z);2,5-dimethyl-2-heptadecenoic acid;2-nonadecenoic acid;2-octyl-cyclopropaneoctanoic acid;4-heptyl-2-methyl-2-undecenoic acid;5Z-Nonadecenoic acid;7E-nonadecenoic acid;7Z-nonadecenoic acid;8,9-Methylene-octadecanoic acid;Dihydrosterculic acid;Lactobacillic acid",C19H36O2
+365,297.194,Dinor-10-NO2-CLA;Dinor-7-NO2-CLA,C16H27NO4
+366,298.2144,8E-Heptadecenedioic acid,C17H30O4
+367,298.2308,"18-fluoro-9Z,12Z-octadecadienoic acid",C18H31FO2
+368,298.2508,"10(R)-hydroxy-8Z-octadeceneic acid;10(S)-hydroxy-8E-octadecenoic acid;10-hydroxy-11E-octadecenoic acid;11-cycloheptyl,2R-hydroxyundecanoic acid;2-Hydroxyoleic acid;8Z-decen-4,6-diynoic acid",C18H34O3
+369,298.2872,"10,16-dimethyl-heptadecanoic acid;10-methyl-octadecanoic acid;11-methyl-octadecanoic acid;12,16-dimethyl-heptadecanoic acid;12-methyl-octadecanoic acid;13-methyl-octadecanoic acid;14-methyl-octadecanoic acid;15-methyl-octadecanoic acid;2-methyl-octadecanoic acid;3-methyl-octadecanoic acid;4,14-dimethyl-heptadecanoic acid;4-methyl-octadecanoic acid;5-methyl-octadecanoic acid;6-methyl-octadecanoic acid;7-methyl-octadecanoic acid;8-methyl-octadecanoic acid;9-methyl-octadecanoic acid;Anteisononadecanoic acid;Isononadecanoic acid;Nonadecylic acid;Tuberculostearic acid",C19H38O2
+370,299.2824,12-amino-octadecanoic acid;2-amino-octadecanoic acid,C18H37NO2
+371,300.1362,18-hydroxyminquartynoic acid,C18H20O4
+372,300.1725,"methyl 8R,9R-epoxy-13Z,15Z-eicosadien-4,6-diynoate",C19H24O3
+373,300.2089,"5,8,11-Eicosatriynoic acid;6,9,12-Eicosatriynoic acid;7,10,13-Eicosatriynoic acid;8,11,14,18-Eicosatetraynoic acid;9,12,15-Eicosatriynoic acid",C20H28O2
+374,300.2301,2-methyl-hexadecanedioic acid;3-methyl-hexadecanedioic acid;4-methyl-hexadecanedioic acid;5-methyl-hexadecanedioic acid;8-methyl-hexadecanedioic acid;Heptadecanedioic acid,C17H32O4
+375,300.2465,18-fluoro-9E-octadecenoic acid;18-fluoro-9Z-octadecenoic acid,C18H33FO2
+376,300.2664,(S)-3-hydroxystearic acid;11-methoxy-heptadecanoic acid;2-hydroxystearate;9-methoxy-heptadecanoic acid,C18H36O3
+377,302.2093,"10-hydroxy-hexadecan-1,16-dioic acid;9-hydroxy-hexadecan-1,16-dioic acid",C16H30O5
+378,302.2246,"2E,5Z,8Z,11Z,14Z-eicosapentaenoic acid;4,8,12,15,18-eicosapentaenoic acid;5E,7E,9E,14Z,17Z-eicosapentaenoic acid;5E,8Z,11Z,14Z,16Z-eicosapentaenoic acid;5Z,11Z,14Z-Eicosatrien-8-ynoic acid;5Z,7E,9E,14Z,17Z-eicosapentaenoic acid;5Z,8Z,11E,14Z,17E-eicosapentaenoic acid;5Z,8Z,11E,14Z,17Z-eicosapentaenoic acid;5Z,8Z,14Z-Eicosatrien-11-ynoic acid;8-[1]-ladderane octanoic acid;8-[5]-ladderane-octanoic acid;8Z,1Z1,14Z-Eicosatrien-5-ynoic acid;Bosseopentaenoic acid ;EPA",C20H30O2
+379,302.2457,"3,4-dihydroxy-4-methylhexadecanoic acid",C17H34O4
+380,302.2621,18-fluoro-octadecanoic acid,C18H35FO2
+381,304.225,"11,12,15-trihydroxy palmitic acid;2,15,16-trihydroxy palmitic acid;8,9,16-trihydroxy palmitic acid;Aleuritic acid;Ustilic acid B",C16H32O5
+382,304.2402,"10,13-Eicosadiynoic acid;16:3(2E,10E,12E)(3Me,5Me[R],7My,15Me);16:3(2E,9E,11E)(3Me,5Me[S],7My,15Me);17:4(2E,4E,9E,11E)(7Me[R],10Me,13Me[S]);17:4(2E,4E,9E,11E)(8Me[R],10Me,15Me[R]);18-methyl-5Z,8Z,11Z,14Z-nonadecatetraenoic acid;20:4(5Z,13Z,16Z,19Z);2E,8Z,11Z,14Z-Eicosatetraenoic acid;4,7,10,13-Eicosatetraenoic acid;4,8,12,16-eicosatetraenoic acid;4Z,7Z,10Z,13Z-eicosatetraenoic acid;4Z,8Z,11Z,14Z-eicosatetraenoic acid;5(E)-Arachidonic acid;5,11,14,17-Eicosatetraenoic acid;5,8,11,14-eicosatetraenoic acid;6,10,14,18-eicosatetraenoic acid;7,13-Eicosadiynoic acid;7Z,11Z,14Z,17Z-Eicosatetraenoic acid;8,11,14,17-eicosatetraenoic acid;8,11-Eicosadiynoic acid;8-[1]-ladderane octanoic acid;8-[3]-ladderane-octanoic acid;8Z,11Z,14Z,18Z-eicosatetraenoic acid;Arachidonic acid;Juniperonic acid;omega-3-Arachidonic acid",C20H32O2
+383,305.7527,"2,3,3-tribromoacrylic acid",C3HBr3O2
+384,306.1962,9-chloro-10-hydroxy-hexadecanoic acid;9-hydroxy-10-chloro-hexadecanoic acid,C16H31ClO3
+385,306.2195,"Methyl 8-hydroxy-11E,17-Octadecadien-9-ynoate",C19H30O3
+386,306.2559,"(5Z,9E,14Z)-icosa-5,9,14-trienoic acid;11,14,17-eicosatrienoic acid;18-methyl-8Z,11Z,14Z-nonadecatrienoic acid;2-Cyclopentene-1-pentadec-9c-enoic acid;2-Cyclopentene-1-pentadecenoic acid;20:3(5Z,13Z,16Z);2E,4E,8Z-eicosatrienoic acid;3Z,6Z,9Z-Eicosatrienoic acid;5,8,11-eicosatrienoic acid;5E,11Z,14Z-Eicosatrienoic acid;5Z,9Z,12Z-Eicosatrienoic acid;7,10,13-Eicosatrienoic acid;7,11,14-Eicosatrienoic acid;7E,13E,17Z-Eicosatrienoic acid;7Z,10Z,13Z-eicosatrienoic acid;8Z,12E,14Z-eicosatrienoic acid;9Z,11Z,14Z-Eicosatrienoic acid;Bishomo-alpha-linolenic acid;Bishomocolumbinic acid;Bishomopinolenic acid;ETrE(5Z, 8Z, 11Z);Oncobic acid;Sciadonic acid;bishomo-gamma-linolenic acid;eicosa-5Z,8Z,14Z-trienoic acid",C20H34O2
+387,307.2555,EPA (d5),C20H25D5O2
+388,308.0062,Mevalonate-PP,C6H14O10P2
+389,308.2351,"10,13-Epoxy-11-methyloctadeca-10,12-dienoic acid;11-(3-methyl-5-propylfuran-2-yl)-undecanoic acid;8-(3,4-dimethyl-5-pentylfuran-2-yl)-octanoic acid;9-(3,4-dimethyl-5-butylfuran-2-yl)-nonanoic acid;Methyl 5-hexyl-2-Furanoctanoate;methyl 12,13-epoxy-9,15-octadecadienoate;methyl 15,16-epoxy-9,12-octadecadienoate;methyl 9,10-epoxy-12,15-octadecadienoate",C19H32O3
+390,308.2715,"(Z,Z)-10,14-eicosadienoic acid ;11,13-Eicosadienoic acid;11,14-eicosadienoic acid;11Z,15Z-eicosadienoic acid;20:2(5Z,13Z);20:2(5Z,15Z);20:2(5Z,9Z);20:2(6,11);20:2(7Z,14Z);4Z,7Z-eicosadienoic acid;5,11-Eicosadienoic acid;5E,11Z-Eicosadienoic acid;6-Eicosynoic acid;6Z,9Z-Eicosadienoic acid;7E,13E-Eicosadienoic acid;7Z,12Z-eicosadienoic acid;8,11-Eicosadienoic acid;8Z,11Z-eicosadienoic acid;Dihomolinoleic acid;Dihomotaxoleic acid;Eicos-7-ynoic acid;Hormelic acid;Keteleeronic acid;Methyl nonadeca-15,17-dienoate;Phlomic acid",C20H36O2
+391,310.178,methyl 8-[2-(2-formyl-vinyl)-3-hydroxy-5-oxo-cyclopentyl]-octanoate,C17H26O5
+392,310.2144,-;Gallicynoic acid D;Graminoxin A2;Graminoxin B2;Porrigenic acid,C18H30O4
+393,310.2508,"2-hydroxy-8-(2-octylcycloprop-1-en-1-yl)octanoic acid;;9R-hydroxy-10E,12E-octadecadienoic acid, methyl ester",C19H34O3
+394,310.2872,-;10Z-Eicosenoic acid;11-Cycloheptyltridecanoic acid;13-eicosenoic acid;14Z-eicosenoic acid;15-eicosenoic acid;15Z-eicosenoic acid;16-methyl-9E-nonadecenoic acid;16Z-eicosenoic acid;17Z-octadecenoic acid;20:1(7Z);3E-Eicosenoic acid;5E-eicosenoic acid;5Z-eicosenoic acid;6-methyl-9-heptadecenoic acid;6Z-Eicosenoic acid;8Z-eicosenoic acid;Gadelaidic acid;Paullinic acid;cis-Gadoleic acid;cis-gondoic acid;trans-gondoic acid,C20H38O2
+395,311.8144,Diiodoacetic acid,C2H2I2O2
+396,311.9361,"3,3-Dibromo-2-n-hexylacrylic acid;9,9-dibromo-8-nonenoic acid",C9H14Br2O2
+397,312.1937,"(7Z)-14-hydroxy-10,13-dioxoheptadec-7-enoic acid",C17H28O5
+398,312.2301,9Z-Octadecenedioic acid;Dihydroxychaulmoogric acid;Graminoxin A1;Graminoxin B1,C18H32O4
+399,312.2664,10-oxo-nonadecanoic acid;18-oxo-nonadecanoic acid;2-oxo-nonadecanoic acid;3-oxo-nonadecanoic acid,C19H36O3
+400,312.2896,Arachidonic Acid (d8),C20H24D8O2
+401,312.3028,"12,17-dimethyl-octadecanoic acid;17-methyl-nonadecanoic acid;19:0(11Me);2,11-dimethylstearic acid;2,14-dimethyl-octadecanoic acid;4,14-dimethyl-octadecanoic acid;4,16-dimethyl-octadecanoic acid;6,14-dimethyl-octadecanoic acid;6,16-dimethyl-octadecanoic acid;Arachidic acid;Isoarachidic acid",C20H40O2
+402,314.0881,Majusculoic acid,C15H23O2Br
+403,314.1882,"2-(5-((2Z,5Z,8Z,11E)-tetradeca-2,5,8,11-tetraen-1-yl)furan-2-yl)-ethanoic acid;2-(5-((2Z,5Z,8Z,11Z)-tetradeca-2,5,8,11-tetraen-1-yl)furan-2-yl)-ethanoic acid",C20H26O3
+404,314.2457,"(9Z)-(7S,8S)-Dihydroxyoctadecenoic acid;10-Hydroxy-9-ketooctadecanoic acid;2-keto-3-hydroxyoctadecanoic acid;3-Acetoxy-palmitic acid ;9-Hydroxy-10-ketooctadecanoic acid ;Octadecanedioic acid",C18H34O4
+405,314.2821,10-methoxy-octadecanoic acid;11-methoxy-octadecanoic acid;19-hydroxy-nonadecanoic acid;2-hydroxy-nonadecanoic acid;3-Hydroxy-11-methyl-stearic acid,C19H38O3
+406,315.3214,Arachidic acid(d3),C20H37D3O2
+407,316.1463,"4,7,10,13,16,19-Docosahexaynoic acid",C22H20O2
+408,316.2402,"15-phenyl-11E-pentadecenoic acid;15-phenyl-9E-pentadecenoic acid;6Z,9Z,12Z,15Z,18Z-heneicosapentaenoic acid;Methyl-(5E,7E,9E,14Z,17Z) eicosapentaenoate;Methyl-(5Z,7E,9E,14Z,17Z)-eicosapentaenoate;Methyl-(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate",C21H32O2
+409,316.2414,"18-Fluoro-9,10-Epoxyoctadecanoic acid",C18H33O3F
+410,316.2436,2-mercapto-octadecanoic acid,C18H36O2S
+411,316.2614,"13,14-dihydroxy-octadecanoic acid;threo-9,10-Dihydroxystearic acid",C18H36O4
+412,318.2195,"9-hydroxy-2Z,5E,7Z,11Z,14Z-Eicosapentaenoic acid",C20H30O3
+413,318.2559,15-Phenylpentadecanoic acid,C21H34O2
+414,320.0412,"16-bromo-7E,11E,15E-hexadecatrien-5,13-diynoic acid;16-bromo-7E,11E,15Z-hexadecatrien-5,13-diynoic acid",C16H17BrO2
+415,320.1776,"4,7,10,13,16-Docosapentaynoic acid;7,10,13,16,19-Docosapentaynoic acid",C22H24O2
+416,320.2351,"12-hydroxy-5Z,8Z,10Z,14Z-Eicosatetraenoic acid;5R,6R-epoxy-9E-eicosen-7-ynoic acid",C20H32O3
+417,320.2715,"21:3(5Z,14Z,17Z);9(10),12(13),15(16)-trimethylene-octadecanoic acid",C21H36O2
+418,322.0568,"16-bromo-7E,15E-hexadecadien-5,13-diynoic acid",C16H19BrO2
+419,322.2508,"11-(3,4-dimethyl-5-propylfuran-2-yl)-undecanoic acid;15-oxo-11Z,13E-eicosadienoic acid;17(18)-Epoxy-11Z,14Z-Eicosadienoic acid;5R,6R-epoxy-7-eicosynoic acid;5S,6R-epoxy-7-eicosynoic acid;9-(3,4-dimethyl-5-pentylfuran-2-yl)-nonanoic acid",C20H34O3
+420,322.2872,"12Z,15Z-heneicosadienoic acid;18-methyl-5Z,9Z-eicosadienoic acid;19-methyl-5E,9E-eicosadienoic acid;19-methyl-5Z,9Z-eicosadienoic acid;21:2(5Z,14Z);21:2(5Z,16Z);4Z,7Z-heneicosadienoic acid",C21H38O2
+421,323.8144,"(Z) 2,3-diiodoacrylic acid;3,3-diiodoacrylic acid",C3H2I2O2
+422,324.1623,"7,8-dichloro-hexadecanoic acid",C16H30Cl2O2
+423,324.2089,"4,7,10,13-Docosatetraynoic acid;5,8,11,14-Docosatetraynoic acid;7,10,13,16-Docosatetraynoic acid",C22H28O2
+424,324.2301,"methyl 15-hydroperoxy-9Z,12Z,16E-octadecatrienoate;methyl-10-hydroperoxy-8E,12Z,15Z-octadecatrienoate",C19H32O4
+425,324.2664,"11,12-epoxy-14Z-Eicosenoic acid;Alchornoic acid;Auricolic acid",C20H36O3
+426,324.3028,-;12Z-heneicosenoic acid;18-methyl-7Z-eicosenoic acid;19-methyl-7Z-eicosenoic acid;2-methyl-2-eicosenoic acid;2-propyl-9Z-octadecenoic Acid;21:1(7Z),C21H40O2
+427,325.2253,10-Nitrolinoleic acid;12-NO2-CLA;12-nitro-linoleic acid;9-NO2-CLA,C18H31NO4
+428,326.2093,Gallicynoic acid E,C18H30O5
+429,326.2246,"4Z,7Z,9E,11E,13Z,16Z,19Z-docosaheptaenoic acid;Zooxanthellactone",C22H30O2
+430,326.2457,"11-methoxy-12,13-epoxy-9-octadecenoic acid;8-methoxy-13-hydroxy-9,11-octadecadienoic acid;Ceriporic acid A",C19H34O4
+431,326.2821,"11-Cycloheptyl,2-hydroxytridecanoic acid;14R-hydroxy-11E-eicosenoic acid;14R-hydroxy-11Z-eicosenoic acid;19-oxo-eicosanoic acid;2-oxo-eicosanoic acid;3-oxo-eicosanoic acid;Lesquerolic acid",C20H38O3
+432,326.3185,"12,18-dimethyl-nonadecanoic acid;19-methyl-eicosanoic acid;2,6-dimethyl-nonadecanoic acid;20:0(12Me);Heneicosylic acid;Methylarachidic acid",C21H42O2
+433,327.241,10-nitro-9E-octadecenoic acid;9-nitro-9E-octadecenoic acid,C18H33NO4
+434,328.225,Malyngic acid,C18H32O5
+435,328.2402,"-;10,13,16-Docosatriynoic acid;3,9,15-Docosatriynoic acid;8,11,14-Docosatriynoic acid;DHA",C22H32O2
+436,328.2614,Nonadecandioic acid,C19H36O4
+437,328.2778,20-fluoro-11Z-eicosenoic acid;20-fluoro-9Z-eicosenoic acid,C20H37FO2
+438,328.2977,11-methoxy-nonadecanoic acid;2-hydroxy-eicosanoic acid;20-hydroxy-eicosanoic acid;3-hydroxy-eicosanoic acid;3R-hydroxy-eicosanoic acid,C20H40O3
+439,330.2406,"12,13,15-trihydroxy-9E-octadecenoic acid;5,8,12-Trihydroxy-9-octadecenoic acid",C18H34O5
+440,330.2559,"10-[5]-ladderane-decanoic acid;4,7,10,13,16-docosapentaenoic acid;4,8,12,15,19-docosapentaenoic acid;7,10,13,16,19-docosapentaenoic acid",C22H34O2
+441,330.2934,20-Fluoroeicosanoic acid,C20H39O2F
+442,332.1351,16-bromo-9E-hexadecenoic acid,C16H29BrO2
+443,332.1835,"(2S,3S)-2-hydroxytridecane-1,2,3-tricarboxylic acid",C16H28O7
+444,332.2563,"9,10,13-trihydroxy-Octadecanoic acid",C18H36O5
+445,332.2715,"10-[3]-ladderane-decanoic acid;4,7,10,13-docosatetraenoic acid;4Z,9E,15E,19Z-docosatetraenoic acid;5Z,8Z,11Z,14Z-docosatetraenoic acid;8,12,16,19-docosatetraenoic acid;Adrenic Acid",C22H36O2
+446,333.2711,DHA (d5),C22H27D5O2
+447,334.1507,16-bromo-hexadecanoic acid;2-bromo-hexadecanoic acid;3-bromohexadecanoic acid,C16H31BrO2
+448,334.2144,"5Z,8Z,11Z,14Z-Eicosatetraenedioic acid",C20H30O4
+449,334.2275,11-chloro-12-hydroxy-octadecanoic acid;11-hydroxy-12-chloro-octadecanoic acid;9-chloro-10-hydroxy-octadecanoic acid;9-hydroxy-10-chloro-octadecanoic acid,C18H35ClO3
+450,334.2508,"methyl 5R,6R-epoxy-9E-eicosen-7-ynoate",C21H34O3
+451,334.2872,"10,10-dimethyl-5Z,8Z,11Z-eicosatrienoic acid;13,16,19-docosatrienoic acid;3Z,9Z,15Z-docosatrienoic acid;5Z,11Z,17Z-docosatrienoic acid;7,10,13-docosatrienoic acid;7,7-dimethyl-5Z,8Z,11Z-eicosatrienoic acid;8,11,14-docosatrienoic acid;9E,15E,19Z-docosatrienoic acid;DTrE;Dihomo Mead's acid",C22H38O2
+452,336.2301,"5Z,8Z,11Z-Eicosatrienedioic acid",C20H32O4
+453,336.2664,"10-(3,4-dimethyl-5-pentylfuran-2-yl)-decanoic acid;11-(3,4-dimethyl-5-butylfuran-2-yl)-undecanoic acid;11-(3-methyl-5-pentylfuran-2-yl)-undecanoic acid;methyl 5R,6R-epoxy-7-eicosynoate;methyl 5S,6R-epoxy-7-eicosynoate",C21H36O3
+454,336.3028,"13,16-docosadienoic acid;13Z,16Z-docosadienoic acid;22:2(7Z,15Z);5,13-docosadienoic acid;5Z,13Z-docosadienoic acid;7,7-dimethyl-5Z,8Z-eicosadienoic acid;7Z,12Z-docosadienoic acid;Behenolic acid",C22H40O2
+455,338.1729,18-hydroxy-18-oxo-dinorleukotriene B4,C18H26O6
+456,338.1763,sufac#1;sufac#2,C15H30O6S
+457,338.3185,"15-docosenoic acid;15Z-docosenoic acid;19Z-docosenoic acid;2,4-dimethyl-2-eicosenoic acid;22:1(7Z);22:1(9Z);5Z-docosenoic acid;Cetelaidic acid ;cis-cetoleic acid;cis-erucic acid;trans-brassidic acid",C22H42O2
+458,340.1158,Chuanxiongoside A,C16H20O8
+459,340.2614,15S-HpEDE;Gallicynoic acid F,C20H36O4
+460,340.2977,2-oxo-heneicosanoic acid;20-oxo-heneicosanoic acid;3-oxo-heneicosanoic acid;5-oxo-heneicosanoic acid,C21H40O3
+461,340.3341,"14,19-dimethyl-eicosanoic-acid;19-methyl-heneicosanoic acid;3-methyl-heneicosanoic acid;Behenic acid;Isobehenic acid",C22H44O2
+462,342.2406,"methyl 10,13-dihydroxy-9-oxo-11-octadecenoate;methyl 9,12-dihydroxy-13-oxo-10-octadecenoate",C19H34O5
+463,342.2559,Carduusyne A;TrHA,C23H34O2
+464,342.277,3-Acetoxystearic acid;Eicosanedioic acid,C20H38O4
+465,342.3134,12-methoxyeicosanoic acid;13-methoxyeicosanoic acid;14-hydroxy-heneicosanoic acid;15-hydroxy-heneicosanoic acid;2-hydroxy-heneicosanoic acid;21-hydroxy-heneicosanoic acid,C21H42O3
+466,343.3527,Behenic acid(d3),C22H41D3O2
+467,344.1776,"6,9,12,15,18,21-Tetracosahexaynoic acid",C24H24O2
+468,344.2563,"12,13-dihydroxy-11-methoxy-9-octadecenoic acid",C19H36O5
+469,344.2715,17-phenyl-13E-heptadecenoic acid,C23H36O2
+470,344.2927,"11,12-dihydroxy arachidic acid;8,10-dimethoxy-octadecanoic acid;Tetrapedic acid A",C20H40O4
+471,346.0568,"18-bromo-13E,17E-octadecatrien-5,7,15-triynoic acid;18-bromo-9E,17E-octadecadien-5,7,15-triynoic acid;18-bromo-9Z,17E-octadecadien-5,7,15-triynoic acid;18-bromo-9Z,17Z-octadecadien-5,7,15-triynoic acid",C18H19BrO2
+472,346.1992,"(3S,4S)-3-hydroxytetradecane-1,3,4-tricarboxylic acid",C17H30O7
+473,346.2355,Floionic acid,C18H34O6
+474,346.2508,"9,10-epoxy-11,13-docosadiynoic acid",C22H34O3
+475,346.2872,17-phenyl heptadecanoic acid,C23H38O2
+476,348.0725,"18-bromo-17Z-octadecen-5,7,15-triynoic acid;18-bromo-9E,15E,17E-octadecatrien-5,7-diynoic acid;Xestospongic acid",C18H21BrO2;C18H21O2Br
+477,348.2089,"6,9,12,15,18-Tetracosapentaynoic acid",C24H28O2
+478,348.2664,"11(E)-(3,4-dimethyl-5-(pent-1-en-1-yl)furan-2-yl)-undecanoic acid;ethyl 5R,6R-epoxy-9E-eicosen-7-ynoate",C22H36O3
+479,350.0881,"18-bromo-15E,17E-octadecadien-5,7-diynoic acid;18-bromo-9E,17E-Octadecadiene-7,15-diynoic acid;18-bromo-9Z,17E-Octadecadiene-7,15-diynoic acid;Methyl 18-bromooctadeca-5,7,17-triynoate",C18H23BrO2;C18H23O2Br
+480,350.2093,"5,6,15-trihydroxy-7,9,13-Eicosatrien-11-ynoic acid",C20H30O5
+481,350.2821,"13-(3,4-dimethyl-5-propylfuran-2-yl)-tridecanoic acid;2-(5-hexadecylfuran-2-yl)-acetic acid;Furanoid acid - F6;ethyl 5R,6R-epoxy-7-eicosynoate;ethyl 5S,6R-epoxy-7-eicosynoate",C22H38O3
+482,351.8457,"Ethyl (Z) 2,3-diiodoacrylate;Ethyl 3,3-diiodoacrylate",C5H6I2O2
+483,352.1936,"9,10-dichloro-octadecanoic acid",C18H34Cl2O2
+484,352.2038,Carduusyne E,C23H28O3
+485,352.225,"5,14,15-trihydroxy-6,8,10,12-Eicosatetraenoic acid",C20H32O5
+486,352.2614,Ceriporic acid C,C21H36O4
+487,352.2977,Pantheric Acid A,C22H40O3
+488,352.3341,"13,14-methylene-docosanoic acid;14E-tricosenoic acid;14Z-tricosenoic acid;16Z-tricosenoic acid;17Z-tricosenoic acid;18Z-tricosenoic acid;22-tricosenoic acid;9Z-Tricosenoic acid",C23H44O2
+489,354.2042,"5-hydroperoxy-7-[3,5-epidioxy-2-(2-octenyl)-cyclopentyl]-6-heptenoic acid",C19H30O6
+490,354.2559,delta2-THA,C24H34O2
+491,354.277,Ceriporic acid B,C21H38O4
+492,354.3134,10-oxo-docosanoic acid;2-oxo-docosanoic acid;21-oxo-docosanoic acid;3-oxo-docosanoic acid;4-oxo-docosanoic acid,C22H42O3
+493,354.3498,(+)-20-methyl-docosanoic acid;Isotricosanoic acid;Tricosylic acid,C23H46O2
+494,356.2199,"methyl 10,12-dihydroperoxy-8E,13E,15Z-octadecatrienoate;methyl 10,12-epidioxy-13-hydroperoxy-8E,15Z-octadecadienoate;methyl 10,16-dihydroperoxy-8E,12Z,14E-octadecatrienoate;methyl 11-(3,5-epidioxy-2-ethyl-cyclopentyl)-9-hydroperoxy-10-undecenoate;methyl 12,15-epdioxy-16-hydroperoxy-9,13-octadecadienoate;methyl 13,15-dihydroperoxy-9Z,11E,16E-octadecatrienoate;methyl 13,15-epidioxy-12-hydroperoxy-9Z,16E-octadecadienoate;methyl 13,15-epidioxy-16-hydroperoxy-9,11-octadecadienoate;methyl 13,16-dihydroperoxy-9Z,11E,14E-octadecatrienoate;methyl 9,12-dihydroperoxy-10E,13E,15Z-octadecatrienoate;methyl 9,15-dihydroperoxy-10E,12Z,16E-octadecatrienoate;methyl 9,16-dihydroperoxy-10E,12,14E-octadecatrienoate;methyl 9-hydroperoxy-10,12-epidioxy-13,15-octadecadienoate;methyl 9-hydroperoxy-10,13-epdioxy-11,15-octadecadienoate",C19H32O6
+495,356.2715,"(6E,9E,12E,15E,18E,21E)-tetracosa-6,9,12,15,18,21-hexaenoic acid;4,8,12,15,19,21-tetracosahexaenoic acid;THA;tetracosahexaenoic acid",C24H36O2
+496,356.2927,Japanic acid,C21H40O4
+497,356.329,(+)-3-hydroxy behenic;13-hydroxy-docosanoic acid;13-methoxy-heneicosanoic acid;2-hydroxy behenic;Phellonic acid,C22H44O3
+498,358.2719,"11,13-dimethoxy-12-hydroxy-9-octadecenoic acid;9,10-dimethoxy-13-hydroxy-11-octadecenoic acid;9,12-dimethoxy-13-hydroxy-10-octadecenoic acid;9,13-dihydroxy-10-ethoxy-11-octadecenoic acid;9,13-dihydroxy-12-ethoxy-10-octadecenoic acid",C20H38O5
+499,358.2872,"12-[5]-ladderane-dodecanoic acid;6Z,9Z,12Z,15Z,18Z-tetracosapentaenoic acid;9Z,12Z,15Z,18Z,21Z-tetracosapentaenoic acid",C24H38O2
+500,360.0725,"Methyl 18-bromo-13E,17E-octadecatrien-5,7,15-triynoate;Methyl 18-bromo-9E,17E-octadecadien-5,7,15-triynoate;Methyl 18-bromo-9Z,17E-octadecadien-5,7,15-triynoate",C19H21BrO2
+501,360.2301,"7,9,13,17-tetramethyl-7S,14S-dihydroxy-2E,4E,8E,10E,12E,16-octadecahexaenoic acid",C22H32O4
+502,360.2664,"methyl 9,10-Epoxy-11,13-docosadiynoate",C23H36O3
+503,360.3028,"12-[3]-ladderane-dodecanoic acid;9Z,12Z,15Z,18Z-Tetracosatetraenoic acid;tetracosatetraenoic acid n-6",C24H40O2
+504,362.0881,"Methyl 18-bromo-17Z-octadecen-5,7,15-triynoate;Methyl 18-bromo-9E,15E,17E-octadecatrien-5,7-diynoate;Methyl 18-bromooctadec-17-en-5,7,15-triynoate",C19H23BrO2
+505,362.182,12-bromo-octadecanoic acid;18-bromo-octadecanoic acid;2-bromo-octadecanoic acid,C18H35BrO2
+506,362.3185,"12Z,15Z,18Z-Tetracosatrienoic acid;24:3(15Z,18Z,21Z)",C24H42O2
+507,364.053,"5,6,8,9-tetrachloro-tetradecanoic acid",C14H24Cl4O2
+508,364.1038,"Methyl 18-bromo-15E,17E-octadecadien-5,7-diynoate",C19H25BrO2
+509,364.2977,13-(3-methyl-5-pentylfuran-2-yl)-tridecanoic acid,C23H40O3
+510,364.3341,"15Z,18Z-Tetracosadienoic acid;24:2(5Z,9Z);5,9-tetracosadienoic acid",C24H44O2
+511,366.2195,Carduusyne C,C24H30O3
+512,366.3498,(2E)-tetracos-2-enoic acid;11Z-tetracosenoic acid;13-Tetracosenoic acid;17E-tetradocosenoic acid;17Z-Tetracosenoic acid;18E-tetradocosenoic acid;19E-tetradocosenoic acid;19Z-Tetracosenoic acid;9Z-tetradocosenoic acid;Nervonic acid;trans-selacholeic acid,C24H46O2
+513,368.1351,"(5E,17Z)-18-bromo-octadeca-5,17-diene-15-ynoic acid;Methyl (5E,17E)-18-bromo-octadeca-5,17-diene-15-ynoate",C19H29BrO2
+514,368.329,2-oxo-tricosanoic acid;22-oxo-tricosanoic acid;3-oxo-tricosanoic acid,C23H44O3
+515,368.3654,"2,4-dimethyl-docosanoic acid;21-methyl-tricosanoic acid;22-methyl-tricosanoic acid;3,15-dimethyl-docosanoic acid;Lignoceric acid;Mycocerosic acid (C24);Mycosanoic acid (C24)",C24H48O2
+516,370.1911,"8,12-dihydroxy-11-chloro-5Z,9Z,14Z,17Z-eicosatetraenoic acid;8,12-dihydroxy-9-chloro-5Z,10Z,14Z,17Z-eicosatetraenoic acid",C20H31ClO4
+517,370.3083,3-Acetoxy-eicosanoic acid;Phellogenic acid ,C22H42O4
+518,370.3447,2-hydroxy-tricosanoic acid,C23H46O3
+519,371.384,Lignoceric acid(d3),C24H45D3O2
+520,372.0936,"11,12-epoxy-17-bromo-8S-hydroxy-9E-heptadecen-16-ynoic acid",C17H25O4Br
+521,372.13,"(12E,15S,18S)-15-hydroxy-18-bromo-12,16,17-octadecatrienoic acid;(12Z,15S,18S)-15-hydroxy-18-bromo-12,16,17-octadecatrienoic acid;(13E,15R,18R)-15-hydroxy-18-bromo-13,16,17-octadecatrienoic acid;(13Z,15R,18R)-15-hydroxy-18-bromo-13,16,17-octadecatrienoic acid",C18H29BrO3;C18H29O3Br
+522,372.3028,19-phenyl-15E-nonadecenoic acid,C25H40O2
+523,372.324,"13,14-dihydroxy-docosanoic acid;9,10-Dihydroxydocosanoic acid;Tetrapedic acid B",C22H44O4
+524,374.1577,"(2E,4E)-8-(6-O-inositolyl)-8-oxo-2,7-dimethyl-octadienoic acid",C17H26O9
+525,374.2821,"15-hydroxy-tetracosa-6,9,12,16,18-pentaenoic acid;15R-HTPE;15S-HTPE",C24H38O3
+526,374.3185,"12,14-Pentacosadiynoic acid;19-phenyl nonadecanoic acid",C25H42O2
+527,376.1038,"Ethyl 18-bromooctadec-17-en-5,7,15-triynoate",C20H25BrO2
+528,378.3134,"13-(3,4-dimethyl-5-pentylfuran-2-yl)-tridecanoic acid;15-(3,4-dimethyl-5-propylfuran-2-yl)-pentadecanoic acid;Pantheric Acid B",C24H42O3
+529,378.3498,"23-methyl-5Z,9Z-tetracosadienoic acid;Farnesic acid",C25H46O2
+530,380.241,Linusic acid ,C18H36O8
+531,380.329,15-oxo-18Z-tetracosenoic acid,C24H44O3
+532,380.3654,16Z-pentacosenoic acid;17Z-pentacosenoic acid;18Z-pentacosenoic acid;19Z-pentacosenoic acid;5Z-pentacosenoic acid;Mycolipenic acid (C25),C25H48O2
+533,382.1369,16-iodo-hexadecanoic acid;2-iodo-hexadecanoic acid;3-iodo-hexadecanoic acid,C16H31IO2
+534,382.3083,"methyl 13-butylperoxy-9,11-octadecadienoate;methyl 9-butylperoxy-10,12-octadecadienoate",C23H42O4
+535,382.3447,24-hydroxy-10Z-tetracosenoic acid;2R-hydroxy-15Z-tetracosenoic acid;3-oxo-tetracosanoic acid;Hydroxynervonic acid,C24H46O3
+536,382.3811,24:0(17Me);24:0(18Me);Hyenic acid;Isopentacosanoic acid;Mycocerosic acid (C25);Mycosanoic  acid (C25),C25H50O2
+537,384.3028,"26:6(8Z,11Z,14Z,17Z,20Z,23Z)",C26H40O2
+538,384.324,Tricosanedioic acid,C23H44O4
+539,384.3603,15-methoxy-tricosanoic acid;24-hydroxy-tetracosanoic acid;2R-hydroxy-tetracosanoic acid;3-hydroxy-tetracosanoic acid;DL-Cerebronic acid;Mycolipanolic acid (C24),C24H48O3
+540,386.182,"6-bromo-eicosa-5E,9Z-dienoic acid",C20H35BrO2
+541,386.3185,"26:5(8Z,11Z,14Z,17Z,20Z);Shibic acid",C26H42O2
+542,388.2097,"methyl 10,12,13,15-bisepidioxy-16-hydroperoxy-8E-octadecenoate;methyl 10,12,13,16-bisepidioxy-9-hydroperoxy-14-octadecenoate;methyl 9,12,13,15-bisepidioxy-16-hydroperoxy-10-octadecenoate;methyl 9-hydroperoxy-10,12,13,15-bisepidioxy-16E-octadecenoate",C19H32O8
+543,388.3341,"26:4(11Z,14Z,17Z,20Z)",C26H44O2
+544,390.3498,"26:3(5Z,9Z,19E);5,9,17-hexacosatrienoic acid;5,9,19-hexacosatrienoic acid;5Z,9Z,17Z-hexacosatrienoic acid;5Z,9Z,19Z-hexacosatrienoic acid;5Z,9Z,21Z-hexacosatrienoic acid",C26H46O2
+545,391.345,Type IV cyanolipid 20:0 ester,C25H45NO2
+546,392.329,15-(3-methyl-5-pentylfuran-2-yl)-pentadecanoic acid,C25H44O3
+547,392.3654,"17,20-hexacosadienoic acid;17Z,21Z-hexacosadienoic acid;25:2(5Z,9Z)(23Me);25:2(5Z,9Z)(24Me);26:2(9Z,19Z);5,9-hexacosadienoic acid;5Z,9Z-hexacosadienoic acid",C26H48O2
+548,394.3811,11Z-hexacosenoic acid;14Z-Hexacosenoic acid;17-hexacosenoic acid;21Z-Hexacosenoic acid;26:1(19Z));26:1(5Z));9-hexacosenoic acid;9Z-hexacosenoic acid;Ximenic acid;cis-2-hexacosenoic acid;trans-2-hexacosenoic acid,C26H50O2
+549,396.2512,"methyl 8-[3,5-epidioxy-2-(3-hydroperoxy-1-pentenyl)-cyclopentyl]-octanoate",C22H36O6
+550,396.324,Wuhanic acid,C24H44O4
+551,396.3967,"25:0(18Me);25:0(23Me);26:0(18Me);26:0(18Me,24Me);Cerotic acid;Isocerotic acid;Mycocerosic acid (C26);Mycosanoic  acid (C26);Phthioic acid",C26H52O2
+552,398.1093,"Methyl 18-bromo-9R-hydroxy-12,13-trans-epoxy-10E,15Z-octadecadien-17-ynoate",C19H27BrO4
+553,398.3396,Axillarenic acid;Nebraskanic acid;Tetracosanedioic acid,C24H46O4
+554,398.376,15-hydroxy-pentacosanoic acid;2-Hydroxy-22-methyltetracosanoic acid,C25H50O3
+555,399.4153,Cerotic acid(d3),C26H49D3O2
+556,399.9674,"14,16-dibromo-7E,9E,13E,15Z-hexadecatetraen-5-ynoic acid",C16H18Br2O2
+557,400.1977,"6-bromo-heneicosa-5E,9Z-dienoic acid",C21H37BrO2
+558,401.2777,myriocin,C21H39NO6
+559,401.983,"14,16-dibromo-7E,13E,15Z-hexadecatrien-5-ynoic acid",C16H20Br2O2
+560,402.3134,"2-(5-((3Z,13Z)-eicosa-3,13-dien-1-yl)furan-2-yl)-ethanoic acid",C26H42O3
+561,402.3498,"12,14-Heptacosadiynoic acid;21-phenyl heneicosanoic acid",C27H46O2
+562,404.3138,Ventosic acid ,C22H44O6
+563,404.3654,"27:3(5Z,9Z,20Z);Amphimic acid C",C27H48O2
+564,405.1788,Epolactaene,C21H27NO7
+565,406.3447,"15-(3,4-dimethyl-5-pentylfuran-2-yl)-pentadecanoic acid",C26H46O3
+566,406.3811,"2,4,6-trimethyl-2,15-tetracosadienoic acid;26:2(5Z,9Z)(24Me);26:2(5Z,9Z)(25Me);27:2(5Z,9Z)",C27H50O2
+567,408.3028,"4Z,7Z,10Z,13Z,16Z,19Z,22Z,25Z-octacosaoctaenoic acid",C28H40O2
+568,408.3603,17-oxo-20Z-hexacosenoic acid;Ficulinic acid A,C26H48O3
+569,408.3967,"(+)-C27-Phthienoic acid;18Z-heptacosenoic acid;2,4-dimethyl-2-pentacosenoic acid;2-methyl-2-hexacosenoic acid;20Z-heptacosenoic acid;26:0(19Cp);Mycolipenic acid (C27)",C27H52O2
+570,410.1682,3-iodo-octadecanoic acid,C18H35IO2
+571,410.3185,28:7(n-6),C28H42O2
+572,410.376,3-oxohexacosanoic acid,C26H50O3
+573,410.4124,(+)-24-methyl-hexacosanoic acid;Carboceric acid;Mycocerosic acid (C27),C27H54O2
+574,412.1977,"6-Bromo-5E,9Z,13Z-docosatrienoic acid",C22H37BrO2
+575,412.3341,"28:6(10Z,13Z,16Z,19Z,22Z,25Z)",C28H44O2
+576,412.3916,(S)-3-hydroxyhexacosanoic acid;12-Hydroxyhexacosanoic acid;2-hydroxy-hexacosanoic acid;26-hydroxy-hexacosanoic acid;2R-hydroxy-hexacosanoic acid;Mycolipanolic acid (C26),C26H52O3
+577,414.2133,"6-bromo-docosa-5E,9Z-dienoic acid",C22H39BrO2
+578,414.2254,"methyl 5-hydroperoxy-6,8,9,11-bisepidioxy-12,14-eicosadienoate",C21H34O8
+579,414.3498,"28:5(10Z,13Z,16Z,19Z,22Z);28:5(13Z,16Z,19Z,22Z,25Z)",C28H46O2
+580,414.3709,"Tetracosanoic acid, 15,16-dihydroxy-, methyl ester",C25H50O4
+581,416.3654,"28:4(13Z,16Z,19Z,22Z);Amphimic acid B",C28H48O2
+582,418.1507,"18-bromo-8E,17E,19Z-tricosatrien-4,6-diynoic acid;Carduusyne B",C23H31BrO2;C23H31O2Br
+583,418.3811,"28:3(5Z,9Z,21Z);Amphimic acid A",C28H50O2
+584,420.1156,"9,10,12,13-tetrachloro-octadecanoic acid",C18H32Cl4O2
+585,420.3967,"19Z,23Z-octacosadienoic acid;27:2(5Z,9Z)(25Me);27:2(5Z,9Z)(26Me);28:2(5Z,9Z);28:2(9Z,21Z)",C28H52O2
+586,422.182,"Methyl 18-bromo-5,6-trans-endomethylene-7,11,15-trimethyl-8E,10Z-octadecadien-17-ynoate",C23H35BrO2
+587,422.376,"(5Z,9Z)-2-methoxy-hexacosadienoic acid",C27H50O3
+588,422.4124,11Z-octacosenoic acid;19Z-octacosenoic acid;21Z-octacosenoic acid;23Z-octacosenoic acid;9-Octacosenoic acid;9Z-octacosenoic acid;Mycolipenic acid (C28),C28H54O2
+589,424.428,Isomontanic acid;Montanic acid;Mycocerosic acid (C28),C28H56O2
+590,426.3709,Hexacosanedioic acid,C26H50O4
+591,426.4073,Mycolipanolic acid (C27),C27H54O3
+592,427.9987,"18,18-dibromo-9E,17-octadecadien-5,7-diynoic acid",C18H22Br2O2
+593,428.229,"6-bromo-tricosa-5E,9Z-dienoic acid",C23H41BrO2
+594,430.1839,Cissoic acid,C20H30O10
+595,430.3811,23-phenyl tricosanoic acid,C29H50O2
+596,432.3967,"29:3(5Z,9Z,23Z)",C29H52O2
+597,434.1457,"16-hydroxy-18-bromo-8E,17E19Z-tricosatrien-4,6-diynoic acid;Carduusyne D",C23H31BrO3;C23H31O3Br
+598,434.4124,"28:2(5Z,9Z)(22Me);28:2(5Z,9Z)(27Me);29:2(5Z,9Z)",C29H54O2
+599,436.3916,"(5Z,9Z)-2R-Methoxy-24-methyl-hexacosadienoic acid;(5Z,9Z)-2R-methoxy-25-methyl-hexacosadienoic acid;19-oxo-22Z-octacosenoic acid;Ficulinic acid B",C28H52O3
+600,436.428,20Z-nonacosenoic acid;Mycolipenic acid (C29),C29H56O2
+601,438.4073,11-keto-Octacosanoic acid;27-Oxooctacosanoic acid;9-Ketooctacosanoic acid,C28H54O3
+602,438.4437,Mycocerosic acid (C29);nonacosanoic acid,C29H58O2
+603,440.0926,"9,10-dibromo-stearic acid",C18H34Br2O2
+604,440.3654,"30:6(12Z,15Z,18Z,21Z,24Z,27Z)",C30H48O2
+605,440.3866,Heptacosanedioic acid,C27H52O4
+606,440.4229,27-Hydroxyoctacosanoic acid;28-hydroxy-octacosanoic acid;Mycolipanolic acid (C28),C28H56O3
+607,442.0143,"Methyl 16,18-dibromo-15Z,17E-octadecadien-5,7-diynoate;Methyl 18,18-dibromo-9E,17-octadecadien-5,7-diynoate",C19H24Br2O2
+608,442.2446,"6-bromo-tetracosa-5E,9Z-dienoic acid",C24H43BrO2
+609,442.3811,"30:5(12Z,15Z,18Z,21Z,24Z);30:5(15Z,18Z,21Z,24Z,27Z)",C30H50O2
+610,444.03,"Methyl 18,18-dibromo-17-octadecen-5,7-diynoate",C19H26Br2O2
+611,444.3967,"30:4(15Z,18Z,21Z,24Z)",C30H52O2
+612,446.182,"Ethyl 18-bromo-8E,17E,19Z-tricosatrien-4,6-diynoate",C25H35BrO2
+613,446.2451,10-cys-9-nitro-octadecenoic acid;11-cys-12-nitro-octadecenoic acid;12-cys-9-nitro-octadecenoic acid;9-Cys-12-nitro-octadecenoic acid,C21H38N2O6S
+614,446.4124,"-;30:3(5Z,9Z,23Z);5Z,9Z,25Z-triacontatrienoic acid",C30H54O2
+615,448.428,"29:2(5Z,9Z)(22Me);29:2(5Z,9Z)(26Me);30:2(9Z,23Z);5Z,9Z-triacontadienoic acid",C30H56O2
+616,450.4073,Nuciferoic  Acid,C29H54O3
+617,450.4437,30:1(23Z));Lumequeic acid;Lumequic acid,C30H58O2
+618,452.4593,"9,10-dimethyl-octacosanoic acid;Melissic acid;Mycocerosic acid (C30)",C30H60O2
+619,456.2603,"6-bromo-23-methyl-tetracosa-5E,9Z-dienoic acid;6-bromo-pentacosa-5E,9Z-dienoic acid",C25H45BrO2
+620,456.3451,Byrsonic acid,C26H48O6
+621,462.177,"Ethyl 16-hydroxy-18-bromo-8E,17E19Z-tricosatrien-4,6-diynoate",C25H35BrO3
+622,462.4437,"22-methyl-5Z,9Z-triacontadienoic acid",C31H58O2
+623,464.329,Corticatic acid A;Corticatic acid B,C31H44O3
+624,464.4593,22Z-Hentriacontenoic acid,C31H60O2
+625,466.2446,"6-Bromo-5E,9Z,13Z,24Z-heptacosatetraenoic acid",C26H43BrO2
+626,466.4386,29-Oxotriacontanoic acid,C30H58O3
+627,466.475,(+)-28-methyl-triacontanoic acid;D-Mycoceranic acid;Mycocerosic acid (C31);Phthioceranic acid (C31);hentriacontanoic acid,C31H62O2
+628,468.3967,"32:6(14Z,17Z,20Z,23Z,26Z,29Z)",C32H52O2
+629,468.4179,"Argenonic acid;Nonacosane-1,29-dioic acid",C29H56O4
+630,468.4542,30-hydroxy-triacontanoic acid,C30H60O3
+631,470.2759,"6-bromo-24-methyl-pentacosa-5E,9Z-dienoic acid;6-bromo-5,9-hexacosadienoic acid;6-bromo-5E,9Z-hexacosadienoic acid",C26H47BrO2
+632,470.4124,"32:5(14Z,17Z,20Z,23Z,26Z);32:5(17Z,20Z,23Z,26Z,29Z)",C32H54O2
+633,472.428,"32:4(17Z,20Z,23Z,26Z)",C32H56O2
+634,478.475,23Z-dotriacontenoic acid,C32H62O2
+635,479.8935,"6,14,16-tribromo-5Z,7E,9E,13E,15Z-hexadecapentaenoic acid",C16H19Br3O2
+636,480.2603,"6-Bromo-5E,9Z,13Z,24Z-octacosatetraenoic acid",C27H45BrO2
+637,480.4906,Lacceroic acid;Mycocerosic acid (C32),C32H64O2
+638,482.4335,"13,14-dimethyloctacosanedioic acid;Equisetolic acid",C30H58O4
+639,482.4699,Hydroxyphthioceranic acid (C31),C31H62O3
+640,484.2916,"27:2(5Z,9Z)(6Br);6-bromo-25-methyl-hexacosa-5E,9Z-dienoic acid",C27H49BrO2;C27H49O2Br
+641,484.4492,Lanoceric acid,C30H60O4
+642,494.5063,Mycocerosic acid (C33);Phthioceranic acid (C33);Psyllic acid,C33H66O2
+643,496.3916,"31-hydroxy-4Z,18Z,29E-tritriacontatrien-2,32-diynoic acid",C33H52O3
+644,496.428,"34:6(16Z,19Z,22Z,25Z,28Z,31Z)",C34H56O2
+645,496.4855,corynomycolic acid,C32H64O3
+646,498.3072,"28:2(5Z,9Z)(6Br)",C28H51BrO2
+647,498.4437,"34:5(16Z,19Z,22Z,25Z,28Z);34:5(19Z,22Z,25Z,28Z,31Z)",C34H58O2
+648,500.3866,ELV-N32,C32H52O4
+649,500.4593,"34:4(19Z,22Z,25Z,28Z)",C34H60O2
+650,506.5063,25Z-Tetratriacontenoic acid,C34H66O2
+651,508.4855,11-Oxoceromelissic acid,C33H64O3
+652,508.5219,Gheddic acid;Mycocerosic acid (C34);Phthioceranic acid (C34),C34H68O2
+653,510.4648,Diabolic acid,C32H62O4
+654,510.5012,11-Hydroxycero­melissic  acid;Hydroxyphthioceranic acid (C33),C33H66O3
+655,512.3229,"29:2(5Z,9Z)(6Br)",C29H53BrO2
+656,522.5376,Ceroplastic acid;Mycocerosic acid (C35),C35H70O2
+657,524.4593,"36:6(18Z,21Z,24Z,27Z,30Z,33Z)",C36H60O2
+658,524.5168,Hydroxyphthioceranic acid (C34),C34H68O3
+659,526.475,"36:5(18Z,21Z,24Z,27Z,30Z);36:5(21Z,24Z,27Z,30Z,33Z)",C36H62O2
+660,528.4179,ELV-N34,C34H56O4
+661,528.4906,"36:4(21Z,24Z,27Z,30Z)",C36H64O2
+662,536.5532,Hexatriacontylic acid;Phthioceranic acid (C36),C36H72O2
+663,538.475,"36:6(5Z,9Z,12Z,15Z,18Z,21Z)(34Me[S])",C37H62O2
+664,550.5689,Phthioceranic acid (C37);heptatriacontanoic acid,C37H74O2
+665,552.4906,"38:6(20Z,23Z,26Z,29Z,32Z,35Z)",C38H64O2
+666,552.5481,Hydroxyphthioceranic acid (C36),C36H72O3
+667,554.5063,"38:5(20Z,23Z,26Z,29Z,32Z);38:5(23Z,26Z,29Z,32Z,35Z)",C38H66O2
+668,556.5219,"38:4(23Z,26Z,29Z,32Z)",C38H68O2
+669,564.5845,"2,4,6,8-tetramethyl-tetratriacontanoic acid;octatriacontanoic acid",C38H76O2
+670,566.5638,Hydroxyphthioceranic acid (C37),C37H74O3
+671,578.6002,Phthioceranic acid (C39),C39H78O2
+672,580.5219,"40:6(22Z,25Z,28Z,28Z,31Z,37Z)",C40H68O2
+673,592.6158,Phthioceranic acid (C40),C40H80O2
+674,594.5951,Hydroxyphthioceranic acid (C39),C39H78O3
+675,595.9136,"9,10,12,13-tetrabromo-stearic acid",C18H32Br4O2
+676,608.5532,"42:6(25Z,27Z,30Z,33Z,36Z,39Z)",C42H72O2
+677,608.6107,Hydroxyphthioceranic acid (C40),C40H80O3
+678,620.6471,Phthioceranic acid (C42),C42H84O2
+679,634.6628,Phthioceranic acid (C43),C43H86O2
+680,636.642,Hydroxyphthioceranic acid (C42),C42H84O3
+681,650.6577,Hydroxyphthioceranic acid (C43),C43H86O3
+682,662.6941,Phthioceranic acid (C45),C45H90O2
+683,676.7097,Phthioceranic acid (C46);hexatetracontanoic acid,C46H92O2
+684,678.689,Hydroxyphthioceranic acid (C45),C45H90O3
+685,692.7046,Hydroxyphthioceranic acid (C46);R. ruber mycolic acid,C46H92O3
+686,696.5118,Petroformynic acid B,C47H68O4
+687,698.5274,Petroformynic acid C,C47H70O4
+688,704.741,Phthioceranic acid (C48),C48H96O2
+689,720.7359,Hydroxyphthioceranic acid (C48),C48H96O3
+690,788.7985,2-eicosyl-3-hydroxy-tritriaconta-16Z-enoic acid,C53H104O3
+691,792.7571,2-eicosyl-3-hydroxy-30-carboxy-triacontanoic acid,C51H100O5
+692,796.5126,Fulvyne I;Osirisyne B;Osirisyne D;Osirisyne E;Osirisyne H,C47H72O10
+693,796.5489,Fulvyne H,C48H76O9
+694,810.4918,Nepheliosyne A;Nepheliosyne B,C47H70O11
+695,812.5075,Fulvyne D;Fulvyne E;Fulvyne F;Fulvyne G;Osirisyne A;Osirisyne C;Osirisyne G;Osirisyne I,C47H72O11
+696,816.8298,2-eicosyl-3-hydroxy-pentatriaconta-16Z-enoic acid;2-eicosyl-3-hydroxy-pentatriaconta-18Z-enoic acid,C55H108O3
+697,818.5755,"alpha,alpha'-Trehalose 6-mycolate",C44H82O13
+698,820.7884,2-docosyl-3-hydroxy-30-carboxy-triacontanoic acid,C53H104O5
+699,826.4867,Osirisyne F,C47H70O12
+700,828.5024,Fulvyne A;Fulvyne B;Fulvyne C,C47H72O12
+701,830.8455,2-docosyl-3-hydroxy-tritriaconta-16Z-enoic acid,C56H110O3
+702,844.8611,2-docosyl-3-hydroxy-pentatriaconta-18Z-enoic acid;2-eicosyl-3-hydroxy-heptatriaconta-16Z-enoic acid;2-eicosyl-3-hydroxy-heptatriaconta-18Z-enoic acid;2-eicosyl-3-hydroxy-heptatriaconta-20Z-enoic acid;2-tetracosyl-3-hydroxy-tritriaconta-16Z-enoic acid,C57H112O3
+703,848.8197,2-eicosyl-3-hydroxy-34-carboxy-tetratriacontanoic acid;2-tetracosyl-3-hydroxy-30-carboxy-triacontanoic acid,C55H108O5
+704,858.8768,2-docosyl-3-hydroxy-pentatriaconta-16Z-enoic acid,C58H114O3
+705,872.8924,2-docosyl-3-hydroxy-heptatriaconta-16Z-enoic acid;2-docosyl-3-hydroxy-heptatriaconta-18Z-enoic acid;2-docosyl-3-hydroxy-heptatriaconta-20Z-enoic acid;2-eicosyl-3-hydroxy-nonatriaconta-18Z-enoic acid;2-eicosyl-3-hydroxy-nonatriaconta-20Z-enoic acid;2-tetracosyl-3-hydroxy-pentatriaconta-16Z-enoic acid;2-tetracosyl-3-hydroxy-pentatriaconta-18Z-enoic acid,C59H116O3
+706,876.851,2-docosyl-3-hydroxy-34-carboxy-tetratriacontanoic acid,C57H112O5
+707,884.8924,"(2R,3R,23Z,33Z)-3-hydroxy-2-octyldopentaconta-23,33-dienoic acid",C60H116O3
+708,900.9237,2-docosyl-3-hydroxy-nonatriaconta-18Z-enoic acid;2-docosyl-3-hydroxy-nonatriaconta-20Z-enoic acid;2-eicosyl-3-hydroxy-hentetraconta-20Z-enoic acid;2-tetracosyl-3-hydroxy-heptatriaconta-16Z-enoic acid;2-tetracosyl-3-hydroxy-heptatriaconta-18Z-enoic acid;2-tetracosyl-3-hydroxy-heptatriaconta-20Z-enoic acid,C61H120O3
+709,904.8823,2-eicosyl-3-hydroxy-38-carboxy-octatriacontanoic acid;2-tetracosyl-3-hydroxy-34-carboxy-tetratriacontanoic acid,C59H116O5
+710,928.955,2-docosyl-3-hydroxy-hentetraconta-20Z-enoic acid;2-tetracosyl-3-hydroxy-nonatriaconta-18Z-enoic acid;2-tetracosyl-3-hydroxy-nonatriaconta-20Z-enoic acid,C63H124O3
+711,932.9136,2-docosyl-3-hydroxy-38-carboxy-tetratriacontanoic acid,C61H120O5
+712,956.9863,2-tetracosyl-3-hydroxy-hentetraconta-20Z-enoic acid,C65H128O3
+713,960.9449,2-tetracosyl-3-hydroxy-38-carboxy-octatriacontanoic acid,C63H124O5
+714,1001.0126,"2-eicosyl-3-hydroxy-28,29-epoxy-30-methyl-hexatetracontanoic acid",C67H132O4
+715,1017.0439,2-eicosyl-3-hydroxy-46-methoxy-heptatetracontanoic acid,C68H136O4
+716,1029.0439,"2-docosyl-3-hydroxy-28,29-epoxy-30-methyl-hexatetracontanoic acid;2-eicosyl-3-hydroxy-28,29-epoxy-30-methyl-octatetracontanoic acid",C69H136O4
+717,1043.0595,2-eicosyl-3-hydroxy-32-oxo-33-methyl-nonatetracontanoic acid,C70H138O4
+718,1045.0752,2-docosyl-3-hydroxy-46-methoxy-heptatetracontanoic acid,C70H140O4
+719,1057.0752,"2-docosyl-3-hydroxy-28,29-epoxy-30-methyl-octatetracontanoic acid;2-eicosyl-3-hydroxy-28,29-epoxy-30-methyl-pentacontanoic acid;2-eicosyl-3-hydroxy-32,33-epoxy-34-methyl-pentacontanoic acid;2-tetracosyl-3-hydroxy-28,29-epoxy-30-methyl-hexatetracontanoic acid",C71H140O4
+720,1059.0908,2-eicosyl-3-hydroxy-32-methoxy-33-methyl-nonatetracontanoic acid,C71H142O4
+721,1071.0908,2-docosyl-3-hydroxy-32-oxo-33-methyl-nonatetracontanoic acid;2-eicosyl-3-hydroxy-32-oxo-33-methyl-henpentacontanoic acid,C72H142O4
+722,1073.1065,2-tetracosyl-3-hydroxy-46-methoxy-heptatetracontanoic acid,C72H144O4
+723,1085.1065,"2-docosyl-3-hydroxy-28,29-epoxy-30-methyl-pentacontanoic acid;2-docosyl-3-hydroxy-32,33-epoxy-34-methyl-pentacontanoic acid;2-eicosyl-3-hydroxy-32,33-epoxy-34-methyl-dopentacontanoic acid;2-tetracosyl-3-hydroxy-28,29-epoxy-30-methyl-octatetracontanoic acid",C73H144O4
+724,1087.1221,2-docosyl-3-hydroxy-32-methoxy-33-methyl-nonatetracontanoic acid;2-eicosyl-3-hydroxy-32-methoxy-33-methyl-henpentacontanoic acid,C73H146O4
+725,1095.6858,mediomycin B,C62H97NO15
+726,1099.1221,2-docosyl-3-hydroxy-32-oxo-33-methyl-henpentacontanoic acid;2-eicosyl-3-hydroxy-32-oxo-33-methyl-tripentacontanoic acid;2-eicosyl-3-hydroxy-36-oxo-37-methyl-tripentacontanoic acid;2-tetracosyl-3-hydroxy-32-oxo-33-methyl-nonatetracontanoic acid,C74H146O4
+727,1101.1378,2-eicosyl-3-hydroxy-51-methoxy-dopentacontanoic acid;2-tetracosyl-3-hydroxy-32-methoxy-33-methyl-nonatetracontanoic acid,C74H148O4
+728,1113.1378,"2-docosyl-3-hydroxy-32,33-epoxy-34-methyl-dopentacontanoic acid;2-eicosyl-3-hydroxy-32,33-epoxy-34-methyl-tetrapentacontanoic acid;2-eicosyl-3-hydroxy-36,37-epoxy-38-methyl-tetrapentacontanoic acid;2-tetracosyl-3-hydroxy-28,29-epoxy-30-methyl-pentacontanoic acid;2-tetracosyl-3-hydroxy-32,33-epoxy-34-methyl-pentacontanoic acid",C75H148O4
+729,1115.1534,2-docosyl-3-hydroxy-32-methoxy-33-methyl-henpentacontanoic acid;2-eicosyl-3-hydroxy-32-methoxy-33-methyl-tripentacontanoic acid;2-eicosyl-3-hydroxy-36-methoxy-37-methyl-tripentacontanoic acid,C75H150O4
+730,1123.1585,alpha-Semegma mycolic acid,C77H150O3
+731,1127.1534,2-docosyl-3-hydroxy-32-oxo-33-methyl-tripentacontanoic acid;2-docosyl-3-hydroxy-36-oxo-37-methyl-tripentacontanoic acid;2-eicosyl-3-hydroxy-36-oxo-37-methyl-pentapentacontanoic acid;2-tetracosyl-3-hydroxy-32-oxo-33-methyl-henpentacontanoic acid,C76H150O4
+732,1129.1691,2-docosyl-3-hydroxy-51-methoxy-dopentacontanoic acid;2-tetracosyl-3-hydroxy-32-methoxy-33-methyl-henpentacontanoic acid,C76H152O4
+733,1137.1741,"(2R)-2-{(1R)-1-hydroxy-12-[(1R,2S)-2-{14-[(1R,2S)-2-icosylcyclopropyl]tetradecyl}cyclopropyl]dodecyl}hexacosanoic acid;(2R)-2-{(1R)-1-hydroxy-12-[(1S,2R)-2-{14-[(1S,2R)-2-icosylcyclopropyl]tetradecyl}cyclopropyl]dodecyl}hexacosanoic acid",C78H152O3
+734,1141.1691,"2-docosyl-3-hydroxy-32,33-epoxy-34-methyl-tetrapentacontanoic acid;2-docosyl-3-hydroxy-36,37-epoxy-38-methyl-tetrapentacontanoic acid;2-eicosyl-3-hydroxy-36,37-epoxy-38-methyl-hexapentacontanoic acid;2-tetracosyl-3-hydroxy-32,33-epoxy-34-methyl-dopentacontanoic acid",C77H152O4
+735,1143.1847,2-docosyl-3-hydroxy-32-methoxy-33-methyl-tripentacontanoic acid;2-eicosyl-3-hydroxy-36-methoxy-37-methyl-pentapentacontanoic acid,C77H154O4
+736,1155.1847,2-docosyl-3-hydroxy-36-oxo-37-methyl-pentapentacontanoic acid;2-eicosyl-3-hydroxy-36-oxo-37-methyl-heptapentacontanoic acid;2-eicosyl-3-hydroxy-40-oxo-41-methyl-heptapentacontanoic acid;2-tetracosyl-3-hydroxy-32-oxo-33-methyl-tripentacontanoic acid;2-tetracosyl-3-hydroxy-36-oxo-37-methyl-tripentacontanoic acid,C78H154O4
+737,1157.2004,2-tetracosyl-3-hydroxy-51-methoxy-dopentacontanoic acid,C78H156O4
+738,1165.2054,alpha-mycolic acid,C80H156O3
+739,1169.2004,"2-docosyl-3-hydroxy-36,37-epoxy-38-methyl-hexapentacontanoic acid;2-eicosyl-3-hydroxy-36,37-epoxy-38-methyl-octapentacontanoic acid;2-tetracosyl-3-hydroxy-32,33-epoxy-34-methyl-tetrapentacontanoic acid;2-tetracosyl-3-hydroxy-36,37-epoxy-38-methyl-tetrapentacontanoic acid",C79H156O4
+740,1171.216,2-eicosyl-3-hydroxy-36-methoxy-37-methyl-heptapentacontanoic acid;2-eicosyl-3-hydroxy-40-methoxy-41-methyl-heptapentacontanoic acid;2-tetracosyl-3-hydroxy-32-methoxy-33-methyl-tripentacontanoic acid,C79H158O4
+741,1175.6426,mediomycin A,C62H97NO18S
+742,1183.216,2-docosyl-3-hydroxy-36-oxo-37-methyl-heptapentacontanoic acid;2-docosyl-3-hydroxy-40-oxo-41-methyl-heptapentacontanoic acid;2-eicosyl-3-hydroxy-40-oxo-41-methyl-nonapentacontanoic acid;2-tetracosyl-3-hydroxy-36-oxo-37-methyl-pentapentacontanoic acid,C80H158O4
+743,1185.2317,2-eicosyl-3-hydroxy-57-methoxy-octapentacontanoic acid,C80H160O4
+744,1195.216,keto meromycolic acid,C81H158O4
+745,1197.1953,(20E)-2-docosyl-3-hydroxy-39-(nonadecan-2-yloxy)-39-oxononatriacont-20-enoic acid,C80H156O5
+746,1197.2317,"2-docosyl-3-hydroxy-36,37-epoxy-38-methyl-octapentacontanoic acid;2-tetracosyl-3-hydroxy-36,37-epoxy-38-methyl-hexapentacontanoic acid",C81H160O4
+747,1199.2473,2-eicosyl-3-hydroxy-40-methoxy-41-methyl-nonapentacontanoic acid,C81H162O4
+748,1209.2317,keto mycolic acid,C82H160O4
+749,1211.2473,2-docosyl-3-hydroxy-40-oxo-41-methyl-nonapentacontanoic acid;2-eicosyl-3-hydroxy-40-oxo-41-methyl-henhexacontanoic acid;2-tetracosyl-3-hydroxy-36-oxo-37-methyl-heptapentacontanoic acid;2-tetracosyl-3-hydroxy-40-oxo-41-methyl-heptapentacontanoic acid,C82H162O4
+750,1213.263,2-docosyl-3-hydroxy-57-methoxy-octapentacontanoic acid,C82H164O4
+751,1225.263,"2-tetracosyl-3-hydroxy-36,37-epoxy-38-methyl-octapentacontanoic acid;methoxy mycolic acid",C83H164O4
+752,1227.2786,2-eicosyl-3-hydroxy-40-methoxy-41-methyl-henhexacontanoic acid,C83H166O4
+753,1237.263,"(2R)-2-[(1R)-1-hydroxy-16-{(1S,2R)-2-[(20S)-20-methyl-19-oxooctatriacontyl]cyclopropyl}hexadecyl]hexacosanoic acid;(2R)-2-{(1R)-1-hydroxy-16-[(1R,2S)-2-(20-methyl-19-oxooctatriacontyl)cyclopropyl]hexadecyl}hexacosanoic acid",C84H164O4
+754,1239.2786,"(2R)-2-[(1R)-1-hydroxy-16-{(1R,2S)-2-[(20S)-20-methyl-19-oxooctatriacontyl]cyclopropyl}hexadecyl]hexacosanoic acid;(2R)-2-[(1R)-1-hydroxy-16-{(1S,2R)-2-[(19S,20S)-19-hydroxy-20-methyloctatriacontyl]cyclopropyl}hexadecyl]hexacosanoic acid;2-docosyl-3-hydroxy-40-oxo-41-methyl-henhexacontanoic acid;2-tetracosyl-3-hydroxy-40-oxo-41-methyl-nonapentacontanoic acid",C84H166O4
+755,1241.2943,2-tetracosyl-3-hydroxy-57-methoxy-octapentacontanoic acid,C84H168O4
+756,1253.2943,"(2R)-2-[(1R)-1-hydroxy-18-{(1R,2S)-2-[(17R,18R)-17-methoxy-18-methylhexatriacontyl]cyclopropyl}octadecyl]hexacosanoic acid;(2R)-2-[(1R)-1-hydroxy-18-{(1R,2S)-2-[(17S,18S)-17-methoxy-18-methylhexatriacontyl]cyclopropyl}octadecyl]hexacosanoic acid;(2R)-2-[(1R)-1-hydroxy-18-{(1S,2R)-2-[(17R,18R)-17-methoxy-18-methylhexatriacontyl]cyclopropyl}octadecyl]hexacosanoic acid;(2R)-2-[(1R)-1-hydroxy-18-{(1S,2R)-2-[(17S,18S)-17-methoxy-18-methylhexatriacontyl]cyclopropyl}octadecyl]hexacosanoic acid",C85H168O4
+757,1267.3099,2-tetracosyl-3-hydroxy-40-oxo-41-methyl-henhexacontanoic acid,C86H170O4
+758,1279.3099,"(2R)-2-[(1R)-1-hydroxy-17-{(1R,2R)-2-[(2R)-22-methyl-21-oxotetracontan-2-yl]cyclopropyl}heptadecyl]hexacosanoic acid",C87H170O4
+759,1281.3256,"(2R)-2-[(1R)-1-hydroxy-17-{(1R,2R)-2-[(2R,21R,22R)-21-hydroxy-22-methyltetracontan-2-yl]cyclopropyl}heptadecyl]hexacosanoic acid;(2R)-2-[(1R)-1-hydroxy-17-{(1R,2R)-2-[(2R,21S,22S)-21-hydroxy-22-methyltetracontan-2-yl]cyclopropyl}heptadecyl]hexacosanoic acid",C87H172O4
+760,1295.0349,"alpha,alpha'-Trehalose 6,6'-bismycolate",C76H142O15
+761,1295.3412,"(2R)-2-[(1R)-1-hydroxy-19-{(1R,2R)-2-[(2R,19S,20S)-19-methoxy-20-methyloctatriacontan-2-yl]cyclopropyl}nonadecyl]hexacosanoic acid",C88H174O4

@@ -1,0 +1,560 @@
+,MASS,COMMON_NAME,FORMULA
+0,86.0368,Dihydrofuran-2(3H)-one,C4H6O2
+1,88.0524,Methyl propionate,C4H8O2
+2,100.0524,ethyl 2E-propenoate;gamma-valerolactone,C5H8O2
+3,102.0681,Methyl butyrate;ethyl propionate,C5H10O2
+4,114.0681,Ethyl crotonate;Methyl 4-pentenoate;gamma-caprolactone,C6H10O2
+5,116.0473,methyl 3-hydroxybut-2-enoate,C5H8O3
+6,116.0837,3-Methyl-2-butenyl formate;Ethyl butyrate;Methyl (S)-2-Methylbutanoate;Methyl 3-methylbutanoate;Methyl pentanoate;ethyl 2-methyl-propionyl;propyl propionate,C6H12O2
+7,118.063,Methyl 3-hydroxy-butanoate,C5H10O3
+8,126.0681,Methyl sorbate,C7H10O2
+9,128.0473,3-Acetyldihydro-2(3H)-furanone,C6H8O3
+10,128.0837,4-heptanolide;Allyl butyrate;Ethyl 4-pentenoate;Ethyl tiglate;Methyl (Z)-3-hexenoate;Methyl 2E-hexenoate;cis-2-Methyl-5-hexanolide,C7H12O2
+11,130.0266,Methyl hydrogen fumarate,C5H6O4
+12,130.063,4-Hydroxy-4-methyltetrahydro-2H-pyran-2-one,C6H10O3
+13,130.0994,2-Methylpropyl propionate;Ethyl pentanoate;Isopropyl butyrate;Methyl 2-methylpentanoate;Methyl 4-methylpentanoate;Methyl hexanoate;Pentyl acetate;ethyl 2-methyl-butanoate;ethyl 3-methyl-butanoate;propionyl butyrate,C7H14O2
+14,134.0402,Methyl 3-mercaptobutanoate,C5H10O2S
+15,140.0473,HOHA lactone,C7H8O3
+16,140.0837,"2E,4E-Hexadienyl acetate;2E,5-Hexadienyl acetate;Allyl tiglate;Ethyl 2-methyl-3,4-pentadienoate;Ethyl sorbate",C8H12O2
+17,142.063,3-acetyl-3-methyldihydrofuran-2(3H)-one,C7H10O3
+18,142.0994,"(E)-2-Butenyl butyrate;1-Hexenyl acetate;2-Methylallyl butyrate;2-Methylpropyl (2E)-butenoate;2-Propenyl 3-methylbutanoate;2E-Hexenyl acetate;2S,4R-Dimethyl-5S-hexanolide;3-Methyl-2-butenyl propionate;3E-Hexenyl acetate;3Z-Hexenyl acetate;Allyl valerate;Ethyl (E)-3-hexenoate;Ethyl 2-methyl-4-pentenoate;Ethyl 2E-hexenoate;Ethyl trans-2-methyl-2-pentenoate;Isopropyl tiglate;Methyl 2-heptenoate;delta-octanolide;gamma-octanolide",C8H14O2
+19,144.0423,Ethyl hydrogen fumarate,C6H8O4
+20,144.0786,2S-Hydroxy-2-isopropylbutano-3S-lactone;Methyl (R)-3-methyl-2-oxopentanoate;isopropyl 3-hydroxybut-2-enoate,C7H12O3
+21,144.115,2-Methylpropyl 2-methylpropionate;2-Methylpropyl butanoate;3-Methylbutyl propionate;Ethyl 2-ethylbutanoate;Ethyl 2-methylpentanoate;Ethyl 3-methylpentanoate;Ethyl 4-methylpentanoate;Hexyl acetate;Isopropyl 2-methylbutanoate;Isopropyl 3-methylbutanoate;Methyl 5-methylhexanoate;Methyl heptanoate;Propyl 3-methylbutanoate;Propyl pentanoate;butryl butyrate;ethyl hexanoate,C8H16O2
+22,146.0943,(+/-)-Ethyl 2-hydroxy-2-methylbutyrate;Methyl DL-Leucate,C7H14O3
+23,148.0558,Ethyl 3-mercaptobutyrate;Methyl 2-(methylthio)butyrate;Methyl 3-(methylthio)butanoate;Methyl 4-(methylthio)butyrate;Methylthiomethyl butyrate,C6H12O2S
+24,152.0473,Methyl furfuracrylate,C8H8O3
+25,152.0837,"2,6Z-Nonadien-4-olide;2-Propenyl 2,4-hexadienoate",C9H12O2
+26,154.063,HOOA lactone,C8H10O3
+27,154.0994,(2-Hydroxymethyl-cyclohexyl)-acetic acid lactone;2-nonen-4-olide;Allyl hexenoate;Methyl 2-octynoate,C9H14O2
+28,156.115,(E)-2-Methyl-2-butenyl butyrate;2-Propenyl 2-ethylbutanoate;2-Propenyl hexanoate;2E-Heptenyl acetate;3-Methylenehexyl acetate;Isobutyl angelate;Isopropyl 2-methyl-2E-pentenoate ;Methyl (E)-2-octenoate;Methyl 2-octenoate;Methyl 4Z-octenoate;cis-Ethyl 4-heptenoate;gamma-nonanolide,C9H16O2
+29,158.0943,1-Methyl-2-oxopropyl butyrate,C8H14O3
+30,158.1307,1-Methylbutyl 3-methylbutanoate;1-Methylbutyl butanoate;2-Methylbutyl 2-methylpropionate;2-Methylbutyl butyrate;2-Methylpropyl 2-methylbutanoate;2-Methylpropyl 3-methylbutanoate;3-Methylbutyl 2-methylpropionate;3-Methylbutyl butyrate;Butyl pentanoate;Heptyl acetate;Isopropyl hexanoate;Methyl octanoate;Octyl formate;Oenanthic ether;Pentyl butanoate;butyl 2-methyl-butanoate;hexyl propionate;propionyl hexanoate,C9H18O2
+31,160.0736,Dihydro-3-hydroxy-3-(1-hydroxyethyl)-4-methylfuran-2(3H)-one,C7H12O4
+32,160.1099,(+/-)-Ethyl 2-hydroxy-3-methylvalerate;ethyl 3-hydroxy-hexanoate,C8H16O3
+33,162.0715,Ethyl 4-(methylthio)butyrate,C7H14O2S
+34,164.0837,Methyl 3-phenylpropanoate,C10H12O2
+35,168.0786,2-Furanylmethyl butanoate,C9H12O3
+36,168.115,"2,4-Hexadienyl butyrate;2E,4E-Octadienyl acetate;2E,6E-Octadienyl acetate;2E,6Z-Octadienyl acetate;2E,7-Octadienyl acetate;Ethyl (4Z)-4,7-octadienoate;Methyl octynecarboxylate;Tiglyl tiglate;Trans-eldanolide;butyl 2E,4E-hexadienoate;cis-3-Hexenyl crotonate;cis-eldanolide;propyl 2-heptynoate",C10H16O2
+37,170.1307,(E)-2-Hexenyl butyrate;(R)-gamma-Decalactone;10-Methyloxecan-2-one;2-Methylbutyl 3-methyl-2-butenoate;2-Propenyl heptanoate;2E-Octenyl acetate;3Z-Hexenyl butyrate;3Z-Hexenyl isobutyrate;3Z-Octenyl acetate;Cyclohexyl butanoate;Delta-decalactone;Ethyl (E)-2-octenoate;Ethyl 4Z-octenoate;Hexyl crotonate;Isopentyl 3-methyl-2-butenoate;Methyl 2-nonenoate;Methyl 6E-nonenoate;ethyl 3E-octenoate;ethyl 4Z-octenoate,C10H18O2
+38,172.0524,"Methyl (Z)-2-decene-4,6,8-triynoate;Nemotin",C11H8O2
+39,172.1463,2-Methylbutyl 2-methylbutanoate;2-Methylbutyl 3-methylbutanoate;2-Methylpropyl hexanoate;2-Pentyl 3-methylbutanoate;3-Methylbutyl 2-methylbutanoate;3-Methylbutyl pentanoate;Ethyl 2-ethylhexanoate;Isopentyl isopentanoate;Methyl 4-methyl-octanoate;Methyl nonanoate;Octyl acetate;Pentyl 3-methylbutanoate;Propyl heptanoate;butyl hexanoate;ethyl 4-methyl-heptanoate;ethyl octanoate;hexyl butyrate,C10H20O2
+40,174.1494,Butyrylcholine,C9H20NO2
+41,176.0837,"2-Decene-4,6-diynoic acid, methyl ester, (E)-",C11H12O2
+42,176.0871,Methylthiomethyl hexanoate,C8H16O2S
+43,178.0994,Methyl 4-phenylbutanoate,C11H14O2
+44,180.0786,Propyl 2-furanacrylate,C10H12O3
+45,180.115,"7E,10-undecadien-4-olide;Methyl 2E,4E,6Z-decatrienoate;Methyl 2E,4Z,6Z-decatrienoate;Methyl 2Z,4E,6Z-decatrienoate",C11H16O2
+46,182.0943,Furfuryl isovalerate;Furfuryl pentanoate;Modiolide B,C10H14O3
+47,182.1307,"(E)-2-Hexenyl 2-methyl-(E)-2-butenoate;(E)-3,7-Dimethyl-2,6-octadienyl formate;(Z)-3,7-Dimethyl-2,6-octadienyl formate;Ethyl octynecarboxylate;Methyl 2E,4E-decadienoate;Methyl 2E,4Z-decadienoate;cis-3-Hexenyl tiglate",C11H18O2
+48,184.1099,Poprunellelactone,C10H16O3
+49,184.1463,"(Z)-3-Hexenyl 3-methylbutanoate;11-undecanolactone;2-Hexenyl isovalerate;2-Hexenyl valerate;2-Nonenyl acetate;2-Propenyl octanoate;3-Hexenyl 2-methylbutyrate;5-Octenyl propanoate;6E-Nonenyl acetate;Cyclohexyl 3-methylbutanoate;Cyclohexyl pentanoate;Ethyl 3-cyclohexylpropionate;Methyl 2-decenoate;Methyl 3,7-dimethyl-6E-octenoate;Methyl 4Z-decenoate;Pent-2-enyl hexanoate;cis-3-Hexenyl 2-methylbutanoate;cis-3-Hexenyl pentanoate;cis-3-Octenyl propionate;gamma-undecalactone;trans-2-Hexenyl 2-methylbutyrate",C11H20O2
+50,186.0681,Odyssin,C12H10O2
+51,186.1256,-;3Z-Hexenyl 3R-hydroxybutanoate;6-Hydroxy-4-decanolide;[1-hydroxyhexyl]-2H-furan-2-one,C10H18O3
+52,186.162,"2-Methylbutyl hexanoate;3,7-Dimethyl-6-octenyl formate;3-Methylbutyl hexanoate;4-Methyloctyl acetate;Butyl heptanoate;Ethyl nonanoate;Heptyl butyrate;Hexyl 2-methylbutanoate;Hexyl 3-methylbutanoate;Isobutyl enanthate;Isopropyl octanoate ;Methyl 3,7-dimethyl-6-octenoate;Methyl decanoate;Nonyl acetate;Octyl propanoate;decyl formate;ethyl 4-methyl-octanoate;valeryl hexanoate",C11H22O2
+53,188.0321,(2E)-3-(methoxycarbonyl)pent-2-enedioic acid,C7H8O6
+54,188.1049,"cis- and trans-Ethyl 2,4-dimethyl-1,3-dioxolane-2-acetate",C9H16O4
+55,188.1412,Hexyl (R)-3-hydroxybutyrate,C10H20O3
+56,190.0664,Ethyl 4-(acetylthio)butyrate,C8H14O3S
+57,190.1028,(+/-)-Isobutyl 3-methylthiobutyrate,C9H18O2S
+58,192.115,Ethyl 4-phenylbutanoate,C12H16O2
+59,194.1307,"4,8-Dimethyl-4E,8E-decadien-10-olide;Cucujolide IV;Cucujolide IX;Parcoblattalactone;Suspensolide",C12H18O2
+60,196.1099,Isobutyl 2-furanpropionate,C11H16O3
+61,196.1463,"(E)-2-Hexenyl (E)-2-hexenoate;(E)-2-Hexenyl (Z)-3-hexenoate;(Z)-4-Hydroxy-6-dodecenoic acid lactone;3,7-Dimethyl-2E,6-octadienyl acetate;3,7-Dimethyl-2Z,6-octadienyl acetate;3E,5E-Decadienyl acetate;3Z,5E-Decadienyl acetate;5-Dodecen-11-olide;7Z,9-Decadienyl acetate;Allyl 3-cyclohexylpropionate;Buibuilactone;Cucujolide II;Cucujolide VIII;Ethyl (E)-7,9-decadienoate;Isopropyl 2,4-dimethyl-2E,4E-heptadienoate  ;Methyl 2-undecynoate;S-Cucujolide II;cis-3-Hexenyl cis-3-hexenoate;cis-3-Hexenyl trans-2-hexenoate;ethyl 2E,4Z-decadienoate",C12H20O2
+62,198.0892,Modiolide A,C10H14O4
+63,198.162,(E)-2-Hexenyl hexanoate;(E)-2-Octenyl butyrate;(Z)-2-Nonenyl propionate;(Z)-3-Hexenyl hexanoate;1-Ethenylhexyl butanoate;10-methyl-6R-undecanolide;11-Dodecanolide;2E-Decenyl acetate;3Z-Decenyl acetate;4E-Decenyl acetate;4Z-Decenyl acetate;5E-Decenyl acetate;5Z-Decenyl acetate;7E-Decenyl acetate;7Z-Decenyl acetate;Allyl nonanoate;Citronellyl acetate;Ethyl 2-decenoate;Ethyl 4-decenoate;Hexyl 2-methyl-4-pentenoate;Hexyl 2E-hexenoate;Methyl 10-undecenoate;Methyl 9-undecenoate;Rhodinyl acetate;delta-dodecalactone;gamma-dodecalactone,C12H22O2
+64,200.1412,3Z-Hexenyl 2R-hydroxy-3-methylbutyrate;5R-hydroxy-4R-decanolide;5S-hydroxy-4R-decanolide;6-hydroxy-4-Undecanolide,C11H20O3
+65,200.1651,2-Hexenoylcholine,C11H22NO2
+66,200.1776,2-Heptyl butyrate;Decyl acetate;Isopropyl nonanoate;Pentyl heptanoate;ethyl decanoate;hexyl hexanoate;octyl 2-methyl-propionyl;octyl butyrate,C12H24O2
+67,202.1205,R-2-Hydroxy-3-methylbutanoic acid 3-Methylbutanoyl,C10H18O4
+68,202.1569,3-Hydroxynonyl acetate,C11H22O3
+69,203.1158,Acetyl-D-carnitine;Acetyl-L-carnitine;DL-Acetylcarnitine,C9H17NO4
+70,204.1184,Hexyl 3-mercaptobutanoate,C10H20O2S
+71,206.1307,Ethyl 2-ethyl-3-phenylpropanoate,C13H18O2
+72,210.1256,Ieodomycin B;Isoamyl 2-furonpropionate;Patulolide A;Patulolide B,C12H18O3
+73,210.162,"(E)-2-Octenyl 2-methyl-(E)-2-butenoate;(E)-3,7-Dimethyl-2,6-octadienyl propionate;(E)-3,7-Dimethyl-2,7-octadienyl propionate;(Z)-3,7-Dimethyl-2,7-octadienyl propionate;2-Propenyl cyclohexanebutanoate;Methyl (2E,6Z)-dodecadienoate;Neryl propionate;Propyl 2,4-decadienoate",C13H22O2
+74,212.1412,"8-oxo-3,7-Dimethyl-6E-octenyl acetate;Patulolide C",C12H20O3
+75,212.1776,(Z)-7-Dodecenyl formate;10S-methyl-6R-dodecanolide;2-Undecenyl acetate;3-Methylene-7-methyl-7-octenyl propionate;5Z-Undecenyl acetate;7Z-Undecenyl acetate;8E-Undecenyl acetate;8Z-Undecenyl acetate;9E-Undecenyl acetate;9Z-Undecenyl acetate;Citronellyl propionate;Ethyl 10-undecenoate;Methyl (E)-2-dodecenoate;Rhodinyl propionate,C13H24O2
+76,214.0841,Curvulalide,C10H14O5
+77,214.1569,"4S-Hydroxy-5R-octyl-4,5-dihydro-3H-furan-2-one;4S-Hydroxy-5S-octyl-4,5-dihydro-3H-furan-2-one;6-hydroxy-4-dodecanolide",C12H22O3
+78,214.1933,2-methylbutyl octanoate;3-Methylbutyl octanoate;Ethyl undecanoate;Methyl dodecanoate;Pentyl octanoate;Undecyl acetate;decyl propionate;dodecyl formate;nonyl butyrate;octyl 2-methyl-butanoate;octyl 3-methyl-butanoate,C13H26O2
+79,215.1158,Propenoylcarnitine,C10H17NO4
+80,216.1362,Butyl butyryllactate,C11H20O4
+81,217.1314,O-propanoyl-D-carnitine;O-propanoyl-carnitine;Propionylcarnitine,C10H19NO4
+82,222.162,"7E,9E,11-Dodecatrienyl acetate;7E,9Z,11-Dodecatrienyl acetate;7Z,9E,11-Dodecatrienyl acetate;9Z-Dodecen-7-ynyl acetate;Cucujolide X;R-cucujolide V;S-cucujolide V",C14H22O2
+83,224.1412,Furfuryl octanoate,C13H20O3
+84,224.1776,"(E)-2-Hexenyl (E)-2-octenoate;(E)-3,7-Dimethyl-2,6-octadienyl butyrate;(Z)-3,7-Dimethyl-2,6-octadienyl butyrate;2-Propenyl cyclohexanepentanoate;3E,5Z-Dodecadienyl acetate;3Z,5E-Dodecadienyl acetate;4E,10E-Dodecadienyl acetate;5E,7E-Dodecadienyl acetate;5E,7Z-Dodecadienyl acetate;5Z,7E-Dodecadienyl acetate;5Z,7Z-Dodecadienyl acetate;7E,9E-Dodecadienyl acetate;7E,9Z-Dodecadienyl acetate;7Z,9E-Dodecadienyl acetate;7Z,9Z-Dodecadienyl acetate;8E,10E-Dodecadienyl acetate;8E,10Z-Dodecadienyl acetate;8Z,10E-Dodecadienyl acetate;8Z,10Z-Dodecadienyl acetate;9E,11-Dodecadienyl acetate;9Z,11-Dodecadienyl acetate;Allyl undecylenate;Ethyl (2E,6Z)-dodecadienoate;Geranyl 2-methylpropanoate;R-cucujolide III;S-cucujolide III",C14H24O2
+85,226.1933,(E)-2-Octenyl hexanoate;10E-Dodecenyl acetate;10Z-Dodecenyl acetate;11-Dodecenyl acetate;13-tetradecanolide;2-Hexenyl octanoate;3E-Dodecenyl acetate;3Z-Dodecenyl acetate;4E-Dodecenyl acetate;5E-Dodecenyl acetate;5Z-Dodecenyl acetate;7E-Dodecenyl acetate;7Z-Dodecenyl acetate;8E-Dodecenyl acetate;8Z-Dodecenyl acetate;9E-Dodecenyl acetate;9Z-Dodecenyl acetate;Butyl 2-decenoate;Citronellyl butyrate;Citronellyl isobutyrate;Ethyl (E)-2-dodecenoate;Methyl 3-methyl-2Z-dodecenoate;Rhodinyl butyrate;Rhodinyl isobutyrate;decyl 2E-butenoate;delta-nonyl-valeralactone;gamma-tetradecalactone,C14H26O2
+86,228.1725,6-hydroxy-4-tridecanolide,C13H24O3
+87,228.2089,3-Methylbutyl nonanoate;Decyl isobutyrate;Dodecyl acetate;Heptyl heptanoate;Nonyl isovalerate;decyl butyrate;ethyl dodecanoate;hexyl octanoate;octyl hexanoate,C14H28O2
+88,229.1314,Butenylcarnitine,C11H19NO4
+89,230.1307,"(2E,8Z)-Decadiene-4,6-diyn-1-yl 3-methylbutanoate",C15H18O2
+90,231.1471,Butyrylcarnitine;Isobutyryl-L-carnitine;O-butanoyl-carnitine,C11H21NO4
+91,232.1463,"(Z)-8-Decene-4,6-diyn-1-yl 3-methylbutanoate",C15H20O2
+92,233.1263,Hydroxypropionylcarnitine,C10H19NO5
+93,234.162,"4,6-Decadiyn-1-ol isovalerate",C15H22O2
+94,236.1412,"12,13-Dimethyl-5,14-dioxabicyclo[9.2.1]-tetradeca-1(13),11-dien-4-one",C14H20O3
+95,236.1776,"4E,7Z,10Z-Tridecatrienyl acetate;Geranyl tiglate",C15H24O2
+96,238.1569,Geranyl acetoacetate,C14H22O3
+97,238.1933,"(E)-3,7-Dimethyl-2,6-octadienyl 3-methylbutanoate;(E)-3,7-Dimethyl-2,6-octadienyl pentanoate;(E,E)-8,10-Tetradecadienyl formate;(Z)-3,7-Dimethyl-2,6-octadienyl 3-methylbutanoate;(Z)-3-Nonenyl (E)-2-hexenoate;(Z,E)-5,7-Dodecadienyl propionate;2-Propenyl cyclohexanehexanoate;4E,7Z-Tridecadienyl acetate;5E,9Z-Tridecadienyl acetate;5Z,9E-Tridecadienyl acetate;5Z,9Z-Tridecadienyl acetate;7Z,11Z-Tridecadienyl acetate;Citronellyl trans-2-methyl-2-butenoate;Geranyl 2-methylbutyrate;Geranyl valerate;Methyl (E)-2,6,10-trimethyl-5,9-undecadienoate",C15H26O2
+98,240.2089,(E)-8-Tetradecenyl formate;(E)-9-Tetradecenyl formate;(Z)-5-Decenyl 3-methylbutanoate;(Z)-7-Dodecenyl propionate;(Z)-8-Tetradecenyl formate;(Z)-9-Tetradecenyl formate;10Z-Tridecenyl acetate;11E-Tridecenyl acetate;11Z-Tridecenyl acetate;2-Tridecenyl acetate;3E-Tridecenyl acetate;4E-Tridecenyl acetate;4Z-Tridecenyl acetate;6E-Tridecenyl acetate;8E-Tridecenyl acetate;8Z-Tridecenyl acetate;9E-Tridecenyl acetate;9Z-Tridecenyl acetate;Butyl undecylenate;Citronellyl isovalerate;Citronellyl pentanoate;Isobutyl 10-undecenoate;Isopropyl 5Z-dodecenoate ;Isopropyl 7Z-dodecenoate ;Isopropyl 9Z-dodecenoate ;Methyl 5Z-tetradecenoate;Methyl 9Z-tetradecenoate;Rhodinyl isovalerate,C15H28O2
+99,242.2246,"1,3,5,7-Tetramethyldecyl formate;10R-Methyldodecyl acetate;3-Methylbutyl decanoate;Dodecyl propionate;Heptyl octanoate;Hexyl nonanoate;Isopropyl dodecanoate;Methyl 2,4,8-trimethylundecanoate;Methyl 3,5-dimethyl-dodecanoate;Methyl tetradecanoate;Octyl heptanoate;Pentyl decanoate;Tridecyl acetate;Undecyl isobutyrate;propionyl dodecanoate;undecyl butyrate",C15H30O2
+100,243.1471,2-ethylacryloylcarnitine;Tiglylcarnitine,C12H21NO4
+101,245.1627,2-Methylbutyroylcarnitine;Isovalerylcarnitine;Valerylcarnitine;isovaleryl-L-carnitine;pivaloylcarnitine,C12H23NO4
+102,247.1056,Malonylcarnitine;O-malonylcarnitine,C10H17NO6
+103,247.142,3-hydroxybutyrylcarnitine;Hydroxybutyrylcarnitine,C11H21NO5
+104,248.1776,Octyl phenylacetate,C16H24O2
+105,250.1933,"(E)-2-Hexenyl (E)-7,9-decadienoate;3E,8Z,11Z-Tetradecatrienyl acetate;9Z,11E,13-Tetradecatrienyl acetate",C16H26O2
+106,252.2089,"(E)-3,7-Dimethyl-2,6-octadienyl hexanoate;(Z)-3,7-Dimethyl-2,6-octadienyl hexanoate;(Z)-3-Decenyl (E)-2-hexenoate;(Z)-3-Decenyl (E)-3-hexenoate;(Z)-3-Dodecenyl (E)-2-butenoate;10E,12E-Tetradecadienyl acetate;10E,12Z-Tetradecadienyl acetate;10Z,12E-Tetradecadienyl acetate;10Z,12Z-Tetradecadienyl acetate;11-Methyl-9Z,12-tridecadienyl acetate;11E,13-Tetradecadienyl acetate;11Z,13-Tetradecadienyl acetate;3E,5E-Tetradecadienyl acetate;3E,5Z-Tetradecadienyl acetate;3E,7Z-Tetradecadienyl acetate;3E,8Z-Tetradecadienyl acetate;3Z,5E-Tetradecadienyl acetate;4E,10Z-Tetradecadienyl acetate;4E,9Z-Tetradecadienyl acetate;8E,10E-Tetradecadienyl acetate;8E,10Z-Tetradecadienyl acetate;8Z,10E-Tetradecadienyl acetate;9E,11-Tetradecadienyl acetate;9E,11Z-Tetradecadienyl acetate;9E,12E-Tetradecadienyl acetate;9Z,11E-Tetradecadienyl acetate;9Z,11Z-Tetradecadienyl acetate;9Z,12E-Tetradecadienyl acetate;9Z,12Z-Tetradecadienyl acetate",C16H28O2
+107,254.1882,Methyl 7-oxo-11E-tetradecenoate,C15H26O3
+108,254.2246,(Z)-7-Dodecenyl butyrate;10E-Tetradecenyl acetate;10Z-Tetradecenyl acetate;11E-Tetradecenyl acetate;11Z-Tetradecenyl acetate;12E-Tetradecenyl acetate;12Z-Tetradecenyl acetate;15R-Hexadecanolide;16-Hexadecanolide;3E-Tetradecenyl acetate;3Z-Tetradecenyl acetate;5E-Tetradecenyl acetate;5Z-Tetradecenyl acetate;6E-Tetradecenyl acetate;6Z-Tetradecenyl acetate;7E-Tetradecenyl acetate;7Z-Tetradecenyl acetate;8E-Tetradecenyl acetate;8Z-Tetradecenyl acetate;9E-Tetradecenyl acetate;9Z-Tetradecenyl acetate;Citronellyl hexanoate;Vittatalactone;delta-hexadecalactone;dodecyl 2E-butenoate;ethyl 7E-tetradecenoate;ethyl 9E-tetradecenoate;ethyl 9Z-tetradecenoate,C16H30O2
+109,256.2402,"7-Methyloctyl 5-methylhexanoate;Butyl dodecanoate;Dodecyl 2-methylpropanoate;Methyl 2,6,10-trimethyl-dodecanoate;Tetradecyl acetate;decyl hexanoate;dodecyl butyrate;ethyl tetradecanoate;hexyl decanoate;octyl octanoate",C16H32O2
+110,257.1627,2-Hexenoylcarnitine,C13H23NO4
+111,258.2433,Decanoylcholine,C15H32NO2
+112,259.1056,Fumarycarnitine,C11H17NO6
+113,259.1784,Hexanoylcarnitine;O-hexanoyl-R-carnitine,C13H25NO4
+114,261.1212,Methylmalonylcarnitine;O-methylmalonylcarnitine;O-succinylcarnitine,C11H19NO6
+115,261.1576,3-hydroxyisovalerylcarnitine;hydroxyisovaleroyl carnitine,C12H23NO5
+116,262.1744,"11,11-Difluoro-9Z-dodecenyl acetate;7,7-Difluoro-8Z-dodecenyl acetate",C14H24F2O2;C14H24O2F2
+117,264.2089,"3,7,11-Trimethyl-2,6,10-dodecatrienyl acetate",C17H28O2
+118,266.2246,"(E)-3,7-Dimethyl-2,6-octadienyl heptanoate;(Z,E)-9,12-Tetradecadienyl propionate;8E,10E-Pentadecadienyl acetate;8E,10Z-Pentadecadienyl acetate;8Z,10E-Pentadecadienyl acetate;8Z,10Z-Pentadecadienyl acetate;Neryl 4-methylhexanoate;Neryl 5-methylhexanoate",C17H30O2
+119,268.2402,(Z)-11-Hexadecenyl formate;1-methylpropyl-tridecanolide;10Z-Pentadecenyl acetate;12E-Pentadecenyl acetate;12Z-Pentadecenyl acetate;8Z-Pentadecenyl acetate;9E-Pentadecenyl acetate;9Z-Pentadecenyl acetate;Isopropyl 5Z-tetradecenoate ;Isopropyl 7Z-tetradecenoate ;Isopropyl 9Z-tetradecenoate ;Methyl 7E-hexadecenoate;Methyl 7Z-hexadecenoate;Methyl 8Z-hexadecenoate;Methyl 9Z-hexadecenoate,C17H32O2
+120,270.2559,"12-Methyltetradecyl acetate;2,6-Dimethyl-5-heptenyl octanoate;3-Methylbutyl dodecanoate;7-Methyloctyl octanoate;Isopropyl tetradecanoate;Methyl 2,6,10-trimethyl-tridecanoate;Methyl 2,6-dimethyl-tetradecanoate;Methyl hexadecanoate;Nonyl octanoate;Pentadecyl acetate;tetradecyl propionate;tridecyl butyrate",C17H34O2
+121,272.2152,14-Fluoro-11E-tetradecenyl acetate;14-Fluoro-11Z-tetradecenyl acetate,C16H29O2F
+122,272.259,Undecanoylcholine,C16H34NO2
+123,273.1212,Glutaconylcarnitine,C12H19NO6
+124,273.194,Heptanoylcarnitine,C14H27NO4
+125,274.1933,Citronellyl alpha-toluate;Rhodinyl phenylacetate,C18H26O2
+126,275.1369,Glutarylcarnitine;O-glutarylcarnitine,C12H21NO6
+127,275.1733,Hydroxyhexanoycarnitine,C13H25NO5
+128,278.2246,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl propionate;10E,12E,14E-Hexadecatrienyl acetate;10E,12E,14Z-Hexadecatrienyl acetate;11Z,13E,15-Hexadecatrienyl acetate;13Z-Hexadecen-11-ynyl acetate;4E,6E,10Z-Hexadecatrienyl acetate;4E,6E,11Z-Hexadecatrienyl acetate;4E,6Z,10Z-Hexadecatrienyl acetate;cucujolide XI",C18H30O2
+129,280.2402,"(E)-3,7-Dimethyl-2,6-octadienyl octanoate;(Z)-3,7-Dimethyl-2,6-octadienyl octanoate;10E,12E-Hexadecadienyl acetate;10E,12Z-Hexadecadienyl acetate;10Z,12E-Hexadecadienyl acetate;11-Hexadecynyl acetate;11E,13E-Hexadecadienyl acetate;11E,13Z-Hexadecadienyl acetate;11Z,13E-Hexadecadienyl acetate;11Z,13Z-Hexadecadienyl acetate;11Z,14E-Hexadecadienyl acetate;4E,6Z-Hexadecadienyl acetate;6E,11Z-Hexadecadienyl acetate;7Z,11E-Hexadecadienyl acetate;7Z,11Z-Hexadecadienyl acetate;8Z,10Z-Hexadecadienyl acetate;9-octadecen-4-olide;9-octadecenolide;9E,11Z-Hexadecadienyl acetate;9Z-octadecadien-4R-olide;Ethyl (Z,Z)-11,13-hexadecadienoate",C18H32O2
+130,282.2559,10Z-Hexadecenyl acetate;11E-Hexadecenyl acetate;11Z-Hexadecenyl acetate;12Z-Hexadecenyl acetate;18-Octadecanolide;3Z-Hexadecenyl acetate;5E-Hexadecenyl acetate;5Z-Hexadecenyl acetate;6E-Hexadecenyl acetate;7-Hexadecenyl acetate;7Z-Hexadecenyl acetate;8E-Hexadecenyl acetate;9E-Hexadecenyl acetate;9Z-Hexadecenyl acetate;Ethyl 9-hexadecenoate;Methyl 14-methyl-8E-hexadecenoate;Methyl 14-methyl-8Z-hexadecenoate;ethyl 7Z-hexadecenoate;ethyl 9Z-hexadecenoate,C18H34O2
+131,284.2351,Tanikolide,C17H32O3
+132,284.2715,"2,6-Dimethyl-5-heptenyl nonanoate;7-Methyloctyl 7-methyloctanoate;Hexadecyl acetate;Methyl 14-methyl-8-hexadecenoate;Methyl heptadecanoate;Tetradecyl isobutyrate;decyl octanoate;dodecyl hexanoate;ethyl hexadecanoate;hexyl dodecanoate;octyl decanoate;tetradecyl butyrate",C18H36O2
+133,285.194,(2E)-octenoylcarnitine;2-octenoyl-L-carnitine,C15H27NO4
+134,286.0841,Collimonin A;Collimonin B,C16H14O5
+135,286.1933,Citronellyl cinnamate,C19H26O2
+136,287.1369,(2E)-hexenedioylcarnitine,C13H21NO6
+137,287.2097,O-octanoyl-R-carnitine;O-octanoylcarnitine,C15H29NO4
+138,289.1525,O-adipoylcarnitine,C13H23NO6
+139,290.1552,Diisopentyl thiomalate,C14H26O4S
+140,290.1882,Cymatherelactone,C18H26O3
+141,292.2402,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl butyrate",C19H32O2
+142,294.2195,PsiAalpha,C18H30O3
+143,294.2559,"(E)-3,7-Dimethyl-2,6-octadienyl nonanoate;Neryl 6-methyloctanoate",C19H34O2
+144,296.2351,PsiAabeta,C18H32O3
+145,296.2715,11Z-Heptadecenyl acetate;7-Methyloctyl (Z)-4-decenoate;Isopropyl 9Z-hexadecenoate ;methyl oleate,C19H36O2
+146,298.2872,3-Methyl-3-butenyl tetradecanoate;Heptadecyl acetate;Isopropyl hexadecanoate;Methyl octadecanoate;pentadecyl butyrate,C19H38O2
+147,301.1889,3-hydroxy-cis-5-octenoylcarnitine,C15H27NO5
+148,301.2253,"2,6 dimethylheptanoyl carnitine;Nonanoylcarnitine",C16H31NO4
+149,306.1598,Chlorosphaerolactylate B;Chlorosphaerolactylate C,C15H27O4Cl
+150,306.2559,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl 3-methylbutanoate;(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl pentanoate;3Z,6Z,9Z-Octadecatrienyl acetate;9Z,12Z,15Z-Octadecatrienyl acetate",C20H34O2
+151,308.1963,"14,14,14-Trifluoro-11E-tetradecenyl acetate;14,14,14-Trifluoro-11Z-tetradecenyl acetate",C16H27O2F3
+152,308.2715,"(E)-3,7-Dimethyl-2,6-octadienyl decanoate;(Z)-3,7-Dimethyl-2,6-octadienyl decanoate;2E,13Z-Octadecadienyl acetate;2Z,13E-Octadecadienyl acetate;2Z,13Z-Octadecadienyl acetate;3E,13E-Octadecadienyl acetate;3E,13Z-Octadecadienyl acetate;3Z,13E-Octadecadienyl acetate;3Z,13Z-Octadecadienyl acetate;9Z,12Z-Octadecadienyl acetate",C20H36O2
+153,309.194,"(2E,5Z,7E)-decatrienoylcarnitine",C17H27NO4
+154,310.2872,"(E)-3,7-Dimethyl-6-octenyl 3,7-dimethyl-2,6-octadienoate;11Z-Octadecenyl acetate;13E-Octadecenyl acetate;13Z-Octadecenyl acetate;20-Eicosanolide;2E-Octadecenyl acetate;9-Octadecenyl acetate;9Z-Octadecenyl acetate;Ethyl oleate;Pentyl pentadec-11-enoate",C20H38O2
+155,311.2097,"(2E,4Z)-decadienoylcarnitine",C17H29NO4
+156,312.3028,"14-Methylpentadecyl isobutyrate;3,7-Dimethyl-6-octenyl 3,7-dimethyl-6-octenoate;3,7-Dimethyl-6-octenyl decanoate;3-Methylbutyl pentadecanoate;7-Methyloctyl 9-methyldecanoate;Ethyl stearate;Octadecyl acetate;decyl decanoate;dodecyl octanoate;hexadecyl butyrate;hexyl tetradecanoate;tetradecyl hexanoate",C20H40O2
+157,313.2253,(4Z)-decenoylcarnitine;9-Decenoylcarnitine;CIS-4-DECENOYL CARNITINE,C17H31NO4
+158,314.2093,2S-hydroxy-3-(10Z-tetradecenoyloxy)-propanoic acid,C17H30O5
+159,315.241,Decanoylcarnitine;O-decanoyl-R-carnitine,C17H33NO4
+160,316.1462,"11,11,11,12,12-Pentafluoro-9Z-dodecenyl acetate",C14H21O2F5
+161,316.2038,Topsentolide A1,C20H28O3
+162,318.1831,Panaquinquecol 6,C19H26O4
+163,318.2195,Topsentolide A2,C20H30O3
+164,320.2715,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl hexanoate",C21H36O2
+165,322.2872,Neryl 8-methyldecanoate,C21H38O2
+166,324.3028,3-Methyl-3-butenyl hexadecanoate;Isopropyl 9Z-octadecenoate ;Pentyl hexadec-12-enoate,C21H40O2
+167,326.3185,"10,14-Dimethylpentadecyl butyrate;10,14-Dimethylpentadecyl isobutyrate;3-Methyl-2-butenyl hexadecanoate;dodecyl nonanoate;hexadecyl 2-methyl-butanoate;octadecyl propionate;pentadecyl hexanoate;propyl stearate",C21H42O2
+168,329.2202,6-Keto-decanoylcarnitine,C17H31NO5
+169,329.2566,"4,8 dimethylnonanoyl carnitine;Undecanoylcarnitine",C18H35NO4
+170,330.2406,Siegesbeckin E;Siegesbeckin F,C18H34O5
+171,330.2559,Ethyl icosapentate,C22H34O2
+172,332.1988,Agardhilactone,C20H28O4
+173,332.2715,"3,7,11,15-Tetramethyl-2E,6E,10E,14-hexadecatetraenyl acetate",C22H36O2
+174,334.2872,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl heptanoate;11Z,14Z,17Z-Eicosatrienyl acetate",C22H38O2
+175,335.2824,Type III cyanolipid 16:0 ester;Type IV cyanolipid 16:0 ester,C21H37NO2
+176,336.3028,"(E)-3,7-Dimethyl-2,6-octadienyl dodecanoate;11Z,14Z-Eicosadienyl acetate;11Z,19-Eicosadienyl acetate",C22H40O2
+177,338.3185,(Z)-3-Hexenyl hexadecanoate;(Z)-7-Octadecenyl butyrate;11Z-Eicosenyl acetate;16-Methyl-9Z-heptadecenyl isobutyrate ;22-Docosanolide;7Z-Octadecenyl isobutyrate ;n-Butyl Oleate,C22H42O2
+178,340.1208,Chlorosphaerolactylate A,C15H26O4Cl2
+179,340.2614,FAHFA(12:1(5Z)/3-O-8:0);FAHFA(8:0/3-O-12:1(5Z)),C20H36O4
+180,340.3341,"16-Methylheptadecyl isobutyrate;6,10,13-Trimethyltetradecyl 3-methylbutanoate;Butyl octadecanoate;Eicosyl acetate;Octadecyl isobutyrate;dodecyl decanoate;hexadecyl hexanoate;hexyl hexadecanoate;octadecyl butyrate;tetradecyl octanoate",C22H44O2
+181,342.2406,Siegesbeckin G,C19H34O5
+182,342.277,FAHFA(10:0/3-O-10:0);FAHFA(12:0/3-O-8:0);FAHFA(8:0/3-O-12:0),C20H38O4
+183,342.3134,Propylene glycol stearate,C21H42O3
+184,343.2723,Dodecanoylcarnitine;O-dodecanoylcarnitine,C19H37NO4
+185,344.2563,Siegesbeckin A;Siegesbeckin B,C19H36O5
+186,345.2151,O-sebacoylcarnitine,C17H31NO6
+187,346.2144,Heterofibrin A2,C21H30O4
+188,346.2355,Sorbitan laurate,C18H34O6
+189,348.1937,Eunicea sesquiterpenoid 7,C20H28O5
+190,348.2301,Topsentolide C1,C21H32O4
+191,348.3028,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl octanoate",C23H40O2
+192,350.2457,Topsentolide C2,C21H34O4
+193,352.3341,(Z)-7-Octadecenyl 3-methylbutanoate;(Z)-9-Octadecenyl 3-methylbutanoate;3-Methyl-3-butenyl octadecanoate;9-Octadecenyl 3-methylbutanoate;Oleyl isobutyrate,C23H44O2
+194,354.3134,3R-hydroxy-docosan-5S-olide,C22H42O3
+195,354.3498,3-Methyl-2-butenyl octadecanoate;6-Octadecenyl 3-methylbutanoate;6-Octadecenyl valerate;dodecyl undecanoate;octadecyl 2-methyl-butanoate;tridecyl decanoate,C23H46O2
+196,356.2927,Stearoyllactic acid,C21H40O4
+197,357.2515,(9Z)-3-hydroxydodecenoylcarnitine,C19H35NO5
+198,357.2668,Type III cyanolipid 18:3 ester;Type IV cyanolipid 18:3 ester,C23H35NO2
+199,358.2719,FAHFA(10:0/3-O-10:0);Siegesbeckin C;Siegesbeckin D,C20H38O5
+200,359.2672,2-Hydroxylauroylcarnitine;3-hydroxydodecanoylcarnitine,C19H37NO5
+201,359.2824,Type III cyanolipid 18:2 ester;Type IV cyanolipid 18:2 ester,C23H37NO2
+202,360.2301,Heterofibrin B2,C22H32O4
+203,361.2981,Type III cyanolipid 18:1(11Z) ester;Type III cyanolipid 18:1(9Z) ester;Type IV cyanolipid 18:1 ester;Type IV cyanolipid 18:1(11Z) ester,C23H39NO2
+204,362.3185,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl nonanoate;11Z,14Z,17Z-Eicosatrienyl isobutyrate ",C24H42O2
+205,363.3137,Type III cyanolipid 18:0 ester;Type IV cyanolipid 18:0 ester,C23H41NO2
+206,364.3341,(Z)-5-Dodecenyl (Z)-5-dodecenoate,C24H44O2
+207,366.3498,11-Docosenyl acetate;24-Tetracosanolide;4-Methyl-3-heptyl palmitoleate,C24H46O2
+208,367.2723,"(5Z,8Z)-tetradecadienoylcarnitine",C21H37NO4
+209,368.2927,FAHFA(10:0/3-O-12:1(5Z);FAHFA(12:1(5Z)/3-O-10:0);FAHFA(14:1(7Z)/3-O-8:0);FAHFA(8:0/3-O-14:1(7Z));Octadecyl fumarate,C22H40O4
+210,368.3654,4-Methyl-3-heptyl palmitate ;Docosyl acetate;Eicosyl isobutyrate ;Lauryl laurate;eicosyl butyrate;ethyl docosenyl;hexyl octadecanoate;octadecyl hexanoate,C24H48O2
+211,369.2879,cis-5-Tetradecenoylcarnitine,C21H39NO4
+212,370.3083,"FAHFA(10:0/3-O-12:0);FAHFA(12:0/3-O-10:0);FAHFA(14:0/3-O-8:0);FAHFA(2:0/2-O-20:0);FAHFA(8:0/3-O-14:0);hexanedioic acid,1,6-bis[(2R)-ethylhexyl] ester",C22H42O4
+213,371.3036,O-tetradecanoylcarnitine;Tetradecanoylcarnitine,C21H41NO4
+214,373.2464,O-(11-carboxyundecanoyl)carnitine,C19H35NO6
+215,374.0818,Chlorosphaerolactylate D,C15H25O4Cl3
+216,376.3341,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl decanoate",C25H44O2
+217,378.2406,Cornudentanone,C22H34O5
+218,380.3654,3-Methyl-3-butenyl eicosanoate;delta-pentacosanalactone,C25H48O2
+219,382.3811,3-Methyl-2-butenyl eicosanoate;4-Methyl-3-heptyl heptadecanoate ;dodecyl 10-methyl-dodecanoate,C25H50O2
+220,383.2672,"(5Z,8Z)-3-hydroxytetradecadienoylcarnitine",C21H37NO5
+221,387.2985,2-Hydroxymyristoylcarnitine;3-hydroxytetradecanoylcarnitine,C21H41NO5
+222,387.3137,Type III cyanolipid 20:2 ester;Type IV cyanolipid 20:2 ester,C25H41NO2
+223,388.3341,"7Z,13Z,16Z,19Z-Docosatetraenyl isobutyrate ",C26H44O2
+224,389.3294,Type III cyanolipid 20:1(11Z) ester;Type III cyanolipid 20:1(13Z) ester;Type IV cyanolipid 20:1(11Z) ester;Type IV cyanolipid 20:1(13Z) ester,C25H43NO2
+225,390.3498,"(Z,Z,Z)-11,14,17-Eicosatrienyl 4-methylvalerate",C26H46O2
+226,391.345,Type III cyanolipid 20:0 ester,C25H45NO2
+227,392.3654,4-Methyl-3-heptyl linoleate ,C26H48O2
+228,394.3811,26-Hexacosanolide;4-Methyl-3-heptyl oleate;Lauryl myristoleate;Myristoleyl laurate;delta-hexacosanalactone,C26H50O2
+229,395.3036,"(7Z,10Z)-hexadecadienoylcarnitine",C23H41NO4
+230,396.324,FAHFA(10:0/3-O-14:1(7Z));FAHFA(12:0/3-O-12:1(5Z);FAHFA(12:1(5Z)/3-O-12:0);FAHFA(14:1(7Z)1/3-O-10:0),C24H44O4
+231,396.3967,4-Methyl-3-heptyl stearate ;Lauryl myristate;Myristyl laurate;Tetracosyl acetate;docosenyl butyrate,C26H52O2
+232,397.3192,O-palmitoleoylcarnitine;trans-Hexadec-2-enoyl carnitine,C23H43NO4
+233,398.3185,"13E,15E,18Z,20Z-pentacosatetraen-11-ynyl acetate",C27H42O2
+234,398.3396,FAHFA(10:0/3-O-14:0);FAHFA(12:0/3-O-12:0);FAHFA(14:0/3-O-10:0);FAHFA(2:0/2-O-22:0);FAHFA(3:0/2-O-21:0),C24H46O4
+235,399.2621,(5Z)-13-carboxytridec-5-enoylcarnitine,C21H37NO6
+236,399.3349,L-palmitoylcarnitine;O-palmitoylcarnitine;Palmitoylcarnitine,C23H45NO4
+237,401.2777,O-(13-carboxytridecanoyl)carnitine,C21H39NO6
+238,402.2981,Sorbitan palmitate,C22H42O6
+239,404.3654,"(E,E)-3,7,11-Trimethyl-2,6,10-dodecatrienyl dodecanoate",C27H48O2
+240,408.3603,22-keto-26-Hexacosanolide,C26H48O3
+241,408.3967,3-Methyl-3-butenyl docosanoate;delta-heptacosanalactone,C27H52O2
+242,410.4124,3-Methyl-2-butenyl docosanoate,C27H54O2
+243,411.2985,"(9Z,12Z)-3-hydroxyhexadecadienoylcarnitine",C23H41NO5
+244,412.3553,FAHFA(2:0/2-O-24:0);FAHFA(3:0/2-O-22:0),C25H48O4
+245,413.3141,3-hydroxypalmitoleoylcarnitine,C23H43NO5
+246,413.3505,Heptadecanoyl carnitine,C24H47NO4
+247,414.2618,Ascorbyl palmitate,C22H38O7
+248,415.3298,2-Hydroxyhexadecanoylcarnitine,C23H45NO5
+249,417.3607,Type III cyanolipid 22:1 ester;Type IV cyanolipid 22:1 ester,C27H47NO2
+250,418.2355,Heterofibrin A3,C24H34O6
+251,419.3036,Stearidonyl carnitine,C25H41NO4
+252,419.3763,Type III cyanolipid 22:0 ester;Type IV cyanolipid 22:0 ester,C27H49NO2
+253,420.3967,Myristoleyl myristoleate,C28H52O2
+254,421.3192,Gamma-linolenyl carnitine,C25H43NO4
+255,422.2338,"1,4-bis[(2-ethylhexyl)oxy]-1,4-dioxobutane-2-sulfonic acid",C20H38O7S
+256,422.4124,28-octacosanolactone;Lauryl palmitoleate;Myristoleyl myristate;Palmitoleyl laurate;delta-octacosanalactone,C28H54O2
+257,423.3349,"9,12-Octadecadienoyl carnitine;Linoelaidyl carnitine;O-linoleoylcarnitine",C25H45NO4
+258,424.3553,FAHFA(10:0/3-O-16:1(9Z);FAHFA(14:1(7Z)1/3-O-12:0);FAHFA(16:1(9Z)1/3-O-10:0),C26H48O4
+259,424.428,Lauryl palmitate;Myristyl myristate;Palmityl laurate;octadecyl decanoate;tetracosyl butyrate,C28H56O2
+260,425.3505,Elaidic carnitine;O-oleoylcarnitine,C25H47NO4
+261,426.3709,FAHFA(2:0/2-O-25:0);FAHFA(3:0/2-O-23:0),C26H50O4
+262,427.3662,Acylcarnitine C18:0;Stearoylcarnitine,C25H49NO4
+263,428.3138,Glyceryl lactooleate;Sorbitan oleate,C24H44O6
+264,429.309,hexadecanedioic acid mono-L-carnitine ester,C23H43NO6
+265,430.2355,ingenol mebutate,C25H34O6
+266,430.3294,Sorbitan stearate,C24H46O6
+267,432.2512,Heterofibrin B3,C25H36O6
+268,436.428,Tridecyl palmitoleate,C29H56O2
+269,437.3141,"(9Z,12Z,15Z)-3-hydroxyoctadecatrienoylcarnitine",C25H43NO5
+270,439.3298,3-hydroxylinoleoylcarnitine,C25H45NO5
+271,440.3866,FAHFA(3:0/2-O-24:0),C27H52O4
+272,441.3454,(9Z)-3-hydroxyoctadecenoylcarnitine,C25H47NO5
+273,442.2931,Ascorbyl stearate,C24H42O7
+274,443.3611,12-Hydroxy-12-octadecanoylcarnitine;3-hydroxyoctadecanoylcarnitine,C25H49NO5
+275,444.3967,"Methyl nonacosa-14E,18E,22E,26E-tetraenoate",C30H52O2
+276,445.1363,O-hexanoyl-adenosine monophosphate,C16H24N5O8P
+277,446.4124,Lauryl linolenate;Linolenyl laurate,C30H54O2
+278,447.3349,O-arachidonoylcarnitine,C27H45NO4
+279,448.428,Lauryl linoleate;Linoleyl laurate;Myristolel palmitoleate;Palmitoleyl myristoleate,C30H56O2
+280,450.4437,30-triacontanolactone;Lauryl oleate;Myristoleyl palmitate;Myristyl palmitoleate;Oleyl laurate;Palmitoleyl myristate;Palmityl myristoleate,C30H58O2
+281,451.3662,"(11Z,14Z)-eicosadienoylcarnitine",C27H49NO4
+282,452.3866,2-Hydroxy-24-keto-octacosanolide,C28H52O4
+283,452.4593,28-methyl-29-nonacosanolactone;Lauryl stearate;Myristyl palmitate;Palmityl myristate;Stearyl laurate;WE(5:0/25:0),C30H60O2
+284,453.3818,(11Z)-eicoseneoylcarnitine,C27H51NO4
+285,455.3247,O-[(9Z)-17-carboxyheptadec-9-enoyl]carnitine,C25H45NO6
+286,455.3975,Arachidyl carnitine,C27H53NO4
+287,457.3403,O-(17-carboxyheptadecanoyl)carnitine,C25H47NO6
+288,458.4124,Lignoceric acid benzyl ester,C31H54O2
+289,463.3298,3-hydroxyarachidonoylcarnitine,C27H45NO5
+290,464.4593,29-methyl-30-triacontanolactone;Pentadecyl palmitoleate,C31H60O2
+291,466.475,11-methyl-tridecanyl 10-methyl-hexadecanoate;11-methyl-tridecanyl 14-methyl-hexadecanoate;11-methyl-tridecanyl 15-methyl-hexadecanoate;11-methyl-tridecanyl 2-methyl-hexadecanoate;11-methyl-tridecanyl heptadecanoate;12-methyl-tridecanyl 10-methyl-hexadecanoate;12-methyl-tridecanyl 14-methyl-hexadecanoate;12-methyl-tridecanyl 15-methyl-hexadecanoate;12-methyl-tridecanyl 2-methyl-hexadecanoate;12-methyl-tridecanyl heptadecanoate;14-methyl-hexadecanyl tetradecanoate;15-methyl-hexadecanyl tetradecanoate;WE(6:0/25:0);tetradecanyl 10-methyl-hexadecanoate;tetradecanyl 14-methyl-hexadecanoate;tetradecanyl 15-methyl-hexadecanoate;tetradecanyl 2-methyl-hexadecanoate;tetradecanyl heptadecanoate,C31H62O2
+292,471.3349,Cervonyl carnitine,C29H45NO4
+293,471.3924,3-hydroxyeicosanoylcarnitine,C27H53NO5
+294,472.428,-;Linoleyl myristoleate;Myristoleyl linolenate,C32H56O2
+295,473.3505,"(7Z,10Z,13Z,16Z,19Z)-docosapentaenoylcarnitine;Clupanodonyl carnitine;Docosa-4,7,10,13,16-pentaenoyl carnitine",C29H47NO4
+296,474.4437,Linolenyl myristate;Myristoleyl linoleate;Myristyl linolenate,C32H58O2
+297,475.3662,"(7Z,10Z,13Z,16Z)-docosatetraenoylcarnitine",C29H49NO4
+298,476.4593,"30-methyl-,21Z-hentriaconten-31-olactone;30-methyl-23Z-hentriaconten-31-olactone;Linoleyl myristate;Myristoleyl oleate;Myristyl linoleate;Oleyl myristoleate;Palmitoleyl palmitoleate",C32H60O2
+299,478.475,30-methyl-31-hentriacontalactone;32-dotriacontalactone;Myristoleyl stearate;Myristyl oleate;Oleyl myristate;Palmitoleyl palmitate;Palmityl palmitoleate;Stearyl myristoleate,C32H62O2
+300,479.3975,"(13Z,16Z)-docosadienoylcarnitine",C29H53NO4
+301,480.1995,Acevaltrate,C24H32O10
+302,480.4906,11-methyl-tridecanyl 16-methyl-heptadecanoate;12-methyl-tridecanyl 16-methyl-heptadecanoate;16-methyl-heptadecanyl tetradecanoate;Arachidyl laurate;Lauryl arachidate;Myristyl stearate;Palmityl palmitate;Stearyl myristate,C32H64O2
+303,482.4335,FAHFA(16:0/9-O-14:0),C30H58O4
+304,483.4288,O-behenoylcarnitine,C29H57NO4
+305,486.4437,-,C33H58O2
+306,490.475,31-methyl-22Z-dotriaconten-32-olactone;31-methyl-24Z-dotriaconten-32-olactone,C33H62O2
+307,491.3611,Lipstatin,C29H49NO5
+308,492.4906,31-methyl-32-dotriacontalactone;Heptadecyl palmitoleate,C33H64O2
+309,494.5063,"11-methyl-tridecanyl 2,6,10,14-tetramethyl-pentadecanoate;12-methyl-tridecanyl 2,6,10,14-tetramethyl-pentadecanoate;Heptadecyl-palmitate;tetradecanyl 2,6,10,14-tetramethyl-pentadecanoate",C33H66O2
+310,498.4437,Myristoleyl arachidonate,C34H58O2
+311,500.4593,-;Linolenyl palmitatoleate;Palmitoleyl linolenate,C34H60O2
+312,502.475,"32-methyl-11Z,25Z-tritriacontadien-33-olide;32-methyl-13Z,25Z-tritriacontadien-33-olide;32-methyl-15Z,25Z-tritriacontadien-33-olide;32-methyl-17Z,25Z-tritriacontadien-33-olide;Linolenyl palmitate;Linoleyl palmitatoleate;Palmitoleyl linoleate;Palmityl linolenate",C34H62O2
+313,504.4179,Mayolene-14,C32H56O4
+314,504.4906,32-methyl-23Z-tritriaconten-33-olactone;32-methyl-25Z-tritriaconten-33-olactone;Linoleyl palmitate;Oleyl palmitoleate;Palmitoleyl oleate;Palmityl linoleate,C34H64O2
+315,506.5063,11Z-octadecenyl hexadecanoate;32-methyl-33-tritriacontalactone;6Z-octadecenyl hexadecanoate;Arachidyl myristoleate;Elaidyl palmitate;Myristoleyl arachidate;Nocardiolactone;Oleyl palmitate;Palmitoleyl stearate;Palmityl elaidate;Palmityl oleate;Stearyl palmitoleate;hexadecanyl 11Z-octadecenoate;hexadecanyl 6Z-octadecenoate;octadecyl 11E-hexadecenoate,C34H66O2
+316,508.4492,FAHFA(16:1(9Z)/10-O-16:0);FAHFA(16:1(9Z)/11-O-16:0);FAHFA(16:1(9Z)/12-O-16:0);FAHFA(16:1(9Z)/13-O-16:0);FAHFA(16:1(9Z)/5-O-16:0);FAHFA(16:1(9Z)/7-O-16:0);FAHFA(16:1(9Z)/8-O-16:0);FAHFA(16:1(9Z)/9-O-16:0),C32H60O4
+317,508.5219,Arachidyl myristate;Behenyl laurate;Lauryl behenate;Myristyl arachidate;Palmityl stearate;Stearyl palmitate,C34H68O2
+318,510.4648,FAHFA(14:0/10-O-18:0);FAHFA(14:0/12-O-18:0);FAHFA(14:0/13-O-18:0);FAHFA(14:0/9-O-18:0);FAHFA(16:0/10-O-16:0);FAHFA(16:0/11-O-16:0);FAHFA(16:0/12-O-16:0);FAHFA(16:0/13-O-16:0);FAHFA(16:0/5-O-16:0);FAHFA(16:0/7-O-16:0);FAHFA(16:0/8-O-16:0);FAHFA(16:0/9-O-16:0),C32H62O4
+319,514.475,-,C35H62O2
+320,518.4335,Mayolene-15,C33H58O4
+321,518.5063,33-methyl-24Z-tetratriaconten-34-olactone;33-methyl-26Z-tetratriaconten-34-olactone,C35H66O2
+322,520.5219,33-methyl-34-tetratriacontalactone;Nonadecyl palmitoleate,C35H68O2
+323,522.5376,octadecyl heptadecanoate,C35H70O2
+324,524.4593,Linolenyl linolenate,C36H60O2
+325,524.4805,FAHFA(15:0/10-O-18:0);FAHFA(15:0/11-O-18:0);FAHFA(15:0/12-O-18:0);FAHFA(15:0/13-O-18:0);FAHFA(15:0/14-O-18:0);FAHFA(15:0/15-O-18:0);FAHFA(15:0/5-O-18:0);FAHFA(15:0/6-O-18:0);FAHFA(15:0/7-O-18:0);FAHFA(15:0/8-O-18:0);FAHFA(15:0/9-O-18:0),C33H64O4
+326,526.475,Linolenyl linoleate;Linoleyl linolenate;Palmitoleyl arachidonate,C36H62O2
+327,528.4906,-;Linolenyl oleate;Linoleyl linoleate;Oleyl linolenate,C36H64O2
+328,530.5063,"34-methyl-13Z,27Z-pentatriacontadien-35-olide;34-methyl-15Z,27Z-pentatriacontadien-35-olide;34-methyl-17Z,27Z-pentatriacontadien-35-olide;34-methyl-19Z,27Z-pentatriacontadien-35-olide;34-methyl-21Z,27Z-pentatriacontadien-35-olide;Linolenyl stearate;Linoleyl oleate;Oleyl linoleate;Stearyl linolenate",C36H66O2
+329,532.4492,Mayolene-16,C34H60O4
+330,532.5219,34-methyl-25Z-pentatriaconten-35-olactone;34-methyl-27Z-pentatriaconten-35-olactone;Linoleyl stearate;Oleyl oleate;Stearyl linoleate,C36H68O2
+331,534.5376,34-methyl-35-pentatriacontalactone;8E-octadecenyl heptadecanoate;Arachidyl palmitoleate;Behenyl myristoleate;Myristoleyl behenate;Oleyl stearate;Palmitoleyl arachidate;Stearyl oleate,C36H70O2
+332,536.4805,FAHFA(16:1(9Z)/10-O-18:0);FAHFA(16:1(9Z)/11-O-18:0);FAHFA(16:1(9Z)/12-O-18:0);FAHFA(16:1(9Z)/13-O-18:0);FAHFA(16:1(9Z)/5-O-18:0);FAHFA(16:1(9Z)/7-O-18:0);FAHFA(16:1(9Z)/8-O-18:0);FAHFA(16:1(9Z)/9-O-18:0);FAHFA(18:1(9Z)/10-O-16:0);FAHFA(18:1(9Z)/11-O-16:0);FAHFA(18:1(9Z)/12-O-16:0);FAHFA(18:1(9Z)/13-O-16:0);FAHFA(18:1(9Z)/5-O-16:0);FAHFA(18:1(9Z)/7-O-16:0);FAHFA(18:1(9Z)/8-O-16:0);FAHFA(18:1(9Z)/9-O-16:0),C34H64O4
+333,536.5532,Arachidyl palmitate;Behenyl myristate;Myristyl behenate;Palmityl arachidate;Stearyl stearate,C36H72O2
+334,538.4961,FAHFA(16:0/10-O-18:0);FAHFA(16:0/11-O-18:0);FAHFA(16:0/12-O-18:0);FAHFA(16:0/13-O-18:0);FAHFA(16:0/14-O-18:0);FAHFA(16:0/15-O-18:0);FAHFA(16:0/3-O-18:0);FAHFA(16:0/4-O-18:0);FAHFA(16:0/5-O-18:0);FAHFA(16:0/6-O-18:0);FAHFA(16:0/7-O-18:0);FAHFA(16:0/8-O-18:0);FAHFA(16:0/9-O-18:0);FAHFA(18:0/10-O-16:0);FAHFA(18:0/11-O-16:0);FAHFA(18:0/12-O-16:0);FAHFA(18:0/13-O-16:0);FAHFA(18:0/5-O-16:0);FAHFA(18:0/7-O-16:0);FAHFA(18:0/8-O-16:0);FAHFA(18:0/9-O-16:0),C34H66O4
+335,539.4914,Hexacosanoyl carnitine,C33H65NO4
+336,542.5063,-,C37H66O2
+337,546.4648,Mayolene-17,C35H62O4
+338,548.4593,all-trans-retinyl linoleate,C38H60O2
+339,548.5532,Heneicosanyl palmitoleate,C37H72O2
+340,550.475,all-trans-retinyl oleate,C38H62O2
+341,552.4906,Linoleyl arachidonate,C38H64O2
+342,552.5118,FAHFA(17:0/10-O-18:0);FAHFA(17:0/5-O-18:0);FAHFA(17:0/7-O-18:0);FAHFA(17:0/8-O-18:0);FAHFA(17:0/9-O-18:0),C35H68O4
+343,554.5063,Oleyl arachidonate,C38H66O2
+344,556.5219,-,C38H68O2
+345,558.4648,FAHFA(18:2/13-O-18:2);FAHFA(18:2/15-O-18:2);FAHFA(18:2/9-O-18:2),C36H62O4
+346,558.5376,"36-methyl-15Z,29Z-heptatriacontadien-37-olide;36-methyl-17Z,29Z-heptatriacontadien-37-olide;36-methyl-19Z,29Z-heptatriacontadien-37-olide;36-methyl-21Z,29Z-heptatriacontadien-37-olide;36-methyl-23Z,29Z-heptatriacontadien-37-olide;Arachidyl linolenate;Linolenyl arachidate",C38H70O2
+347,560.4805,Mayolene-18,C36H64O4
+348,560.5532,Arachidyl linoleate;Linoleyl arachidate,C38H72O2
+349,562.2778,Macrolactin O,C30H42O10
+350,562.5689,Arachidyl oleate;Behenyl palmitoleate;Oleyl arachidate;Palmitoleyl behenate,C38H74O2
+351,564.2935,Macrolactin B;Macrolactin C;Macrolactin Q;Macrolactin R,C30H44O10
+352,564.5118,FAHFA(18:1(9Z)/10-O-18:0);FAHFA(18:1(9Z)/11-O-18:0);FAHFA(18:1(9Z)/12-O-18:0);FAHFA(18:1(9Z)/13-O-18:0);FAHFA(18:1(9Z)/3-O-18:0);FAHFA(18:1(9Z)/4-O-18:0);FAHFA(18:1(9Z)/5-O-18:0);FAHFA(18:1(9Z)/7-O-18:0);FAHFA(18:1(9Z)/8-O-18:0);FAHFA(18:1(9Z)/9-O-18:0),C36H68O4
+353,564.5845,Arachidyl stearate;Behenyl palmitate;Palmityl behenate;Stearyl arachidate,C38H76O2
+354,566.5274,FAHFA(15:0/21-O-21:0);FAHFA(18:0/10-O-18:0);FAHFA(18:0/11-O-18:0);FAHFA(18:0/12-O-18:0);FAHFA(18:0/13-O-18:0);FAHFA(18:0/14-O-18:0);FAHFA(18:0/15-O-18:0);FAHFA(18:0/3-O-18:0);FAHFA(18:0/4-O-18:0);FAHFA(18:0/5-O-18:0);FAHFA(18:0/6-O-18:0);FAHFA(18:0/7-O-18:0);FAHFA(18:0/8-O-18:0);FAHFA(18:0/9-O-18:0),C36H70O4
+355,570.5376,-,C39H70O2
+356,574.4961,Mayolene-19,C37H66O4
+357,576.5845,Tricosanyl palmitoleate,C39H76O2
+358,578.3091,Macrolactin P,C31H46O10
+359,578.6002,hexadecyl tricosanoate,C39H78O2
+360,584.5532,Gondoyl-linolenate,C40H72O2
+361,586.5689,Behenyl linolenate;Gondoyl-linoleate;Linolenyl behenate,C40H74O2
+362,588.5118,Mayolene-20,C38H68O4
+363,588.5845,Behenyl linoleate;Linoleyl behenate,C40H76O2
+364,590.6002,Behenyl oleate;Oleyl behenate;Tetracosanyl palmitoleate,C40H78O2
+365,592.6158,Arachidyl arachidate;Behenyl stearate;Stearyl behenate;Tetracosyl-palmitate,C40H80O2
+366,604.6158,Pentacosanyl palmitoleate,C41H80O2
+367,606.4648,FAHFA(22:6/13-O-18:2);FAHFA(22:6/9-O-18:2),C40H62O4
+368,606.6315,hexadecyl pentacosanoate,C41H82O2
+369,618.6315,21-methyl tricosanyl oleate;22-methyl-tricosanyl oleate;Hexacosanyl palmitoleate;tetracosanyl oleate,C42H82O2
+370,620.6471,Arachidyl behenate;Behenyl arachidate;Hexacosyl-palmitate;hexadecyl hexacosanoate,C42H84O2
+371,628.4373,2-(9R-(15Z-docosenoyloxy)-3-methyl-2Z-decenoyloxy)-ethanesulfonic acid,C35H64O7S
+372,641.5383,"1,3-di-(octadec-9Z-enoyl)-(1-cyano-2-methylene-propane-1,3-diol)",C41H71NO4
+373,644.4686,2-(9R-(tricosanoyloxy)-3-methyl-2Z-decenoyloxy)-ethanesulfonic acid,C36H68O7S
+374,648.6784,Behenyl behenate;Octacosyl-palmitate,C44H88O2
+375,650.6213,"2S,3R-didecanoyl-docosane-2,3-diol",C42H82O4
+376,654.4529,"2-(9R-(5Z,9Z-tetracosadienoyloxy)-3-methyl-2Z-decenoyloxy)-ethanesulfonic acid",C37H66O7S
+377,654.4648,FAHFA(22:6/14-O-22:6),C44H62O4
+378,687.1489,Dephospho-CoA,C21H35N7O13P2S
+379,730.6839,FAHFA(16:1/32-O-32:1);FAHFA(18:1/30-O-30:1),C48H90O4
+380,758.7152,FAHFA(16:1/34-O-34:1);FAHFA(18:1/32-O-32:1),C50H94O4
+381,786.7465,FAHFA(18:1/34-O-34:1),C52H98O4
+382,788.6014,Bastimolide A;Bastimolide B,C44H84O11
+383,809.1258,Acetyl-CoA,C23H38N7O17P3S
+384,821.1258,acryloyl-CoA,C24H38N7O17P3S
+385,823.1414,Propionyl-CoA,C24H40N7O17P3S
+386,835.1414,Crotonoyl-CoA;Methacrylyl-CoA;vinylacetyl-CoA,C25H40N7O17P3S
+387,837.1207,Malonyl-CoA semialdehyde,C24H38N7O18P3S
+388,837.1571,Butyryl-CoA;Isobutyryl-CoA,C25H42N7O17P3S
+389,839.1,oxalyl-CoA,C23H36N7O19P3S
+390,839.1363,(R)-lactoyl-CoA;3-hydroxypropionyl-CoA;Lactyl-CoA,C24H40N7O18P3S
+391,849.1571,2-methylcrotonoyl-CoA;3-methylbut-2-enoyl-CoA;3-methylbut-3-enoyl-CoA;pent-2-enoyl-CoA,C26H42N7O17P3S
+392,851.1363,Acetoacetyl-CoA,C25H40N7O18P3S
+393,851.1727,2-methylbutanoyl-CoA;Isovaleryl-CoA;pentanoyl-CoA,C26H44N7O17P3S
+394,852.1316,malonamoyl-CoA,C24H39N8O18P3S
+395,852.168,3-aminobutyryl-CoA;4-aminobutanoyl-CoA;L-3-aminobutanoyl-CoA,C25H43N8O17P3S
+396,853.1156,Malonyl-CoA,C24H38N7O19P3S
+397,853.152,(R)-3-hydroxybutanoyl-CoA;(S)-3-hydroxybutanoyl-CoA;(S)-3-hydroxyisobutyryl-CoA;3-hydroxy-2-methylpropanoyl-CoA;3-hydroxybutyryl-CoA,C25H42N7O18P3S
+398,853.1884,3-hydroxy-3-methylbutyl-CoA,C26H46N7O17P3S
+399,858.9132,Nonacosyl triacontanoate,C59H118O2
+400,863.1727,trans-3-Hexenoyl-CoA;trans-hex-2-enoyl-CoA,C27H44N7O17P3S
+401,865.152,2-Methylacetoacetyl-CoA,C26H42N7O18P3S
+402,865.1884,Hexanoyl-CoA,C27H46N7O17P3S
+403,867.1313,(R)-methylmalonyl-CoA;(S)-methylmalonyl-CoA;Succinyl-CoA;malonyl-CoA methyl ester,C25H40N7O19P3S
+404,867.1676,"(2S,3S)-3-hydroxy-2-methylbutanoyl-CoA;3-hydroxyisovaleryl-CoA;5-hydroxypentanoyl-CoA",C26H44N7O18P3S
+405,873.1571,"cyclohexa-1,4-diene-1-carbonyl-CoA;cyclohexa-1,5-diene-1-carbonyl-CoA;cyclohexa-2,5-diene-1-carbonyl-CoA",C28H42N7O17P3S
+406,875.1727,cyclohex-1-ene-1-carbonyl-CoA,C28H44N7O17P3S
+407,877.1156,5-hydroxy-2-furoyl-CoA;S-(5-Hydroxy-2-furoyl)-CoA,C26H38N7O19P3S
+408,877.152,"cis-3,4-didehydroadipoyl-CoA semialdehyde",C27H42N7O18P3S
+409,877.1884,3-Isopropylbut-3-enoyl-CoA;cyclohexane-1-carbonyl-CoA,C28H46N7O17P3S
+410,879.1313,itaconyl-CoA;mesaconyl-CoA;trans-4-carboxybut-2-enoyl-CoA,C26H40N7O19P3S
+411,879.1676,3-Ketohexanoyl-CoA;cis-6-hydroxyhex-3-enoyl-CoA,C27H44N7O18P3S
+412,879.204,2-Methylhexanoyl-CoA;Enanthyl-CoA,C28H48N7O17P3S
+413,881.1469,(2S)-ethylmalonyl-CoA;Glutaryl-CoA,C26H42N7O19P3S
+414,881.1833,(S)-3-hydroxyhexanoyl-CoA,C27H46N7O18P3S
+415,883.1262,(3S)-3-carboxy-3-hydroxypropanoyl-CoA;Malyl-CoA,C25H40N7O20P3S
+416,886.1523,anthraniloyl-CoA,C28H41N8O17P3S
+417,887.1363,Salicyl CoA,C28H40N7O18P3S
+418,889.0826,sulfoacetyl-CoA,C23H38N7O20P3S2
+419,889.152,"3-hydroxycyclohexa-1,5-diene-1-carbonyl-CoA;6-Oxocyclohex-1-ene-1-carboxyl-CoA;6-oxocyclohex-1-ene-1-carbonyl-CoA",C28H42N7O18P3S
+420,889.1884,"trans,trans-octa-2,4-dienoyl-CoA",C29H46N7O17P3S
+421,891.1676,2-oxocyclohexane-1-carbonyl-CoA;6-hydroxycyclohex-1-ene-1-carbonyl-CoA,C28H44N7O18P3S
+422,891.204,trans-oct-2-enoyl-CoA,C29H48N7O17P3S
+423,893.1469,"(Z)-2,3-dehydroadipoyl-CoA;3-Methylglutaconyl-CoA;5-oxo-furan-2-acetyl-CoA;cis-3,4-didehydroadipoyl-CoA;trans-2,3-didehydroadipoyl-CoA;trans-3-methylglutaconyl-CoA",C27H42N7O19P3S
+424,893.1833,2-hydroxycyclohexane-1-carbonyl-CoA,C28H46N7O18P3S
+425,893.2071,(E)-4-(trimethylammonio)but-2-enoyl-CoA,C28H48N8O17P3S
+426,893.2197,Octanoyl-CoA;Valproyl-CoA,C29H50N7O17P3S
+427,894.1785,4-acetamidobutanoyl-CoA,C27H45N8O18P3S
+428,895.1262,2-oxoglutaryl-CoA,C26H40N7O20P3S
+429,895.1626,3-hydroxy-5-oxohexanoyl-CoA;Adipoyl-CoA,C27H44N7O19P3S
+430,895.2228,gamma-butyrobetainyl-CoA,C28H50N8O17P3S
+431,897.1418,(3S)-citramalyl-CoA;2-hydroxyglutaryl-CoA;L-erythro-3-methylmalyl-CoA,C26H42N7O20P3S
+432,897.1571,Cinnamoyl-CoA,C30H42N7O17P3S
+433,899.1575,2'-(5''-phosphoribosyl)-3'-dephospho-CoA,C26H44N7O20P3S
+434,900.168,N-methylanthraniloyl-CoA,C29H43N8O17P3S
+435,904.1629,2-amino-5-oxocyclohex-1-enecarbonyl-CoA,C28H43N8O18P3S
+436,907.1626,"2,3-didehydropimeloyl-CoA;2-hydroxy-6-oxocyclohexane-1-carbonyl-CoA",C28H44N7O19P3S
+437,907.1864,L-carnityl-CoA,C28H46N8O18P3S
+438,907.1989,(1-hydroxycyclohexyl)acetyl-CoA;3-Oxooctanoyl-CoA,C29H48N7O18P3S
+439,907.2353,nonanoyl-CoA,C30H52N7O17P3S
+440,909.1418,3-oxoadipyl-CoA,C27H42N7O20P3S
+441,909.1782,"2,6-dihydroxycyclohexane-1-carbonyl-CoA;pimeloyl-CoA",C28H46N7O19P3S
+442,909.2146,(R)-3-hydroxyoctanoyl-CoA;(S)-3-hydroxyoctanoyl-CoA,C29H50N7O18P3S
+443,910.2098,(R)-carnitinyl-CoA betaine;(S)-carnitinyl-CoA betaine,C28H49N8O18P3S
+444,911.1033,(2Z)-4-carboxy-2-sulfanylbut-2-enoyl-CoA;4-carboxy-2-thioxobutanoyl-CoA,C26H40N7O19P3S2
+445,911.1575,(3S)-3-Hydroxyadipyl-CoA;(3S)-3-hydroxy-3-methylglutaryl-CoA;2-hydroxyadipoyl-CoA;3-hydroxy-3-methylglutaryl-CoA;3-hydroxyadipyl-CoA,C27H44N7O20P3S
+446,911.1761,3-thiaoctanoyl-CoA,C28H48N7O17P3S2
+447,913.152,4-coumaroyl-CoA,C30H42N7O18P3S
+448,917.2197,"(2-trans,4-cis)-deca-2,4-dienoyl-CoA;cis-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA;trans,trans-deca-2,4-dienoyl-CoA;trans-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA",C31H50N7O17P3S
+449,919.1626,"3,8-dioxooct-5-enoyl-CoA",C29H44N7O19P3S
+450,919.1989,7-methyl-3-oxooct-6-enoyl-CoA,C30H48N7O18P3S
+451,919.2353,cis-dec-4-enoyl-CoA;trans-3-Decenoyl-CoA;trans-dec-2-enoyl-CoA,C31H52N7O17P3S
+452,921.2146,7-methyl-3-oxooctanoyl-CoA,C30H50N7O18P3S
+453,921.251,decanoyl-CoA,C31H54N7O17P3S
+454,923.1575,3-oxopimeloyl-CoA,C28H44N7O20P3S
+455,924.168,indol-3-ylacetyl-CoA,C31H43N8O17P3S
+456,925.1731,3-hydroxypimeloyl-CoA,C28H46N7O20P3S
+457,929.1469,caffeoyl-CoA,C30H42N7O19P3S
+458,931.1989,"[(1R)-2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetyl-CoA",C31H48N7O18P3S
+459,933.2146,(3R)-3-isopropenyl-6-oxoheptanoyl-CoA;(3S)-3-isopropenyl-6-oxoheptanoyl-CoA;2-hydroxy-4-isopropenylcyclohexane-1-carbonyl-CoA,C31H50N7O18P3S
+460,934.2098,Pseudoecgonyl-CoA,C30H49N8O18P3S
+461,935.1575,3-oxo-8-carboxy-5-octenoyl-CoA,C29H44N7O20P3S
+462,935.2302,"3-Hydroxy-2,6-dimethyl-5-methylene-heptanoyl-CoA;3-oxodecanoyl-CoA",C31H52N7O18P3S
+463,935.2666,"4,8-dimethylnonanoyl-CoA;Undecanoyl-CoA",C32H56N7O17P3S
+464,939.1313,feruloyl-CoA(4-),C31H40N7O19P3S
+465,941.1317,(3S)-citryl-CoA,C27H42N7O22P3S
+466,941.168,acetyl-2'-(5''-phosphoribosyl)-3'-dephospho-CoA,C28H46N7O21P3S
+467,943.1626,trans-feruloyl-CoA,C31H44N7O19P3S
+468,945.251,"(2-trans,6-cis)-dodeca-2,6-dienoyl-CoA;cis,cis-dodeca-3,6-dienoyl-CoA;trans,cis-Lauro-2,6-dienoyl-CoA",C33H54N7O17P3S
+469,947.1939,"3,4,4-trimethylhepta-2,5-dienoyl-CoA;[(2R)-3,3,4-trimethyl-6-oxo-3,6-dihydro-1H-pyran-2-yl]acetyl-CoA",C31H48N7O19P3S
+470,947.2666,"2E-Dodecenoyl-CoA;Trans-2,3-dehydrododecanoyl-CoA;cis-dodec-3-enoyl-CoA",C33H56N7O17P3S
+471,949.2095,3-isopropenylpimeloyl-CoA,C31H50N7O19P3S
+472,949.2823,Lauroyl-CoA,C33H58N7O17P3S
+473,959.1575,5-hydroxyferuloyl-CoA,C31H44N7O20P3S
+474,961.2095,3-(4-methylpent-3-en-1-yl)pent-2-enedioyl-CoA,C32H50N7O19P3S
+475,963.2615,3-oxo-dodecanoyl-CoA;3-oxolauroyl-CoA,C33H56N7O18P3S
+476,963.2979,Tridecanoyl-CoA;isotridecanoyl-CoA,C34H60N7O17P3S
+477,965.2772,(S)-3-hydroxylauroyl-CoA,C33H58N7O18P3S
+478,967.1626,"(E,E)-piperonyl-CoA",C33H44N7O19P3S
+479,973.1731,sinapoyl-CoA,C32H46N7O20P3S
+480,973.2823,"(3E,5Z)-tetradecadienoyl-CoA;5-cis-8-cis-Tetradecadienoyl-CoA;cis,cis-tetradeca-5,8-dienoyl-CoA",C35H58N7O17P3S
+481,975.2979,(9Z)-myristoleoyl-CoA;cis-tetradec-11-enoyl-CoA;cis-tetradec-3-enoyl-CoA;cis-tetradec-5-enoyl-CoA;trans-tetradec-11-enoyl-CoA;trans-tetradec-2-enoyl-CoA,C35H60N7O17P3S
+482,977.3136,myristoyl-CoA,C35H62N7O17P3S
+483,979.2201,3-hydroxy-3-(4-methylpent-3-en-1-yl)glutaryl-CoA,C32H52N7O20P3S
+484,985.2459,trans-2-Enoyl-OPC4-CoA,C35H54N7O18P3S
+485,989.3136,(E)-isopentadec-2-enoyl-CoA,C36H62N7O17P3S
+486,991.2201,"3,5,7-trioxododecanoyl-CoA",C33H52N7O20P3S
+487,991.2928,3-ketotetradecanoyl-CoA,C35H60N7O18P3S
+488,991.3292,isopentadecanoyl-CoA,C36H64N7O17P3S
+489,993.1928,biotinyl-CoA,C31H50N9O18P3S2
+490,993.3085,3S-Hydroxytetradecanoyl-CoA,C35H62N7O18P3S
+491,1003.3292,(E)-hexadec-2-enoyl-CoA;Palmitelaidoyl-CoA;palmitoleoyl-CoA,C37H64N7O17P3S
+492,1005.3085,3-oxoisopentadecanoyl-CoA,C36H62N7O18P3S
+493,1005.3449,"4,8,12-trimethyltridecanoyl-CoA;Palmitoyl-CoA;isopalmitoyl-CoA",C37H66N7O17P3S
+494,1007.3241,3-hydroxyisopentadecanoyl-CoA,C36H64N7O18P3S
+495,1013.2772,trans-2-Enoyl-OPC6-CoA,C37H58N7O18P3S
+496,1017.3449,(E)-isoheptadec-2-enoyl-CoA,C38H66N7O17P3S
+497,1019.3241,3-ketopalmitoyl-CoA,C37H64N7O18P3S
+498,1019.3605,Heptadecanoyl CoA;isoheptadecanoyl-CoA,C38H68N7O17P3S
+499,1021.3398,(S)-3-hydroxypalmitoyl-CoA;2-hydroxypalmitoyl-CoA,C37H66N7O18P3S
+500,1025.3136,Stearidonoyl-CoA,C39H62N7O17P3S
+501,1027.3292,alpha-linolenoyl-CoA;gamma-linolenoyl-CoA,C39H64N7O17P3S
+502,1029.3449,"9-octadecynoyl-CoA;CoA(18:2(6Z,9Z));Linoleoyl-CoA",C39H66N7O17P3S
+503,1031.3605,cis-vaccenoyl CoA;oleoyl-CoA;trans-2-octadecenoyl-CoA,C39H68N7O17P3S
+504,1033.3398,3-oxoisoheptadecanoyl-CoA,C38H66N7O18P3S
+505,1033.3762,Stearoyl-CoA,C39H70N7O17P3S
+506,1035.3554,2-hydroxy-3-methylhexadecanoyl-CoA;3-hydroxyisoheptadecanoyl-CoA,C38H68N7O18P3S
+507,1041.3085,trans-2-Enoyl-OPC8-CoA,C39H62N7O18P3S
+508,1043.3241,"(9Z,12Z)-3-oxolinoleoyl-CoA",C39H64N7O18P3S
+509,1045.3762,"(E)-2,3-didehydropristanoyl-CoA",C40H70N7O17P3S
+510,1047.3554,3-oxoisooctadecanoyl-CoA;3-oxooctadecanoyl-CoA,C39H68N7O18P3S
+511,1047.3918,2R-Pristanoyl-CoA;2S-Pristanoyl-CoA,C40H72N7O17P3S
+512,1049.3711,(S)-3-hydroxyoctadecanoyl-CoA;2-hydroxystearoyl-CoA;3-hydroxyoctadecanoyl-CoA,C39H70N7O18P3S
+513,1051.314,3-Hydroxyhexdecanedioyl-CoA,C37H64N7O20P3S
+514,1051.3292,"(5Z,8Z,11Z,14Z,17Z)-icosapentaenoyl-CoA",C41H64N7O17P3S
+515,1053.3449,"(8Z,11Z,14Z,17Z)-icosatetraenoyl-CoA;Arachidonyl-CoA",C41H66N7O17P3S
+516,1055.3605,"CoA(20:3(11Z,14Z,17Z));CoA(20:3(5Z,8Z,11Z));all-cis-icosa-8,11,14-trienoyl-CoA",C41H68N7O17P3S
+517,1057.3762,"CoA(20:2(11Z,14Z));CoA(20:2(8Z,11Z))",C41H70N7O17P3S
+518,1059.0901,2'-(5-triphosphoribosyl)-3'-dephospho-CoA,C26H46N7O26P5S
+519,1059.3918,(11Z)-eicosenoyl-CoA,C41H72N7O17P3S
+520,1061.3711,3-oxopristanoyl-CoA,C40H70N7O18P3S
+521,1061.4075,Arachidoyl-CoA,C41H74N7O17P3S
+522,1063.3867,3-hydroxypristanoyl-CoA,C40H72N7O18P3S
+523,1067.3241,"(8Z,11Z,14Z,17Z)-3-oxoicosatetraenoyl-CoA",C41H64N7O18P3S
+524,1069.3398,"(11Z,14Z,17Z)-3-oxoicosatrienoyl-CoA;(8Z,11Z,14Z)-3-oxoicosa-8,11,14-trienoyl-CoA;(9Z,12Z,15Z)-3-oxoicosatrienoyl-CoA",C41H66N7O18P3S
+525,1071.3554,"(11Z,14Z)-3-oxoicosa-11,14-dienoyl-CoA",C41H68N7O18P3S
+526,1073.3711,(11Z)-3-oxoicosa-11-enoyl-CoA,C41H70N7O18P3S
+527,1075.3292,"2,4,7,10,13,16,19-Docosaheptaenoyl-CoA",C43H64N7O17P3S
+528,1075.3867,3-ketoeicosanoyl-CoA,C41H72N7O18P3S
+529,1077.3449,"(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",C43H66N7O17P3S
+530,1077.4024,2-Hydroxyphytanoyl-CoA;3-hydroxyicosanoyl-CoA,C41H74N7O18P3S
+531,1079.3605,"(7Z,10Z,13Z,16Z,19Z)-docosapentaenoyl-CoA;CoA(22:5(4Z,7Z,10Z,13Z,16Z));Docosa-4,7,10,13,16-pentaenoyl CoA",C43H68N7O17P3S
+532,1081.3762,"(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA",C43H70N7O17P3S
+533,1085.4075,"CoA(22:2(13Z,16Z))",C43H74N7O17P3S
+534,1087.4231,erucoyl-CoA,C43H76N7O17P3S
+535,1089.4388,Behenoyl-CoA,C43H78N7O17P3S
+536,1093.3398,"(7Z,10Z,13Z,16Z,19Z)-3-oxodocosapentaenoyl-CoA",C43H66N7O18P3S
+537,1095.3554,"(7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA",C43H68N7O18P3S
+538,1095.3918,"8Z,11Z,14Z-eicosatrienoyl-CoA",C44H72N7O17P3S
+539,1101.4024,(13Z)-3-oxodocosenoyl-CoA,C43H74N7O18P3S
+540,1103.3605,"(2E,6Z,9Z,12Z,15Z,18Z,21Z)-tetracosaheptaenoyl-CoA",C45H68N7O17P3S
+541,1103.418,3-ketodocosanoyl-CoA,C43H76N7O18P3S
+542,1105.3762,"(6Z,9Z,12Z,15Z,18Z,21Z)-tetracosahexaenoyl-CoA",C45H70N7O17P3S
+543,1105.4337,2-hydroxybehenoyl-CoA;3-hydroxydocosanoyl-CoA,C43H78N7O18P3S
+544,1107.3918,"(9Z,12Z,15Z,18Z,21Z)-tetracosapentaenoyl-CoA;CoA(24:5(6Z,9Z,12Z,15Z,18Z))",C45H72N7O17P3S
+545,1109.4075,"(9Z,12Z,15Z,18Z)-tetracosatetraenoyl-CoA",C45H74N7O17P3S
+546,1115.4544,(15Z)-tetracosenoyl-CoA,C45H80N7O17P3S
+547,1117.4701,Lignoceroyl-CoA,C45H82N7O17P3S
+548,1119.3554,"(6Z,9Z,12Z,15Z,18Z,21Z)-3-oxotetracosahexaenoyl-CoA",C45H68N7O18P3S
+549,1121.3711,"(6Z,9Z,12Z,15Z,18Z,21Z)-3-hydroxytetracosahexaenoyl-CoA;(9Z,12Z,15Z,18Z,21Z)-3-oxotetracosapentaenoyl-CoA",C45H70N7O18P3S
+550,1123.3867,"(9Z,12Z,15Z,18Z)-3-oxotetracosatetraenoyl-CoA",C45H72N7O18P3S
+551,1129.4337,(15Z)-3-oxotetracosenoyl-CoA,C45H78N7O18P3S
+552,1131.4493,3-oxotetracosanoyl-CoA,C45H80N7O18P3S
+553,1133.465,2-hydroxytetracosanoyl-CoA;3-hydroxytetracosanoyl-CoA,C45H82N7O18P3S
+554,1143.4857,(17Z)-hexacosenoyl-CoA;trans-2-hexacosenoyl-CoA,C47H84N7O17P3S
+555,1145.5014,Cerotoyl-CoA,C47H86N7O17P3S
+556,1159.4806,3-ketocerotoyl-CoA,C47H84N7O18P3S
+557,1161.4963,(S)-3-hydroxyhexacosanoyl-CoA;3-hydroxyhexacosanoyl-CoA,C47H86N7O18P3S
+558,1173.5327,montanoyl-CoA,C49H90N7O17P3S

@@ -1,0 +1,337 @@
+,MASS,COMMON_NAME,FORMULA
+0,87.0684,Butyramide,C4H9NO
+1,101.0477,acetoacetamide,C4H7NO2
+2,101.0841,pentanamide,C5H11NO
+3,116.0586,Succinamide,C4H8N2O2
+4,129.1154,N-methyl hexanamide,C7H15NO
+5,131.0582,glutaramic acid,C5H9NO3
+6,143.0219,N-formylmaleamic acid,C5H5NO4
+7,144.0899,Adipamide,C6H12N2O2
+8,147.032,Agrocybin,C8H5NO2
+9,157.1103,"N,N-diethyl-3-hydroxybut-2-enamide",C8H15NO2
+10,159.0532,N-methyl-2-oxoglutaramic acid,C6H9NO4
+11,171.0895,N-butanoyl-homoserine lactone;N-butanoyl-l-homoserine lactone,C8H13NO3
+12,171.1623,"N,2,3-Trimethyl-2-(1-methylethyl)butanamide;decanamide",C10H21NO
+13,181.1467,N-Ethyl trans-2-cis-6-nonadienamide,C11H19NO
+14,185.0688,N-(3-oxo-butanoyl)-homoserine lactone,C8H11NO4
+15,185.1052,N-isovaleryl-homoserine lactone;N-pentanoyl-homoserine lactone,C9H15NO3
+16,187.0845,N-(3-hydroxy-butanoyl)-homoserine lactone;N-(3S-hydroxy-butanoyl)-homoserine lactone,C8H13NO4
+17,193.1467,N-Cyclopropyl-trans-2-cis-6-nonadienamide,C12H19NO
+18,197.1052,Rehmagluamide,C10H15NO3
+19,199.0845,N-(3-oxo-pentanoyl)-homoserine lactone,C9H13NO4
+20,199.1208,N-hexanoyl-homoserine lactone,C10H17NO3
+21,199.1936,dodecanamide,C12H25NO
+22,201.1001,N-(3-hydroxy-pentanoyl)-homoserine lactone,C9H15NO4
+23,204.111,N-(3-carboxypropanoyl)-N-hydroxyputrescine,C8H16N2O4
+24,205.0595,lipoamide,C8H15NOS2
+25,205.1314,Pantothenol,C9H19NO4
+26,207.0752,(R)-dihydrolipoamide;Dihydrolipoamide,C8H17NOS2
+27,213.1001,N-(3-oxo-hexanoyl)-homoserine lactone,C10H15NO4
+28,213.1365,N-heptanoyl-homoserine lactone,C11H19NO3
+29,213.2093,Tridecanamide,C13H27NO
+30,214.2045,12-amino-dodecanoicacid,C12H26N2O
+31,216.111,Sakacin P,C9H16N2O4
+32,218.1267,N-(3-carboxypropanoyl)-N-hydroxycadaverine,C9H18N2O4
+33,223.1208,Cerulenin,C12H17NO3
+34,223.1936,"(E,E)-2,4-Decadienoic isobutylamide",C14H25NO
+35,227.1158,N-(3-oxo-heptanoyl)-homoserine lactone,C11H17NO4
+36,227.1521,N-octanoyl-homoserine lactone,C12H21NO3
+37,229.0773,N-(3-oxo-hexanoyl)-homoserine thiolactone,C10H15NO3S
+38,229.1314,N-(3-hydroxy-heptanoyl)-homoserine lactone,C11H19NO4
+39,229.1467,"(2E,4E)-N-isobutylundeca-2,4-dien-8,10-diynamide;2,4-Undecadiene-8,10-diynoic acid isobutylamide;Neopellitorine A",C15H19NO
+40,231.0895,Cinnamoyl-homoserine lactone,C13H13NO3
+41,236.1017,S-aminomethyldihydrolipoamide,C9H20N2OS2
+42,241.1314,N-(3-oxo-octanoyl)-homoserine lactone,C12H19NO4
+43,241.1678,N-(7-methyloctanoyl)homoserine lactone,C13H23NO3
+44,243.0929,N-(3-oxo-heptanoyl)-homoserine thiolactone,C11H17NO3S
+45,243.1471,N-(3-hydroxy-octanoyl)-homoserine lactone,C12H21NO4
+46,243.1623,BRN 2646116,C16H21NO
+47,243.2198,Lauroyl-EA,C14H29NO2
+48,247.0845,p-coumaroyl-homoserine lactone,C13H13NO4
+49,247.1936,beta-sanshool,C16H25NO
+50,249.0857,S-Acetyldihydrolipoamide;S-Acetyldihydrolipoamide-E,C10H19NO2S2
+51,251.2249,Herculin,C16H29NO
+52,253.1426,N-hexanoyl histidine,C12H19N3O3
+53,253.2406,Palmitoleamide,C16H31NO
+54,255.1834,N-decanoyl-homoserine lactone,C14H25NO3
+55,255.2562,Bacillamidin F;Palmitamide,C16H33NO
+56,257.1086,N-(3-oxo-octanoyl)-homoserine thiolactone,C12H19NO3S
+57,257.1627,N-(3-hydroxy-7-methyloctanoyl)homoserine lactone,C13H23NO4
+58,257.1991,N-lauroyl glycine,C14H27NO3
+59,261.1001,N-(4-phenyl-3-oxo-tetranoyl)-homoserine lactone,C14H15NO4
+60,263.1885,Hydroxy-alpha-sanshool;Hydroxy-beta-sanshool,C16H25NO2
+61,269.1627,N-(3-oxo-decanoyl)-homoserine lactone,C14H23NO4
+62,271.1784,N-(3-hydroxy-decanoyl)-homoserine lactone,C14H25NO4
+63,271.1936,"Anacyclin;Dehydro-gamma-sanshool;N-(2E,4E,10E,12Z-tetradecatetraen-8-yn-oyl) isobutylamine;Tulipiferamide A;Tulipiferamide B",C18H25NO
+64,271.2511,Myristoyl-EA,C16H33NO2
+65,273.2093,"N-Isobutyl-2,4,8,10,12-tetradecapentaenamide;Tulipiferamide C;gamma-sanshool",C18H27NO
+66,277.117,S-(2-Methylpropionyl)-dihydrolipoamide-E,C12H23NO2S2
+67,279.1834,"N-(2E,4E-dodecadienoyl)-homoserine lactone;N-(2E,5Z-dodecadienoyl)-homoserine lactone;N-(3E,5Z-dodecadienoyl)-homoserine lactone",C16H25NO3
+68,279.2562,Linoleamide,C18H33NO
+69,281.1739,N-octanoyl histidine,C14H23N3O3
+70,281.1991,N-(2E-dodecenoyl)-homoserine lactone;N-(5Z-dodecenoyl)-homoserine lactone,C16H27NO3
+71,281.2719,Elaidamide;Oleamide,C18H35NO
+72,283.2147,N-(dodecanoyl)-homoserine lactone,C16H29NO3
+73,283.2875,Bacillamidin G;Stearamide,C18H37NO
+74,285.2668,Pentadecanoyl-EA,C17H35NO2
+75,287.246,Lauroyl diethanolamide,C16H33NO3
+76,289.2042,"Hydroxy-gamma-sanshool;N-(2-Hydroxyisobutyl)-2,4,8,10,12-tetradecapentaenamide",C18H27NO2
+77,291.2198,Bungeanool;Isobungeanool,C18H29NO2
+78,293.1991,Nonivamide;Nordihydrocapsaicin,C17H27NO3
+79,293.2355,-,C18H31NO2
+80,295.1784,N-(3-oxo-5Z-dodecenoyl)-homoserine lactone,C16H25NO4
+81,295.2511,Linoleyl hydroxamic acid;Tetrahydrobungeanool,C18H33NO2
+82,297.194,N-(3-oxododecanoyl) homoserine lactone,C16H27NO4
+83,297.2668,Palmitoleoyl-EA,C18H35NO2
+84,299.2097,N-(3-hydroxy-dodecanoyl)-homoserine lactone,C16H29NO4
+85,299.2824,Palmitoyl-EA,C18H37NO2
+86,301.2253,-,C16H31NO4
+87,303.2562,Arachidonoyl amine,C20H33NO
+88,303.3071,Palmitoyl-EA(d4);Palmitoyl-EA-d4,C18H33D4NO2
+89,305.1991,Capsaicin,C18H27NO3
+90,307.2147,"Dihydrocapsaicin;N-(2E,7Z-tetradecadienoyl)-homoserine lactone",C18H29NO3
+91,309.2052,N-decanoyl histidine,C16H27N3O3
+92,309.2304,N-(7Z-tetradecenoyl)-homoserine lactone,C18H31NO3
+93,310.2256,Bacillamidin C,C17H30N2O3
+94,311.246,N-tetradecanoyl-homoserine lactone,C18H33NO3
+95,313.1712,N-(3-oxo-dodecanoyl)-homoserine thiolactone,C16H27NO3S
+96,313.2617,N-palmitoyl glycine,C18H35NO3
+97,313.2981,Margaroyl-EA,C19H39NO2
+98,313.3093,Solacaproine,C18H39N3O
+99,317.2719,N-methyl arachidonoyl amine,C21H35NO
+100,319.1784,Thalassotalic acid C,C18H25NO4
+101,319.2511,"Anandamide (18:4, n-3);N-hydroxy arachidonoyl amine",C20H33NO2
+102,321.2052,"N-(3S,4S-methylene-decanoyl) histidine",C17H27N3O3
+103,321.2668,"Anandamide (18:3, n-3);Anandamide (18:3, n-6)",C20H35NO2
+104,323.2824,"Anandamide (18:2, n-6)",C20H37NO2
+105,325.2253,N-(3-oxo-tetradecanoyl)-homoserine lactone;N-(3R-hydroxy-7Z-tetradecenoyl)-homoserine lactone,C18H31NO4
+106,325.2981,Elaidic acid ethanolamide;N-oleoyl ethanolamine;Semiplenamide C;Trans-11-octadecenoic acid ethanolamide;Trans-petroselinic acid ethanolamide;Vaccenic acid ethanolamide,C20H39NO2
+107,327.241,-,C18H33NO4
+108,327.2773,N-(15-methyl-hexadecanoyl) glycine;N-palmitoyl alanine,C19H37NO3
+109,327.3104,Oleoyl-EA(d2),C20H37D2NO2
+110,327.3137,Stearoyl-EA,C20H41NO2
+111,328.2726,N-lauroyl lysine;N6-lauroyl lysine,C18H36N2O3
+112,329.2202,Bacillamidin A,C17H31NO5
+113,329.2566,Commendamide,C18H35NO4
+114,329.293,Palmitoyl Serinol,C19H39NO3
+115,331.2875,"N,N-dimethyl arachidonoyl amine;N-ethyl arachidonoyl amine",C22H37NO
+116,332.21,Thalassotalamide A;Thalassotalamide B,C19H28N2O3
+117,333.194,Thalassotalic acid A;Thalassotalic acid B,C19H27NO4
+118,335.246,"N-(2E,9Z-hexadecadienoyl)-homoserine lactone",C20H33NO3
+119,335.3188,"N-isobutyl-2E,4Z-octadecadienoyl amine;Pipericine",C22H41NO
+120,337.2617,N-(9Z-hexadecenoyl)-homoserine lactone,C20H35NO3
+121,337.3345,Erucamide,C22H43NO
+122,338.2569,Bacillamidin D,C19H34N2O3
+123,339.2198,"N-(5,8,11,14-eicosatetraynoyl)-ethanolamine",C22H29NO2
+124,339.2773,13-HODE-EA;N-(hexadecanoyl)-homoserine lactone;N-oleoyl glycine,C20H37NO3
+125,339.3501,Docosanamide,C22H45NO
+126,341.293,N-palmitoyl GABA;N-stearoyl glycine,C20H39NO3
+127,343.1185,phenyl [1-(N-succinylamino)pentyl]phosphonate,C15H22NO6P
+128,343.2723,N-palmitoyl serine,C19H37NO4
+129,345.2668,"Anandamide (20:5, n-3)",C22H35NO2
+130,345.3032,Macamide;N-isopropyl arachidonoyl amine;N-propyl arachidonoyl amine,C23H39NO
+131,347.2824,"Anandamide (20:4, n-6);Cis-8,11,14,17-eicosatetraenoic acid ethanolamide;Juniperoyl ethanolamide",C22H37NO2
+132,349.2781,N-(2-fluoro-ethyl) arachidonoyl amine,C22H36NOF
+133,349.2981,"Anandamide (20:3, n-3);Dihomo-gamma-linolenoyl-EA;Mead Acid-EA;Sciadonoyl-ethanolamide",C22H39NO2
+134,351.241,N-(3-oxo-9Z-hexadecenoyl)-homoserine lactone,C20H33NO4
+135,351.3071,"Anandamide-d4 (20:4, n-6)",C22H33D4NO2
+136,351.3137,"Anandamide (20:2, n-6)",C22H41NO2
+137,352.2726,N-goshuyoyl lysine;N6-goshuyoyl lysine,C20H36N2O3
+138,353.2566,N-(3-oxo-hexadecanoyl)-homoserine lactone,C20H35NO4
+139,353.293,N-oleoyl alanine;N-palmitoyl proline,C21H39NO3
+140,353.3294,"Anandamide (20:1, n-9)",C22H43NO2
+141,354.2882,N-physeteroyl lysine;N6-physeteroyl lysine,C20H38N2O3
+142,355.2723,-,C20H37NO4
+143,355.3086,N-palmitoyl valine;N-stearoyl alanine,C21H41NO3
+144,355.3318,Arachidonoyl-EA(d8),C22H29D8NO2
+145,355.345,Eicosanoyl-EA,C22H45NO2
+146,356.2675,N-myristoyl glutamine,C19H36N2O4
+147,356.3039,N-myristoyl lysine;N6-myristoyl lysine,C20H40N2O3
+148,357.2515,Bacillamidin B,C19H35NO5
+149,357.2879,N-palmitoyl threonine,C20H39NO4
+150,357.3407,N-(2-fluoro-ethyl)-eicosanoyl amine,C22H44NOF
+151,359.3188,"(+)N-(1S-methyl-propyl) arachidonoyl amine;(-)N-(1R-methyl-propyl) arachidonoyl amine;N,N-diethyl arachidonoyl amine;N-butyl arachidonoyl amine;N-isopropyl alpha-methylarachidonoyl amine;N-propyl alpha-methyl arachidonoyl amine;N-tert-butyl arachidonoyl amine",C24H41NO
+152,361.2617,"N-(17,18-epoxy-5Z,8Z,11Z,14Z-eicosatetraenoyl)-ethanolamine;N-arachidonoyl glycine",C22H35NO3
+153,361.2981,"N-(1R-methyl-2-hydroxy-ethyl) arachidonoyl amine;N-(2-methoxy-ethyl) arachidonoyl amine;N-(2-methyl-2S-hydroxy-ethyl) arachidonoyl amine;N-(3-hydroxy-propyl) arachidonoyl amine;N-(5Z,8Z,11Z,14Z-heneicosatetraenoyl)-ethanolamine;N-methyl N-(2-hydroxy-ethyl) arachidonoyl amine;alpha-methyl anandamide",C23H39NO2
+154,363.2443,N-palmitoyl taurine,C18H37NO4S
+155,363.2773,11(12)-EpETrE-EA;14(15)-EpETrE-EA;15-HETE-EA;20-HETE-EA;5(6)-EpETrE-EA;8(9)-EpETrE-EA,C22H37NO3
+156,363.2937,N-(2-fluoro-ethyl) 2-methyl-arachidonoyl amine,C23H38NOF
+157,365.3294,Semiplenamide A,C23H43NO2
+158,367.2875,Macamide,C25H37NO
+159,367.3086,N-(octadecanoyl)-homoserine lactone;N-oleoyl GABA,C22H41NO3
+160,369.2879,N-oleoyl L-serine,C21H39NO4
+161,369.3032,Macamide,C25H39NO
+162,369.3243,N-palmitoyl isoleucine;N-palmitoyl leucine;N-stearoyl GABA;Semiplenamide F,C22H43NO3
+163,370.2468,Mutanamide,C19H34N2O5
+164,371.2824,"Anandamide (22:6, n-3)",C24H37NO2
+165,371.3036,N-stearoyl serine,C21H41NO4
+166,371.3188,Macamide,C25H41NO
+167,373.2253,Stieleriacine A1;Stieleriacine A2,C22H31NO4
+168,373.2981,Arachidonoylmorpholine,C24H39NO2
+169,373.3345,"Macamide;N-(1,1-dimethyl-propyl) arachidonoyl amine;N-(3-methyl-butyl) arachidonoyl amine;N-amyl arachidohoyl amine;N-isopropyl alpha,alpha-dimethylarachidonoyl amine;N-propyl alpha,alpha-dimethylarachidonoyl amine",C25H43NO
+170,375.241,Stieleriacine B1;Stieleriacine B2,C22H33NO4
+171,375.2773,N-arachidonoyl alanine,C23H37NO3
+172,375.3137,"Adrenoyl-EA;N-(1,1-dimethyl-2-hydroxy-ethyl) arachidonoyl amine;N-(5Z,8Z,11Z,14Z-docosatetraenoyl)-ethanolamine;N-(m-Methoxybenzyl)hexadecanamide;N-ethyl N-(2-hydroxy-ethyl) arachidonoyl amine;alpha,alpha-dimethyl anandamide",C24H41NO2
+173,377.2566,12-HETE-Gly;15-HETE-Gly;Stieleriacine C,C22H35NO4
+174,377.26,N-margaroyl taurine,C19H39NO4S
+175,377.293,N-arachidonoyl dihydroxypropylamine,C23H39NO3
+176,379.2723,N-(3-oxo-11Z-octadecenoyl)-homoserine lactone,C22H37NO4
+177,379.3086,N-linoleoyl valine;N-oleoyl proline,C23H41NO3
+178,381.2879,"11,12-DiHETrE-EA;14,15-DiHETrE-EA;5,6-DiHETrE-EA;8,9-DiHETrE-EA;N-(3-oxo-octadecanoyl)-homoserine lactone",C22H39NO4
+179,381.3243,N-stearoyl proline,C23H43NO3
+180,381.3607,Erucicoyl-EA,C24H47NO2
+181,382.2832,N-palmitoleyl glutamine,C21H38N2O4
+182,383.2824,"Macamide;N-benzyl-13-oxo-9E,11E-octadecadienamide;N-benzyl-9-oxo-10E,12E-octadecadienamide;N-benzyl-9-oxo-10E,12Z-octadecadienamide;N-benzyl-9-oxo-12Z,15Z-octadecadienamide;Oxidized macamide",C25H37NO2
+183,383.3036,N-(3-hydroxy-octadecanoyl)-homoserine lactone;N-oleoyl threonine,C22H41NO4
+184,383.3399,N-stearoyl valine,C23H45NO3
+185,383.3763,Behenoyl-EA,C24H49NO2
+186,384.2988,N-palmitoyl glutamine,C21H40N2O4
+187,385.2828,N-palmitoyl glutamic acid,C21H39NO5
+188,385.2981,N-benzyl-9-oxo-12Z-octadecenamide,C25H39NO2
+189,386.0929,1-(4-carboxybutanamido)-1'-(dimethylcarbamoyl)ferrocene,C18H22N2O4Fe
+190,386.3145,alpha-N-(3-hydroxyhexadecanoyl)  L-ornithine,C21H42N2O4
+191,387.2443,N-linoleoyl taurine,C20H37NO4S
+192,387.2773,"N-(19,20-epoxy-4Z,7Z,13Z,16Z-docosapentaenoyl)-ethanolamine",C24H37NO3
+193,387.2807,N-palmitoyl methionine,C21H41NO3S
+194,389.26,N-oleoyl taurine,C20H39NO4S
+195,389.293,N-arachidonoyl GABA;N-palmitoyl dopamine,C24H39NO3
+196,389.3294,"(+)N-(1S-methyl-2-hydroxy-ethyl) alpha,alpha-dimethylarachidonoyl amine;(+)N-(2S-hydroxy-propyl) alpha,alpha-dimethylarachidonoyl amine;(-)N-(1R-methyl-2-hydroxy-ethyl) alpha,alpha-dimethylarachidonoyl amine;(-)N-(2R-hydroxy-propyl) alpha,alpha-dimethylarachidonoyl amine;N-(17,17-dimethyl-5Z,8Z,11Z,14Z-heneicosatetraenoyl)-ethanolamine;N-(17-methyl-5Z,8Z,11Z,14Z-docosatetraenoyl)-ethanolamine;N-(2-isopropyl-5Z,8Z,11Z,14Z-eicosatetraenoyl)-ethanolamine;N-(5-hydroxy-pentyl) arachidonoyl amine;N-(5Z,8Z,11Z,14Z-tricosatetraenoyl)-ethanolamine;N-propyl N-(2-hydroxy-ethyl) arachidonoyl amine",C25H43NO2
+197,390.2115,pre-putrebactin,C16H30N4O7
+198,391.2723,12-HETE-Ala;15-HETE-Ala;N-arachidonoyl D-serine;N-arachidonoyl L-serine,C23H37NO4
+199,391.2756,N-stearoyl taurine,C20H41NO4S
+200,391.3086,"N,N-(2,2-dihydroxy-ethyl) arachidonoyl amine",C24H41NO3
+201,393.2991,N-palmitoyl histidine,C22H39N3O3
+202,395.3399,N-(eicosanoyl)-homoserine lactone;N-oleoyl isoleucine;N-oleoyl leucine;Semiplenamide E,C24H45NO3
+203,396.2988,N-oleoyl asparagine,C22H40N2O4
+204,397.392,Tricosanoyl-EA,C25H51NO2
+205,399.3137,Tetracosahexaenoylethanolamide,C26H41NO2
+206,401.3658,"N-propyl-16,16-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine",C27H47NO
+207,402.361,"N'-5Z,8Z,11Z,14Z-eicosatetraenoyl-N''-diethyl-ethylenediamine",C26H46N2O
+208,403.2756,N-(9Z-nonadecenoyl) taurine,C21H41NO4S
+209,403.3086,N-palmitoyl phenylalanine,C25H41NO3
+210,403.345,"N-(16,16-dimethy-5Z,8Z,11Z,14Z-docosatetraenoyl)-ethanolamine;N-(17,17-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl)-ethanolamine;N-(5Z,8Z,11Z,14Z-tetracosatetraenoyl)-ethanolamine",C26H45NO2
+211,405.1821,1-tauro-tetranor-PGE1,C18H31NO7S
+212,405.2879,12-HETE-GABA;15-HETE-GABA,C24H39NO4
+213,405.2913,N-nonadecanoyl taurine,C21H43NO4S
+214,405.3243,"N-(3,4-dimethoxybenzyl)-hexadecanamide",C25H43NO3
+215,405.3407,"(+/-)N-(2-fluoro-ethyl)-2,16-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine;(+/-)N-(2-fluoro-ethyl)-2,17-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine;(+/-)N-(2-fluoro-ethyl)-2-methyl-5Z,8Z,11Z,14Z-tricosatetraenoyl amine",C26H44NOF
+216,407.2672,N-linolenoyl glutamic acid,C23H37NO5
+217,407.3399,Semiplenamide B,C25H45NO3
+218,408.2988,"N-(9,12-octadecadienoyl)-glutamine",C23H40N2O4
+219,409.2828,"N-(9,12-octadecadienoyl)-glutamic acid",C23H39NO5
+220,409.392,Nervonoyl-EA,C26H51NO2
+221,410.3145,N-oleoyl glutamine,C23H42N2O4
+222,411.2443,N-arachidonoyl taurine,C22H37NO4S
+223,411.2985,N-oleoyl glutamic acid,C23H41NO5
+224,411.3349,N-(3-hydroxy-eicosanoyl)-homoserine lactone;Semiplenamide G,C24H45NO4
+225,411.4076,Lignoceroyl-EA,C26H53NO2
+226,412.3301,N-stearoyl glutamine,C23H44N2O4
+227,413.293,N-docosahexaenoyl GABA;N-gamma-linolenoyl dopamine;N-linolenoyl dopamine,C26H39NO3
+228,413.2964,N-oleoyl methionine,C23H43NO3S
+229,413.3141,N-stearoyl glutamic acid,C23H43NO5
+230,414.3246,Palmitoyl Serotonin,C26H42N2O2
+231,414.3458,alpha-N-(3-hydroxyoctadecanoyl)-L-ornithine,C23H46N2O4
+232,415.3086,N-linoleoyl dopamine,C26H41NO3
+233,417.2913,N-gondoyl taurine,C22H43NO4S
+234,417.3032,N-benzyl docosahexaenamide,C29H39NO
+235,417.3243,N-Oleoyl Dopamine;N-arachidonoyl isoleucine;N-arachidonoyl leucine,C26H43NO3
+236,417.3607,"N-(2-hydroxy-2S-methyl-ethyl)-16,16-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine;N-(2-methoxy-ethyl)-16,16-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine;N-(2R-methyl-3-hydroxy-ethyl)-16,16-dimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine",C27H47NO2
+237,419.3036,N-palmitoyl tyrosine,C25H41NO4
+238,419.3069,N-arachidoyl taurine,C22H45NO4S
+239,419.3148,N-oleoyl histidine,C24H41N3O3
+240,419.3399,N-stearoyl dopamine,C26H45NO3
+241,419.3563,"(+/-)N-(2-fluoro-ethyl)-2,16,16-trimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine;(+/-)N-(2-fluoro-ethyl)-2,17,17-trimethyl-5Z,8Z,11Z,14Z-docosatetraenoyl amine",C27H46NOF
+242,421.3304,N-stearoyl histidine,C24H43N3O3
+243,422.2781,Volicitin,C23H38N2O5
+244,423.3137,N-(2-phenoxy-ethyl) arachidonoyl amine,C28H41NO2
+245,423.3712,Semiplenamide D,C26H49NO3
+246,424.2937,"N-(17-hydroxy-9,12-octadecadienoyl)-glutamine",C23H40N2O5
+247,426.357,N-stearoyl arginine,C23H46N4O3
+248,427.2392,12-HETE-T;15-HETE-T,C22H37NO5S
+249,427.2488,Anandamide 0-phosphate,C22H38NO5P
+250,429.3243,N-oleoyl phenylalanine,C27H43NO3
+251,430.3043,-,C22H42N2O6
+252,431.1978,1-tauro-dinor-PGE2,C20H33NO7S
+253,431.3399,"N-(3,4-dimethoxybenzyl)-9Z-oleamide;N-stearoyl phenylalanine",C27H45NO3
+254,432.2988,N-arachidonoyl glutamine,C25H40N2O4
+255,433.2134,1-tauro-dinor-PGE1,C20H35NO7S
+256,433.2828,N-arachidonoyl glutamic acid,C25H39NO5
+257,433.3226,N-heneicosanoyl taurine,C23H47NO4S
+258,433.372,"(+/-)N-(2-fluoro-ethyl)-2,16,16-trimethyl-5Z,8Z,11Z,14Z-tricosatetraenoyl amine",C28H48NOF
+259,437.3294,(+/-)N-(1-methyl-2-hydroxy-2-phenyl-ethyl) arachidonyl amine,C29H43NO2
+260,439.3086,N-arachidonoyl dopamine;N-arachidonoyl vanillylamine,C28H41NO3
+261,440.3403,Oleoyl Serotonin,C28H44N2O2
+262,441.2991,N-arachidonoyl histidine,C26H39N3O3
+263,441.3243,Dihomo-gamma-linolenoyl dopamine,C28H43NO3
+264,442.3195,N-palmitoyl tryptophan,C27H42N2O3
+265,442.3559,Stearoyl Serotonin,C28H46N2O2
+266,445.3192,N-oleoyl tyrosine,C27H43NO4
+267,445.3226,N-erucoyl taurine,C24H47NO4S
+268,447.3349,"N-palmitoyl alpha,O-dimethyl tyrosine;N-stearoyl tyrosine",C27H45NO4
+269,447.3382,N-docosanoyl taurine,C24H49NO4S
+270,447.358,N-arachidonoyl-dopamine-d8,C28H33D8NO3
+271,455.3036,15-HETE-DA;15-HETE-VA,C28H41NO4
+272,455.4127,N-benzyl-15Z-tetracosenamide,C31H53NO
+273,456.2988,N-docosahexaenoyl glutamine,C27H40N2O4
+274,457.2828,N-docosahexaenoyl glutamic acid,C27H39NO5
+275,457.3192,Stieleriacine D,C28H43NO4
+276,457.4284,N-benzyltetracosanamide,C31H55NO
+277,458.2603,N-(4-benzenesulfonamide) arachidonoyl amine,C26H38N2O3S
+278,459.2291,1-tauro-PGE2,C22H37NO7S
+279,459.3349,Stieleriacine E,C28H45NO4
+280,459.3382,N-(14Z-tricosenoyl) taurine,C25H49NO4S
+281,461.3539,N-tricosanoyl taurine,C25H51NO4S
+282,462.3246,Arachidonoyl Serotonin,C30H42N2O2
+283,465.2991,N-docosahexaenoyl histidine,C28H39N3O3
+284,467.3036,N-arachidonoyl tyrosine,C29H41NO4
+285,467.3399,"N-(7Z,10Z,13Z-16Z-docosatetraenoyl) dopamine",C30H45NO3
+286,468.3352,N-oleoyl tryptophan,C29H44N2O3
+287,470.3508,N-stearoyl tryptophan,C29H46N2O3
+288,473.3539,N-nervonoyl taurine,C26H51NO4S
+289,475.3086,N-docosahexaenoyl phenylalanine,C31H41NO3
+290,475.3695,N-lignoceroyl taurine,C26H53NO4S
+291,486.2916,N-(2'-(4-benzenesulfonamide)-ethyl) arachidonoyl amine,C28H42N2O3S
+292,489.3852,N-pentacosanoyl taurine,C27H55NO4S
+293,490.3519,N-oleyl-Ala-His,C27H46N4O4
+294,493.4243,"N,N-bis(4-acetamidobutyl)-15-methylhexadec-6E-enamide",C29H55N3O3
+295,494.2053,EI-1511-3,C27H30N2O7
+296,496.221,EI-1625-2,C27H32N2O7
+297,503.4008,N-hexacosanoyl taurine,C28H57NO4S
+298,507.2832,FR901464,C27H41NO8
+299,512.2523,TMC-1A,C28H36N2O7
+300,516.3271,IC202C,C23H44N6O7
+301,520.221,EI-1511-5,C29H32N2O7
+302,521.1599,N-(4-bromo-benzenesulfon) arachidonoyl amine,C26H36NO3SBr
+303,523.2781,FR901465,C27H41NO9
+304,532.3221,IC202B,C23H44N6O8
+305,538.2679,TMC-1C,C30H38N2O7
+306,539.4914,N-(15-methyl-3-(12-methyl-tridecanoyloxy)-hexadecanoyl)-glycine,C33H65NO4
+307,540.2836,TMC-1D,C30H40N2O7
+308,543.2599,FR901463,C27H42NO8Cl
+309,546.2366,asukamycin,C31H34N2O7
+310,550.2679,manumycin,C31H38N2O7
+311,551.455,-,C33H61NO5
+312,553.4706,Topostin B553,C33H63NO5
+313,560.3534,Deferoxamine,C25H48N6O8
+314,563.5026,N-(4-isobutyramidobutyl)-15-methyl-N-(4-pentanamidobutyl)hexadec-6E-enamide,C34H65N3O3
+315,565.4706,N-(15-methyl-3-(13-methyl-4Z-tetradecenoyloxy)-hexadecanoyl)-glycine,C34H63NO5
+316,565.5182,N-(4-isobutyramidobutyl)-15-methyl-N-(4-pentanamidobutyl)hexadecanamide,C34H67N3O3
+317,567.4863,N-(15-methyl-3-(13-methyl-tetradecanoyloxy)-hexadecanoyl)-glycine;N-[3-(13-methyl-tetradecanoyl)-15-methyl-hexadecanoyl] glycine,C34H65NO5
+318,572.3897,IC202A,C27H52N6O7
+319,577.5182,"(E)-15-methyl-N,N-bis(4-pentanamidobutyl)hexadec-6-enamide",C35H67N3O3
+320,579.4863,N-(15-methyl-3-(13-methyl-4Z-tetradecenoyloxy)-hexadecanoyl)-glycine methyl ester,C35H65NO5
+321,602.3639,desferrioxamine D1,C27H50N6O9
+322,616.2883,Ferroxamine,C25H48FeN6O8
+323,618.3588,desferrioxamine G,C27H50N6O10
+324,624.5441,alpha-N-(3-hexadecanoyloxy-hexadecanoyl)-L-ornithine,C37H72N2O5
+325,628.4088,Bacillamidin E,C36H56N2O7
+326,640.5027,Topostin D654,C36H68N2O7
+327,652.5027,N-(3R-(15-methyl-3-(13-methyl-tetradecenoyloxy)-hexadecanoyl)-glycyl)-L-serine,C37H68N2O7
+328,654.5183,N-[3-(13-methyl-tetradecanoyloxy)-13-methyl-hexadecanoyl] glycyl serine;Topostin D654,C37H70N2O7
+329,664.5754,"alpha-N-(3-(11,12-methylene)-octadecanoyloxy-hexadecanoyl)-L-ornithine",C40H76N2O5
+330,666.5183,N-(3R-(15-methyl-3-(13-methyl-tetradecanoyloxy)-hexadecanoyl)-glycyl)-L-serine methyl ester,C38H70N2O7
+331,676.3724,Granadaene,C39H52N2O8
+332,680.5703,"alpha-N-(3-(3-hydroxy-11,12-methylene-octadecanoyloxy)-hexadecanoyl)-L-ornithine",C40H76N2O6
+333,680.6067,alpha-N-(3-octadecanoyloxy-octadecanoyl)-L-ornithine,C41H80N2O5
+334,692.6067,"alpha-N-(3-(11,12-methylene)-octadecanoyloxy-octadecanoyl)-L-ornithine",C42H80N2O5
+335,696.6016,alpha-N-(3-(3-hydroxy)-octadecanoyloxy-octadecanoyl)-L-ornithine,C41H80N2O6

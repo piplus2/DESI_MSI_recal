@@ -1,0 +1,506 @@
+,MASS,COMMON_NAME,FORMULA
+0,312.2089,"pregna-4,9(11)-diene-3,20-dione",C21H28O2
+1,344.2715,-,C23H36O2
+2,354.2923,-,C25H38O
+3,356.3079,"26,27-bisnor-22-dehydro-cholesterol",C25H40O
+4,362.1882,Bufogargarizin C,C24H26O3
+5,366.1831,Bufogargarizin D,C23H26O4
+6,370.3236,-;19-norcholestenone,C26H42O
+7,370.36,-,C27H46
+8,372.3392,24-norcholesterol,C26H44O
+9,372.3756,-,C27H48
+10,374.2457,Digitoxigenin,C23H34O4
+11,374.3549,19-norcholestanol,C26H46O
+12,378.2923,-,C27H38O
+13,380.3079,Pentalinonsterol,C27H40O
+14,382.2872,-,C26H38O2
+15,382.3236,"-;1,4-cholestadienone;3,5-cholestadien-7-one;4,6-cholestadienone;7-dehydro-desmosterol;Glaucasterol;Zymosterone",C27H42O
+16,384.2301,Bufohydrolide B;Resibufogenin;Scillarenin,C24H32O4
+17,384.3392,"-;1-(5alpha)-cholestenone;22-dehydrocholesterol;22Z-dehydrocholesterol;24,26-cyclocholesterol;3-ketocholesterol;4,6-cholestadienol;5, 20(22)-cholestadienol;5alpha-cholesta-7,24-dien-3beta-ol;7-dehydrocholesterol;8-Dehydrocholesterol;Cholestenone;Cystosterol;Desmosterol;Lumisterol 3;Occelasterol;Zymosterol",C27H44O
+18,386.2093,-,C23H30O5
+19,386.2457,Bufalin,C24H34O4
+20,386.3549,-;15-dehydro-A-norcholestanol;4-cholestenol;5alpha-cholestanone;5beta-cholestanone;Cholesterol;Epicholesterol;Lathosterol;Patinosterol;Zymostenol,C27H46O
+21,387.3501,25-Azacholesterol,C26H45NO
+22,388.225,cannogenin,C23H32O5
+23,388.2614,sarmentogenin,C24H36O4
+24,388.3705,Coprostanol;Dihydrocholesterol;Epi-cholestanol,C27H48O
+25,390.2406,Digoxigenin;gitoxigenin,C23H34O5
+26,390.3763,-;Desmosterol(d6),C27H38D6O
+27,391.3824,7-dehydrocholesterol-d7,C27H37D7O
+28,392.3079,"Ergosta-4,6,8(14),22E-tetraen-3-one",C28H40O
+29,393.3981,Cholesterol(d7);Zymostenol-d7,C27H39D7O
+30,394.3236,"Dehydroergosterol;Ergosta-5,7,22E,24(28)-tetraenol;ergosta-5,7,22,24(28)-tetraen-3beta-ol",C28H42O
+31,396.3392,-;3-dehydro-4-methylzymosterol;3-keto-4alpha-methyl-zymosterol;5-dehydroepisterol;Baikalosterol;Ergosterol,C28H44O
+32,397.3345,20-epi-Verazine;Solanidine;Verazine,C27H43NO
+33,398.2821,Asparacemosone D,C26H38O3
+34,398.3185,-;24-keto-25dehydrocholesterol;7-oxo-cholestenone ;Chabrosterol,C27H42O2
+35,398.3549,"(22R,23R)-methylenecholesterol;-;22-dihydroergosterol;22-methylenecholesterol;22S,23S-methylenecholesterol;24-epibrassicasterol;4alpha-methyl-5alpha-cholest-7-en-3-one;4alpha-methylzymosterol;5-campestenone;5-dihydroergosterol;Brassicasterol;Chalinasterol;Codisterol;Episterol;Fecosterol;Micaceol;epicodisterol;stellasterol",C28H46O
+36,399.3501,Demissidine,C27H45NO
+37,400.225,12beta-hydroxyresibufogenin;19-hydroxyresibufogenin;19-oxo-bufalin;Bovogenin A;Bufohydrolide A;Desacetylcinobufagin;Drimianin A;Drimianin F,C24H32O5
+38,400.3341,"(24E),26-hydroxydesmosterol;(24Z),26-hydroxydesmosterol;-;15-ketocholestene;22-oxocholesterol;24,25-epoxy-cholesterol;24-keto-25dehydrocholestanol;24-ketocholesterol;24-oxocholesterol;24S-OH-7-DHC;3-oxo-7alpha-hydroxycholesterol ;4alpha-OH-7-DHC;4beta-OH-7-DHC;7-oxo-cholesterol;7alpha-hydroxy-Desmosterol;Cholesta-5,7-diene-1,3-diol",C27H44O2
+39,400.3705,"-;22,23-dihydrobrassicasterol;4alpha-methylcholest-8-en-3beta-ol;Campesterol;Fungisterol;campest-4-en-3beta-ol",C28H48O
+40,400.4069,5alpha-poriferastane;5alpha-stigmastane;5beta-poriferastane;5beta-stigmastane;poriferastane;stigmastane,C29H52
+41,402.2042,Bufogargarizin C,C23H30O6
+42,402.2406,1beta-hydroxybufalin;Desacetylbufotalin;Gamabufotalin;Hexanorisocucurbitacin D;Telocinobufagin,C24H34O5
+43,402.3134,-,C26H42O3
+44,402.3498,"(24R)-24-hydroxycholesterol;15-ketocholestane;15alpha-hydroxycholestene;15beta-hydroxycholestene ;19-hydroxycholesterol;20S-hydroxycholesterol;20a-hydroxy cholesterol;22-hydroxycholesterol;22R-hydroxycholesterol;22S-hydroxycholesterol;24-ketocholestanol;24S-hydroxy-cholesterol;25-hydroxy-cholesterol;27-hydroxy-cholesterol;27-hydroxy-cholesterol(25R);4beta-hydroxy-cholesterol;5,6alpha-epoxy-cholesterol;5beta,6beta-epoxy-cholesterol;6-oxocholestanol;7alpha-hydroxy-cholesterol;7beta-hydroxycholesterol",C27H46O2
+45,402.3862,-;Campestanol;Ergostanol;Lophanol,C28H50O
+46,404.2199,-;adonitoxigenin;strophanthidin,C23H32O6
+47,404.3654,15alpha-hydroxycholestane ;15beta-hydroxycholestane;5alpha-hydroxycholesterol;6alpha-hydroxycholestanol,C27H48O2
+48,405.3683,25-hydroxy-cholesterol(d3),C27H43D3O2
+49,406.2355,antiogenin;bipindogenin;diginatigenin,C23H34O6
+50,406.2872,-,C28H38O2
+51,406.3712,"24,25-epoxy-cholesterol(d6)",C27H38D6O2
+52,407.3774,-;7-oxocholesterol(d7),C27H37D7O2
+53,408.3028,"-;25-hydroxy-ergosta-4,6,8(14),22E-tetraen-3-one",C28H40O2
+54,408.3392,Conicasterol B,C29H44O
+55,408.3868,24-hydroxy-cholesterol(d6);25-hydroxy-cholesterol(d6);27-hydroxy-cholesterol(d6),C27H40D6O2
+56,409.393,"22R-hydroxycholesterol(d7);22S-hydroxycholesterol(d7);4beta-hydroxy-cholesterol(d7);5,6alpha-epoxy-cholesterol(d7);5,6beta-epoxy-cholesterol(d7);7alpha-hydroxy-cholesterol(d7);7beta-hydroxy-cholesterol(d7)",C27H39D7O2
+57,410.2821,Minabeolide-4,C27H38O3
+58,410.3549,"(22E,24R)-24,26-dimethylcholesta-5,22,25(27)-trien-3beta-ol;(23R)-isocalysterol;(24S)-isocalysterol;-;24-allenyl-cholesterol;4,4-dimethylcholesta-8,11,24-trienol;5-Dehydro-avenasterol;Calysterol;Corbisterol;Craterol A;Dehydroconicasterol;Delta 8,14 -Sterol",C29H46O
+59,411.4087,6alpha-hydroxycholestanol(d7),C27H41D7O2
+60,412.225,3beta-formyloxyresibufogenin,C25H32O5
+61,412.2977,-;Episceptrumgenin;Minabeolide-6,C27H40O3
+62,412.3341,-;zymosterol intermediate 1b,C28H44O2
+63,412.3705,"(24E)-24,26-dimethyldesmosterol;(24Z)-24,26-dimethyldesmosterol;(3beta,5alpha,24S)-Stigmasta-7,25-dien-3-ol;(5alpha,24(28)Z)-Stigmast-24(28)-en-3-one;-;14-demethyllanosterol;23,24-dihydro-calysterol;23-demethylgorgosterol;24(28)-dehydroaplysterol;25(26)-dehydroaplysterol;4alpha-Methylfecosterol;4alpha-demethyldinosterol;7-dehydrositosterol;Chondrillasterol;Clerosterol;Conicasterol;Delta7-Avenasterol;Ficisterol;Hebesterol;Isofucosterol;Nicasterol;Peposterol;Petrosterol;Poriferasterol;Sarcosterol;Spinasterol;Stigmasterol;beta-Sitostenone;fucosterol",C29H48O
+64,413.3294,25-iso-etioline;Etioline;Leptinidine;Solasodine;tomatidinol,C27H43NO2
+65,414.2042,19-oxodesacetylcinobufagin,C24H30O6
+66,414.3134,"-;20S-Hydroxycholest-1-en-3,16-dione;20S-Hydroxycholest-4-en-3,16-dione;Diosgenin;Epidiosgenin;Marthasterone;Yamogenin",C27H42O3
+67,414.3498,"-;22,23-epoxycampesterol;22S-hydroxy-24-methylene-cholesterol;5alpha-ergosta-7,22-diene-3beta,5-diol;zymosterol intermediate 1a",C28H46O2
+68,414.3862,"(3beta,5alpha,24R)-Stigmast-8(14)-en-3-ol;-;23,24-dihydro-5alpha-calystanol;23-methylene-24-methylcholestanol;28-Isofucostanol;4,4-Dimethylcholest-8-enol;4,4-dimethyl-5alpha-cholest-7-en-3beta-ol;Aplysterol;Clionasterol;Echissaposterol;Fucostanol;Petrostanol;Scottenol;Sitosterol",C29H50O
+69,414.4226,lanostane,C30H54
+70,415.345,22-iso-teinemine;Teinemine;soladulcidine;tomatidine,C27H45NO2
+71,416.2199,11alpha-hydroxymarinobufagin;19-hydroxydesacetylcinobufagin;19-hydroxymarinobufagin;Bufarenogin;Desacetylcinobufotalin;Hellebrigenin;Pseudobufarenogin,C24H32O6
+72,416.329,"(25R)-5beta-spirostan-3beta-ol;-;2,22,25-trideoxyecdysone;20S-Hydroxycholestane-3,16-dione;25-Hydroxy-7-oxocholesterol;3beta,4beta-dihydroxycholest-7(8)-en-23-one;3beta,4beta-dihydroxycholest-8(9)-en-23-one;3beta,4beta-dihydroxycholesta-5-ene-23-one;5alpha,6alpha-24S,25-diepoxy-cholesterol;7-OOH-5,8-dien-3beta-ol;7alpha,(25R)26-Dihydroxycholest-4-en-3-one;7alpha,(25S)26-Dihydroxycholest-4-en-3-one;DHCEO;Dihydromarthasterone;Dormatinone;EnP(5,8);Neotigogenin;Sarsasapogenenin;Tigogenin",C27H44O3
+73,416.3654,-;22S-hydroxycampesterol;6-oxocampestanol,C28H48O2
+74,416.4018,-;24-ethylcoprostanol;Stigmastanol,C29H52O
+75,418.2355,11alpha-hydroxytelocinobufagin;19-hydroxytelocinobufagin,C24H34O6
+76,418.3083,24-northornasterol A,C26H42O4
+77,418.3447,"(20R,22R)-20,22-dihydroxycholesterol;1,25-Dihydroxycholesterol;16beta,20S-dihydroxycholestan-3-one;24S,25-dihydroxycholesterol;24S,27-dihydroxycholesterol;25,27-dihydroxycholesterol;3beta,4beta-dihydroxycholest-23-one;6,24S-dihydroxycholesterol;7alpha,25(R)26-dihydroxycholesterol;7alpha,25(S)26-dihydroxycholesterol;7alpha-hydroperoxycholesterol;7beta,25-dihydroxycholesterol;7beta-hydroperoxycholesterol;Cholesterol-5alpha-hydroperoxide;Cholesterol-5beta-hydroperoxide;Cholesterol-6alpha-hydroperoxide;Cholesterol-6beta-hydroperoxide;Dormantinol;Secosterol-A;Secosterol-B;cholestan-6-oxo-3,5-diol",C27H46O3
+78,418.3811,3-epi-6-deoxocathasterone;6-Deoxocathasterone;6alpha-hydroxycampestanol,C28H50O2
+79,420.3603,"-;5alpha,6beta-dihydroxycholestanol;Hipposterol",C27H48O3
+80,422.2821,Calvasterol A;Minabeolide-1,C28H38O3
+81,422.3549,Theonellasterol B,C30H46O
+82,424.2977,-;Minabeolide-3;Norselic acid C;Talarosterone,C28H40O3
+83,424.3705,"-;24-isopropenyl-22E-dehydrocholesterol;Craterol B;Gorgostan-5,25-dien-3beta-ol",C30H48O
+84,426.3134,"9,11-dehydroergosterol peroxide;Stoloniferone A;Stoloniferone B;Stoloniferone O;Stoloniferone P",C28H42O3
+85,426.3498,"-;Saringosterone;Stigmast-4-ene-3,6-dione;zymosterol intermediate 1c",C29H46O2
+86,426.3862,-;24-Isopropenylcholesterol;24-Isopropyl-22E-dehydrocholesterol;24-ethylidene Iophenol;24E-propylidenecholesterol;24S-isopropenyl-cholesterol;29-methylisofucosterol;Axinyssasterol;Dinosterone;Durissimasterol;Gorgosterol;Isostelliferasterol;Lanosterol;Mutasterol;Obtusifoliol;Remeisterol;Stelliferasterol;Strongylosterol;Theonellasterol;Verongulasterol;Xestosterol;cycloartenol;cycloeucalenol,C30H50O
+87,428.2927,-;17(20)-Dehydrocryptogenin ;9(11)-dehydroxyhecogenin;Bufospirostenin A;delta5-Convallamarogenin,C27H40O4
+88,428.329,"-;3beta,4beta-dihydroxyergosta-24(28)-en-23-one;4alpha-carboxy-zymosterol;Ergosterol peroxide;Nebrosteroid J;Stoloniferone C;Stoloniferone E",C28H44O3
+89,428.3654,"(3beta,24R,24'R)-fucosterol epoxide;(3beta,24S,24'S)-fucosterol epoxide;-;22S-hydroxyisofucosterol;3-Hydroxystigmast-5-en-7-one;3beta-hydroxy-4beta-methyl-5alpha-cholest-7-ene-4alpha-carbaldehyde;Cholesteryl acetate;Saringosterol;Stigmastane-3,6-dione;halosterol A;halosterol B;leucisterol",C29H48O2
+90,428.4018,"-;24,25-dihydrolanosterol;24-Ethyllophenol;24-Isopropyl-cholesterol;24-ethyl-24-methyl-cholesterol;A-norgorgostanol;Dinosterol;Peridinosterol;cycloartanol",C30H52O
+91,430.3083,"-;3beta-Hydroxy-5alpha,6alpha-epoxy-9-oxo-9,10-seco-5-cholest-7-en-11-al;Convallamarogenin;Cryptogenin;Epiruscogenin;Hecogenin;Isonarthogenin;Isonuatigenin;Nuatigenin;Pennogenin;Prazerigenin A;Ruscogenin;Sisalagenin;Solagenin;Yuccagenin",C27H42O4
+92,430.3447,"(22E,24R)-ergosta-5,22-dien-3beta,5alpha,6alpha-triol;-;3beta,4beta-dihydroxyergosta-23-one;6-deoxo-3-dehydroteasterone;Nebrosteroid K",C28H46O3
+93,430.3811,-;12alpha-hydroxy Sitosterol;22S-hydroxysitosterol;4beta-(hydroxymethyl)-4alpha-methyl-5alpha-cholest-7-en-3beta-ol;Ikshusterol,C29H50O2
+94,430.4175,-,C30H54O
+95,432.2148,"-;11alpha,19-dihydroxymarinobufagin;19-carboxy-19-demethyltelocinobufagin",C24H32O7
+96,432.324,"(25R)-5beta-spirostan-1beta,3alpha-diol;-;7alpha,12alpha,(25R)26-Trihydroxycholest-4-en-3-one;Chlorogenin;Digalogenin;Gitogenin;Isorhodeasapogenin;Neochlorogenin;Nogiragenin;Rhodeasapagenin;Rockogenin;Thornasterol A;Yonogenin;beta-Chlorogenin",C27H44O4
+97,432.3603,"-;22,23-dihydroxycampesterol;3-Dehydro-6-deoxoteasterone;Cathasterone",C28H48O3
+98,434.2305,"-;11alpha,19-dihydroxytelocinobufagin",C24H34O7
+99,434.3396,-,C27H46O4
+100,434.376,6-Deoxotyphasterol;6-deoxoteasterone,C28H50O3
+101,436.2614,Paraminabeolide A,C28H36O4
+102,436.3553,"Cholestane-3b,5a,6b,(25R)26-tetrol",C27H48O4
+103,438.3134,Ganodecalone B,C29H42O3
+104,438.3345,27-Nor-cholestane-pentol,C26H46O5
+105,438.3862,25-Methyl-24-isopropenyl-22E-dehydrocholesterol;Ophirasterol,C31H50O
+106,440.2927,Calvasterol B,C28H40O4
+107,440.329,-;Stoloniferone D;Stoloniferone Q,C29H44O3
+108,440.3654,32-oxolanosterol;Theonellasterol C,C30H48O2
+109,440.4018,(24R)-24-methylcycloart-25-en-3beta-ol;(25E)-26-methylstrongylosterol;(25Z)-26-methylstrongylosterol;-;24-Ethyl-24-methyl-22E-dehydrocholesterol;24-methylene-cycloartanol;25-Methyl-24-isopropenyl-cholesterol;25-methylxestosterol;28-methylxestosterol;Isoxestospongesterol;Sipalosterol;Sutinasterol;Xestospongesterol,C31H52O
+110,442.2355,Cinobufagin;Scillirosidin,C26H34O6
+111,442.2719,Asparacemosone C,C27H38O5
+112,442.3083,-,C28H42O4
+113,442.3447,-;4beta-methyl-zymosterol-4alpha-carboxylic acid;Nebrosteroid I,C29H46O3
+114,442.3811,"-;32-hydroxylanosterol;7alpha-Theonellasterol;Cycloarta-23-ene-3beta,25-diol",C30H50O2
+115,442.4175,7beta-ethyl-sitosterol,C31H54O
+116,444.2512,Bufotalin,C26H36O6
+117,444.2876,Asparacemosone B;Asparacosin A;Kammogenin,C27H40O5
+118,444.324,-;Stoloniferone H;Stoloniferone I;Stoloniferone L;Strophasterol A;Strophasterol B,C28H44O4
+119,444.3603,-;3beta-hydroxy-4alpha-methyl-5alpha-cholest-7-ene-4beta-carboxylic acid;3beta-hydroxy-4beta-methyl-5alpha-cholest-7-ene-4alpha-carboxylic acid;Conicasterol D,C29H48O3
+120,444.3967,-;Saoussazine,C30H52O2
+121,446.3032,14-deoxydacryhainansterone;Asparacemosone A;Karatavegenin C;Pinnasterol;Protometagenin,C27H42O5
+122,446.3396,"(20S,24R)-Thornasterol B;(20S,24S)-Thornasterol B;-;3-Dehydroteasterone;Stoloniferone K;Stoloniferone N",C28H46O4
+123,446.376,"(20S)-Stigmasta-5-ene-3beta,7alpha,20-triol;-;24-hydroperoxy-24-vinylcholesterol;Nebrosteroid M",C29H50O3
+124,448.3189,2-deoxyecdysone;25-deoxyecdysone;Agigenin;Bombycosterol;Convallagenin  A;Digitogenin;Epimetagenin;Hispigenin;Hongguanggenin;Metagenin;Neoagigenin;Neosolaspigenin;Neotokorogenin;Paniculogenin;Porrigenin A;Solaspigenin;Tokorogenin,C27H44O5
+125,448.3553,Teasterone;Typhasterol,C28H48O4
+126,448.3916,"(3beta,5alpha,6beta,24R)-Stigmastane-3,5,6-triol",C29H52O3
+127,450.3709,-;6-Deoxocastasterone,C28H50O4
+128,452.2927,Norselic acid A,C29H40O4
+129,452.329,Endertiin A,C30H44O3
+130,452.3502,-,C27H48O5
+131,454.1992,"14-deoxy-15beta,16beta-epoxymelianthugenin",C26H30O7
+132,454.2719,Exodeconolide F;Minabeolide-5,C28H38O5
+133,454.3447,Ganodecalone A;Masticadienonic acid,C30H46O3
+134,454.4175,"24R-Ethyl-26,26,27-trimethyl-3beta-hydroxycholesta-7,26-(30)-diene",C32H54O
+135,456.2148,Melianthugenin,C26H32O7
+136,456.2876,Minabeolide-7,C28H40O5
+137,456.324,-;Norselic acid B;Norselic acid D,C29H44O4
+138,456.3603,Endertiin B;Penasterol;Penicisteroid D,C30H48O3
+139,456.4331,"4alpha,14alpha,23S-trimethyl-sitosterol",C32H56O
+140,458.1941,Bufogargarizin A;Bufogargarizin B,C25H30O8
+141,458.2305,12beta-hydroxycinobufagin;6alpha-hydroxycinobufagin;Cinobufotalin,C26H34O7
+142,458.3032,-,C28H42O5
+143,458.3396,"-;3beta,4alpha-dihydroxy-26-methoxyergosta-7,24(28)-dien-6-one;Stoloniferone J;Stoloniferone M",C29H46O4
+144,458.376,Conicasterol C;Theonellasterol E;Theonellasterol F,C30H50O3
+145,460.2461,5beta-hydroxybufotalin,C26H36O7
+146,460.2825,20-oxodacryhainansterone,C27H40O6
+147,460.3189,-;Stoloniferone G;Strophasterol E;Strophasterol F,C28H44O5
+148,460.3553,"(20S,24S)-24-ethylthornasterol",C29H48O4
+149,462.2981,14-deoxy-25-hydroxydacryhainansterone;2-dehydroecdysone;3-dehydroecdysone;5-deoxykaladasterone;shidasterone,C27H42O6
+150,462.3345,Daturmeteside C;Daturmeteside D;Stoloniferone F,C28H46O5
+151,464.3138,"14-Deoxy-20-hydroxyecdysone;22-iso-ecdysone;5alpha,14beta-14-deoxy-20-hydroxyecdysone;5alpha-14-Deoxy-20-hydroxyecdysone;Agavegenin A;Alliogenin;Convallagenin  B;Ecdysone;Neoallilogenin;ponasterone A",C27H44O6
+152,464.3502,7-oxotyphasterol;Castasterone;Trihydroxycoprostanoic acid,C28H48O5
+153,466.2719,Minabeolide-2,C29H38O5
+154,466.3658,6alpha-Hydroxycastasterone,C28H50O5
+155,468.3451,-;Herbasterol,C27H48O6
+156,470.2668,Withaferin A;Withanolide;Withanolide A;Withanolide D,C28H38O6
+157,470.3032,Minabeolide-8,C29H42O5
+158,470.3396,Nebrosteroid L,C30H46O4
+159,472.2097,16beta-hydroxy-melianthugenin,C26H32O8
+160,472.3553,Armatinol A;Penicisteroid B;Penicisteroid C,C30H48O4
+161,472.3916,Theonellasterol D,C31H52O3
+162,474.3345,-,C29H46O5
+163,474.3709,"24R,25,30-trihydroxy-9,19-cycloartane-3-one;Theonellasterol G;Theonellasterol H",C30H50O4
+164,476.241,Trillenogenin,C26H36O8
+165,476.2774,Calonysterone,C27H40O7
+166,476.3502,-,C29H48O5
+167,476.3866,"Cycloartane-3beta,24R,25,30-tetrol",C30H52O4
+168,478.2931,"14beta-14,15-dihydrocalonysterone",C27H42O7
+169,478.3294,-;Daturmeteside A;Daturmeteside B;Daturmeteside E,C28H46O6
+170,480.3087,"20-hydroxyecdysone;22-deoxy-20,21-dihydroxyecdysone;Zoanthusterone;inokosterone",C27H44O7
+171,480.3451,24-epi-brassinolide;Brassinolide,C28H48O6
+172,484.34,-,C27H48O7
+173,486.2618,15beta-Hydroxynicandrin B;Withaperuvin C,C28H38O7
+174,486.2981,(25R)-12beta-acetyl-17alpha-hydroxyspirost-4-en-3-one,C29H42O6
+175,488.241,Psi-bufarenogin L-lactate,C27H36O8
+176,488.2774,-,C28H40O7
+177,488.3138,Acetylpinnasterol,C29H44O6
+178,488.3502,-;Penicisteroid E;cimigenol,C30H48O5
+179,490.2931,Pentalinonside,C28H42O7
+180,490.3294,-,C29H46O6
+181,490.3658,-;Armatinol B;Penicisteroid H;Xeniasterol-b,C30H50O5
+182,490.4022,Aragusteroketal,C31H54O4
+183,492.2546,29-demethylgeodisterol-O-sulfite,C27H40O6S
+184,492.3815,-;Xeniasterol-a,C30H52O5
+185,494.288,2-Oxo-turkesterone,C27H42O8
+186,494.3032,Norselic acid E,C31H42O5
+187,494.3244,makisterone B,C28H46O7
+188,496.2097,Acutifolactone,C28H32O8
+189,496.3036,"20,26-dihydroxyecdysone;Lesterone;Turkesterone;polypodine B",C27H44O8
+190,496.428,Sitosteryl 3E-pentenoate,C34H56O2
+191,498.2981,Cucurbitacin S,C30H42O6
+192,500.241,Melianthusigenin,C28H36O8
+193,500.3138,Hippuristanolide;Physalolactone B,C30H44O6
+194,500.3349,-,C27H48O8
+195,502.2567,4beta-Hydroxywithanolide E;Withaperuvin B,C28H38O8
+196,504.2723,Ixocarpalactone A,C28H40O8
+197,506.2702,geodisterol-O-sulfite,C28H42O6S
+198,506.288,Zenkersterone,C28H42O8
+199,506.3244,2-deoxy-20-hydroxy-5alpha-ecdysone 3-acetate,C29H46O7
+200,506.3607,Penicisteroid A;Penicisteroid G,C30H50O6
+201,508.3764,-,C30H52O6
+202,510.3193,25-Hydroxy-atrotosterone A,C28H46O8
+203,511.3662,Ergosteryl-3beta-O-L-aspartate,C32H49NO4
+204,512.2046,"2beta-acetoxy-14-deoxy-15beta,16beta-epoxymelianthugenin",C28H32O9
+205,512.2774,Exodeconolide E,C30H40O7
+206,512.2985,"(24R)-11alpha,20,24-trihydroxyecdysone;(25R)-11alpha,20,26-trihydroxyecdysone;(25S)-11alpha,20,26-trihydroxyecdysone",C27H44O9
+207,514.2931,Cucurbitacin I;Exodeconolide D;Ganoweberianic acid A,C30H42O7
+208,516.2359,2beta-acetoxy-3-O-acetylhellebrigenin;2beta-hydroxymelianthusigenin,C28H36O9
+209,516.2723,ajugalactone,C29H40O8
+210,516.3087,Cucurbitacin D;Cucurbitacin L;Ganoderic acid A;Ganoderic acid B;Ganoweberianic acid G;Hippuristanacetal,C30H44O7
+211,516.3298,-,C27H48O9
+212,516.3815,-,C32H52O5
+213,518.288,carthamosterone,C29H42O8
+214,518.3244,Cucurbitacin F;Cucurbitacin O,C30H46O7
+215,518.3971,-;cholesteryl beta-D-xyloside,C32H54O5
+216,520.2228,Physalolactone C,C28H37O7Cl
+217,520.2672,Withaperuvin,C28H40O9
+218,520.3036,cyasterone,C29H44O8
+219,520.34,22-epi-Hippurin-1;Cucurbitacin P;Hippurin-1,C30H48O7
+220,522.3557,Penicisteroid F,C30H50O7
+221,526.2567,Ganosporeric acid A,C30H38O8
+222,528.2723,Ganoweberianic acid F;Physapubenolide,C30H40O8
+223,528.2852,2-deoxyecdysone 22-phosphate,C27H45O8P
+224,528.3298,-,C28H48O9
+225,530.288,Ganoweberianic acid B;Ganoweberianic acid D;Proscillaridin A,C30H42O8
+226,532.3036,Cucurbitacin J;Ganoweberianic acid C,C30H44O8
+227,532.3764,-,C32H52O6
+228,534.3193,Cucurbitacin H;neriifolin,C30H46O8
+229,534.392,-,C32H54O6
+230,536.2985,11-Hydroxy-cyasterone;Rhapocasterone A;Rhapocasterone B;rhodexin A,C29H44O9
+231,536.3349,Turkesterone 22-acetonide,C30H48O8
+232,538.2333,Physalolactone,C28H39O8Cl
+233,538.3142,Turkesterone 22-acetate;Zoanthone A,C29H46O9
+234,544.2801,2-deoxy-20-hydroxyecdysone 22-phosphate,C27H45O9P
+235,546.3193,Neocucurbitacin E,C31H46O8
+236,546.392,-,C33H54O6
+237,548.3349,24alpha-Methoxydihydrocucurbitacin D;24beta-Methoxydihydrocucurbitacin D,C31H48O8
+238,548.4077,cholesteryl alpha-D-glucoside;cholesteryl beta-D-galactoside;cholesteryl beta-D-glucoside,C33H56O6
+239,550.2778,adonitoxin;convallatoxin,C29H42O10
+240,550.387,-,C32H54O7
+241,550.4233,Cholestanyl glucoside,C33H58O6
+242,552.2935,antioside;lokundjoside,C29H44O10
+243,556.2309,"2beta-Acetoxy-14-deoxy-15β,16β-epoxymelianthusigenin",C30H36O10
+244,556.3036,Cucurbitacin E,C32H44O8
+245,558.2465,"2beta-acetoxy-3,5-di-O-acetylhellebrigenin",C30H38O10
+246,558.3193,Cucurbitacin B,C32H46O8
+247,560.2622,Drimianin D,C30H40O10
+248,560.275,20-hydroxyecdysone 22-phosphate,C27H45O10P
+249,560.3349,Cucurbitacin C;Cucurbitacin Q,C32H48O8
+250,562.2778,-;Drimianin C,C30H42O10
+251,562.3142,"3beta,11beta-dihydroxy-24,25,26,27-tetranor-cycloart-7-en-23,16beta-olide-3- O-beta-D-xylopyranoside",C31H46O9
+252,562.4233,Campesteryl glucoside,C34H58O6
+253,564.2935,-,C30H44O10
+254,564.3298,Colocynthenin E,C31H48O9
+255,566.3455,Venustone,C31H50O9
+256,568.2884,Acaulesterone,C29H44O11
+257,568.34,Karatavegenin B,C34H48O7
+258,568.5219,12:0 Cholesterol ester,C39H68O2
+259,574.2778,Ganoweberianic acid E,C31H42O10
+260,574.3142,7beta-Hydroxy-3-epi-isocucurbitacin B;Cucurbitacin A,C32H46O9
+261,574.387,-,C34H54O7
+262,574.4233,-;Clerosterol 3-glucoside;Stigmasteryl glucoside,C35H58O6
+263,576.3298,"3beta,15alpha,16alpha,24alpha-tetrahydroxy25,26,27-trinor-16,24-cyclo-cycloart-7-en-23-one-3-O-beta-D-xylopyranoside",C32H48O9
+264,576.3662,Collettiside I;Trillin,C33H52O8
+265,576.439,-;Sitosteryl glucoside;beta-Sitosterol 3-O-beta-D-galactopyranoside,C35H60O6
+266,578.2727,-;Drimianin E,C30H42O11
+267,578.3455,"3beta,15alpha,16alpha,24alpha-tetrahydroxy25,26,27-trinor-16,24-cyclo-cycloartane-23-one-3-O-beta-D-xylopyranoside",C32H50O9
+268,578.3819,(25S)-5beta-spirostan-3beta-yl beta-D-glucoside,C33H54O8
+269,578.4546,Stigmastanyl glucoside,C35H62O6
+270,584.2833,Ouabain,C29H44O12
+271,586.2907,3-O-acetylecdysone 2-phosphate,C29H47O10P
+272,590.3819,-,C34H54O8
+273,592.3247,Colocynthenin F,C32H48O10
+274,592.3611,-;agavoside A;nuatigenin 3-beta-D-glucopyranoside,C33H52O9
+275,594.2676,-,C30H42O12
+276,594.3768,-,C33H54O9
+277,594.5376,14:1 Cholesterol ester,C41H70O2
+278,595.4084,Jurubine,C33H57NO8
+279,596.3924,-,C33H56O9
+280,596.5532,14:0 Cholesterol ester,C41H72O2
+281,604.2884,Scilliroside,C32H44O11
+282,608.356,Brainesteroside B,C33H52O10
+283,608.5532,15:1 Cholesterol ester,C42H72O2
+284,610.3717,-;Brainesteroside D,C33H54O10
+285,610.5689,15:0 Cholesterol ester,C42H74O2
+286,612.2638,-,C27H48O11S2
+287,614.3819,Hellebrigenin-3-(12-hydroxy-laurate),C36H54O8
+288,618.3768,-,C35H54O9
+289,618.5376,16:3 Cholesterol ester,C43H70O2
+290,620.2833,-,C32H44O12
+291,620.5532,16:2 Cholesterol ester;zymosteryl palmitoleate,C43H72O2
+292,622.3353,Brainesteroside C,C33H50O11
+293,622.5689,16:1 Cholesterol ester;5-dihydroergosteryl-pentadecylate,C43H74O2
+294,624.351,Brainesteroside A,C33H52O11
+295,624.5845,16:0 Cholesterol ester,C43H76O2
+296,626.3666,Brainesteroside E;ecdysone 25-O-D-glucopyranoside,C33H54O11
+297,628.4339,Telocinobufagin-3-(14-hydroxymyristate),C38H60O7
+298,630.4132,"3beta,5beta,10beta,14beta-tetrahydroxy-19-norbufa-20,22-dienolide-3-(14-hydroxy-myristate",C37H58O8
+299,632.5532,16:3 Campesterol ester;ergosteryl palmitoleate,C44H72O2
+300,634.3353,"12-beta-acetoxy-3beta,15alpha,16alpha,24alpha-tetrahydroxy25,26,27-trinor-16,24-cyclo-cycloart-7-en-23-one-3-O-beta-D-xylopyranoside",C34H50O11
+301,634.5689,16:2 Campesterol ester;episteryl palmitoleate;fecosteryl palmitoleate,C44H74O2
+302,636.351,Withanoside XI,C34H52O11
+303,636.3873,Cimimanol B,C35H56O10
+304,636.4237,Fasciculic acid B,C36H60O9
+305,636.5845,16:1 Campesterol ester;17:1 Cholesterol ester;5-dihydroergosteryl-palmitate,C44H76O2
+306,638.6002,16:0 Campesterol ester;17:0 Cholesterol ester,C44H78O2
+307,640.3975,Hellebrigenin-3-(14-hydroxy-6Z-tetradecenoate),C38H56O8
+308,640.6158,Campestanyl-16:0,C44H80O2
+309,642.4132,hellebrigenin-3-(14-hydroxymyristate),C38H58O8
+310,644.4288,1beta-hydroxytelocinobufagin-3-(14-hydroxymyristate);hellebrigenol-3-(14-hydroxymyristate),C38H60O8
+311,644.5532,16:3 Stigmasterol ester,C45H72O2
+312,646.3717,abrusoside A,C36H54O10
+313,646.5689,16:2 Stigmasterol ester;16:3 Sitosterol ester;18:3 Cholesterol ester,C45H74O2
+314,648.5845,16:1 Stigmasterol ester;16:2 Sitosterol ester;18:2 Cholesterol ester;zymosteryl oleate,C45H76O2
+315,650.6002,16:0 Stigmasterol ester;16:1 Sitosterol ester;18:1 Cholesterol ester;Brassicasteryl-16:0,C45H78O2
+316,652.6158,16:0 Sitosterol ester;18:0 Cholesterol ester,C45H80O2
+317,654.6315,Sitostanyl-16:0,C45H82O2
+318,655.6311,18:1 Cholesterol ester (d5),C45H73D5O2
+319,656.3772,Fibraurecdyside A,C34H56O12
+320,656.4652,19-hydroxybufalin-3-(16-hydroxy-palmitate),C40H64O7
+321,658.5536,Teasterone 3-myristate,C42H74O5
+322,660.5845,18:3 Campesterol ester;5-dihydroergosteryl-linoleate;Brassicasteryl-18:2;ergosteryl oleate,C46H76O2
+323,662.403,Cimifoetidanoside G;cimicifoetiside A,C37H58O10
+324,662.6002,18:2 Campesterol ester;Brassicasteryl-18:1;episteryl oleate;fecosteryl oleate;lanosteryl palmitoleate,C46H78O2
+325,664.6158,18:1 Campesterol ester;Brassicasteryl-18:0;Campestanyl-18:2,C46H80O2
+326,666.6315,18:0 Campesterol ester;19:0 Cholesterol ester;Campestanyl-18:1,C46H82O2
+327,668.6471,Campestanyl-18:0,C46H84O2
+328,670.5689,20:5 Cholesterol ester,C47H74O2
+329,672.5845,18:3 Stigmasterol ester;20:4 Cholesterol ester,C47H76O2
+330,674.6002,18:2 Stigmasterol ester;18:3 Sitosterol ester;20:3 Cholesterol ester,C47H78O2
+331,676.6158,18:1 Stigmasterol ester;18:2 Sitosterol ester;20:2 Cholesterol ester,C47H80O2
+332,678.3615,Arvenin III,C36H54O12
+333,678.3979,"23R,acetoxy-3beta,15alpha,24R,25-tetrahydroxy-cycloart-7-en-16-one-3-O-beta-D-xylopyranoside",C37H58O11
+334,678.6315,18:0 Stigmasterol ester;18:1 Sitosterol ester;20:1 Cholesterol ester;Sitostanyl-18:2,C47H82O2
+335,680.3772,Arvenin IV,C36H56O12
+336,680.6471,18:0 Sitosterol ester;20:0 Cholesterol ester;Sitostanyl-18:1,C47H84O2
+337,682.6628,Sitostanyl-18:0,C47H86O2
+338,688.6158,20:3 Campesterol ester,C48H80O2
+339,690.6315,20:2 Campesterol ester;lanosteryl oleate,C48H82O2
+340,692.3408,Scillaren A,C36H52O13
+341,692.6471,20:1 Campesterol ester,C48H84O2
+342,693.5696,Cholesteryl nitrolinoleate,C45H75NO4
+343,694.59,"(22E,24R)-ergosta-7,22-dien-3beta,5alpha-dihydroxy-6beta-yl oleate",C46H78O4
+344,694.6628,20:0 Campesterol ester,C48H86O2
+345,696.5845,22:6 Cholesterol ester,C49H76O2
+346,698.6002,22:5 Cholesterol ester,C49H78O2
+347,700.5278,Ecdysone 22-palmitoleate,C43H72O7
+348,700.6158,20:3 Stigmasterol ester;22:4 Cholesterol ester,C49H80O2
+349,702.2888,Taccalonolide A,C36H46O14
+350,702.5435,Ecdysone 22-palmitate;ecdysone palmitate,C43H74O7
+351,702.6315,20:2 Stigmasterol ester;20:3 Sitosterol ester;22:3 Cholesterol ester,C49H82O2
+352,704.4136,cimicifoetiside B,C39H60O11
+353,704.5744,Cholesteryl 11-hydroperoxy-eicosatetraenoate,C47H76O4
+354,704.6471,20:1 Stigmasterol ester;20:2 Sitosterol ester;22:2 Cholesterol ester,C49H84O2
+355,705.4452,Solanidine 3-O-alpha-L-rhamnopyranosyl-(1-2)-beta-D-glucopyranoside,C39H63NO10
+356,706.3928,Cimimanol A,C38H58O12
+357,706.6628,20:0 Stigmasterol ester;20:1 Sitosterol ester;22:1 Cholesterol ester,C49H86O2
+358,708.6784,20:0 Sitosterol ester;22:0 Cholesterol ester,C49H88O2
+359,709.4401,Fasciculic acid C,C38H63NO11
+360,710.3514,-,C36H54O14
+361,710.5849,"(22E,24R)-ergosta-22-en-7-one-3beta,5alpha-dihydroxy-6beta-yl oleate",C46H78O5
+362,710.6941,Sitostanyl-20:0,C49H90O2
+363,712.367,digitalin,C36H56O14
+364,716.6471,22:3 Campesterol ester,C50H84O2
+365,718.6628,22:2 Campesterol ester,C50H86O2
+366,720.3721,Arvenin I,C38H56O13
+367,720.4085,"23R,24S-diacetoxy-3beta,15alpha,25-trihydroxy-cycloart-7-en-16-one-3-O-beta-D-xylopyranoside",C39H60O12
+368,720.6784,22:1 Campesterol ester,C50H88O2
+369,722.3877,Arvenin II,C38H58O13
+370,722.4241,-,C39H62O12
+371,722.6941,22:0 Campesterol ester,C50H90O2
+372,724.3306,Hellebrin,C36H52O15
+373,724.7097,Campestanyl-22:0,C50H92O2
+374,726.5435,Ecdysone 22-linoleate,C45H74O7
+375,728.5591,Ecdysone 22-oleate,C45H76O7
+376,728.6471,22:3 Stigmasterol ester,C51H84O2
+377,730.5748,12:0-Glc-Cholesterol;Ecdysone 22-stearate,C45H78O7
+378,730.6628,22:2 Stigmasterol ester;22:3 Sitosterol ester,C51H86O2
+379,732.6784,22:1 Stigmasterol ester;22:2 Sitosterol ester,C51H88O2
+380,734.6941,22:0 Stigmasterol ester;22:1 Sitosterol ester;24:1 Cholesterol ester,C51H90O2
+381,736.7097,22:0 Sitosterol ester,C51H92O2
+382,738.4554,-,C40H66O12
+383,738.7254,Sitostanyl-22:0,C51H94O2
+384,740.3255,-,C36H52O16
+385,748.4034,Cimimanol E,C40H60O13
+386,752.4347,Cimimanol D,C40H64O13
+387,754.414,-,C39H62O14
+388,754.4324,"Xestosteryl 18-bromooctadeca-9E,17E-diene-5,7,15-triynoate",C48H67O2Br
+389,758.4637,"Xestosteryl 18-bromooctadeca-9E,17E-diene-7,15-diynoate",C48H71O2Br
+390,758.6061,14:0-Glc-Cholesterol,C47H82O7
+391,764.4347,digitoxin,C41H64O13
+392,764.741,Cholesteryl 23-methyl pentacosanoate;Cholesteryl 24-methyl pentacosanoate;Cholesteryl hexacosanoate,C53H96O2
+393,766.3412,Glucoscilliroside,C38H54O16
+394,772.4245,-,C39H64O15
+395,780.4296,Digoxin;gitoxin,C41H64O14
+396,780.5904,16:3-Glc-Cholesterol,C49H80O7
+397,782.4089,Withanoside X,C40H62O15
+398,782.6061,16:2-Glc-Cholesterol,C49H82O7
+399,784.6217,16:1-Glc-Cholesterol,C49H84O7
+400,786.4402,-,C40H66O15
+401,786.6374,16:0-Glc-Cholesterol;Cholesteryl 6-O-palmitoyl-β-D-galactopyranoside,C49H86O7
+402,788.4194,-,C39H64O16
+403,794.4453,Cimimanol C,C42H66O14
+404,794.6061,16:3-Glc-Campesterol,C50H82O7
+405,796.4245,diginatin,C41H64O15
+406,796.6217,16:2-Glc-Campesterol,C50H84O7
+407,798.6374,16:1-Glc-Campesterol,C50H86O7
+408,800.653,16:0-Glc-Campesterol,C50H88O7
+409,802.4351,Diospolysaponin A,C40H66O16
+410,806.6061,16:3-Glc-Stigmasterol,C51H82O7
+411,808.4245,Abrusoside C,C42H64O15
+412,808.6217,16:2-Glc-Stigmasterol;16:3-Glc-Sitosterol;18:3-Glc-cholesterol,C51H84O7
+413,810.6374,16:1-Glc-Stigmasterol;16:2-Glc-Sitosterol;18:2-Glc-cholesterol,C51H86O7
+414,812.653,16:0-Glc-Stigmasterol;16:1-Glc-Sitosterol;18:1-Glc-cholesterol,C51H88O7
+415,814.6687,-;16:0-Glc-Sitosterol;18:0-Glc-Cholesterol,C51H90O7
+416,822.4038,Abrusoside D;Abrusoside E,C42H62O16
+417,822.6374,18:3-Glc-Campesterol,C52H86O7
+418,824.653,18:2-Glc-Campesterol,C52H88O7
+419,826.6687,18:1-Glc-Campesterol,C52H90O7
+420,828.6843,18:0-Glc-Campesterol,C52H92O7
+421,834.4038,Cimimanol F,C43H62O16
+422,834.6374,18:3-Glc-Stigmasterol,C53H86O7
+423,836.4194,Abrusoside B,C43H64O16
+424,836.653,18:2-Glc-Stigmasterol;18:3-Glc-Sitosterol;20:3-Glc-cholesterol,C53H88O7
+425,838.3843,clathsterol disulfonic acid,C39H66O15S2
+426,838.6687,18:1-Glc-Stigmasterol;18:2-Glc-Sitosterol;20:2-Glc-cholesterol,C53H90O7
+427,840.6843,18:0-Glc-Stigmasterol;18:1-Glc-Sitosterol;20:1-Glc-cholesterol,C53H92O7
+428,842.7,18:0-Glc-Sitosterol;20:0-Glc-Cholesterol,C53H94O7
+429,850.6687,20:3-Glc-Campesterol,C54H90O7
+430,852.6843,20:2-Glc-Campesterol,C54H92O7
+431,854.7,20:1-Glc-Campesterol,C54H94O7
+432,856.7156,20:0-Glc-Campesterol,C54H96O7
+433,858.4249,thevetin B,C42H66O18
+434,862.6687,20:3-Glc-Stigmasterol,C55H90O7
+435,864.6843,20:2-Glc-Stigmasterol;20:3-Glc-Sitosterol;22:3-Glc-cholesterol,C55H92O7
+436,866.7,20:1-Glc-Stigmasterol;20:2-Glc-Sitosterol;22:2-Glc-cholesterol,C55H94O7
+437,868.4457,-,C44H68O17
+438,868.7156,20:0-Glc-Stigmasterol;20:1-Glc-Sitosterol;22:1-Glc-cholesterol,C55H96O7
+439,870.7313,20:0-Glc-Sitosterol;22:0-Glc-Cholesterol,C55H98O7
+440,872.4042,thevetin A,C42H64O19
+441,878.7,22:3-Glc-Campesterol,C56H94O7
+442,880.7156,22:2-Glc-Campesterol,C56H96O7
+443,882.4613,Trillfurostanoside F,C45H70O17
+444,882.7313,22:1-Glc-Campesterol,C56H98O7
+445,884.477,-;Gracillin,C45H72O17
+446,884.5133,Dioscin,C46H76O16
+447,884.7469,22:0-Glc-Campesterol,C56H100O7
+448,890.7,22:3-Glc-Stigmasterol,C57H94O7
+449,892.7156,22:2-Glc-Stigmasterol;22:3-Glc-Sitosterol,C57H96O7
+450,894.7313,22:1-Glc-Stigmasterol;22:2-Glc-Sitosterol,C57H98O7
+451,896.7469,22:0-Glc-Stigmasterol;22:1-Glc-Sitosterol,C57H100O7
+452,898.7626,22:0-Glc-Sitosterol,C57H102O7
+453,916.4668,-,C45H72O19
+454,944.4617,Withanoside VIII,C46H72O20
+455,952.4879,Trillfurostanoside H,C45H76O21
+456,968.6377,Ganoweberianone A,C60H88O10
+457,970.6534,Ganoweberianone B,C60H90O10
+458,1014.5399,Parrisaponin,C51H82O20
+459,1024.5243,Aethioside B,C52H80O20
+460,1028.5192,Trillfurostanoside E,C51H80O21
+461,1030.4985,-,C50H78O22
+462,1030.5349,Pseudoprotodioscin,C51H82O21
+463,1033.5458,tomatine,C50H83NO21
+464,1034.5662,Spongioside A,C51H86O21
+465,1038.54,Aethioside A,C53H82O20
+466,1046.5298,-;Pseudoprotogracillin,C51H82O22
+467,1048.509,-,C50H80O23
+468,1048.5454,-,C51H84O22
+469,1050.5247,-,C50H82O23
+470,1054.5349,Parispolyside H,C53H82O21
+471,1058.4934,Trillfurostanoside B,C51H78O23
+472,1060.5454,Dioscoreside C,C52H84O22
+473,1062.5247,-,C51H82O23
+474,1062.5611,Methyl protogracillin,C52H86O22
+475,1070.9969,Palmitoleoyloxy-triacontenoic acid cholesterol ester,C73H130O4
+476,1076.5403,Dioscoreside E,C52H84O23
+477,1078.5924,Methylprotodioscin,C53H90O22
+478,1080.5353,Trillfurostanoside D;Trillfurostanoside I,C51H84O24
+479,1082.5298,Aethioside C,C54H82O22
+480,1090.556,Spongioside B,C53H86O23
+481,1099.0282,Oleoyloxy-triacontenoic acid cholesterol ester,C75H134O4
+482,1106.5145,Withanoside IX,C52H82O25
+483,1127.0595,Oleoyloxy-dotriacontenoic acid cholesterol ester;Palmitoleoyloxy-tetratriacontenoic acid cholesterol ester,C77H138O4
+484,1137.366,3beta-Hydroxy-7-oxochol-5-en-24-oyl-CoA,C45H70N7O19P3S
+485,1155.0908,Oleoyloxy-tetratriacontenoic acid cholesterol ester,C79H142O4
+486,1180.5513,-,C55H88O27
+487,1181.4286,-,C48H78N7O19P3S
+488,1182.567,-,C55H90O27
+489,1183.4443,-,C48H80N7O19P3S
+490,1194.567,-,C56H90O27
+491,1196.5462,-,C55H88O28
+492,1196.5826,-,C56H92O27
+493,1197.4235,-,C48H78N7O20P3S
+494,1199.4392,-,C48H80N7O20P3S
+495,1208.5826,-,C57H92O27
+496,1208.619,-,C58H96O26
+497,1210.5983,-,C57H94O27
+498,1212.5775,-,C56H92O28
+499,1213.4184,-,C48H78N7O21P3S
+500,1215.4341,-,C48H80N7O21P3S
+501,1224.5775,Trillfurostanoside A,C57H92O28
+502,1226.5932,Trillfurostanoside C,C57H94O28
+503,1228.5724,Digitonin,C56H92O29
+504,1244.6037,Trillfurostanoside G,C57H96O29
