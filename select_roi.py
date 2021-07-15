@@ -295,7 +295,7 @@ class MainWindow(QMainWindow):
         self.loadAction = QAction(QIcon(':file-open.svg'), "Open raw peaks ...",
                                   self)
         self.exitAction = QAction(QIcon(':exit.svg'), 'Exit', self)
-        self.drawAction = QAction(QIcon(':edit.svg'), 'Draw contour', self)
+        # self.drawAction = QAction(QIcon(':edit.svg'), 'Draw contour', self)
         self.eraseAction = QAction(QIcon(':eraser.svg'), 'Erase contour', self)
         self.deleteAction = QAction(QIcon(':delete.svg'), 'Delete regions',
                                     self)
@@ -331,8 +331,8 @@ class MainWindow(QMainWindow):
         self.exitAction.setStatusTip('Exit application')
         self.exitAction.triggered.connect(qApp.quit)
 
-        self.drawAction.setShortcut('Ctrl+D')
-        self.drawAction.setStatusTip('Draw region contour')
+        # self.drawAction.setShortcut('Ctrl+D')
+        # self.drawAction.setStatusTip('Draw region contour')
 
         self.eraseAction.setShortcut('Ctrl+E')
         self.eraseAction.setStatusTip('Erase current region contour')
@@ -353,7 +353,7 @@ class MainWindow(QMainWindow):
         fileMenu.addAction(self.exitAction)
 
         toolsMenu = mainMenu.addMenu('Tools')
-        toolsMenu.addAction(self.drawAction)
+        # toolsMenu.addAction(self.drawAction)
         toolsMenu.addAction(self.eraseAction)
         toolsMenu.addAction(self.deleteAction)
         toolsMenu.addSeparator()
@@ -370,7 +370,7 @@ class MainWindow(QMainWindow):
         self.file_toolbar.addAction(self.exitAction)
 
         self.tools_toolbar.setIconSize(QSize(16, 16))
-        self.tools_toolbar.addWidget(btn_draw)
+        # self.tools_toolbar.addWidget(btn_draw)
         self.tools_toolbar.addAction(self.eraseAction)
         self.tools_toolbar.addAction(self.deleteAction)
         self.tools_toolbar.addAction(self.predictAction)
