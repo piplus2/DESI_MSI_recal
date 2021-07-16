@@ -7,13 +7,13 @@
 #   package.
 
 
-import bisect
 import os
-from typing import Union, Dict, Tuple
+from typing import Union
 from tqdm import tqdm
 import numpy as np
 import pandas as pd
 from KDEpy import FFTKDE
+from sklearn.linear_model import RANSACRegressor
 from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
 from scipy.interpolate import UnivariateSpline
 from sklearn.metrics import mean_squared_error, mean_absolute_error
@@ -22,7 +22,7 @@ from sklearn.pipeline import Pipeline
 import statsmodels.api as sm
 from joblib import Parallel, delayed
 import multiprocessing
-from scipy.stats import median_abs_deviation
+from scipy.signal import find_peaks
 
 
 def del_all_files_dir(dirname: str) -> None:
@@ -32,21 +32,63 @@ def del_all_files_dir(dirname: str) -> None:
             os.unlink(file_path)
 
 
-def dppm_to_dmz(dppm: float, refmz: float) -> float:
+def dppm_to_dmz(dppm, refmz):
     return dppm * refmz / 1e6
 
 
-def dmz_to_dppm(dmz: float, refmz: float) -> float:
+def dmz_to_dppm(dmz, refmz):
     return dmz / refmz * 1e6
+
+
+def search_thread(msp, top_n, ref_masses, tol_masses, pixel_index):
+    matches = {m: {x: [] for x in ['pixel', 'mz', 'intensity', 'peak']} for m in
+               ref_masses}
+    if top_n != -1 and top_n != 'upper':
+        top_idx = np.argsort(msp[:, 1])[::-1]
+        top_idx = top_idx[:int(top_n)]
+    elif top_n == 'upper':
+        threshold = np.quantile(msp[:, 1], q=0.75)
+        top_idx = np.where(msp[:, 1] >= threshold)[0]
+    else:
+        top_idx = np.arange(msp.shape[0])
+
+    skip_mass_idx = []
+    for i, m in enumerate(ref_masses):
+        sm = msp[top_idx, 0]
+        if m - tol_masses[m] > sm[-1] or m + tol_masses[m] < sm[0]:
+            skip_mass_idx.append(i)
+    search_masses = ref_masses.copy()
+    if len(skip_mass_idx):
+        search_masses = np.delete(search_masses, skip_mass_idx)
+
+    left_mass = np.asarray([m - tol_masses[m] for m in search_masses])
+    right_mass = np.asarray([m + tol_masses[m] for m in search_masses])
+
+    sm = msp[top_idx, 0]
+    hit_lx = np.searchsorted(sm, left_mass, side='left')
+    hit_rx = np.searchsorted(sm, right_mass, side='right')
+    for m, lx, rx in zip(search_masses, hit_lx, hit_rx):
+        hits = top_idx[lx:rx]
+        if len(hits) == 0:
+            continue
+        if len(hits) > 1:
+            hits = [hits[np.argmax(msp[hits, 1])]]
+        for hit in hits:
+            matches[m]['pixel'].append(int(pixel_index))
+            matches[m]['mz'].append(float(msp[hit, 0]))
+            matches[m]['intensity'].append(float(msp[hit, 1]))
+            matches[m]['peak'].append(int(hit))
+
+    return matches
 
 
 # Returns the hits for a list of reference masses, given a tolerance expressed
 # in ppm. The search is performed in the N most intense peaks or, optionally,
 # in all peaks (top_n = -1)
 def search_ref_masses(msiobj, ref_masses, max_tolerance,
-                      top_n: Union[int, str] = 100) -> Dict:
+                      top_n: Union[int, str] = 100):
     # top_n = -1: search in all peaks
-    # top_n = 'upper': search in peaks with intensity > 0.9 quantile
+    # top_n = 'upper': search in peaks with intensity > 0.75 quantile
     # top_n = int: search in int highest peaks
     print('Searching reference masses ...')
     tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
@@ -59,55 +101,68 @@ def search_ref_masses(msiobj, ref_masses, max_tolerance,
         elif top_n == 'upper':
             threshold = np.quantile(msp[:, 1], q=0.9)
             top_idx = np.where(msp[:, 1] >= threshold)[0]
+
+        # Remove masses that are outside of the interval
+        skip_masses = np.full(len(ref_masses), False, dtype=bool)
+        for j, m in enumerate(ref_masses):
+            if top_n == -1:
+                sm = msp[:, 0]
+            else:
+                sm = msp[top_idx, 0]
+            if m - tol_masses[m] > sm[-1] or m + tol_masses[m] < sm[0]:
+                skip_masses[j] = True
+        search_masses = ref_masses.copy()
+        search_masses = search_masses[~skip_masses]
+
+        # Run the search
+        if top_n == -1:
+            sm = msp[:, 0]
         else:
-            top_idx = np.arange(msp.shape[0])
-        for m in ref_masses:
-            mass_search = msp[top_idx, 0]
-            left = m - tol_masses[m]
-            right = m + tol_masses[m]
-            if right < mass_search[0]:
-                continue
-            if left > mass_search[-1]:
-                continue
-            hit_left = bisect.bisect_left(mass_search, left)
-            hit_right = bisect.bisect_right(mass_search, right)
-            hits = top_idx[hit_left:hit_right]
-            # hits = top_idx[np.where((msp[top_idx, 0] >= m - tol_masses[m]) & (
-            #         msp[top_idx, 0] <= m + tol_masses[m]))[0]]
+            sm = msp[top_idx, 0]
+        left_mass = np.asarray([m - tol_masses[m] for m in search_masses])
+        right_mass = np.asarray([m + tol_masses[m] for m in search_masses])
+        hit_lx = np.searchsorted(sm, left_mass, side='left')
+        hit_rx = np.searchsorted(sm, right_mass, side='right')
+        for m, lx, rx in zip(search_masses, hit_lx, hit_rx):
+            if top_n == -1:
+                hits = np.arange(lx, rx)
+            else:
+                hits = top_idx[lx:rx]
             if len(hits) == 0:
                 continue
-            if len(hits) > 1:
-                hits = [hits[np.argmax(msp[hits, 1])]]
             for hit in hits:
-                matches[m]['pixel'].append(int(msiobj.pixels_indices[i]))
-                matches[m]['mz'].append(float(msp[hit, 0]))
-                matches[m]['intensity'].append(float(msp[hit, 1]))
-                matches[m]['peak'].append(int(hit))
+                matches[m]['pixel'].append(msiobj.pixels_indices[i])
+                matches[m]['mz'].append(msp[hit, 0])
+                matches[m]['intensity'].append(msp[hit, 1])
+                matches[m]['peak'].append(hit)
     for m in matches.keys():
-        matches[m]['pixel'] = np.asarray(matches[m]['pixel'], dtype=int)
-        matches[m]['mz'] = np.asarray(matches[m]['mz'], dtype=float)
-        matches[m]['intensity'] = np.asarray(matches[m]['intensity'],
-                                             dtype=float)
-        matches[m]['peak'] = np.asarray(matches[m]['peak'], dtype=int)
+        matches[m]['pixel'] = np.asarray(matches[m]['pixel'])
+        matches[m]['mz'] = np.asarray(matches[m]['mz'])
+        matches[m]['intensity'] = np.asarray(matches[m]['intensity'])
+        matches[m]['peak'] = np.asarray(matches[m]['peak'])
     return matches
 
 
-def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
-    adducts = {'ES+': [1.0073, 22.9892],
-               'ES-': [-1.0073]}
+def gen_ref_list(ion_mode, verbose: bool):
+    adducts = {'ES+': [1.0073, 22.9892, 38.9632],
+               'ES-': [-1.0073, 34.9694]}
 
     if ion_mode == 'ES-':
         lipid_classes = ['hmdb_others', 'hmdb_pg', 'hmdb_pi', 'hmdb_ps',
-                         'FA_straight_chain', 'FA_unsaturated', 'Cer',
-                         'PA', 'PE']
-    else:
+                         'FA_branched', 'FA_straight_chain', 'FA_unsaturated',
+                         'Cer', 'PA', 'PE', 'PG', 'PS', 'PI', 'CL', 'SM',
+                         'glycine_conj']
+    elif ion_mode == 'ES+':
         lipid_classes = ['hmdb_cholesterol', 'hmdb_glycerides', 'hmdb_pc',
-                         'FA_hydroxy', 'MG', 'TG', 'DG']
+                         'MG', 'DG', 'TG', 'PC', 'PE',
+                         'SM', 'cholesterol', 'fatty_esters']  # , ]
+    else:
+        raise ValueError('Invalid `ion_mode`.')
 
     db_masses = pd.DataFrame()
     for lipid_class in lipid_classes:
         tmp = pd.read_csv(
-            os.path.join('./db/{}_curated.csv'.format(lipid_class)))
+            os.path.join('./db/new/{}_curated.csv'.format(lipid_class)))
         db_masses = db_masses.append(tmp)
         del tmp
     db_masses = np.sort(db_masses['MASS'].to_numpy())
@@ -116,28 +171,26 @@ def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
 
     # Additional masses - often observed in DESI
     custom_ref_masses = {
-        'ES+': np.array([309.2036, 104.1070, 184.0733, 296.0660, 381.0794,
-                         562.3269, 577.5190, 782.5670, 820.5253, 867.6497,
-                         907.7725]),
-        'ES-': np.array([255.2330, 89.0244, 96.9696, 124.0074, 145.0619,
-                         146.0459, 175.0248, 279.2329, 281.2485, 283.2643,
-                         303.2330, 500.2783, 519.1508, 599.3202, 697.4814,
-                         699.4970, 742.5392, 764.5236, 768.5549, 824.5002,
-                         859.5342, 885.5499, 909.5499])}
-    # Combine the reference masses - remove those close < 2e-4 m/z (these may
-    # be due to approximation errors)
-    db_masses = np.unique(np.r_[custom_ref_masses[ion_mode], db_masses])
-    db_masses = np.delete(db_masses, np.where(np.diff(db_masses) < 2e-4)[0] + 1)
-
+        'ES+': np.array(
+            [286.2144, 103.0997, 183.0660, 342.1162, 523.3638, 576.5118]),
+        'ES-': np.array(
+            [90.0317, 97.9769, 146.0691, 147.0532, 176.0321, 280.2402])
+    }
     if verbose:
         print('Generating lock mass table ...')
+    db_masses = np.unique(np.r_[custom_ref_masses[ion_mode], db_masses])
     ref_list = []
     for m in db_masses:
         for a in adducts[ion_mode]:
             ref_list.append(m + a)
     ref_list = np.asarray(ref_list)
-    ref_list = np.round(ref_list, 4)
+    ref_list = np.round(ref_list, 4).astype(np.float32)
+    ref_list = np.sort(ref_list)
+    # Combine the reference masses - remove those close < 2e-4 m/z (these may
+    # be due to approximation errors)
+    ref_list = np.delete(ref_list, np.where(np.diff(ref_list) <= 2e-4)[0] + 1)
     ref_list = np.unique(ref_list)
+    ref_list = ref_list.astype(np.float32)
 
     if verbose:
         print('Num. test masses = {}'.format(len(ref_list)))
@@ -145,8 +198,7 @@ def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
     return ref_list
 
 
-def find_kde_max(x: np.ndarray, y: np.ndarray, kde_values: np.ndarray,
-                 remove_zeros: bool = True) -> Tuple[np.ndarray, np.ndarray]:
+def find_kde_max(x, y, kde_values, remove_zeros=True):
     # Remove all zeros
     if remove_zeros:
         all_zeros = np.all(kde_values == 0, axis=0)
@@ -157,16 +209,17 @@ def find_kde_max(x: np.ndarray, y: np.ndarray, kde_values: np.ndarray,
     return x[~all_zeros], y[max_kde[~all_zeros]]
 
 
-def fit_spline_kde(pixels: np.ndarray, match_masses: np.ndarray,
-                   ref_mass: float) -> Tuple[np.ndarray, bool]:
-    if np.var(match_masses) == 0:
-        spline = UnivariateSpline(x=pixels, y=match_masses)
+def fit_spline_kde(pixels, match_masses, ref_mass):
+    if np.var(match_masses) <= 1e-6:
+        spline = UnivariateSpline(x=pixels, y=match_masses - ref_mass)
         use_kde = False
     else:
         use_kde = True
-        data = np.c_[pixels, match_masses - ref_mass]
+        data = np.c_[pixels, match_masses - ref_mass].astype(np.float64)
+        data = data.astype(float)
         scaler = MinMaxScaler()
-        data = scaler.fit_transform(data)
+        scaler.fit(data)
+        data = scaler.transform(data)
         bandwidth = 2.575 * data.std() * data.shape[0] ** (-1 / 5)
         kde = FFTKDE(bw=bandwidth, kernel='tri').fit(data)
         grid, points = kde.evaluate(400)
@@ -181,6 +234,7 @@ def fit_spline_kde(pixels: np.ndarray, match_masses: np.ndarray,
         spline = UnivariateSpline(x=xmax_kde, y=ymax_kde)
 
     predictions = spline(pixels)
+
     return predictions, use_kde
 
 
@@ -205,14 +259,19 @@ class SMWrapper(BaseEstimator, RegressorMixin):
         return self.results_.predict(X)
 
 
-def poly_regression(degree: int):
+def poly_regression(degree):
     return Pipeline([('poly', PolynomialFeatures(degree=degree)),
                      ('regressor', SMWrapper(sm.OLS))])
 
 
-def poly_weighted(degree: int):
+def poly_weighted(degree):
     return Pipeline([('poly', PolynomialFeatures(degree=degree)),
                      ('regressor', SMWrapper(sm.WLS))])
+
+
+def poly_ransac(degree):
+    return Pipeline([('poly', PolynomialFeatures(degree=degree)),
+                     ('regressor', RANSACRegressor())])
 
 
 def fit_model_thread(x, y, d, model, **kwargs):
@@ -220,6 +279,8 @@ def fit_model_thread(x, y, d, model, **kwargs):
         mdl = poly_regression(degree=d)
     elif model == 'wols':
         mdl = poly_weighted(degree=d)
+    elif model == 'ransac':
+        mdl = poly_ransac(degree=d)
     else:
         raise ValueError('Invalid model value.')
     mdl.fit(x.reshape(-1, 1), y.reshape(-1, ), **kwargs)
@@ -232,7 +293,7 @@ def calculate_bic(n, mse, num_params):
     return bic
 
 
-def fit_shift_model(x, y, max_degree=5, model='ols', error: str = 'mse',
+def fit_shift_model(x, y, max_degree, model='ols', error: str = 'mse',
                     **kwargs):
     if error == 'mse':
         err_func = mean_squared_error
@@ -258,18 +319,39 @@ def fit_shift_model(x, y, max_degree=5, model='ols', error: str = 'mse',
              range(len(yhats))])
         best_degree = np.arange(1, max_degree + 1)[np.argmin(bics)]
         best_model = models[np.argmin(bics)]
+        # gam = pygam.LinearGAM(pygam.l(0) + pygam.s(0, n_splines=5))
+        # gam.gridsearch(X=x.reshape(-1, 1), y=y, progress=False)
+        # best_model = gam
+        # best_degree = 0
+        # bics = []
+
     return {'bic': bics, 'best_model': best_model, 'best_degree': best_degree}
 
 
 def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     # Determine hits with close error in ppm
-    ppm = ((x_fit - y_fit) / y_fit * 1e6)
-    mad = median_abs_deviation(ppm)
-    in_mask = np.abs(ppm - np.median(ppm)) <= mad
+    ppm = (x_fit - y_fit) / y_fit * 1e6
+    kde = FFTKDE(kernel='gaussian', bw='silverman')
+    xphi = np.arange(np.min(ppm) - 1e-3, np.max(ppm) + 1e-3, 1e-3)
+    kde.fit(ppm)
+    yphifft = kde.evaluate(xphi)
+    peaks, properties = find_peaks(yphifft, rel_height=0.25, width=0)
+    maxpeak = np.argmax(yphifft[peaks])
+    if maxpeak > 0 and properties['left_ips'][maxpeak] < peaks[maxpeak - 1]:
+        left_pt = (peaks[maxpeak] - peaks[maxpeak - 1]) / 2
+    else:
+        left_pt = properties['left_ips'][maxpeak]
+    if maxpeak < len(peaks) - 1 and \
+            properties['right_ips'][maxpeak] < peaks[maxpeak + 1]:
+        right_pt = (peaks[maxpeak - 1] - peaks[maxpeak]) / 2
+    else:
+        right_pt = properties['right_ips'][maxpeak]
 
-    # Calculate weights
-    w = 1 / np.abs(ppm[in_mask] - np.median(ppm[in_mask]))
-    w[ppm[in_mask] == 0] = np.inf
+    xinterp = np.interp(
+        x=[left_pt, right_pt],
+        xp=np.arange(len(xphi)), fp=xphi)
+
+    in_mask = (ppm >= xinterp[0]) & (ppm <= xinterp[1])
 
     if transform == 'sqrt':
         x_fit = np.sqrt(x_fit)
@@ -279,12 +361,12 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     poly_degree = np.min([max_degree, np.sum(in_mask) - 1])
 
     mdls = fit_shift_model(x_fit[in_mask], y_fit[in_mask],
-                           max_degree=poly_degree, model='wols',
-                           error='mae', weights=w)
+                           max_degree=poly_degree, model='ols',
+                           error='mae')
     model = mdls['best_model']
 
     mz_corrected = model.predict(x_pred.reshape(-1, 1)).ravel()
     if transform == 'sqrt':
         mz_corrected = mz_corrected ** 2
 
-    return mz_corrected, model
+    return mz_corrected, model, in_mask
