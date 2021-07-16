@@ -127,7 +127,7 @@ for index in msi_datasets.index:
     for m in tqdm(matches.keys()):
         shift_preds, use_kde = fit_spline_kde(
             pixels=matches[m]['pixel'], match_masses=matches[m]['mz'],
-            ref_mass=m, save_dir=kde_dir)
+            ref_mass=m)
         # Find outliers
         residuals[m] = matches[m]['mz'] - m - shift_preds
         mad_resid = 1.4826 * np.median(np.abs(residuals[m]))
