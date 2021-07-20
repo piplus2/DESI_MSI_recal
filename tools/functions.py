@@ -335,17 +335,17 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     xphi = np.arange(np.min(ppm) - 1e-3, np.max(ppm) + 1e-3, 1e-3)
     kde.fit(ppm)
     yphifft = kde.evaluate(xphi)
-    peaks, properties = find_peaks(yphifft, rel_height=0.25, width=0)
+    peaks, properties = find_peaks(yphifft, rel_height=0.25, width=3)
     maxpeak = np.argmax(yphifft[peaks])
-    if maxpeak > 0 and properties['left_ips'][maxpeak] < peaks[maxpeak - 1]:
-        left_pt = (peaks[maxpeak] - peaks[maxpeak - 1]) / 2
-    else:
-        left_pt = properties['left_ips'][maxpeak]
-    if maxpeak < len(peaks) - 1 and \
-            properties['right_ips'][maxpeak] < peaks[maxpeak + 1]:
-        right_pt = (peaks[maxpeak - 1] - peaks[maxpeak]) / 2
-    else:
-        right_pt = properties['right_ips'][maxpeak]
+    # if maxpeak > 0 and properties['left_ips'][maxpeak] < peaks[maxpeak - 1]:
+    #     left_pt = (peaks[maxpeak] - peaks[maxpeak - 1]) / 2
+    # else:
+    left_pt = properties['left_ips'][maxpeak]
+    # if maxpeak < len(peaks) - 1 and \
+    #         properties['right_ips'][maxpeak] < peaks[maxpeak + 1]:
+    #     right_pt = (peaks[maxpeak - 1] - peaks[maxpeak]) / 2
+    # else:
+    right_pt = properties['right_ips'][maxpeak]
 
     xinterp = np.interp(
         x=[left_pt, right_pt],
