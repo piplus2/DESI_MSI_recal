@@ -211,7 +211,16 @@ def find_kde_max(x, y, kde_values, remove_zeros=True):
 
 def fit_spline_kde(pixels, match_masses, ref_mass):
     if np.var(match_masses) <= 1e-6:
-        spline = UnivariateSpline(x=pixels, y=match_masses - ref_mass)
+        s, u = np.unique(pixels, return_counts=True)
+        spx = s
+        smz = np.zeros(len(spx))
+        for i in range(len(s)):
+            if u[i] == 1:
+                smz[i] = match_masses[pixels == s[i]]
+            else:
+                smz_ = match_masses[pixels == s[i]]
+                smz[i] = smz_[np.argmin(np.abs(smz_ - ref_mass))]
+        spline = UnivariateSpline(x=spx, y=smz - ref_mass)
         use_kde = False
     else:
         use_kde = True
