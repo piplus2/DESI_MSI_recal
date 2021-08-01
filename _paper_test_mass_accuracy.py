@@ -35,6 +35,34 @@ def del_all_files_dir(dirname: str) -> None:
             os.unlink(file_path)
 
 
+def find_masses_common_err(search_res, delta_ppm=1):
+    err_tilde = \
+        np.asarray([np.median(dmz_to_dppm(search_res[m]['mz'] - m, m))
+                    for m in search_res.keys()], dtype=float)
+    if np.any(np.isnan(err_tilde)):
+        raise RuntimeError(
+            '{} median errors are nan.'.format(np.sum(np.isnan(err_tilde))))
+
+    density = gaussian_kde(err_tilde)
+    x_density = \
+        np.linspace(np.min(err_tilde), np.max(err_tilde),
+                    int(np.ceil(np.ptp(err_tilde)) * 2))
+    y_density = density(x_density)
+    # Find density highest peak interval
+    peaks, properties = find_peaks(x=y_density)
+    max_peak = np.argmax(y_density[peaks])
+    xmax_density = x_density[peaks[max_peak]]
+    xleft = np.max([xmax_density - delta_ppm, x_density[0]])
+    xright = np.min([xmax_density + delta_ppm, x_density[-1]])
+
+    masses = []
+    for ii, kk in enumerate(search_res.keys()):
+        if (err_tilde[ii] >= xleft) & (err_tilde[ii] <= xright):
+            masses.append(kk)
+
+    return masses
+
+
 set_mpl_params()
 
 REF_DIR = os.path.join('C:/Users', 'pingl', 'Desktop',
@@ -43,34 +71,19 @@ ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
 MAX_TOL = {'ORBITRAP': 20, 'TOF': 100}
 MIN_PCT = 75.0
 
-# METHOD = 'poly'
-
-# if DATASET == 'TOF':
-#     MIN_PERC = 75.0
-#     MAX_POLY_DEGREE = 5
-#     MAX_TOL = 100.0
-#     TRANSFORM = 'sqrt'
-#     MAX_DISPERSION = 10.0
-# elif DATASET == 'ORBITRAP':
-#     MIN_PERC = 75.0
-#     MAX_POLY_DEGREE = 1
-#     MAX_TOL = 20.0
-#     TRANSFORM = None
-#     MAX_DISPERSION = 10.0
-# else:
-#     raise ValueError('Invalid dataset type.')
-
-for dataset in ['ORBITRAP', 'TOF']:
-    msi_datasets = pd.read_csv(os.path.join(ROOT_DIR, dataset, 'meta.csv'),
-                               index_col=0)
+for dataset in ['TOF']:  # , 'ORBITRAP']:
+    msi_datasets = \
+        pd.read_csv(os.path.join(ROOT_DIR, dataset, 'meta.csv'), index_col=0)
     msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
-    for index in msi_datasets.index:
-        run = msi_datasets.loc[index, :]
 
-        print('MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0],
-                                     run['dir']))
-
-        outdir = os.path.join(run['dir'], 'test_mz')
+    for index in range(msi_datasets.shape[0]):
+        run = msi_datasets.iloc[index, :]
+        print(
+            'MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0],
+                                   run['dir']))
+        # outdir = os.path.join(run['dir'], 'test_mz')
+        outdir = \
+            os.path.join(run['dir'], '_RESULTS', 'new_inmask', 'test_masses')
         if not os.path.isdir(outdir):
             os.makedirs(outdir)
         else:
@@ -84,8 +97,9 @@ for dataset in ['ORBITRAP', 'TOF']:
         del refdir
 
         # Load the METASPACE reference and remove the recalibration masses
-        test_masses_fname = run['tissue'] + '_' + (
-            'pos' if run['ion_mode'] == 'ES+' else 'neg') + '.txt'
+        test_masses_fname = \
+            run['tissue'] + '_' + \
+            ('pos' if run['ion_mode'] == 'ES+' else 'neg') + '.txt'
         print('Loading METASPACE masses from {} ...'.format(test_masses_fname))
         test_masses = np.loadtxt(os.path.join(REF_DIR, test_masses_fname))
         test_masses = np.unique(np.round(test_masses, 4))
@@ -105,70 +119,45 @@ for dataset in ['ORBITRAP', 'TOF']:
         # Original data --------------------------------------------------------
 
         print('Searching lock masses ...')
-        input_imzml_orig = '{}_{}_0step.imzML'.format(run['tissue'],
-                                                      run['ion_mode'])
+        input_imzml_orig = \
+            '{}_{}_0step.imzML'.format(run['tissue'], run['ion_mode'])
         print('Loading original data ...')
         meta = {'ion_mode': run['ion_mode']}
         msi = MSI(imzml=os.path.join(run['dir'], input_imzml_orig), meta=None)
         msi._MSI__meta = meta
-        matches = search_ref_masses(msiobj=msi, ref_masses=test_masses,
-                                    max_tolerance=MAX_TOL[dataset], top_n=-1)
-        matches = {m: matches[m] for m in matches.keys() if
-                   len(np.unique(matches[m]['pixel'])) / len(
-                       msi.pixels_indices) * 100.0 >= MIN_PCT}
+        matches = \
+            search_ref_masses(msiobj=msi, ref_masses=test_masses,
+                              max_tolerance=MAX_TOL[dataset], top_n=-1)
+        matches = \
+            {m: matches[m] for m in matches.keys() if
+             len(np.unique(matches[m]['pixel'])) /
+             len(msi.pixels_indices) * 100.0 >= MIN_PCT}
 
         # Take only references with similar errors in ppm
 
-        err_tilde = np.asarray([np.median(dmz_to_dppm(matches[m]['mz'] - m, m))
-                                for m in matches.keys()], dtype=float)
-        if np.any(np.isnan(err_tilde)):
-            raise RuntimeError(
-                '{} median errors are nan.'.format(np.sum(np.isnan(err_tilde))))
+        # # Plot density
+        # fig = plt.figure(figsize=(4, 3), dpi=300)
+        # ax = fig.add_subplot(111)
+        # ax.plot(x_density, y_density, c='black')
+        # ax.axvline(x=xmax_density, color='red')
+        # idx_left = np.argmin(np.abs(x_density - xleft))
+        # idx_right = np.argmin(np.abs(x_density - xright))
+        # ax.axvline(x=xleft, c='black', ls='dashed')
+        # ax.axvline(x=xright, c='black', ls='dashed')
+        # ax.set_xlabel(r'$\tilde{\Delta}$' + ' (ppm)')
+        # ax.set_ylabel(r'$f(\tilde{\Delta})$')
+        # ax.fill_between(x_density[idx_left:idx_right + 1],
+        #                 y_density[idx_left:idx_right + 1],
+        #                 color='gray')
+        # plt.tight_layout()
+        # plt.savefig(os.path.join(outdir, 'error_density.pdf'), format='pdf')
+        # plt.close()
 
-        density = gaussian_kde(err_tilde)
-        x_density = np.linspace(np.min(err_tilde), np.max(err_tilde),
-                                int(np.ceil(np.ptp(err_tilde)) * 2))
-        y_density = density(x_density)
-        # Find density highest peak interval
-        peaks, properties = find_peaks(
-            x=y_density)  # , rel_height=0.25, width=0)
-        max_peak = np.argmax(y_density[peaks])
-        xmax_density = x_density[peaks[max_peak]]
-        xleft = np.max([xmax_density - 1, x_density[0]])
-        xright = np.min([xmax_density + 1, x_density[-1]])
-
-        # xleft = np.interp(x=properties['left_ips'][max_peak],
-        #                   xp=np.arange(len(x_density)), fp=x_density)
-        # xright = np.interp(x=properties['right_ips'][max_peak],
-        #                    xp=np.arange(len(x_density)), fp=x_density)
-
-        # Plot density
-        fig = plt.figure(figsize=(4, 3), dpi=300)
-        ax = fig.add_subplot(111)
-        ax.plot(x_density, y_density, c='black')
-        ax.axvline(x=xmax_density, color='red')
-        idx_left = np.argmin(np.abs(x_density - xleft))
-        idx_right = np.argmin(np.abs(x_density - xright))
-        ax.axvline(x=xleft, c='black', ls='dashed')
-        ax.axvline(x=xright, c='black', ls='dashed')
-        ax.set_xlabel(r'$\tilde{\Delta}$' + ' (ppm)')
-        ax.set_ylabel(r'$f(\tilde{\Delta})$')
-        ax.fill_between(x_density[idx_left:idx_right + 1],
-                        y_density[idx_left:idx_right + 1],
-                        color='gray')
-        plt.tight_layout()
-        plt.savefig(os.path.join(outdir, 'error_density.pdf'), format='pdf')
-        plt.close()
-
-        sel_test_masses = []
-        for i, m in enumerate(matches.keys()):
-            if (err_tilde[i] >= xleft) & (err_tilde[i] <= xright):
-                sel_test_masses.append(m)
-        # Save list of test masses
-        np.savetxt(fname=os.path.join(outdir, 'test_masses.txt'),
-                   X=sel_test_masses, fmt='%f')
-
+        sel_test_masses = find_masses_common_err(matches)
         print('Num. test masses = {}'.format(len(sel_test_masses)))
+        # # Save list of test masses
+        # np.savetxt(fname=os.path.join(outdir, 'test_masses.txt'),
+        #            X=sel_test_masses, fmt='%f')
         matches_test_orig = {m: matches[m] for m in sel_test_masses}
         del msi, matches
 
@@ -176,8 +165,11 @@ for dataset in ['ORBITRAP', 'TOF']:
 
         print('Loading recal. data ...')
         meta = {'ion_mode': run['ion_mode']}
-        msi = MSI(imzml=os.path.join(run['dir'], 'recal_peaks.imzML'),
-                  meta=None)
+        msi = \
+            MSI(imzml=os.path.join(run['dir'], '_RESULTS', 'new_inmask',
+                                   'recal_peaks.imzML'), meta=None)
+        # msi = MSI(imzml=os.path.join(run['dir'], 'recal_peaks.imzML'),
+        #           meta=None)
         msi._MSI__meta = meta
         matches_test_recal = {x: [] for x in matches_test_orig.keys()}
         for m in matches_test_orig.keys():
@@ -190,8 +182,27 @@ for dataset in ['ORBITRAP', 'TOF']:
             del mass_
         del msi
 
+        # No TS data -----------------------------------------------------------
+
+        print('Loading no TS data ...')
+        meta = {'ion_mode': run['ion_mode']}
+        msi = \
+            MSI(imzml=os.path.join(run['dir'], '_RESULTS', 'analysis_no_ts',
+                                   'recal_peaks.imzML'), meta=None)
+        msi._MSI__meta = meta
+        matches_test_nots = {x: [] for x in matches_test_orig.keys()}
+        for m in matches_test_orig.keys():
+            mass_ = []
+            for px, match_idx in zip(matches_test_orig[m]['pixel'],
+                                     matches_test_orig[m]['peak']):
+                idx = int(np.where(msi.pixels_indices == px)[0])
+                mass_.append(msi.msdata[idx][match_idx, 0])
+            matches_test_nots[m] = {'mz': np.asarray(mass_, dtype=float)}
+            del mass_
+        del msi
+
         # LaRocca data ---------------------------------------------------------
-        #
+
         # print('Loading recal. data ...')
         # meta = {'ion_mode': run['ion_mode']}
         # msi = MSI(imzml=os.path.join(run['dir'], 'larocca.imzML'), meta=None)
@@ -210,31 +221,33 @@ for dataset in ['ORBITRAP', 'TOF']:
         # Gen tables and save --------------------------------------------------
 
         mae = np.zeros(len(matches_test_orig))
-        med_errors = np.full((len(matches_test_orig), 2), np.nan, dtype=float)
-        mad_errors = np.full((len(matches_test_orig), 2), np.nan, dtype=float)
+        med_errors = np.full((len(matches_test_orig), 3), np.nan, dtype=float)
+        mad_errors = np.full((len(matches_test_orig), 3), np.nan, dtype=float)
 
         for i, m in enumerate(matches_test_orig.keys()):
             assert (len(matches_test_orig[m]['mz']) == len(
                 matches_test_recal[m]['mz']))
-            ppm_orig = dmz_to_dppm(
-                np.asarray(matches_test_orig[m]['mz']) - m, m)
-            ppm_recal = dmz_to_dppm(
-                np.asarray(matches_test_recal[m]['mz'] - m), m)
+            ppm_orig = \
+                dmz_to_dppm(np.asarray(matches_test_orig[m]['mz']) - m, m)
+            ppm_recal = \
+                dmz_to_dppm(np.asarray(matches_test_recal[m]['mz'] - m), m)
+            ppm_nots = \
+                dmz_to_dppm(np.asarray(matches_test_nots[m]['mz'] - m), m)
             mae[i] = np.median(np.abs(ppm_orig) - np.abs(ppm_recal))
-            med_errors[i, :] = np.asarray(
-                [np.median(ppm_orig), np.median(ppm_recal)])
-            mad_errors[i, :] = np.asarray(
-                [median_abs_deviation(ppm_orig),
-                 median_abs_deviation(ppm_recal)])
+            med_errors[i, :] = \
+                np.asarray([np.median(ppm_orig), np.median(ppm_recal)])
+            mad_errors[i, :] = \
+                np.asarray([median_abs_deviation(ppm_orig),
+                            median_abs_deviation(ppm_recal),
+                            median_abs_deviation(ppm_nots)])
 
         # Save median and MAD errors
 
-        df = pd.DataFrame(data=np.c_[np.abs(med_errors), mae],
-                          columns=['Orig.', 'Recal.', 'MAE'])  # , 'LaRocca'])
-        csv_fname = 'abs_med_errors_ppm_TEST_new.csv'
-        df.to_csv(os.path.join(outdir, csv_fname))
+        pd.DataFrame(
+            data=np.c_[np.abs(med_errors), mae],
+            columns=['Orig.', 'Recal.', 'noTS', 'MAE']).to_csv(
+            os.path.join(outdir, 'abs_med_errors_ppm_TEST_new.csv'))
 
-        df = pd.DataFrame(data=mad_errors,
-                          columns=['Orig.', 'Recal.'])  # , 'LaRocca'])
-        csv_fname = 'mad_errors_ppm_TEST_new.csv'
-        df.to_csv(os.path.join(outdir, csv_fname))
+        pd.DataFrame(
+            data=mad_errors, columns=['Orig.', 'Recal.', 'noTS']).to_csv(
+            os.path.join(outdir, 'mad_errors_ppm_TEST_new.csv'))

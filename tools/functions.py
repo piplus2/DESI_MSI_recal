@@ -23,6 +23,10 @@ import statsmodels.api as sm
 from joblib import Parallel, delayed
 import multiprocessing
 from scipy.signal import find_peaks
+import pygam
+from sklearn.model_selection import KFold
+
+import matplotlib.pyplot as plt
 
 
 def del_all_files_dir(dirname: str) -> None:
@@ -40,46 +44,14 @@ def dmz_to_dppm(dmz, refmz):
     return dmz / refmz * 1e6
 
 
-def search_thread(msp, top_n, ref_masses, tol_masses, pixel_index):
-    matches = {m: {x: [] for x in ['pixel', 'mz', 'intensity', 'peak']} for m in
-               ref_masses}
-    if top_n != -1 and top_n != 'upper':
-        top_idx = np.argsort(msp[:, 1])[::-1]
-        top_idx = top_idx[:int(top_n)]
-    elif top_n == 'upper':
-        threshold = np.quantile(msp[:, 1], q=0.75)
-        top_idx = np.where(msp[:, 1] >= threshold)[0]
-    else:
-        top_idx = np.arange(msp.shape[0])
-
-    skip_mass_idx = []
-    for i, m in enumerate(ref_masses):
-        sm = msp[top_idx, 0]
-        if m - tol_masses[m] > sm[-1] or m + tol_masses[m] < sm[0]:
-            skip_mass_idx.append(i)
-    search_masses = ref_masses.copy()
-    if len(skip_mass_idx):
-        search_masses = np.delete(search_masses, skip_mass_idx)
-
-    left_mass = np.asarray([m - tol_masses[m] for m in search_masses])
-    right_mass = np.asarray([m + tol_masses[m] for m in search_masses])
-
-    sm = msp[top_idx, 0]
-    hit_lx = np.searchsorted(sm, left_mass, side='left')
-    hit_rx = np.searchsorted(sm, right_mass, side='right')
-    for m, lx, rx in zip(search_masses, hit_lx, hit_rx):
-        hits = top_idx[lx:rx]
-        if len(hits) == 0:
-            continue
-        if len(hits) > 1:
-            hits = [hits[np.argmax(msp[hits, 1])]]
-        for hit in hits:
-            matches[m]['pixel'].append(int(pixel_index))
-            matches[m]['mz'].append(float(msp[hit, 0]))
-            matches[m]['intensity'].append(float(msp[hit, 1]))
-            matches[m]['peak'].append(int(hit))
-
-    return matches
+def filter_roi_px(msiobj, roi):
+    if not np.all(roi.shape == msiobj.dim_xy[::-1]):
+        raise ValueError('ROI has incompatible dimensions.')
+    outpx = np.where(roi.ravel() == 0)[0]
+    delpx = np.where(np.isin(msiobj.pixels_indices, outpx))[0]
+    delpx = np.sort(delpx)
+    msiobj.del_pixel(list(delpx))
+    return msiobj
 
 
 # Returns the hits for a list of reference masses, given a tolerance expressed
@@ -209,7 +181,19 @@ def find_kde_max(x, y, kde_values, remove_zeros=True):
     return x[~all_zeros], y[max_kde[~all_zeros]]
 
 
-def fit_spline_kde(pixels, match_masses, ref_mass):
+def ts_cv(x, y, s):
+
+    cv = KFold(n_splits=5)
+    error = []
+    for trg, tst in cv.split(x):
+        mdl = UnivariateSpline(x[trg], y[trg], s=s)
+        yhat = mdl(x[tst])
+        error.append(np.mean((yhat - y[tst])**2))
+    
+    return np.mean(error)
+
+
+def fit_spline_kde(pixels, match_masses, ref_mass, plot_dir=None):
     if np.var(match_masses) <= 1e-6:
         s, u = np.unique(pixels, return_counts=True)
         spx = s
@@ -220,7 +204,7 @@ def fit_spline_kde(pixels, match_masses, ref_mass):
             else:
                 smz_ = match_masses[pixels == s[i]]
                 smz[i] = smz_[np.argmin(np.abs(smz_ - ref_mass))]
-        spline = UnivariateSpline(x=spx, y=smz - ref_mass)
+        mdl = UnivariateSpline(x=spx, y=smz - ref_mass)
         use_kde = False
     else:
         use_kde = True
@@ -240,11 +224,98 @@ def fit_spline_kde(pixels, match_masses, ref_mass):
         xyi = scaler.inverse_transform(np.c_[x, y])
         xmax_kde, ymax_kde = find_kde_max(x=xyi[:, 0], y=xyi[:, 1],
                                           kde_values=z, remove_zeros=True)
-        spline = UnivariateSpline(x=xmax_kde, y=ymax_kde)
+        if np.var(xmax_kde) == 0:
+            mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
+        else:
+            # lam = np.logspace(-3, 3, 7)
+            # n_splines = np.arange(5, 25, 5)
+            # comb = np.array(np.meshgrid(lam, n_splines)).T.reshape(-1, 2)
+            # gcv = Parallel(n_jobs=5)(delayed(gam)(xmax_kde.reshape(-1, 1),
+            # ymax_kde.reshape(-1, ), l, int(n)) for (l, n) in zip(comb[:, 0],
+            # comb[:, 1]))
 
-    predictions = spline(pixels)
+            # mdl = pygam.LinearGAM(pygam.s(0, n_splines=10))
+            # mdl.gridsearch(X=xmax_kde.reshape(-1, 1), y=ymax_kde.reshape(-1, ),
+            #                progress=False)
 
-    return predictions, use_kde
+            # use_gam = False
+            s_vals = np.linspace(0.1, 0.9, 9)
+            mse = []
+            for s_ in s_vals:
+                mse.append(
+                    ts_cv(xmax_kde.reshape(-1, 1), ymax_kde.reshape(-1, ), s_))
+            mdl = \
+                UnivariateSpline(x=xmax_kde, y=ymax_kde,
+                                 s=s_vals[np.argmin(mse)])
+
+    # if use_gam:
+    #     yhat = mdl.predict(pixels.reshape(-1, 1)).ravel()
+    # else:
+    yhat = mdl(pixels)
+
+    # Plot
+    if plot_dir is not None:
+        fig = plt.figure(dpi=150, figsize=(4, 3))
+        ax = fig.add_subplot(111)
+        if use_kde:
+            xx, yy = np.meshgrid(xyi[:, 0], xyi[:, 1])
+            ax.pcolormesh(xx, yy, z, cmap='viridis', shading='nearest')
+        ax.scatter(pixels, match_masses - ref_mass, s=3, edgecolor='white',
+                   facecolor='none', linewidths=0.5)
+        if use_kde:
+            ax.scatter(
+                xmax_kde, ymax_kde, s=3, edgecolor='red', facecolor='none',
+                linewidths=0.5)
+        ax.scatter(
+            pixels, yhat, s=3, edgecolor='green', facecolor='none',
+            linewidths=0.5)
+        ax.set_xlim([pixels[0], pixels[-1]])
+        plt.tight_layout()
+        plt.savefig(os.path.join(plot_dir, 'kde_' + str(ref_mass) + '.png'))
+        plt.close()
+
+    return yhat, use_kde
+
+
+def kde_regress(msiobj, search_results, min_pct, max_disp, plot_dir=None):
+    failed = []
+
+    results = \
+        {m: {'is_inlier': [], 'inlier_px': [], 'inlier_pct': [],
+             'residuals': [], 'dispersion': []}
+         for m in search_results.keys()}
+
+    for m in tqdm(search_results.keys()):
+        try:
+            preds, is_kde = \
+                fit_spline_kde(pixels=search_results[m]['pixel'],
+                               match_masses=search_results[m]['mz'],
+                               ref_mass=m, plot_dir=plot_dir)
+        except:
+            failed.append(m)
+            continue
+        results[m]['residuals'] = search_results[m]['mz'] - (m + preds)
+        mad = 1.4826 * np.median(np.abs(results[m]['residuals']))
+        results[m]['is_inlier'] = \
+            (np.abs(results[m]['residuals']) <= 2 * mad)
+        results[m]['inlier_px'] = \
+            search_results[m]['pixel'][results[m]['is_inlier']]
+        results[m]['inlier_pct'] = \
+            len(np.unique(results[m]['inlier_px'])) / \
+            len(msiobj.pixels_indices)
+        results[m]['dispersion'] = np.max(2 * mad / (preds + m) * 1e6)
+
+    # Remove failed kde models
+    if len(failed) > 0:
+        results = {m: results[m] for m in results.keys()
+                   if m not in failed}
+
+    # Select by coverage percentage and dispersion
+    results = \
+        {m: results[m] for m in results.keys() if
+         (np.abs(results[m]['dispersion']) <= max_disp) &
+         (results[m]['inlier_pct'] * 100 >= min_pct)}
+    return results
 
 
 class SMWrapper(BaseEstimator, RegressorMixin):
@@ -297,8 +368,11 @@ def fit_model_thread(x, y, d, model, **kwargs):
 
 
 # calculate bic for regression
-def calculate_bic(n, mse, num_params):
-    bic = n * np.log(mse) + num_params * np.log(n)
+def calculate_bic(n, residuals, num_params):
+    bic = \
+        n * np.log(np.sum(residuals ** 2 + 1e-12) / n) + np.log(n) \
+        * num_params
+    # bic = n * np.log(error + 1e-12) + num_params * np.log(n)
     return bic
 
 
@@ -310,57 +384,87 @@ def fit_shift_model(x, y, max_degree, model='ols', error: str = 'mse',
         err_func = mean_absolute_error
     else:
         raise ValueError('Invalid `error`.')
-    if np.var(y) < 1e-10:
-        model = 'ols'
-        best_model = fit_model_thread(x, y, 0, model, **kwargs)
-        bics = []
-        best_degree = 0
+
+    if model != 'gam':
+        if np.var(y) < 1e-10:
+            model = 'ols'
+            best_model = fit_model_thread(x, y, 0, model, **kwargs)
+            bics = []
+            best_degree = 0
+        else:
+            num_cores = multiprocessing.cpu_count()
+            num_params = np.arange(1, max_degree + 1) + 1
+            models = Parallel(n_jobs=np.min([num_cores - 1, max_degree + 1]))(
+                delayed(fit_model_thread)(x, y, d, model) for d in
+                range(1, max_degree + 1))
+            yhats = [mdl.predict(x.reshape(-1, 1)).flatten() for mdl in models]
+            resid = [y - yhat for yhat in yhats]
+            bics = np.asarray(
+                [calculate_bic(len(yhats[i]), resid[i], num_params[i]) for i in
+                 range(len(yhats))])
+            best_degree = np.arange(1, max_degree + 1)[np.argmin(bics)]
+            best_model = models[np.argmin(bics)]
     else:
-        num_cores = multiprocessing.cpu_count()
-        num_params = np.arange(1, max_degree + 1) + 1
-        models = Parallel(n_jobs=np.min([num_cores - 1, max_degree + 1]))(
-            delayed(fit_model_thread)(x, y, d, model) for d in
-            range(1, max_degree + 1))
-        yhats = [mdl.predict(x.reshape(-1, 1)).flatten() for mdl in models]
-        mses = [err_func(y, yhat) for yhat in yhats]
-        bics = np.asarray(
-            [calculate_bic(len(yhats[i]), mses[i], num_params[i]) for i in
-             range(len(yhats))])
-        best_degree = np.arange(1, max_degree + 1)[np.argmin(bics)]
-        best_model = models[np.argmin(bics)]
-        # gam = pygam.LinearGAM(pygam.l(0) + pygam.s(0, n_splines=5))
-        # gam.gridsearch(X=x.reshape(-1, 1), y=y, progress=False)
-        # best_model = gam
-        # best_degree = 0
-        # bics = []
+        gam = pygam.LinearGAM(pygam.s(0))
+        gam.gridsearch(X=x.reshape(-1, 1), y=y, progress=False)
+        best_model = gam
+        best_degree = 0
+        bics = []
 
     return {'bic': bics, 'best_model': best_model, 'best_degree': best_degree}
 
 
-def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
-    # Determine hits with close error in ppm
-    ppm = (x_fit - y_fit) / y_fit * 1e6
+def find_boundary_from_ppm_err(obs_masses, th_masses, max_ppm=5, kde_step=1e-3):
+    delta_mass = th_masses - obs_masses
+    error = delta_mass / th_masses * 1e6
+
     kde = FFTKDE(kernel='gaussian', bw='silverman')
-    xphi = np.arange(np.min(ppm) - 1e-3, np.max(ppm) + 1e-3, 1e-3)
-    kde.fit(ppm)
+    xphi = \
+        np.arange(np.min(error) - kde_step, np.max(error) + kde_step, kde_step)
+    kde.fit(error)
     yphifft = kde.evaluate(xphi)
     peaks, properties = find_peaks(yphifft, rel_height=0.25, width=3)
     maxpeak = np.argmax(yphifft[peaks])
-    # if maxpeak > 0 and properties['left_ips'][maxpeak] < peaks[maxpeak - 1]:
-    #     left_pt = (peaks[maxpeak] - peaks[maxpeak - 1]) / 2
-    # else:
+
     left_pt = properties['left_ips'][maxpeak]
-    # if maxpeak < len(peaks) - 1 and \
-    #         properties['right_ips'][maxpeak] < peaks[maxpeak + 1]:
-    #     right_pt = (peaks[maxpeak - 1] - peaks[maxpeak]) / 2
-    # else:
     right_pt = properties['right_ips'][maxpeak]
 
     xinterp = np.interp(
         x=[left_pt, right_pt],
         xp=np.arange(len(xphi)), fp=xphi)
 
-    in_mask = (ppm >= xinterp[0]) & (ppm <= xinterp[1])
+    if xphi[peaks[maxpeak]] - xinterp[0] >= max_ppm:
+        xinterp[0] = xphi[peaks[maxpeak]] - max_ppm
+    if xinterp[1] - xphi[peaks[maxpeak]] >= max_ppm:
+        xinterp[1] = xphi[peaks[maxpeak]] + max_ppm
+
+    mass_peak = xphi[peaks[maxpeak]] * th_masses / 1e6
+    error_mask = (error >= xinterp[0]) & (error <= xinterp[1])
+
+    residuals = (delta_mass - mass_peak)[error_mask]
+    mass_mask = (delta_mass - mass_peak >= np.min(residuals)) & \
+                (delta_mass - mass_peak <= np.max(residuals))
+
+    # Set maximum shift equal to 0.005 m/z
+    lo_shift = np.min(residuals)
+    if np.abs(lo_shift) >= 0.005:
+        lo_shift = np.sign(lo_shift) * 0.005
+    hi_shift = np.max(residuals)
+    if np.abs(hi_shift) >= 0.005:
+        hi_shift = np.sign(hi_shift) * 0.005
+
+    lo_bound = lo_shift + mass_peak[error_mask]
+    hi_bound = hi_shift + mass_peak[error_mask]
+
+    return mass_mask, error_mask, mass_peak, lo_bound, hi_bound
+
+
+def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
+    # Determine hits with close error in ppm
+    in_mask, ppm_mask, peak_mass, lo_bound, hi_bound = \
+        find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
+
+    # in_mask = (ppm >= xinterp[0]) & (ppm <= xinterp[1])
 
     if transform == 'sqrt':
         x_fit = np.sqrt(x_fit)
@@ -368,8 +472,7 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
         x_pred = np.sqrt(x_pred)
 
     poly_degree = np.min([max_degree, np.sum(in_mask) - 1])
-
-    mdls = fit_shift_model(x_fit[in_mask], y_fit[in_mask],
+    mdls = fit_shift_model(x=x_fit[in_mask], y=y_fit[in_mask],
                            max_degree=poly_degree, model='ols',
                            error='mae')
     model = mdls['best_model']
@@ -378,4 +481,11 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     if transform == 'sqrt':
         mz_corrected = mz_corrected ** 2
 
-    return mz_corrected, model, in_mask
+    if transform == 'sqrt':
+        x_fit = x_fit ** 2
+
+    return mz_corrected, model, in_mask, \
+           pd.DataFrame(
+               data=np.c_[x_fit[ppm_mask], peak_mass[ppm_mask], lo_bound,
+                          hi_bound],
+               columns=['mobs', 'peak', 'lo_bound', 'hi_bound'])

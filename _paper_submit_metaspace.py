@@ -55,29 +55,32 @@ def fill_metadata(organism, part, ion_mode, analyzer, res_power):
 sm = get_sminstance(api_key='4d3pw03ewJF4')
 
 ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
-DATASET = 'TOF'
-msi_datasets = pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'),
-                           index_col=0)
+DATASET = 'ORBITRAP'
+msi_datasets = \
+    pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'), index_col=0)
 msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
 
-for index in [9, 10, 11]:  # msi_datasets.index:
+for index in msi_datasets.index:
     run = msi_datasets.loc[index, :]
 
     print(run['dir'])
 
-    dset_name = run['organism'] + ' ' + run['tissue'] + ' ' + run[
-        'ion_mode'] + ' ' + DATASET + ' orig'
+    dset_name = \
+        run['organism'] + ' ' + run['tissue'] + ' ' + run['ion_mode'] + ' ' + \
+        DATASET + ' final'
 
-    fname = run['tissue'] + '_' + run['ion_mode'] + '_0step'
+    # fname = run['tissue'] + '_' + run['ion_mode'] + '_0step'
     # fname = 'larocca'
-    # fname = 'recal_peaks'
-    imzml_fn = os.path.join(run['dir'], fname + '.imzML')
-    ibd_fn = os.path.join(run['dir'], fname + '.ibd')
-    metadata = fill_metadata(
-        organism=run['organism'], part=run['tissue'],
-        ion_mode='Negative' if run['ion_mode'] == 'ES-' else 'Positive',
-        analyzer=DATASET, res_power=eval(run['res_power']))
+    fname = 'recal_peaks'
+    imzml_dir = os.path.join(run['dir'], '_RESULTS', 'new_inmask')
+    imzml_fn = os.path.join(imzml_dir, fname + '.imzML')
+    ibd_fn = os.path.join(imzml_dir, fname + '.ibd')
+    metadata = \
+        fill_metadata(organism=run['organism'], part=run['tissue'],
+                      ion_mode='Negative' if run['ion_mode'] == 'ES-'
+                      else 'Positive',
+                      analyzer=DATASET, res_power=eval(run['res_power']))
 
-    sm.submit_dataset(imzml_fn=imzml_fn, ibd_fn=ibd_fn, name=dset_name,
-                      metadata=metadata, is_public=False,
-                      databases=[19, 22, 24, 38])
+    sm.submit_dataset(
+        imzml_fn=imzml_fn, ibd_fn=ibd_fn, name=dset_name, metadata=metadata,
+        is_public=False, databases=[19, 22, 24, 38])

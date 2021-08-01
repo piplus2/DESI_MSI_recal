@@ -30,9 +30,20 @@ def permtest_onesample(x, nperm):
     t1 = np.zeros(nperm)
     for i in range(nperm):
         sign = np.random.binomial(1, 0.5, len(x)) * 2 - 1
-        t1[i] = np.mean(sign * x)
+        t1[i] = np.median(sign * x)
     pval = (np.sum(np.abs(t1) >= np.abs(t0)) + 1) / (nperm + 1)
     return pval, t1
+
+
+def boot(x, nb, statistics=np.median):
+    t0 = statistics(x)
+    x1 = x - t0
+    t1 = np.zeros(nb)
+    for i in range(nb):
+        xb = np.random.choice(x1, size=len(x1), replace=True)
+        t1[i] = statistics(xb)
+    pval = (np.sum(np.abs(t1) >= np.abs(t0)) + 1) / (nb + 1)
+    return pval
 
 
 set_mpl_params_mod()
@@ -55,12 +66,15 @@ for dataset in ['ORBITRAP', 'TOF']:
     for index in data.index:
         d = data.loc[index, 'dir']
         print(d)
-        abs_err = pd.read_csv(
-            os.path.join(d, 'test_mz', 'abs_med_errors_ppm_TEST_new.csv'),
-            index_col=0)
+        abs_err = \
+            pd.read_csv(
+                os.path.join(
+                    d,
+                    # 'test_mz', 'abs_med_errors_ppm_TEST_new.csv'),
+                    '_RESULTS', 'new_inmask', 'test_masses',
+                    'abs_med_errors_ppm_TEST_new.csv'), index_col=0)
 
-        # W, pvals_ = wilcoxon(abs_err['Orig.'], abs_err['Recal.'])
-        p_, t1_ = permtest_onesample(abs_err['MAE'].values, 9999)
+        p_ = boot(abs_err['MAE'].values, 9999)
         pvals.append(p_)
         # Bootstrap median difference
         med_fc = np.full(9999, np.nan, dtype=float)
@@ -87,6 +101,7 @@ df = pd.DataFrame(
 df['reject'] = reject
 df['signif'] = -np.log10(df['pBH'])
 df['analyzer'] = np.r_[np.repeat('Orbitrap', 20), np.repeat('TOF', 10)]
+# df['analyzer'] = np.repeat('TOF', 10)
 df['label'] = run_labels
 
-df.to_csv(os.path.join(ROOT_DIR, 'perm_test_masses.csv'))
+df.to_csv(os.path.join(ROOT_DIR, 'perm_test_masses_new_inmask_gam.csv'))
