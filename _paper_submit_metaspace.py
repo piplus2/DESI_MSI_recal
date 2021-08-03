@@ -60,7 +60,7 @@ msi_datasets = \
     pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'), index_col=0)
 msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
 
-for index in msi_datasets.index:
+for index in [10, 16]:  # msi_datasets.index:
     run = msi_datasets.loc[index, :]
 
     print(run['dir'])

@@ -34,7 +34,7 @@ def make_results_dir(root_dir: str, min_pct: float) -> str:
 set_mpl_params_mod()
 
 ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
-DATASET = 'TOF'
+DATASET = 'ORBITRAP'
 
 if DATASET == 'TOF':
     MAX_POLY_DEGREE = 5
@@ -55,14 +55,14 @@ msi_datasets = pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'),
                            index_col=0)
 msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
 
-for index in msi_datasets.index[5:]:
-    run = msi_datasets.loc[index, :]
+for index in [10, 16]:  # range(msi_datasets.shape[0]):
+    run = msi_datasets.iloc[index, :]
 
     results_dir = os.path.join(run['dir'], '_RESULTS', 'analysis_no_ts')
-    if not os.path.isdir(results_dir):
-        os.makedirs(results_dir)
-    else:
-        del_all_files_dir(results_dir)
+    # if not os.path.isdir(results_dir):
+    #     os.makedirs(results_dir)
+    # else:
+    #     del_all_files_dir(results_dir)
 
     print('Loading DESI-MSI and search ref. masses ...')
     print('MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0],

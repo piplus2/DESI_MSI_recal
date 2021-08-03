@@ -71,12 +71,12 @@ ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
 MAX_TOL = {'ORBITRAP': 20, 'TOF': 100}
 MIN_PCT = 75.0
 
-for dataset in ['TOF']:  # , 'ORBITRAP']:
+for dataset in ['ORBITRAP']:  # , 'ORBITRAP']:
     msi_datasets = \
         pd.read_csv(os.path.join(ROOT_DIR, dataset, 'meta.csv'), index_col=0)
     msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
 
-    for index in range(msi_datasets.shape[0]):
+    for index in [10, 16]:  # range(msi_datasets.shape[0]):
         run = msi_datasets.iloc[index, :]
         print(
             'MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0],
@@ -84,10 +84,10 @@ for dataset in ['TOF']:  # , 'ORBITRAP']:
         # outdir = os.path.join(run['dir'], 'test_mz')
         outdir = \
             os.path.join(run['dir'], '_RESULTS', 'new_inmask', 'test_masses')
-        if not os.path.isdir(outdir):
-            os.makedirs(outdir)
-        else:
-            del_all_files_dir(outdir)
+        # if not os.path.isdir(outdir):
+        #     os.makedirs(outdir)
+        # else:
+        #     del_all_files_dir(outdir)
 
         # Find test ions -------------------------------------------------------
 
@@ -155,9 +155,9 @@ for dataset in ['TOF']:  # , 'ORBITRAP']:
 
         sel_test_masses = find_masses_common_err(matches)
         print('Num. test masses = {}'.format(len(sel_test_masses)))
-        # # Save list of test masses
-        # np.savetxt(fname=os.path.join(outdir, 'test_masses.txt'),
-        #            X=sel_test_masses, fmt='%f')
+        # Save list of test masses
+        np.savetxt(fname=os.path.join(outdir, 'test_masses.txt'),
+                   X=sel_test_masses, fmt='%f')
         matches_test_orig = {m: matches[m] for m in sel_test_masses}
         del msi, matches
 
@@ -221,6 +221,7 @@ for dataset in ['TOF']:  # , 'ORBITRAP']:
         # Gen tables and save --------------------------------------------------
 
         mae = np.zeros(len(matches_test_orig))
+        mae_recal = np.zeros(len(matches_test_orig))
         med_errors = np.full((len(matches_test_orig), 3), np.nan, dtype=float)
         mad_errors = np.full((len(matches_test_orig), 3), np.nan, dtype=float)
 
@@ -234,8 +235,10 @@ for dataset in ['TOF']:  # , 'ORBITRAP']:
             ppm_nots = \
                 dmz_to_dppm(np.asarray(matches_test_nots[m]['mz'] - m), m)
             mae[i] = np.median(np.abs(ppm_orig) - np.abs(ppm_recal))
+            mae_recal[i] = np.median(np.abs(ppm_recal) - np.abs(ppm_nots))
             med_errors[i, :] = \
-                np.asarray([np.median(ppm_orig), np.median(ppm_recal)])
+                np.asarray([np.median(ppm_orig), np.median(ppm_recal),
+                            np.median(ppm_nots)])
             mad_errors[i, :] = \
                 np.asarray([median_abs_deviation(ppm_orig),
                             median_abs_deviation(ppm_recal),
@@ -244,8 +247,8 @@ for dataset in ['TOF']:  # , 'ORBITRAP']:
         # Save median and MAD errors
 
         pd.DataFrame(
-            data=np.c_[np.abs(med_errors), mae],
-            columns=['Orig.', 'Recal.', 'noTS', 'MAE']).to_csv(
+            data=np.c_[np.abs(med_errors), mae, mae_recal],
+            columns=['Orig.', 'Recal.', 'noTS', 'MAE', 'MAE recal.']).to_csv(
             os.path.join(outdir, 'abs_med_errors_ppm_TEST_new.csv'))
 
         pd.DataFrame(

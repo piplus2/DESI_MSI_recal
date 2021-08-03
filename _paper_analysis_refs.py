@@ -19,7 +19,7 @@ from tools._paper_funcs import make_run_labels
 set_mpl_params_mod()
 
 ROOT_DIR = 'E:\\CALIB_PAPER\\DATA'
-DATASET = 'TOF'
+DATASET = 'ORBITRAP'
 
 meta = pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'), index_col=0)
 meta = meta[meta['process'] == 'yes']
@@ -48,15 +48,16 @@ for i, index in enumerate(meta.index):
 
     del msi
 
-    inlier_masses = pd.read_csv(
-        os.path.join(run['dir'], '_RESULTS', 'poly_obs_mz',
-                     'inlier_masses.csv'), index_col=0)
+    inlier_masses = \
+        pd.read_csv(os.path.join(run['dir'], '_RESULTS', 'new_inmask',
+                                 'inlier_masses.csv'), index_col=0)
 
     inlier_masses_all[run_labels[i]] = \
         inlier_masses[inlier_masses['pct'] >= 0.95]['mass'].values
 
-    test_masses = np.loadtxt(
-        os.path.join(run['dir'], 'test_mz', 'test_masses.txt'))
+    test_masses = \
+        np.loadtxt(os.path.join(run['dir'], '_RESULTS', 'new_inmask',
+                                'test_masses', 'test_masses.txt'))
     test_masses_all[run_labels[i]] = test_masses
 
 for p in ['ES-', 'ES+']:
@@ -81,7 +82,8 @@ for p in ['ES-', 'ES+']:
                       col_wrap=4, sharex=False)
     g = g.map(sns.distplot, 'mz', hist=False, rug=True).add_legend()
     plt.tight_layout()
-    plt.savefig(os.path.join(os.path.dirname(ROOT_DIR), 'New folder',
-                             'ref_masses_' + DATASET + '_' + p + '.pdf'),
-                format='pdf', dpi=300)
+    plt.savefig(
+        os.path.join(os.path.dirname(ROOT_DIR), 'New folder',
+                     'ref_masses_' + DATASET + '_' + p + '.pdf'),
+        format='pdf', dpi=300)
     plt.close()

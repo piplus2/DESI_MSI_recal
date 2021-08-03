@@ -54,19 +54,19 @@ for dataset in ['ORBITRAP', 'TOF']:
                     '_RESULTS', 'new_inmask', 'test_masses',
                     'abs_med_errors_ppm_TEST_new.csv'), index_col=0)
 
-        p_ = boot(abs_err['MAE'].values, 9999)
+        p_ = boot(abs_err['MAE recal.'].values, 9999)
         pvals.append(p_)
         # Bootstrap median difference
         med_fc = np.full(9999, np.nan, dtype=float)
         for n in range(9999):
             idx = np.random.choice(abs_err.shape[0], size=abs_err.shape[0],
                                    replace=True)
-            med_fc[n] = np.median(abs_err['Orig.'].to_numpy()[idx] -
-                                  abs_err['Recal.'].to_numpy()[idx])
+            med_fc[n] = np.median(abs_err['Recal.'].to_numpy()[idx] -
+                                  abs_err['noTS'].to_numpy()[idx])
 
-        mu0.append(np.median(abs_err['Orig.']))
-        mu1.append(np.median(abs_err['Recal.']))
-        delta_tilde.append(np.mean(abs_err['MAE'].values))
+        mu0.append(np.median(abs_err['Recal.']))
+        mu1.append(np.median(abs_err['noTS']))
+        delta_tilde.append(np.mean(abs_err['MAE recal.'].values))
         lo_delta.append(np.quantile(med_fc, q=0.025))
         hi_delta.append(np.quantile(med_fc, q=0.975))
 
@@ -75,7 +75,7 @@ reject, pvals_corrected, _, _ = multipletests(pvals, alpha=0.05,
 
 df = pd.DataFrame(
     data=np.c_[delta_tilde, mu0, mu1, lo_delta, hi_delta, pvals_corrected],
-    columns=['delta_tilde', 'med_orig', 'med_recal', 'lo_delta', 'hi_delta',
+    columns=['delta_tilde', 'med_recal', 'med_nots', 'lo_delta', 'hi_delta',
              'pBH'])
 
 df['reject'] = reject
@@ -84,4 +84,4 @@ df['analyzer'] = np.r_[np.repeat('Orbitrap', 20), np.repeat('TOF', 10)]
 # df['analyzer'] = np.repeat('TOF', 10)
 df['label'] = run_labels
 
-df.to_csv(os.path.join(ROOT_DIR, 'perm_test_masses_new_inmask_gam.csv'))
+df.to_csv(os.path.join(ROOT_DIR, 'perm_test_masses_recal_vs_nots.csv'))

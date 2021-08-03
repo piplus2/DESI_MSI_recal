@@ -415,9 +415,12 @@ def fit_shift_model(x, y, max_degree, model='ols', error: str = 'mse',
 
 
 def find_boundary_from_ppm_err(obs_masses, th_masses, max_ppm=5, kde_step=1e-3):
+
     delta_mass = th_masses - obs_masses
     error = delta_mass / th_masses * 1e6
 
+    # Find ppm error density peak and 0.25 interval - These represent the first
+    # candidates peaks
     kde = FFTKDE(kernel='gaussian', bw='silverman')
     xphi = \
         np.arange(np.min(error) - kde_step, np.max(error) + kde_step, kde_step)
@@ -438,33 +441,177 @@ def find_boundary_from_ppm_err(obs_masses, th_masses, max_ppm=5, kde_step=1e-3):
     if xinterp[1] - xphi[peaks[maxpeak]] >= max_ppm:
         xinterp[1] = xphi[peaks[maxpeak]] + max_ppm
 
-    mass_peak = xphi[peaks[maxpeak]] * th_masses / 1e6
+    delta_mass_peak = xphi[peaks[maxpeak]] * th_masses / 1e6
     error_mask = (error >= xinterp[0]) & (error <= xinterp[1])
 
-    residuals = (delta_mass - mass_peak)[error_mask]
-    mass_mask = (delta_mass - mass_peak >= np.min(residuals)) & \
-                (delta_mass - mass_peak <= np.max(residuals))
+    # Calculate the residuals from the linear model delta_mass = delta_mass_peak
+    # = th_mass * ppm_error_peak. Calculate the highest peak and its left and
+    # right points, corresponding to 50% of the peak height.
+    residuals = (delta_mass - delta_mass_peak)[error_mask]
+    resphi = \
+        np.arange(np.min(residuals) - 1e-5, np.max(residuals) + 1e-5, 1e-5)
+    kde.fit(residuals)
+    resphikde = kde.evaluate(resphi)
+    respeaks, resproperties = find_peaks(resphikde, rel_height=0.99, width=3)
+    maxpeakres = np.argmax(resphikde[respeaks])
+    left_pt_res = resproperties['left_ips'][maxpeakres]
+    right_pt_res = resproperties['right_ips'][maxpeakres]
 
-    # Set maximum shift equal to 0.005 m/z
-    lo_shift = np.min(residuals)
+    # If multimodal, then take the points corresponding to the highest peak
+    # of residuals
+    if len(respeaks) != 1:
+        # Check left peaks
+        if maxpeakres > 0 and left_pt_res < respeaks[maxpeakres - 1]:
+            left_pt_res = \
+                respeaks[maxpeakres] - \
+                (respeaks[maxpeakres] - respeaks[maxpeakres - 1]) / 2
+        # Check right peaks
+        if maxpeakres < len(respeaks) - 1 and \
+                right_pt_res > respeaks[maxpeakres + 1]:
+            right_pt_res = \
+                respeaks[maxpeakres] + \
+                (respeaks[maxpeakres + 1] - respeaks[maxpeakres]) / 2
+
+    resxinterp = np.interp(
+        x=[left_pt_res, right_pt_res],
+        xp=np.arange(len(resphi)), fp=resphi)
+
+    # Set maximum half interval equal to 0.005 m/z = 5 ppm error for 1000 m/z
+    lo_shift = resxinterp[0]
     if np.abs(lo_shift) >= 0.005:
         lo_shift = np.sign(lo_shift) * 0.005
-    hi_shift = np.max(residuals)
+    hi_shift = resxinterp[1]
     if np.abs(hi_shift) >= 0.005:
         hi_shift = np.sign(hi_shift) * 0.005
 
-    lo_bound = lo_shift + mass_peak[error_mask]
-    hi_bound = hi_shift + mass_peak[error_mask]
+    lo_bound = lo_shift + delta_mass_peak[error_mask]
+    hi_bound = hi_shift + delta_mass_peak[error_mask]
 
-    return mass_mask, error_mask, mass_peak, lo_bound, hi_bound
+    mass_mask = (delta_mass - delta_mass_peak >= lo_shift) & \
+                (delta_mass - delta_mass_peak <= hi_shift)
+
+    return mass_mask, error_mask, delta_mass_peak, lo_bound, hi_bound
+
+# from scipy.stats import median_abs_deviation
+#
+# def find_peak_kde(vals, kde_step, rel_height, check_other_peaks,
+#                   return_boundaries):
+#
+#     kde = FFTKDE(kernel='gaussian', bw='silverman')
+#     xphi = \
+#         np.arange(np.min(vals) - kde_step, np.max(vals) + kde_step, kde_step)
+#     kde.fit(vals)
+#     yphifft = kde.evaluate(xphi)
+#     peaks, properties = find_peaks(yphifft, rel_height=rel_height, width=3)
+#     maxpeak_idx = np.argmax(yphifft[peaks])
+#
+#     xpeak = xphi[peaks[maxpeak_idx]]
+#     left_pt = properties['left_ips'][maxpeak_idx]
+#     right_pt = properties['right_ips'][maxpeak_idx]
+#
+#     if check_other_peaks:
+#         # If multimodal, then take the points corresponding to the highest peak
+#         # of residuals
+#         if len(peaks) != 1:
+#             # Check left peaks
+#             if maxpeak_idx > 0 and left_pt < peaks[maxpeak_idx - 1]:
+#                 left_pt = \
+#                     peaks[maxpeak_idx] - \
+#                     (peaks[maxpeak_idx] - peaks[maxpeak_idx - 1]) / 2
+#             # Check right peaks
+#             if maxpeak_idx < len(peaks) - 1 and right_pt > \
+#                     peaks[maxpeak_idx + 1]:
+#                 right_pt = \
+#                     peaks[maxpeak_idx] + \
+#                     (peaks[maxpeak_idx + 1] - peaks[maxpeak_idx]) / 2
+#
+#     boundaries = []
+#     if return_boundaries:
+#         boundaries = \
+#             np.interp(x=[left_pt, right_pt], xp=np.arange(len(xphi)), fp=xphi)
+#
+#     return peaks, maxpeak_idx, left_pt, right_pt, xpeak, boundaries
+#
+#
+# def find_boundary_from_ppm_err(obs_masses, th_masses, max_ppm=5):
+#
+#     # Biased error estimator ---------------------------------------------------
+#
+#     dmz = th_masses - obs_masses
+#     dppm = dmz / th_masses * 1e6
+#
+#     _, _, _, _, dppm_peak, dppm_bounds = \
+#         find_peak_kde(dppm, kde_step=1e-3,
+#                       check_other_peaks=False, return_boundaries=True,
+#                       rel_height=0.5)
+#     if dppm_peak - dppm_bounds[0] >= max_ppm:
+#         dppm_bounds[0] = dppm_peak - max_ppm
+#     if dppm_bounds[1] - dppm_peak >= max_ppm:
+#         dppm_bounds[1] = dppm_peak + max_ppm
+#     dppm_mask = (dppm >= dppm_bounds[0]) & (dppm <= dppm_bounds[1])
+#     dmz_peak = dppm_peak * th_masses / 1e6
+#
+#     # Calculate the residuals from the linear model delta_mass = delta_mass_peak
+#     # = th_mass * ppm_error_peak. Calculate the highest peak and its left and
+#     # right points, corresponding to 1% of the peak height.
+#     res_dmz = (dmz - dmz_peak)[dppm_mask]
+#     res_dmz_peaks, res_dmz_max_idx, left_pt, right_pt, res_dmz_peak, \
+#         res_dmz_bounds = \
+#         find_peak_kde(res_dmz, kde_step=1e-5, rel_height=0.99,
+#                       check_other_peaks=True, return_boundaries=True)
+#     # Estimated bias from the distribution of the residuals
+#     bias = res_dmz_peak
+#
+#     mask = (dmz >= res_dmz_bounds[0]) & (dmz <= res_dmz_bounds[1])
+#
+#     # Unbiased estimation ------------------------------------------------------
+#
+#     th_masses_unbiased = th_masses - bias  # Bias correction
+#     dmz = th_masses_unbiased - obs_masses
+#     dppm = dmz / th_masses_unbiased * 1e6
+#
+#     _, _, _, _, dppm_peak, dppm_bounds = \
+#         find_peak_kde(dppm, kde_step=1e-3, check_other_peaks=False,
+#                       return_boundaries=True, rel_height=0.5)
+#     dppm_mask = (dppm >= dppm_bounds[0]) & (dppm <= dppm_bounds[1])
+#
+#     preds = bias + obs_masses / (1 - dppm_peak * 1e-6)
+#
+#     plt.scatter(obs_masses, th_masses - obs_masses, c=dppm_mask)
+#     plt.scatter(obs_masses, th_masses - preds)
+#
+#     res_dmz = (th_masses_unbiased - preds)[dppm_mask]
+#     res_dmz_peaks, res_dmz_max_idx, left_pt, right_pt, res_dmz_peak, \
+#         res_bounds = \
+#         find_peak_kde(res_dmz, kde_step=1e-5, rel_height=0.99,
+#                       check_other_peaks=True, return_boundaries=True)
+#     # Determine the final mask
+#
+#     # Set maximum half interval equal to 0.005 m/z = 5 ppm error for 1000 m/z
+#     lo_shift = res_bounds[0]
+#     if np.abs(lo_shift) >= 0.005:
+#         lo_shift = np.sign(lo_shift) * 0.005
+#     hi_shift = res_bounds[1]
+#     if np.abs(hi_shift) >= 0.005:
+#         hi_shift = np.sign(hi_shift) * 0.005
+#
+#     mass_mask = (th_masses_unbiased - preds >= lo_shift) & (th_masses_unbiased - preds <= hi_shift)
+#
+#     plt.scatter(obs_masses, th_masses - obs_masses, c=mass_mask)
+#
+#     lo_bound = lo_shift + dmz_peak[mass_mask] + bias
+#     hi_bound = hi_shift + dmz_peak[mass_mask] + bias
+#
+#     return bias, mass_mask, lo_bound, hi_bound
 
 
 def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     # Determine hits with close error in ppm
-    in_mask, ppm_mask, peak_mass, lo_bound, hi_bound = \
-        find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
+    # in_mask, ppm_mask, peak_mass, lo_bound, hi_bound = \
+    #     find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
 
-    # in_mask = (ppm >= xinterp[0]) & (ppm <= xinterp[1])
+    bias, in_mask, lo_bound, hi_bound = \
+        find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
 
     if transform == 'sqrt':
         x_fit = np.sqrt(x_fit)
@@ -485,7 +632,6 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
         x_fit = x_fit ** 2
 
     return mz_corrected, model, in_mask, \
-           pd.DataFrame(
-               data=np.c_[x_fit[ppm_mask], peak_mass[ppm_mask], lo_bound,
-                          hi_bound],
-               columns=['mobs', 'peak', 'lo_bound', 'hi_bound'])
+        pd.DataFrame(
+            data=np.c_[x_fit[in_mask], lo_bound, hi_bound],
+            columns=['mobs', 'lo_bound', 'hi_bound'])

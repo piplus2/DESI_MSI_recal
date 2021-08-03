@@ -57,7 +57,7 @@ msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
 
 runtime = np.zeros((msi_datasets.shape[0], 4))
 
-for index in range(msi_datasets.shape[0]):
+for index in [10, 16]:  # range(msi_datasets.shape[0]):
     run = msi_datasets.iloc[index, :]
 
     print('MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0], run['dir']))

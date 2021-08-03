@@ -43,11 +43,11 @@ ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
 MAX_TOL = {'ORBITRAP': 20, 'TOF': 100}
 MIN_PCT = 75.0
 
-for dataset in ['TOF', 'ORBITRAP']:
+for dataset in ['TOF']:  # ['TOF', 'ORBITRAP']:
     msi_datasets = pd.read_csv(os.path.join(ROOT_DIR, dataset, 'meta.csv'),
                                index_col=0)
     msi_datasets = msi_datasets[msi_datasets['process'] == 'yes']
-    for index in msi_datasets.index:
+    for index in [0]:  # msi_datasets.index:
         run = msi_datasets.loc[index, :]
 
         print('MSI {}/{}: {}'.format(index + 1, msi_datasets.shape[0],
