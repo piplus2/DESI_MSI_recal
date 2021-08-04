@@ -34,7 +34,7 @@ def make_results_dir(root_dir: str, min_pct: float) -> str:
 set_mpl_params_mod()
 
 ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
-DATASET = 'ORBITRAP'
+DATASET = 'TOF'
 
 if DATASET == 'TOF':
     MIN_PERC = 75.0

@@ -452,7 +452,7 @@ def find_boundary_from_ppm_err(obs_masses, th_masses, max_ppm=5, kde_step=1e-3):
         np.arange(np.min(residuals) - 1e-5, np.max(residuals) + 1e-5, 1e-5)
     kde.fit(residuals)
     resphikde = kde.evaluate(resphi)
-    respeaks, resproperties = find_peaks(resphikde, rel_height=0.99, width=3)
+    respeaks, resproperties = find_peaks(resphikde, rel_height=0.99, width=1)
     maxpeakres = np.argmax(resphikde[respeaks])
     left_pt_res = resproperties['left_ips'][maxpeakres]
     right_pt_res = resproperties['right_ips'][maxpeakres]
@@ -610,7 +610,7 @@ def recal_pixel(x_fit, y_fit, x_pred, transform, max_degree):
     # in_mask, ppm_mask, peak_mass, lo_bound, hi_bound = \
     #     find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
 
-    bias, in_mask, lo_bound, hi_bound = \
+    in_mask, _, _, lo_bound, hi_bound = \
         find_boundary_from_ppm_err(obs_masses=x_fit, th_masses=y_fit)
 
     if transform == 'sqrt':
