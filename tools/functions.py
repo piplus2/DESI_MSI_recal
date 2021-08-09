@@ -227,18 +227,6 @@ def fit_spline_kde(pixels, match_masses, ref_mass, plot_dir=None):
         if np.var(xmax_kde) == 0:
             mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
         else:
-            # lam = np.logspace(-3, 3, 7)
-            # n_splines = np.arange(5, 25, 5)
-            # comb = np.array(np.meshgrid(lam, n_splines)).T.reshape(-1, 2)
-            # gcv = Parallel(n_jobs=5)(delayed(gam)(xmax_kde.reshape(-1, 1),
-            # ymax_kde.reshape(-1, ), l, int(n)) for (l, n) in zip(comb[:, 0],
-            # comb[:, 1]))
-
-            # mdl = pygam.LinearGAM(pygam.s(0, n_splines=10))
-            # mdl.gridsearch(X=xmax_kde.reshape(-1, 1), y=ymax_kde.reshape(-1, ),
-            #                progress=False)
-
-            # use_gam = False
             s_vals = np.linspace(0.1, 0.9, 9)
             mse = []
             for s_ in s_vals:
@@ -255,23 +243,33 @@ def fit_spline_kde(pixels, match_masses, ref_mass, plot_dir=None):
 
     # Plot
     if plot_dir is not None:
-        fig = plt.figure(dpi=150, figsize=(4, 3))
+        from mpl_toolkits.axes_grid1 import make_axes_locatable
+        fig = plt.figure(dpi=300, figsize=(4, 3))
         ax = fig.add_subplot(111)
+        divider = make_axes_locatable(ax)
+        ax2 = divider.new_horizontal(size="5%", pad=0.05)
+        fig.add_axes(ax2)
         if use_kde:
             xx, yy = np.meshgrid(xyi[:, 0], xyi[:, 1])
-            ax.pcolormesh(xx, yy, z, cmap='viridis', shading='nearest')
+            im = ax.pcolormesh(xx, yy, z, cmap='viridis', shading='nearest')
+            plt.colorbar(im, cax=ax2, label=r'$\hat{f}_{h}$')
+            ax2.yaxis.tick_right()
         ax.scatter(pixels, match_masses - ref_mass, s=3, edgecolor='white',
                    facecolor='none', linewidths=0.5)
         if use_kde:
             ax.scatter(
-                xmax_kde, ymax_kde, s=3, edgecolor='red', facecolor='none',
+                xmax_kde, ymax_kde, s=4, edgecolor='red', facecolor='none',
                 linewidths=0.5)
         ax.scatter(
-            pixels, yhat, s=3, edgecolor='green', facecolor='none',
-            linewidths=0.5)
+            pixels, yhat, s=2, edgecolor='green', facecolor='none',
+            linewidths=0.5, alpha=0.1)
         ax.set_xlim([pixels[0], pixels[-1]])
+        ax.set_xlabel('Pixel order')
+        ax.set_ylabel(r'$M^{\#}$' + ' (m/z)')
+        ax.set_title(str(np.round(ref_mass, 4)) + ' m/z')
         plt.tight_layout()
-        plt.savefig(os.path.join(plot_dir, 'kde_' + str(ref_mass) + '.png'))
+        plt.savefig(os.path.join(plot_dir, 'kde_' + str(ref_mass) + '.pdf'),
+                    format='pdf')
         plt.close()
 
     return yhat, use_kde
@@ -304,6 +302,31 @@ def kde_regress(msiobj, search_results, min_pct, max_disp, plot_dir=None):
             len(np.unique(results[m]['inlier_px'])) / \
             len(msiobj.pixels_indices)
         results[m]['dispersion'] = np.max(2 * mad / (preds + m) * 1e6)
+
+    fig = plt.figure(dpi=300, figsize=(4, 3))
+    ax = fig.add_subplot(111)
+    ax.scatter(search_results[m]['pixel'][~results[m]['is_inlier']],
+               search_results[m]['mz'][~results[m]['is_inlier']] - m,
+               s=3, marker='+', facecolor='grey', linewidths=0.5,
+               label='outlier')
+    ax.scatter(search_results[m]['pixel'][results[m]['is_inlier']],
+               search_results[m]['mz'][results[m]['is_inlier']] - m,
+               s=3, edgecolor='black', facecolor='none', linewidths=0.5,
+               label='inlier')
+    ax.set_yscale('symlog')
+    
+    if use_kde:
+        ax.scatter(
+            xmax_kde, ymax_kde, s=4, edgecolor='red', facecolor='none',
+            linewidths=0.5)
+    ax.scatter(
+        pixels, yhat, s=2, edgecolor='green', facecolor='none',
+        linewidths=0.5, alpha=0.1)
+    ax.set_xlim([pixels[0], pixels[-1]])
+    ax.set_xlabel('Pixel order')
+    ax.set_ylabel(r'$M^{\#}$' + ' (m/z)')
+    ax.set_title(str(np.round(ref_mass, 4)) + ' m/z')
+    plt.tight_layout()
 
     # Remove failed kde models
     if len(failed) > 0:

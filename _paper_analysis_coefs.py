@@ -44,7 +44,7 @@ matplotlib.rcParams.update(params)
 
 
 ROOT_DIR = 'E:\\CALIB_PAPER\\DATA'
-DATASET = 'TOF'
+DATASET = 'ORBITRAP'
 
 meta = pd.read_csv(os.path.join(ROOT_DIR, DATASET, 'meta.csv'), index_col=0)
 meta = meta[meta['process'] == 'yes']
@@ -62,8 +62,14 @@ for i, index in enumerate(meta.index):
     all_coefs = all_coefs.append(coefs)
     del coefs
 
-for i in range(6):
-    all_coefs[['beta_' + str(i), 'dataset']].to_csv(os.path.join(ROOT_DIR, DATASET, 'all_coefs_beta_' + str(i) + '.csv'))
+# Save data for GraphPad
+for i in range(all_coefs.shape[1] - 1):
+    subset = all_coefs[['beta_' + str(i), 'dataset']]
+    subset = subset.pivot(columns='dataset')
+    subset.columns = [x[1] for x in subset.columns]
+    subset.to_csv(
+        os.path.join(ROOT_DIR, DATASET, 'all_coefs_beta_' + str(i) + '.csv'),
+        index=False)
 
 if DATASET == 'TOF':
     for k in range(6):
@@ -83,15 +89,23 @@ plt.tight_layout()
 plt.savefig(os.path.join(ROOT_DIR, DATASET, 'beta0.pdf'), dpi=300, format='pdf')
 plt.close()
 
-fig, (ax1, ax2) = plt.subplots(2, 1, sharex='all')
+fig, (ax1, ax2) = plt.subplots(2, 1, sharex='all', dpi=300, figsize=(8, 6))
+sns.boxplot(
+    x='dataset', y='value', hue='variable', showfliers=False,
+    data=all_coefs.melt(id_vars='dataset'), ax=ax1)
+sns.boxplot(
+    x='dataset', y='value', hue='variable', showfliers=False,
+    data=all_coefs.melt(id_vars='dataset'), ax=ax2)
+
 # plot the same data on both axes
-sns.boxplot(x='dataset', y='beta_1', data=all_coefs, ax=ax1)
-sns.boxplot(x='dataset', y='beta_1', data=all_coefs, ax=ax2)
+# sns.boxplot(x='dataset', y='beta_1', data=all_coefs, ax=ax1)
+# sns.boxplot(x='dataset', y='beta_1', data=all_coefs, ax=ax2)
 
 # zoom-in / limit the view to different portions of the data
-ax1.set_yscale('symlog')
-ax1.set_ylim(1-2e-4, 1+3e-4)  # outliers only
-ax2.set_ylim(0.9975, 0.9977)  # most of the data
+# ax1.set_yscale('symlog')
+ax1.set_ylim(1-15e-5, 1+2e-4)  # outliers only
+ax2.set_ylim(-0.00085, 0.0009)  # most of the data
+# ax2.set_yscale('symlog')
 
 # hide the spines between ax and ax2
 ax1.spines.bottom.set_visible(False)
@@ -109,7 +123,7 @@ ax2.plot([0, 1], [1, 1], transform=ax2.transAxes, **kwargs)
 ax1.set_xlabel('')
 ax1.set_ylabel('')
 plt.setp(ax2.get_xticklabels(), rotation=45, ha='right')
-ax2.set_ylabel(r'$\beta_{1}$')
+ax2.set_ylabel(r'$\beta$')
 plt.tight_layout()
 plt.savefig(os.path.join(ROOT_DIR, DATASET, 'beta1.pdf'), dpi=300, format='pdf')
 plt.close()

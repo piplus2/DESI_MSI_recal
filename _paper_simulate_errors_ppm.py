@@ -40,8 +40,12 @@ def slope_to_ppm(b1, d):
 set_mpl_params_mod()
 
 N_REP = 1000
-N_TRUE = 500
-N_NOISE = 200
+# N_TRUE = 100
+# N_NOISE = 100
+
+N_TRUE = 30
+N_NOISE = 100
+
 
 dataset = 'ORBITRAP'
 
@@ -115,43 +119,59 @@ pd.DataFrame(data=med_err, columns=means).to_csv(
     'E:/CALIB_PAPER/simulated_errors_ppm_' + dataset + '.csv')
 
 
-# fig, ax = plt.subplots(1, 3, dpi=300, figsize=(12, 3))
-#
-# # beta1hat = slope_from_ppm(ppm_mean, dataset)
-# # beta1_min = slope_from_ppm(np.min(ppm_err), dataset)
-# # beta1_max = slope_from_ppm(np.max(ppm_err), dataset)
-#
-# ax[0].hist(ppm_err, bins=30)
-# ax[0].set_xlabel(r'$\delta$' + ' (ppm)')
-# ax[0].set_title('Simulated true mass errors (ppm)')
-#
-# ax[1].scatter(
-#     mobs[mass_mask], mth[mass_mask] - mobs[mass_mask], c='green',
-#     label='selected', s=2)
-# ax[1].scatter(
-#     mobs[~mass_mask], mth[~mass_mask] - mobs[~mass_mask], c='red',
-#     label='filtered', s=2)
-# # ax[1].plot(
-# #     mobs_true, mobs_true * (beta1hat - 1), ls='dashed', c='black', lw=1)
-# # ax[1].plot(
-# #     mobs_true, mobs_true * (beta1_min - 1), ls='dashed', c='black',
-# #     lw=1)
-# # ax[1].plot(
-# #     mobs_true, mobs_true * (beta1_max - 1), ls='dashed', c='black',
-# #     lw=1)
-#
-# ax[1].set_xlabel(r'$M^{\#}$' + ' (m/z)')
-# ax[1].set_ylabel(r'$M - M^{\#}$' + ' (m/z)')
-# ax[1].legend()
-# ax[1].set_title('Filtered peaks')
-#
+fig, ax = plt.subplots(1, 3, dpi=300, figsize=(12, 3))
+
+beta1hat = 1 / (1 - ppm_mean * 1e-6)
+beta1_min = 1 / (1 - np.min(ppm_err) * 1e-6)
+beta1_max = 1 / (1 - np.max(ppm_err) * 1e-6)
+
+ax[0].hist(ppm_err, bins=30)
+ax[0].set_xlabel(r'$\delta$' + ' (ppm)')
+ax[0].set_title('Simulated true mass errors (ppm)')
+
+# Plot noise points
+ax[1].scatter(mobs_noise, mth_noise - mobs_noise, c='gray', marker='+',
+              label='noise', s=3, linewidth=0.5)
+# Plot true points
+ax[1].scatter(
+    mobs_true[mass_mask[:N_TRUE]],
+    mth_true[mass_mask[:N_TRUE]] - mobs_true[mass_mask[:N_TRUE]], c='green',
+    label='selected', s=2)
+ax[1].scatter(
+    mobs_true[~mass_mask[:N_TRUE]],
+    mth_true[~mass_mask[:N_TRUE]] - mobs_true[~mass_mask[:N_TRUE]], c='red',
+    label='filtered', s=2)
+xline = np.linspace(np.min(mobs_true), np.max(mobs_true), 100)
+ax[1].plot(
+    xline, xline * (beta1hat - 1), ls='dashed', c='black', lw=1)
+ax[1].plot(
+    xline, xline * (beta1_min - 1), ls='dashed', c='black',
+    lw=1)
+ax[1].plot(
+    xline, xline * (beta1_max - 1), ls='dashed', c='black',
+    lw=1)
+
+ax[1].set_xlabel(r'$M^{\#}$' + ' (m/z)')
+ax[1].set_ylabel(r'$M - M^{\#}$' + ' (m/z)')
+ax[1].legend()
+ax[1].set_title('Filtered masses')
+
+ax[2].scatter(
+    mobs_true[mass_mask[:N_TRUE]],
+    mth_true[mass_mask[:N_TRUE]] - preds[mass_mask[:N_TRUE]], c='green',
+    label='selected', s=1)
+ax[2].scatter(
+    mobs_true[~mass_mask[:N_TRUE]],
+    mth_true[~mass_mask[:N_TRUE]] - preds[~mass_mask[:N_TRUE]], c='red',
+    label='filtered', s=1)
+ax[2].legend()
+
 # ax[2].scatter(
-#     np.sqrt(mobs_true), np.sqrt(mth_true) -
-#     mdl.predict(np.sqrt(mobs_true).reshape(-1, 1)).ravel(),
-#     c=mass_mask[:N_TRUE], cmap='Set1', s=1)
-# ax[2].set_xlabel(r'$M^{\#}_{true}$' + ' (m/z)')
-# ax[2].set_ylabel('Residuals')
-#
-# plt.tight_layout()
-# plt.savefig(
-#     'E:/CALIB_PAPER/New folder/example_sim_ppm.tif', format='tif')
+#     mobs_true, mth_true - preds, c=mass_mask[:N_TRUE], cmap='Set1', s=1)
+ax[2].set_xlabel(r'$M^{\#}_{true}$' + ' (m/z)')
+ax[2].set_ylabel('Residuals (m/z)')
+ax[2].set_title('Residuals true matches')
+
+plt.tight_layout()
+plt.savefig(
+    'E:/CALIB_PAPER/New folder/example_sim_ppm.tif', format='tif')

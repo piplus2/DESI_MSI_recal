@@ -34,7 +34,7 @@ def make_results_dir(root_dir: str, min_pct: float) -> str:
 set_mpl_params_mod()
 
 ROOT_DIR = os.path.join('E:', 'CALIB_PAPER', 'DATA')
-DATASET = 'TOF'
+DATASET = 'ORBITRAP'
 
 if DATASET == 'TOF':
     MIN_PERC = 75.0
@@ -116,7 +116,7 @@ for index in [10, 16]:  # range(msi_datasets.shape[0]):
         del_all_files_dir(kde_plot_dir)
     kde_results = \
         kde_regress(msiobj=msi, search_results=matches, min_pct=MIN_PERC,
-                    max_disp=MAX_DISPERSION, plot_dir=None)
+                    max_disp=MAX_DISPERSION, plot_dir=kde_plot_dir)
     runtime[index, 1] = timeit.default_timer() - start_time
 
     sel_refs = np.asarray([m for m in kde_results.keys()], dtype=float)
