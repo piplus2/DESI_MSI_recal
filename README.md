@@ -45,14 +45,29 @@ roi:    path of sample ROI mask CSV file. If set equal to 'full', the entire
         
 ---- params ----
 
--h, --help:                 show help message
---analyzer {tof, orbitrap}: MS analyzer. It can be either 'tof' or 'orbitrap'
---ion-mode {pos, neg}:      DESI polarization mode. It can be either 'neg' or   
-                            'pos'
---search-tol <value>:       search tolerance in ppm. If set to 'auto', default  
-                            values are used (TOF=100 ppm, Orbitrap=20 ppm)
---min-coverage <value>:     minimum coverage percentage to retain a candidate  
-                            reference mass (default=75)                       
+-h, --help            show this help message and exit
+--analyzer {tof,orbitrap}
+                    MS analyzer.
+--ion-mode {pos,neg}  ES Polarization mode.
+--search-tol SEARCH_TOL
+                    Search tolerance expressed in ppm. If 'auto', default
+                    value for MS analyzer is used.
+--kde-bw KDE_BW       KDE bandwidth. It can be numeric or 'silverman'
+                    (default='silverman').
+--max-res-smooth SMOOTH
+                    Smoothing parameter for spline. It represents the
+                    maximum sum of squared errors. If set to 'cv', it is
+                    determined by cross-validation (default = 'cv').
+--max-dispersion MAX_DISP
+                    Max dispersion in ppm for outlier detection
+                    (default=10.0).
+--min-coverage MIN_COVERAGE
+                    Min. coverage percentage for hits filtering
+                    (default=75.0).
+--plot-ref-imgs     Save the intensity images of the reference masses. It
+                    can slow down the process (default=False).
+--parallel            Use multithreading.
+                   
 ```
 
 The code saves the images of the candidate reference ions in the subfolder of
