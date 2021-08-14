@@ -34,7 +34,7 @@ opencv~=4.5.0
 python select_roi.py
 ```
 
-![gui](./tools/resources/Screenshot%202021-07-15%20110104.png)
+![gui](./tools/resources/screenshot.png)
 
 The imzML file is loaded using the `File -> Open raw peaks ...` button
 (shortcut = `CTRL + O`).
