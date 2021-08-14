@@ -12,9 +12,7 @@ https://www.biorxiv.org/content/10.1101/2021.03.29.437482v1
 ### Required packages
 
 ```
-numpy~=1.19.5
 pandas~=1.2.0
-pillow~=8.1.0
 scikit-learn~=0.24.0
 pyimzml~=1.4.1
 tqdm~=4.55.1
@@ -27,6 +25,8 @@ scipy~=1.6.0
 scikit-image~=0.18.1
 pyqt~=5.12.3
 opencv~=4.5.0
+numpy~=1.21.1
+pillow~=8.3.1
 ```
 
 ## How to run:
