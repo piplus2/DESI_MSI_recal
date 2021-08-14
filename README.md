@@ -9,7 +9,7 @@ imaging using endogenous reference ions. _bioRxiv_.
 https://www.biorxiv.org/content/10.1101/2021.03.29.437482v1
 
 
-### Required packages
+### Required packages (tested on Python 3.8-3.9)
 
 ```
 pandas~=1.2.0
