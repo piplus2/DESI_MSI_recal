@@ -291,8 +291,8 @@ class RangeColorBar(QWidget):
 
         cols = ['#ff0000', '#00ff00', '#0000ff']
         for ch in range(self.__nch):
-            m_ = minmax[0][0]
-            M_ = minmax[0][1]
+            m_ = minmax[ch][0]
+            M_ = minmax[ch][1]
             self.colorbar[ch].setMin(m_)
             self.colorbar[ch].setMax(M_)
             self.colorbar[ch].setRange(m_, M_)

@@ -315,11 +315,11 @@ class MainWindow(QMainWindow):
         self.initToolbar()
         self.initUI()
 
-    def closeEvent(self, event) -> None:
-        if self.thread is not None:
-            if self.thread.threadactive:
-                self.thread.stop()
-        self.deleteLater()
+    # def closeEvent(self, event) -> None:
+    #     if self.thread is not None:
+    #         if self.thread.threadactive:
+    #             self.thread.stop()
+    #     self.deleteLater()
 
     def init_actions(self):
         self.loadAction.setShortcut("CTRL+O")

@@ -5,7 +5,7 @@
 #   "MIT License Agreement".
 #   Please see the LICENSE file that should have been included as part of this
 #   package.
-
+import multiprocessing
 
 import numpy as np
 from .msi import MSI
@@ -21,6 +21,17 @@ class MSBinner:
         self.__bin_cmz = None
 
     def bin(self, msobj: MSI) -> np.ndarray:
+
+        def __thread(msp_: np.ndarray, cmz_, ndec):
+            bin_yi = np.zeros(len(cmz_))
+            mz__ = np.round(msp_[:, 0], decimals=ndec)
+            u, s = np.unique(mz__, return_index=True)
+            yi_ = np.split(msp_[:, 1], s[1:])
+            # Sum intensities same M/Z
+            yi_ = [np.sum(x) for x in yi_]
+            bin_yi[np.isin(cmz_, u)] = np.asarray(yi_)
+            return bin_yi
+
         list_msx = msobj.msdata
         # Extract the full m/z vector and bin it at the digit level
         print("Binning M/Z values with bin size = {} M/Z ...".format(
@@ -42,9 +53,13 @@ class MSBinner:
         # Bin the spectra intensities: skip empty objects
         print("Binning intensities ...")
         tempdir = tempfile.mkdtemp()
-        bin_yi_list = Parallel(n_jobs=-1, temp_folder=tempdir)(
-            delayed(self.thread)(msp)
-            for msp in list_msx)
+        bin_yi_list = \
+            Parallel(n_jobs=-1,
+                     temp_folder=tempdir)(
+                delayed(__thread)(msp, self.__bin_cmz, self.__decimals)
+                for msp in list_msx)
+        # bin_yi_list = [__thread(msp, self.__bin_cmz, self.__decimals)
+        #                for msp in list_msx]
 
         binned_intensities = np.zeros(
             (np.prod(msobj.dim_xy), len(self.__bin_cmz)))
@@ -56,15 +71,3 @@ class MSBinner:
         memory.clear(warn=False)
 
         return binned_intensities
-
-    def thread(self, msp: np.ndarray) -> np.ndarray:
-        bin_yi = np.zeros(len(self.__bin_cmz))
-
-        mz_ = np.round(msp[:, 0], decimals=self.__decimals)
-        umz, s = np.unique(mz_, return_index=True)
-        yi_ = np.split(msp[:, 1], s[1:])
-        # Sum intensities same M/Z
-        yi_ = [np.sum(x) for x in yi_]
-        bin_yi[np.isin(self.__bin_cmz, umz)] = np.asarray(yi_)
-
-        return bin_yi
