@@ -5,13 +5,14 @@
 #   "MIT License Agreement".
 #   Please see the LICENSE file that should have been included as part of this
 #   package.
-import multiprocessing
+
+import tempfile
 
 import numpy as np
-from .msi import MSI
-from joblib import Parallel, delayed
 from joblib import Memory
-import tempfile
+from joblib import Parallel, delayed
+
+from .msi import MSI
 
 
 class MSBinner:

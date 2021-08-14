@@ -6,6 +6,26 @@ Inglese, P., Huang, H., Wu, V., Lewis, M.R. and Takats, Z., 2021.
 Mass recalibration for desorption electrospray ionization mass spectrometry 
 imaging using endogenous reference ions. _bioRxiv_.
 
+### Required packages
+
+```
+numpy~=1.19.5
+pandas~=1.2.0
+pillow~=8.1.0
+scikit-learn~=0.24.0
+pyimzml~=1.4.1
+tqdm~=4.55.1
+joblib~=1.0.0
+matplotlib~=3.3.3
+pygam~=0.8.0
+statsmodels~=0.12.1
+kdepy~=1.1.0
+scipy~=1.6.0
+scikit-image~=0.18.1
+pyqt~=5.12.3
+opencv~=4.5.0
+```
+
 ## How to run:
 
 ### ROI selection
