@@ -7,26 +7,26 @@
 #   package.
 
 
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PIL import Image, ImageDraw
-
 from typing import Union, List
+
+import cv2
 import numpy as np
+from PIL import Image, ImageDraw
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 from sklearn.preprocessing import minmax_scale
 
-from tools.dbl_slider import QRangeSlider
 from tools._colpicker import MplColorHelper
+from tools.dbl_slider import QRangeSlider
 
 
 def data_to_qpixmap(img, set_alpha: bool = True):
-
     def _scale(values):
-        if np.var(values) == 0:
-            values = np.zeros(values.shape, dtype=np.uint8)
-        else:
+        if np.min(values) < 0:
             values = (minmax_scale(values, axis=0) * 255).astype(np.uint8)
+        else:
+            values = (values / np.max(values) * 255).astype(np.uint8)
         return values
 
     if set_alpha:
@@ -85,6 +85,7 @@ class SelectableImage(QWidget):
         self.image = None
         self.last_point = None
         self.roi = None
+        self.scroll = QScrollArea()
         self.temp_roi = None
         self.temp_contour = []
 
@@ -95,6 +96,7 @@ class SelectableImage(QWidget):
         painter.setPen(QPen(self.draw_color, 1, Qt.SolidLine))
         painter.drawLine(pos, self.last_point)
         painter.end()
+        self.imageWidget.update()
         self.update()
 
     def __empty_mask(self):
@@ -140,27 +142,45 @@ class SelectableImage(QWidget):
 
     def initUI(self):
         self.imageWidget = QLabel(self)
-        self.imageWidget.setStyleSheet('border:1px solid rgb(0, 0, 0);')
+        # self.imageWidget.setStyleSheet('border:1px solid rgb(0, 0, 0);')
+
+        self.scroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scroll.setWidgetResizable(False)
+        self.scroll.setWidget(self.imageWidget)
 
         layout = QVBoxLayout(self)
-        layout.addWidget(QLabel(self.__title), 10)
-        layout.addWidget(self.imageWidget, 90)
-        layout.addStretch()
+        # layout.addWidget(QLabel(self.__title))
+        layout.addWidget(self.scroll)
+        # layout.addStretch()
+        self.setLayout(layout)
 
     def mouseMoveEvent(self, e) -> None:
+        hscroll = self.scroll.horizontalScrollBar().value()
+        vscroll = self.scroll.verticalScrollBar().value()
+        mouse_pos = e.pos()
+        pos_x = mouse_pos.x() + hscroll
+        pos_y = mouse_pos.y() + vscroll
+
         if self.last_point is None:
-            self.last_point = self.imageWidget.mapFromParent(e.pos())
+            self.last_point = self.scroll.mapFromParent(QPoint(pos_x, pos_y))
 
         if self.drawing:
-            map_pos = self.imageWidget.mapFromParent(e.pos())
+            map_pos = self.scroll.mapFromParent(QPoint(pos_x, pos_y))
             self.__draw_line(map_pos)
             self.last_point = map_pos
             self.temp_contour.append([map_pos.x(), map_pos.y()])
 
     def mousePressEvent(self, e):
         if e.button() == Qt.LeftButton:
+            hscroll = self.scroll.horizontalScrollBar().value()
+            vscroll = self.scroll.verticalScrollBar().value()
+            mouse_pos = e.pos()
+            pos_x = mouse_pos.x() + hscroll
+            pos_y = mouse_pos.y() + vscroll
+
             self.drawing = True
-            self.last_point = self.imageWidget.mapFromParent(e.pos())
+            self.last_point = self.scroll.mapFromParent(QPoint(pos_x, pos_y))
 
     def mouseReleaseEvent(self, event):
         if event.button == Qt.LeftButton:
@@ -173,23 +193,21 @@ class SelectableImage(QWidget):
         self.imageWidget.update()
 
     def plot_image_and_mask_overlay(self):
-        if self.roi is not None:
-            mask_img = self.__mask_to_rgb()
-            mask_qpixmap = data_to_qpixmap(mask_img)
-            mode = QPainter.CompositionMode_SourceOver
-            self.imageWidget.clear()
+        mask_img = self.__mask_to_rgb()
+        mask_qpixmap = data_to_qpixmap(mask_img)
 
-            pixmap = QPixmap(self.image.size())
-            pixmap.fill(Qt.transparent)
-            painter = QPainter(pixmap)
-            painter.drawPixmap(0, 0, self.image)
-            painter.setCompositionMode(mode)
-            painter.setOpacity(0.6)
-            painter.drawPixmap(0, 0, mask_qpixmap)
-            painter.end()
-            self.imageWidget.setPixmap(pixmap)
-        else:
-            self.plot_image()
+        mode = QPainter.CompositionMode_SourceOver
+        self.imageWidget.clear()
+
+        pixmap = QPixmap(self.image.size())
+        pixmap.fill(Qt.transparent)
+        painter = QPainter(pixmap)
+        painter.drawPixmap(0, 0, self.image)
+        painter.setCompositionMode(mode)
+        painter.setOpacity(0.6)
+        painter.drawPixmap(0, 0, mask_qpixmap)
+        painter.end()
+        self.imageWidget.setPixmap(pixmap)
 
     def reset_mask(self):
         if self.image is None:
@@ -210,6 +228,20 @@ class SelectableImage(QWidget):
 
     def set_draw_color(self, color):
         self.draw_color = QColor(color)
+
+    def zoom(self, factor):
+        width = self.image.width()
+        height = self.image.height()
+        scaled_pixmap = self.image.scaled(int(factor * width),
+                                          int(factor * height))
+        scaled_mask = cv2.resize(
+            self.roi, (int(scaled_pixmap.width()), int(scaled_pixmap.height())),
+            interpolation=cv2.INTER_NEAREST)
+        scaled_mask = np.floor(scaled_mask).astype(int)
+        self.image = scaled_pixmap
+        self.roi = scaled_mask
+        self.imageWidget.setFixedSize(self.image.size())
+        self.plot_image_and_mask_overlay()
 
 
 class RangeColorBar(QWidget):
@@ -259,8 +291,8 @@ class RangeColorBar(QWidget):
 
         cols = ['#ff0000', '#00ff00', '#0000ff']
         for ch in range(self.__nch):
-            m_ = minmax[ch][0]
-            M_ = minmax[ch][1]
+            m_ = minmax[0][0]
+            M_ = minmax[0][1]
             self.colorbar[ch].setMin(m_)
             self.colorbar[ch].setMax(M_)
             self.colorbar[ch].setRange(m_, M_)
@@ -287,9 +319,8 @@ class ImageWithColorbar(QWidget):
         self.rangebar = RangeColorBar(parent=self, bar_title=colorbar_title)
 
         lay = QVBoxLayout(self)
-        lay.addWidget(self.canvas, 75)
-        lay.addWidget(self.rangebar, 25)
-        lay.addStretch()
+        lay.addWidget(self.canvas, 90)
+        lay.addWidget(self.rangebar, 10)
 
     def plot_data(self, data):
         self.data = data
@@ -331,4 +362,4 @@ class ImageWithColorbar(QWidget):
             data_[data_ > e_] = e_
 
         self.canvas.image = data_to_qpixmap(data_)
-        self.canvas.plot_image_and_mask_overlay()
+        self.canvas.plot_image()

@@ -160,6 +160,7 @@ class LoadPipeline(QThread):
 
     def run(self) -> None:
         scores = None
+        intmat = None
         if self.threadactive:
             self.currsig.emit('Loading MS data ...')
             # Ion mode and analyzer are irrelevant
@@ -224,14 +225,6 @@ class LabelsBox(QWidget):
         self.btn_sm = QRadioButton('Sample')
         self.btn_sm.toggled.connect(self.emit_value)
 
-        # self.btn_bg_col = QPushButton()
-        # self.btn_bg_col.setFixedSize(24, 24)
-        # self.btn_bg_col.setStyleSheet("background-color: red")
-        #
-        # self.btn_sm_col = QPushButton()
-        # self.btn_sm_col.setFixedSize(24, 24)
-        # self.btn_sm_col.setStyleSheet("background-color: blue")
-
         internal_widget = QGroupBox('Labels')
         layout_labels = QVBoxLayout(internal_widget)
         layout_labels.addWidget(self.btn_bg)
@@ -269,6 +262,34 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
 
+        # Actions --------------------------------------------------------------
+        self.predictAction = QAction(
+            QIcon(':neural.svg'), 'Predict regions', self)
+        self.deleteAction = QAction(
+            QIcon(':delete.svg'), 'Delete regions', self)
+        self.eraseAction = QAction(QIcon(':eraser.svg'), 'Erase contour', self)
+        self.exitAction = QAction(QIcon(':exit.svg'), 'Exit', self)
+        self.loadAction = QAction(
+            QIcon(':file-open.svg'), "Open raw peaks ...", self)
+
+        # Buttons --------------------------------------------------------------
+        self.btnSave = QPushButton('Save...')
+        self.btnProcess = QPushButton('Process...')
+        self.btnReset = QPushButton('Reset')
+        self.btnDel = QPushButton('Del selection')
+        self.btnAdd = QPushButton('Add selection')
+        self.btnZoomIn = QPushButton('Zoom in')
+        self.btnZoomOut = QPushButton('Zoom out')
+
+        # Others ---------------------------------------------------------------
+        self.boxMinRoi = QSpinBox()
+        self.labels_widget = LabelsBox(self)
+        self.pbar_ = QProgressBar(self)
+        self.status_bar = QStatusBar()
+        self.tools_toolbar = QToolBar('Tools')
+        self.file_toolbar = QToolBar('File')
+
+        # Main -----------------------------------------------------------------
         self.__height = 768
         self.__title = 'DESI-MSI: select ROI tool'
         self.__width = 1024
@@ -287,28 +308,6 @@ class MainWindow(QMainWindow):
         self.msi_dim_xy = None
         self.save_dir = None
         self.thread = None
-
-        # UI elements
-        self.status_bar = QStatusBar()
-        self.file_toolbar = QToolBar('File')
-        self.tools_toolbar = QToolBar('Tools')
-        self.loadAction = QAction(QIcon(':file-open.svg'), "Open raw peaks ...",
-                                  self)
-        self.exitAction = QAction(QIcon(':exit.svg'), 'Exit', self)
-        # self.drawAction = QAction(QIcon(':edit.svg'), 'Draw contour', self)
-        self.eraseAction = QAction(QIcon(':eraser.svg'), 'Erase contour', self)
-        self.deleteAction = QAction(QIcon(':delete.svg'), 'Delete regions',
-                                    self)
-        self.predictAction = QAction(
-            QIcon(':neural.svg'), 'Predict regions', self)
-        self.labels_widget = LabelsBox(self)
-        self.boxMinRoi = QSpinBox()
-        self.btnAdd = QPushButton('Add selection')
-        self.btnDel = QPushButton('Del selection')
-        self.btnReset = QPushButton('Reset')
-        self.btnProcess = QPushButton('Process...')
-        self.btnSave = QPushButton('Save...')
-        self.preview = QLabel()
 
         self.init_actions()
 
@@ -331,9 +330,6 @@ class MainWindow(QMainWindow):
         self.exitAction.setStatusTip('Exit application')
         self.exitAction.triggered.connect(qApp.quit)
 
-        # self.drawAction.setShortcut('Ctrl+D')
-        # self.drawAction.setStatusTip('Draw region contour')
-
         self.eraseAction.setShortcut('Ctrl+E')
         self.eraseAction.setStatusTip('Erase current region contour')
 
@@ -353,7 +349,6 @@ class MainWindow(QMainWindow):
         fileMenu.addAction(self.exitAction)
 
         toolsMenu = mainMenu.addMenu('Tools')
-        # toolsMenu.addAction(self.drawAction)
         toolsMenu.addAction(self.eraseAction)
         toolsMenu.addAction(self.deleteAction)
         toolsMenu.addSeparator()
@@ -370,7 +365,6 @@ class MainWindow(QMainWindow):
         self.file_toolbar.addAction(self.exitAction)
 
         self.tools_toolbar.setIconSize(QSize(16, 16))
-        # self.tools_toolbar.addWidget(btn_draw)
         self.tools_toolbar.addAction(self.eraseAction)
         self.tools_toolbar.addAction(self.deleteAction)
         self.tools_toolbar.addAction(self.predictAction)
@@ -408,19 +402,17 @@ class MainWindow(QMainWindow):
         self.btnReset.clicked.connect(self.reset_selection)
         self.btnProcess.clicked.connect(self.process_data)
         self.btnSave.clicked.connect(self.save_mask)
-
-        # group_preview = QGroupBox('Preview')
-        # layout_preview = QVBoxLayout(group_preview)
-        # self.preview.setFixedSize(100, 100)
-        # self.preview.setStyleSheet('border:1px solid rgb(0, 0, 0);')
-        # layout_preview.addWidget(self.preview)
-        # layout_preview.setAlignment(Qt.AlignCenter)
+        self.btnZoomIn.clicked.connect(self.zoomin)
+        self.btnZoomOut.clicked.connect(self.zoomout)
 
         self.resetInterface(enable=False)
 
         vspacer = QSpacerItem(QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         layout_panel = QVBoxLayout(self.interfaceWidget)
+        layout_panel.addWidget(self.btnZoomIn)
+        layout_panel.addWidget(self.btnZoomOut)
+        layout_panel.addItem(vspacer)
         layout_panel.addWidget(self.labels_widget)
         layout_panel.addWidget(self.btnAdd)
         layout_panel.addItem(vspacer)
@@ -431,7 +423,6 @@ class MainWindow(QMainWindow):
         layout_panel.addWidget(self.btnProcess)
         layout_panel.addWidget(self.btnSave)
         layout_panel.addStretch()
-        # layout_panel.addWidget(group_preview)
 
         layout = QGridLayout(self.mainWidget)
         layout.addWidget(self.imageWidget, 0, 0)
@@ -450,6 +441,8 @@ class MainWindow(QMainWindow):
         self.btnProcess.setEnabled(enable)
         self.btnSave.setEnabled(enable)
         self.boxMinRoi.setEnabled(enable)
+        self.btnZoomIn.setEnabled(enable)
+        self.btnZoomOut.setEnabled(enable)
 
     def change_spinner_text(self, msg):
         self.busy_spinner.label_operation.setText(msg)
@@ -531,6 +524,12 @@ class MainWindow(QMainWindow):
         self.imageWidget.canvas.reset_mask()
         self.imageWidget.canvas.reset_plot()
 
+    def zoomin(self):
+        self.imageWidget.canvas.zoom(2)
+
+    def zoomout(self):
+        self.imageWidget.canvas.zoom(0.5)
+
     def get_mask(self):
         return self.imageWidget.canvas.roi
 
@@ -552,6 +551,9 @@ class MainWindow(QMainWindow):
             self.showDialog('No ROI selected')
         elif np.all(self.imageWidget.canvas.roi != 0):
             self.showDialog('All pixels already assigned.')
+        elif len(np.unique(self.imageWidget.canvas.roi[
+                               self.imageWidget.canvas.roi != 0])) == 1:
+            self.showDialog('Only one class annotated.')
         else:
             # Do SVM
             self.busy_spinner = BusySpinner(parent=self)
@@ -584,11 +586,11 @@ class MainWindow(QMainWindow):
             self.busy_spinner.move(p)
 
             # Label the separated ROIs
-            lbl_roi = measure.label(self.imageWidget.canvas.roi != 1)
+            bin_roi = np.asarray(self.imageWidget.canvas.roi != 1, dtype=int)
 
             # Save the final ROI
             h, w, ch = self.rgb_im.shape
-            save_mask = cv2.resize(lbl_roi, (w, h),
+            save_mask = cv2.resize(bin_roi, (w, h),
                                    interpolation=cv2.INTER_NEAREST)
             save_mask = np.ceil(save_mask).reshape(h, w)
 
