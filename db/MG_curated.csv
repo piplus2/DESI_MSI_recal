@@ -1,15 +1,43 @@
 ,MASS,COMMON_NAME,FORMULA
-0,274.2144,-,C15H30O4
-1,330.277,MG(0:0/16:0/0:0);MG(16:0/0:0/0:0);MG(16:0/0:0/0:0)[rac],C19H38O4
-2,344.2927,MG(17:0/0:0/0:0)[rac],C20H40O4
-3,354.277,"2-linoleoyl-sn-glycerol;MG(18:2(9Z,12Z)/0:0/0:0)[rac]",C21H38O4
-4,356.2927,MG(0:0/18:1(9Z)/0:0);MG(18:1(11E)/0:0/0:0)[rac];MG(18:1(9Z)/0:0/0:0)[rac],C21H40O4
-5,358.3083,MG(18:0/0:0/0:0)[rac],C21H42O4
-6,376.2614,"MG(0:0/20:5(5Z,8Z,11Z,14Z,17Z)/0:0)",C23H36O4
-7,378.277,"1-Juniperoyl glycerol;1-arachidonoyl-sn-glycerol;2-Juniperoyl glycerol;MG(0:0/20:4(5Z,8Z,11Z,14Z)/0:0)",C23H38O4
-8,380.2927,Sciadonoyl-2-glycerol,C23H40O4
-9,383.3079,2-arachidonoyl glycerol-d5,C23H33D5O4
-10,386.3396,MG(20:0/0:0/0:0)[rac],C23H46O4
-11,394.2719,12-HETE-G;15-HETE-G,C23H38O5
-12,402.277,"MG(0:0/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)",C25H38O4
-13,404.2927,"MG(0:0/22:5(7Z,10Z,13Z,16Z,19Z)/0:0)",C25H40O4
+0,176.1412,1-Hexylglycerol;2-Hexylglycerol,C9H20O3
+1,204.1725,1-Octylglycerol;2-Octylglycerol,C11H24O3
+2,250.1569,Fecapentaene-12,C15H22O3
+3,274.2144,-,C15H30O4
+4,278.1882,Fecapentaene-14,C17H26O3
+5,302.2457,1-O-(2R-hydroxy-4Z-tetradecenyl)-sn-glycerol,C17H34O4
+6,304.2614,1-O-(2R-hydroxy-tetradecyl)-sn-glycerol,C17H36O4
+7,316.2614,1-O-(2R-hydroxy-4Z-pentadecenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-tetradecenyl)-sn-glycerol,C18H36O4
+8,316.2977,1-Hexadecylglycerol,C19H40O3
+9,318.277,1-O-(2R-hydroxy-pentadecyl)-sn-glycerol,C18H38O4
+10,330.277,1-O-(2R-hydroxy-4Z-hexadecenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-pentadecenyl)-sn-glycerol;MG(0:0/16:0/0:0);MG(16:0/0:0/0:0);MG(16:0/0:0/0:0)[rac],C19H38O4
+11,332.2927,1-O-(2R-hydroxy-hexadecyl)-sn-glycerol,C19H40O4
+12,342.3134,1-Oleylglycerol,C21H42O3
+13,344.2927,1-O-(2-methoxy-4-hexadecenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-hexadecenyl)-sn-glycerol;MG(17:0/0:0/0:0)[rac],C20H40O4
+14,344.329,1-Octadecylglycerol,C21H44O3
+15,346.3083,1-O-(2-methoxy-hexadecyl)-sn-glycerol;1-O-(2R-methoxy-hexadecyl)-sn-glycerol,C20H42O4
+16,354.277,"2-linoleoyl-sn-glycerol;MG(18:2(9Z,12Z)/0:0/0:0)[rac]",C21H38O4
+17,356.2927,MG(0:0/18:1(9Z)/0:0);MG(18:1(11E)/0:0/0:0)[rac];MG(18:1(9Z)/0:0/0:0)[rac],C21H40O4
+18,358.3083,1-O-(2R-hydroxy-4Z-octadecenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-heptadecenyl)-sn-glycerol;MG(18:0/0:0/0:0)[rac],C21H42O4
+19,360.324,1-O-(2R-hydroxy-octadecyl)-sn-glycerol,C21H44O4
+20,362.2821,"1-O-(1E,3E,5E,7E,9E-eicosapentenyl)-sn-glycerol;2-(8-[5]-ladderane-octanyl)-sn-glycerol",C23H38O3
+21,364.2977,-;2-(8-[1]-ladderane-octanyl)-sn-glycerol;Noladin Ether,C23H40O3
+22,372.324,1-O-(2R-hydroxy-4Z-nonadecenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-octadecenyl)-sn-glycerol,C22H44O4
+23,372.3603,1-eicosanylglycerol,C23H48O3
+24,374.3396,1-O-(2R-hydroxy-nonadecyl)-sn-glycerol,C22H46O4
+25,376.2614,"MG(0:0/20:5(5Z,8Z,11Z,14Z,17Z)/0:0)",C23H36O4
+26,376.2977,"1-O-(1E,3E,5E,7E,9E-heneicosapentenyl)-sn-glycerol",C24H40O3
+27,378.277,"1-Juniperoyl glycerol;1-arachidonoyl-sn-glycerol;2-Juniperoyl glycerol;MG(0:0/20:4(5Z,8Z,11Z,14Z)/0:0)",C23H38O4
+28,380.2927,Sciadonoyl-2-glycerol,C23H40O4
+29,383.3079,2-arachidonoyl glycerol-d5,C23H33D5O4
+30,386.3396,1-O-(2R-hydroxy-4Z-eicosenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-nonadecenyl)-sn-glycerol;MG(20:0/0:0/0:0)[rac],C23H46O4
+31,388.3553,1-O-(2R-hydroxy-eicosanyl)-sn-glycerol,C23H48O4
+32,394.2719,12-HETE-G;15-HETE-G,C23H38O5
+33,400.3553,1-O-(2R-hydroxy-4Z-heicosenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-eicosenyl)-sn-glycerol,C24H48O4
+34,402.277,"MG(0:0/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)",C25H38O4
+35,402.3709,1-O-(2R-hydroxy-heneicosanyl)-sn-glycerol,C24H50O4
+36,404.2927,"MG(0:0/22:5(7Z,10Z,13Z,16Z,19Z)/0:0)",C25H40O4
+37,414.3709,1-O-(2R-hydroxy-4Z-docosenyl)-sn-glycerol;1-O-(2R-methoxy-4Z-heneicosenyl)-sn-glycerol,C25H50O4
+38,416.3866,1-O-(2R-hydroxy-docosanyl)-sn-glycerol,C25H52O4
+39,418.3083,"1-O-(2R-methoxy-4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenyl)-sn-glycerol",C26H42O4
+40,420.324,"1-O-(2R-methoxy-4Z,7Z,10Z,13Z,16Z-docosapentaenyl)-sn-glycerol",C26H44O4
+41,428.3866,1-O-(2R-methoxy-4Z-docosenyl)-sn-glycerol,C26H52O4

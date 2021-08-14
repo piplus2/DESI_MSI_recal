@@ -10,13 +10,10 @@ import argparse
 import os
 from typing import Dict
 
-import matplotlib.pyplot as plt
 import numpy as np
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from tqdm import tqdm
 
-from tools.functions import gen_ref_list, search_ref_masses, fit_spline_kde, \
-    fit_shift_model, recal_pixel, del_all_files_dir
+from tools.functions import gen_ref_list, search_ref_masses, KDEMassRecal, \
+    del_all_files_dir
 from tools.msi import MSI
 
 
@@ -34,9 +31,27 @@ def __parse_arg():
     parser_.add_argument('--search-tol', default='auto',
                          help='Search tolerance expressed in ppm. If \'auto\', '
                               'default value for MS analyzer is used.')
+    parser_.add_argument('--kde-bw', default='silverman',
+                         help='KDE bandwidth. It can be numeric or '
+                              '\'silverman\' (default=\'silverman\').')
+    parser_.add_argument('--max-res-smooth', default='cv', dest='smooth',
+                         help='Smoothing parameter for spline. It represents '
+                              'the maximum sum of squared errors. If set to '
+                              '\'cv\', it is determined by cross-validation '
+                              '(default = \'cv\').')
+    parser_.add_argument('--max-dispersion', default=10.0, type=float,
+                         help='Max dispersion in ppm for outlier detection '
+                              '(default=10.0).', dest='max_disp')
     parser_.add_argument('--min-coverage', default=75.0, type=float,
                          help='Min. coverage percentage for hits filtering '
                               '(default=75.0).')
+    parser_.add_argument('--plot-ref-imgs', default=False, action='store_true',
+                         dest='plot',
+                         help='Save the intensity images of the reference '
+                              'masses. It can slow down the process '
+                              '(default=False).')
+    parser_.add_argument('--parallel', action='store_true', dest='parallel',
+                         default='false', help='Use multithreading.')
     return parser_
 
 
@@ -47,12 +62,16 @@ def set_params_dict(args_) -> Dict:
         'output': args_.output,
         'roi': args_.roi,
         'analyzer': args_.analyzer,
+        'bw': args_.kde_bw,
         'ion_mode': 'ES-' if args_.ion_mode == 'neg' else 'ES+',
         'max_tol': args_.search_tol if args_.search_tol != 'auto' else
         default_max_tol[args_.analyzer],
         'min_cov': args_.min_coverage,
-        'max_disp': 5.0 if args_.analyzer == 'orbitrap' else 10.0,
+        'max_disp': args_.max_disp,
         'max_degree': 1 if args_.analyzer == 'orbitrap' else 5,
+        'parallel': args_.parallel,
+        'plot': args_.plot,
+        'smooth': args_.smooth,
         'transform': 'none' if args_.analyzer == 'orbitrap' else 'sqrt'
     }
     return params_
@@ -78,13 +97,17 @@ def main():
         msi.del_pixel(list(delpx))
 
     # Creating match images dir
-    plots_dir = os.path.join(
-        os.path.dirname(params['output']), msi.ID + '_recal_imgs')
-    if not os.path.isdir(plots_dir):
-        print('Creating plots dir {} ...'.format(plots_dir))
-        os.makedirs(plots_dir)
+    if params['plot']:
+        plots_dir = os.path.join(
+            os.path.dirname(params['output']), msi.ID + '_recal_imgs')
+        print('Intensity images will be saved in {}'.format(plots_dir))
+        if not os.path.isdir(plots_dir):
+            print('Creating plots dir {} ...'.format(plots_dir))
+            os.makedirs(plots_dir)
+        else:
+            del_all_files_dir(plots_dir)
     else:
-        del_all_files_dir(plots_dir)
+        plots_dir = None
 
     # RECALIBRATION ---------------------------
 
@@ -104,96 +127,16 @@ def main():
     print('Num. lock masses with coverage >= {} % = {}'.format(
         np.round(params['min_cov'], 2), len(matches)))
 
-    inliers = {m: [] for m in matches.keys()}
-    inliers_px = {m: [] for m in matches.keys()}
-    inliers_pct = {m: [] for m in matches.keys()}
-    disp_ppm = {m: [] for m in matches.keys()}
-    residuals = {m: [] for m in matches.keys()}
-
-    for m in tqdm(matches.keys()):
-        shift_preds, use_kde = fit_spline_kde(pixels=matches[m]['pixel'],
-                                              match_masses=matches[m]['mz'],
-                                              ref_mass=m)
-        # Find outliers
-        residuals[m] = matches[m]['mz'] - m - shift_preds
-        mad_resid = 1.4826 * np.median(np.abs(residuals[m]))
-        inliers[m] = np.abs(residuals[m]) <= 2 * mad_resid
-        inliers_px[m] = matches[m]['pixel'][inliers[m]]
-        disp_ppm[m] = np.max(2 * mad_resid / (shift_preds + m) * 1e6)
-        inliers_pct[m] = len(np.unique(inliers_px[m])) / len(msi.pixels_indices)
-
-    # Select by coverage percentage and dispersion
-    sel_refs = np.asarray([m for m in inliers_pct.keys() if
-                           (inliers_pct[m] * 100.0 >= params['min_cov']) & (
-                                   np.abs(disp_ppm[m]) <=
-                                   params['max_disp'])], dtype=float)
-    sel_refs = np.unique(sel_refs)
-
-    # Plot image of selected references
-    for m in sel_refs:
-        fig = plt.figure(dpi=300, figsize=(4, 3))
-        ax = fig.add_subplot(111)
-        img = np.zeros(np.prod(msi.dim_xy))
-        upx, c = np.unique(inliers_px[m], return_counts=True)
-        sel_px = []
-        sel_peaks = np.full(len(inliers[m]), False, dtype=bool)
-        if np.any(c > 1):
-            for i, p in enumerate(upx):
-                idx = np.where(upx == p)[0]
-                if len(idx) == 1:
-                    sel_px.append(p)
-                    sel_peaks[matches[m]['pixel'] == p] = True
-                else:
-                    # If more than one hit per pixel, take the one with the
-                    # smallest residual
-                    sel_px.append(p[np.argmin(np.abs(residuals[m][idx]))])
-                    sel_peaks[matches[m]['pixel'] == p] = True
-        else:
-            sel_px = inliers_px[m].copy()
-            sel_peaks = inliers[m].copy()
-
-        img[np.asarray(sel_px)] = matches[m]['intensity'][sel_peaks]
-        divider = make_axes_locatable(ax)
-        cax = divider.append_axes("right", size="5%", pad=0.05)
-        im = ax.imshow(img.reshape(msi.dim_xy[::-1]), interpolation='none',
-                       cmap='inferno')
-        ax.set_title('{} m/z'.format(m), fontsize=6)
-        ax.set_xlabel('X', fontdict={'size': 6})
-        ax.set_ylabel('Y', fontdict={'size': 6})
-        ax.tick_params(labelsize=4)
-        plt.colorbar(im, cax=cax)
-        plt.tight_layout()
-        plt.savefig(os.path.join(plots_dir, '{}.png'.format(m)), format='png')
-        plt.close()
-
-    shift_models = {m: [] for m in sel_refs}
-    for m in sel_refs:
-        shift_models[m] = fit_shift_model(matches[m]['pixel'][inliers[m]],
-                                          matches[m]['mz'][inliers[m]],
-                                          max_degree=5,  # THIS IS FIXED
-                                          model='ols', error='mse')
-
-    # TODO: warning for extrapolation size
-
-    print('Recalibrating pixels ...')
-
-    # Predict reference shift in all pixels
-    mz_pred = np.full((len(msi.pixels_indices), len(sel_refs)), np.nan)
-    for i, m in enumerate(sel_refs):
-        mz_pred[:, i] = shift_models[m]['best_model'].predict(
-            msi.pixels_indices.reshape(-1, 1)).ravel()
-    mass_theor = np.asarray(sel_refs)
-    arg_sort = np.argsort(mass_theor)
-    mass_theor = mass_theor[arg_sort]
-
-    for i in tqdm(range(len(msi.pixels_indices))):
-        x_fit = mz_pred[i, arg_sort]
-        y_fit = mass_theor.copy()
-        x_pred = msi.msdata[i][:, 0].copy()
-        mz_corrected, mdl = recal_pixel(x_fit=x_fit, y_fit=y_fit, x_pred=x_pred,
-                                        transform=params['transform'],
-                                        max_degree=params['max_degree'])
-        msi.msdata[i][:, 0] = mz_corrected
+    recal = \
+        KDEMassRecal(min_pct=params['min_cov'],
+                     transform=params['transform'],
+                     max_poly_degree=params['max_degree'],
+                     max_disp_ppm=params['max_disp'],
+                     kde_bw=params['bw'],
+                     grid_size=2**10, smooth=params['smooth'],
+                     parallel=params['parallel'], plot=params['plot'],
+                     plot_dir=plots_dir, plot_dim_xy=msi.dim_xy)
+    msi = recal.recalibrate(msi, matches)
 
     print('Saving recalibrated ROI imzML ...')
     msi.to_imzml(output_path=params['output'])
