@@ -56,6 +56,8 @@ value in `Smallest ROI size:` (D) are assigned to the background.
 The current annotations or segmentation can be reset by pressing the `Reset` button (C).  
 The RGB colors of the image can be controlled through the sliders below the image.
 
+![video](./tools/resources/screen_rec.gif)
+
 ### Mass recalibration
 
 ```
