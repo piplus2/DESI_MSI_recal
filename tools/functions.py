@@ -614,7 +614,8 @@ class KDEMassRecal:
                 Parallel(n_jobs=self.__max_njobs, backend='threading')(
                     delayed(__fit_time_series)(
                         matches[m]['pixel'][inliers[m]],
-                        matches[m]['mz'][inliers[m]]) for m in self.ref_masses)
+                        matches[m]['mz'][inliers[m]])
+                    for m in tqdm(self.ref_masses))
             shift_models = dict(zip(self.ref_masses, shift_models))
         else:
             shift_models = {m: [] for m in self.ref_masses}
@@ -658,7 +659,7 @@ class KDEMassRecal:
         if self.__parallel:
             Parallel(n_jobs=self.__max_njobs, backend='threading')(
                 delayed(__thread_px)(mz_pred[idx_, :], mass_theor.copy(),
-                                     msiobj.msdata[idx_].mz.copy(), idx_)
+                                     msiobj.msdata[idx_][:, 0].copy(), idx_)
                 for idx_ in tqdm(range(len(msiobj.pixels_indices))))
         else:
             for i in tqdm(range(len(msiobj.pixels_indices))):
@@ -679,6 +680,6 @@ class KDEMassRecal:
                         self.__recal_pixel(x_fit=x_fit.copy(),
                                            y_fit=y_fit.copy(),
                                            x_pred=x_pred.copy())
-                msiobj.msdata[i].set_mass(mz_corrected)
+                msiobj.msdata[i][:, 0] = mz_corrected
 
         return msiobj

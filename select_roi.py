@@ -606,7 +606,7 @@ class MainWindow(QMainWindow):
             plt.figure(dpi=150)
             plt.imshow(rgb_im, interpolation='none')
             mask_im = (sample_mask != 0).astype(float)
-            mask_im[mask_im == 0] = np.nan
+            # mask_im[mask_im == 0] = np.nan
             mask_im = np.clip(mask_im, 0, 1)
             plt.imshow(mask_im.reshape(self.rgb_im.shape[:2]),
                        cmap='gray', alpha=0.5, interpolation='none')
