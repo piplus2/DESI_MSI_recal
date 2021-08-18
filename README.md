@@ -102,6 +102,12 @@ of the input imzML file.
 
 ## Testing KDE bandwidth and Spline smoothing
 
+By defaults, KDE bandwidth is set to rule-of-thumb value "silverman", and spline
+smoothing parameter is determined by cross-validation.  
+In some cases, the user may be interested in using a custom value for those
+parameters.  
+The script `test_kde_bw.py` tests various values and plots the results in a 
+subfolder of the input imzML folder.  
 Various values are tested on the 3 ions with the smallest median absolute error
 from the nominal mass, that are detected in more than `MIN_COVERAGE` ROI pixels.
 The script saves the scatter plots of the outliers and inliers matched masses in
