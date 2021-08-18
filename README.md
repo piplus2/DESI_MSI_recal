@@ -114,7 +114,7 @@ usage: test_kde_bw.py [-h] [--analyzer {tof,orbitrap}] --ion-mode {pos,neg}
                       [--min-coverage MIN_COVERAGE]
                       input roi
 
-DESI-MSI recalibration tool
+DESI-MSI recalibration. Test time series parameters
 
 positional arguments:
   input                 Input imzML file.

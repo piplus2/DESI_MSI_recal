@@ -27,7 +27,8 @@ from tqdm import tqdm
 
 
 def __parse_arg():
-    parser_ = argparse.ArgumentParser(description='DESI-MSI recalibration tool')
+    parser_ = argparse.ArgumentParser(description='DESI-MSI recalibration.'
+                                                  'Test time series parameters')
     parser_.add_argument('input', type=str, help='Input imzML file.')
     parser_.add_argument('roi', type=str,
                          help='Sample ROI mask CSV file. If set equal to '
