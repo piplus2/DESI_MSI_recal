@@ -66,44 +66,41 @@ def filter_roi_px(msiobj: 'MSI', roi: np.ndarray) -> 'MSI':
 # in all peaks (top_n = -1)
 def search_ref_masses(
         msiobj: 'MSI', ref_masses: Union[List[float], np.ndarray],
-        max_tolerance: float, top_n: Union[int, str] = 100) -> Dict:
+        max_tolerance: float, top_n: Union[int, str] = 100, parallel: bool = False) -> Dict:
     # top_n = -1: search in all peaks
     # top_n = 'upper': search in peaks with intensity > 0.75 quantile
     # top_n = int: search in int highest peaks
-    print('Searching reference masses ...')
-    tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
-    matches = {m: {'pixel': [], 'mz': [], 'intensity': [], 'peak': []} for m in
-               ref_masses}
-    for i, msp in enumerate(tqdm(msiobj.msdata)):
-        if top_n != -1 and top_n != 'upper':
-            top_idx = np.argsort(msp[:, 1])[::-1]
-            top_idx = top_idx[:int(top_n)]
-        elif top_n == 'upper':
-            threshold = np.quantile(msp[:, 1], q=0.9)
-            top_idx = np.where(msp[:, 1] >= threshold)[0]
-
-        # Remove masses that are outside of the interval
-        skip_masses = np.full(len(ref_masses), False, dtype=bool)
-        for j, m in enumerate(ref_masses):
+    
+    def __thread(msp_, idx_, m_, tol_):
+        md = {m: {x: [] for x in ['pixel', 'mz', 'intensity', 'peak']} 
+              for m in m__}
+        
+        skip_masses = np.full(len(m_), False, dtype=bool)
+        for j, m__ in enumerate(m_):
             if top_n == -1:
-                sm = msp[:, 0]
+                sm_ = msp_[:, 0]
             else:
-                sm = msp[top_idx, 0]
-            if m - tol_masses[m] > sm[-1] or m + tol_masses[m] < sm[0]:
+                sm_ = msp_[top_idx, 0]
+            if m__ - tol_[m__] > sm_[-1] or m__ + tol_[m__] < sm[0]:
                 skip_masses[j] = True
-        search_masses = ref_masses.copy()
-        search_masses = search_masses[~skip_masses]
-
-        # Run the search
-        if top_n == -1:
-            sm = msp[:, 0]
-        else:
-            sm = msp[top_idx, 0]
-        left_mass = np.asarray([m - tol_masses[m] for m in search_masses])
-        right_mass = np.asarray([m + tol_masses[m] for m in search_masses])
-        hit_lx = np.searchsorted(sm, left_mass, side='left')
-        hit_rx = np.searchsorted(sm, right_mass, side='right')
-        for m, lx, rx in zip(search_masses, hit_lx, hit_rx):
+        
+        search_m = m_.copy()
+        search_m = search_[~skip_masses]
+        
+        if top_n_ != -1 and top_n_ != 'upper':
+            top_idx = np.argsort(msp_[:, 1])[::-1]
+            top_idx = top_idx[:int(top_n_)]
+        elif top_n_ == 'upper':
+            threshold = np.quantile(msp_[:, 1], q=0.9)
+            top_idx = np.where(msp_[:, 1] >= threshold)[0]
+            
+        lx_mass = np.asarray([m__ - tol_[m] for m__ in search_m])
+        rx_mass = np.asarray([m__ + tol_[m] for m__ in search_m])
+        
+        hit_lx = np.searchsorted(sm_, lx_mass, side='left')
+        hit_rx = np.searchsorted(sm_, rx_mass, side='right')
+        
+        for m__, lx, rx in zip(m_, hit_lx, hit_rx):
             if top_n == -1:
                 hits = np.arange(lx, rx)
             else:
@@ -111,10 +108,35 @@ def search_ref_masses(
             if len(hits) == 0:
                 continue
             for hit in hits:
-                matches[m]['pixel'].append(msiobj.pixels_indices[i])
-                matches[m]['mz'].append(msp[hit, 0])
-                matches[m]['intensity'].append(msp[hit, 1])
-                matches[m]['peak'].append(hit)
+                md[m__]['pixel'].append(idx_)
+                md[m__]['mz'].append(msp_[hit, 0])
+                md[m__]['intensity'].append(msp_[hit, 1])
+                md[m__]['peak'].append(hit)
+         return md
+    
+    print('Searching reference masses ...')
+    tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
+    
+    matches = {m: {'pixel': [], 'mz': [], 'intensity': [], 'peak': []} for m in
+               ref_masses}
+  
+    if parallel:
+        md_px = Parallel(n_jobs=multiprocessing.cpu_count() - 1)(
+            delayed(__thread)(msp_, idx_, ref_masses, tol_masses) 
+            for msp_, idx_ in zip(msiobj.msdata, msiobj.pixel_indices))
+    else:
+        md_px = []
+        for i, msp in enumerate(tqdm(msiobj.msdata)):
+            md_px.append(__thread(msp, msiobj.pixel_indices[i], ref_masses, tol_masses))
+    for md in md_px:
+        for m in md.keys():
+            if len(md[m]) > 0:
+                matches[m]['pixel'].append(md[m]['pixel'])
+                matched[m]['mz'].append(md[m]['mz'])
+                matched[m]['intensity'].append(md[m]['intensity'])
+                matched[m]['peak'].append(md[m]['peak'])
+    del md
+
     for m in matches.keys():
         matches[m]['pixel'] = np.asarray(matches[m]['pixel'])
         matches[m]['mz'] = np.asarray(matches[m]['mz'])
