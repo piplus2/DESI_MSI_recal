@@ -85,7 +85,7 @@ def search_ref_masses(
                 skip_masses[j] = True
         
         search_m = m_.copy()
-        search_m = search_[~skip_masses]
+        search_m = search_m[~skip_masses]
         
         if top_n_ != -1 and top_n_ != 'upper':
             top_idx = np.argsort(msp_[:, 1])[::-1]
