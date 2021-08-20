@@ -51,7 +51,7 @@ def __parse_arg():
                               'masses. It can slow down the process '
                               '(default=False).')
     parser_.add_argument('--parallel', action='store_true', dest='parallel',
-                         default='false', help='Use multithreading.')
+                         default=False, help='Use multithreading.')
     return parser_
 
 
