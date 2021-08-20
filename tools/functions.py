@@ -81,7 +81,7 @@ def search_ref_masses(
                 sm_ = msp_[:, 0]
             else:
                 sm_ = msp_[top_idx, 0]
-            if m__ - tol_[m__] > sm_[-1] or m__ + tol_[m__] < sm[0]:
+            if m__ - tol_[m__] > sm_[-1] or m__ + tol_[m__] < sm_[0]:
                 skip_masses[j] = True
         
         search_m = m_.copy()
