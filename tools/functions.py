@@ -73,7 +73,7 @@ def search_ref_masses(
     
     def __thread(msp_, idx_, m_, tol_):
         md = {m: {x: [] for x in ['pixel', 'mz', 'intensity', 'peak']} 
-              for m in m__}
+              for m in m_}
         
         skip_masses = np.full(len(m_), False, dtype=bool)
         for j, m__ in enumerate(m_):
@@ -122,8 +122,8 @@ def search_ref_masses(
   
     if parallel:
         md_px = Parallel(n_jobs=multiprocessing.cpu_count() - 1)(
-            delayed(__thread)(msp_, idx_, ref_masses, tol_masses) 
-            for msp_, idx_ in zip(msiobj.msdata, msiobj.pixels_indices))
+            delayed(__thread)(msp_, idx_, ref_masses, tol_masses)
+            for msp_, idx_ in Parallel(zip(msiobj.msdata, msiobj.pixels_indices), total=len(msiobj.msdata))
     else:
         md_px = []
         for i, msp in enumerate(tqdm(msiobj.msdata)):
