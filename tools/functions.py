@@ -123,7 +123,7 @@ def search_ref_masses(
     if parallel:
         md_px = Parallel(n_jobs=multiprocessing.cpu_count() - 1)(
             delayed(__thread)(msp_, idx_, ref_masses, tol_masses)
-            for msp_, idx_ in Parallel(zip(msiobj.msdata, msiobj.pixels_indices), total=len(msiobj.msdata))
+            for msp_, idx_ in tqdm(zip(msiobj.msdata, msiobj.pixels_indices), total=len(msiobj.msdata))
     else:
         md_px = []
         for i, msp in enumerate(tqdm(msiobj.msdata)):
