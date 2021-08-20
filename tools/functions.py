@@ -94,8 +94,8 @@ def search_ref_masses(
             threshold = np.quantile(msp_[:, 1], q=0.9)
             top_idx = np.where(msp_[:, 1] >= threshold)[0]
             
-        lx_mass = np.asarray([m__ - tol_[m] for m__ in search_m])
-        rx_mass = np.asarray([m__ + tol_[m] for m__ in search_m])
+        lx_mass = np.asarray([m__ - tol_[m__] for m__ in search_m])
+        rx_mass = np.asarray([m__ + tol_[m__] for m__ in search_m])
         
         hit_lx = np.searchsorted(sm_, lx_mass, side='left')
         hit_rx = np.searchsorted(sm_, rx_mass, side='right')
