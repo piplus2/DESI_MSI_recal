@@ -112,7 +112,7 @@ def search_ref_masses(
                 md[m__]['mz'].append(msp_[hit, 0])
                 md[m__]['intensity'].append(msp_[hit, 1])
                 md[m__]['peak'].append(hit)
-         return md
+        return md
     
     print('Searching reference masses ...')
     tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
