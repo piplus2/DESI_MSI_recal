@@ -87,10 +87,10 @@ def search_ref_masses(
         search_m = m_.copy()
         search_m = search_m[~skip_masses]
         
-        if top_n_ != -1 and top_n_ != 'upper':
+        if top_n != -1 and top_n != 'upper':
             top_idx = np.argsort(msp_[:, 1])[::-1]
-            top_idx = top_idx[:int(top_n_)]
-        elif top_n_ == 'upper':
+            top_idx = top_idx[:int(top_n)]
+        elif top_n == 'upper':
             threshold = np.quantile(msp_[:, 1], q=0.9)
             top_idx = np.where(msp_[:, 1] >= threshold)[0]
             
