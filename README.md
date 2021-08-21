@@ -31,7 +31,7 @@ pillow~=8.3.1
 
 ## How to run:
 
-### ROI selection
+## ROI selection
 
 ```
 python select_roi.py
@@ -58,7 +58,7 @@ The RGB colors of the image can be controlled through the sliders below the imag
 
 ![video](./tools/resources/screen_rec.gif)
 
-### Mass recalibration
+## Mass recalibration
 
 ```
 python desi_recalibration.py input output roi [params]
@@ -98,3 +98,50 @@ roi:    path of sample ROI mask CSV file. If set equal to 'full', the entire
 The code saves the images of the candidate reference ions in the subfolder of
 the output folder, called `runID + '_recal_imgs'`, where `runID` is the name 
 of the input imzML file.
+
+
+## Testing KDE bandwidth and Spline smoothing
+
+By defaults, KDE bandwidth is set to rule-of-thumb value "silverman", and spline
+smoothing parameter is determined by cross-validation.  
+In some cases, the user may be interested in using a custom value for those
+parameters.  
+The script `test_kde_bw.py` tests various values and plots the results in a 
+subfolder of the input imzML folder.  
+Various values are tested on the 3 ions with the smallest median absolute error
+from the nominal mass, that are detected in more than `MIN_COVERAGE` ROI pixels.
+The script saves the scatter plots of the outliers and inliers matched masses in
+the subfolder `_calib` of the input folder.
+
+
+```
+usage: test_kde_bw.py [-h] [--analyzer {tof,orbitrap}] --ion-mode {pos,neg} 
+                      [--search-tol SEARCH_TOL]
+                      [--min-coverage MIN_COVERAGE]
+                      input roi
+
+DESI-MSI recalibration. Test time series parameters
+
+positional arguments:
+  input                 Input imzML file.
+  roi                   Sample ROI mask CSV file. If set equal to 'full',
+                        the entire image is analyzed.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --analyzer {tof,orbitrap}
+                        MS analyzer.
+  --ion-mode {pos,neg}  ES Polarization mode.
+  --search-tol SEARCH_TOL
+                        Search tolerance expressed in ppm. If 'auto', default 
+                        value for MS analyzer is used.
+  --min-coverage MIN_COVERAGE
+                        Min. coverage percentage for hits filtering (default=75.0).
+```
+
+Example:
+
+![test_kde](./tools/resources/test_params_327.2329.png)
+
+The outliers are plotted in red, and the dispersion is reported in the title
+(`disp`).
