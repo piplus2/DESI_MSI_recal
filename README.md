@@ -39,7 +39,7 @@ python select_roi.py
 
 ![gui](./tools/resources/screenshot.png)
 
-The imzML file is loaded using the `File -> Open raw peaks ...` button
+The _centroided_ imzML file is loaded using the `File -> Open raw peaks ...` button
 (shortcut = `CTRL + O`).
 Once the reference image is displayed, the user can start annotating with the
 selected label (top right checkbox), by drawing a closed contour using the mouse.  
@@ -63,7 +63,7 @@ The RGB colors of the image can be controlled through the sliders below the imag
 ```
 python desi_recalibration.py input output roi [params]
 
-input:  input imzML file
+input:  input imzML file (centroided)
 output: input imzML file
 roi:    path of sample ROI mask CSV file. If set equal to 'full', the entire  
         image is analyzed.

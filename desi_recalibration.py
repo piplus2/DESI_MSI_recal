@@ -19,7 +19,8 @@ from tools.msi import MSI
 
 def __parse_arg():
     parser_ = argparse.ArgumentParser(description='DESI-MSI recalibration tool')
-    parser_.add_argument('input', type=str, help='Input imzML file.')
+    parser_.add_argument('input', type=str,
+                         help='Input imzML file (centroided).')
     parser_.add_argument('output', type=str, help='Output imzML file.')
     parser_.add_argument('roi', type=str,
                          help='Sample ROI mask CSV file. If set equal to '
