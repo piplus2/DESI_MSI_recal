@@ -116,7 +116,7 @@ def main():
     print('Searching lock masses within {} ppm ...'.format(
         np.round(params['max_tol'], 2)))
     matches = search_ref_masses(msiobj=msi, ref_masses=ref_masses,
-                                max_tolerance=params['max_tol'], top_n=-1, parallel=args.parallel)
+                                max_tolerance=params['max_tol'], top_n=-1)
 
     print('Removing hits found in less than {} % of ROI pixels ...'.format(
         params['min_cov']))

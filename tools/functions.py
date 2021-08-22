@@ -140,20 +140,20 @@ def search_ref_masses(
 
         for j in midx:
             m = ref_masses[j]
-            matches[m]['pixel'].append(
-                np.repeat(msiobj.pixels_indices[i], len(hits_[j])))
+            matches[m]['pixel'] += [msiobj.pixels_indices[i]] * len(hits_[j])
             for hit in hits_[j]:
                 matches[m]['mz'].append(msp[hit, 0])
                 matches[m]['intensity'].append(msp[hit, 1])
                 matches[m]['peak'].append(hit)
 
     for m in matches.keys():
-        if len(matches[m]) == 0:
+        if len(matches[m]['pixel']) == 0:
             continue
-        matches[m]['pixel'] = np.concatenate(matches[m]['pixel'])
-        matches[m]['mz'] = np.concatenate(matches[m]['mz'])
-        matches[m]['intensity'] = np.concatenate(matches[m]['intensity'])
-        matches[m]['peak'] = np.concatenate(matches[m]['peak'])
+        matches[m]['pixel'] = np.asarray(matches[m]['pixel'])
+        matches[m]['mz'] = np.asarray(matches[m]['mz'])
+        matches[m]['intensity'] = np.asarray(matches[m]['intensity'])
+        matches[m]['peak'] = np.asarray(matches[m]['peak'])
+
     return matches
 
 
