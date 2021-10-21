@@ -1,19 +1,18 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
-# platform: osx-64
 
-pandas~=1.2.0
-scikit-learn~=0.24.0
-pyimzml~=1.4.1
-tqdm~=4.55.1
-joblib~=1.0.0
-matplotlib~=3.3.3
-pygam~=0.8.0
-statsmodels~=0.12.1
-kdepy~=1.1.0
-scipy~=1.6.0
-scikit-image~=0.18.1
-pyqt~=5.12.3
-opencv~=4.5.0
-numpy~=1.21.1
-pillow~=8.3.1
+pandas==1.2.4
+scikit-learn==0.24.2
+pyimzml==1.4.1
+tqdm==4.61.1
+joblib==1.0.1
+matplotlib==3.4.2
+pygam==0.8.0
+statsmodels==0.12.2
+kdepy==1.1.0
+scipy==1.6.3
+scikit-image==0.18.1
+pyqt==5.12.3
+opencv==4.5.0
+numpy==1.20.3
+pillow==8.3.1
