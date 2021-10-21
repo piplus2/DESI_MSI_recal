@@ -62,64 +62,82 @@ def filter_roi_px(msiobj: 'MSI', roi: np.ndarray) -> 'MSI':
 
 
 # Returns the hits for a list of reference masses, given a tolerance expressed
-# in ppm. The search is performed in the N most intense peaks or, optionally,
-# in all peaks (top_n = -1)
+# in ppm.
 def search_ref_masses(
         msiobj: 'MSI', ref_masses: Union[List[float], np.ndarray],
-        max_tolerance: float, top_n: Union[int, str] = 100) -> Dict:
-    # top_n = -1: search in all peaks
-    # top_n = 'upper': search in peaks with intensity > 0.75 quantile
-    # top_n = int: search in int highest peaks
+        max_tolerance: float, coverage: float) -> Dict:
     print('Searching reference masses ...')
+
     tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
-    matches = {m: {'pixel': [], 'mz': [], 'intensity': [], 'peak': []} for m in
-               ref_masses}
+    left_mass = np.asarray([m - tol_masses[m] for m in ref_masses])
+    right_mass = np.asarray([m + tol_masses[m] for m in ref_masses])
+
+    hits_msp_idx = {m: [] for m in ref_masses}
+    hits_peak_lx = {m: [] for m in ref_masses}
+    hits_peak_rx = {m: [] for m in ref_masses}
+
     for i, msp in enumerate(tqdm(msiobj.msdata)):
-        if top_n != -1 and top_n != 'upper':
-            top_idx = np.argsort(msp[:, 1])[::-1]
-            top_idx = top_idx[:int(top_n)]
-        elif top_n == 'upper':
-            threshold = np.quantile(msp[:, 1], q=0.9)
-            top_idx = np.where(msp[:, 1] >= threshold)[0]
-
-        # Remove masses that are outside of the interval
-        skip_masses = np.full(len(ref_masses), False, dtype=bool)
-        for j, m in enumerate(ref_masses):
-            if top_n == -1:
-                sm = msp[:, 0]
-            else:
-                sm = msp[top_idx, 0]
-            if m - tol_masses[m] > sm[-1] or m + tol_masses[m] < sm[0]:
-                skip_masses[j] = True
-        search_masses = ref_masses.copy()
-        search_masses = search_masses[~skip_masses]
-
-        # Run the search
-        if top_n == -1:
-            sm = msp[:, 0]
-        else:
-            sm = msp[top_idx, 0]
-        left_mass = np.asarray([m - tol_masses[m] for m in search_masses])
-        right_mass = np.asarray([m + tol_masses[m] for m in search_masses])
-        hit_lx = np.searchsorted(sm, left_mass, side='left')
-        hit_rx = np.searchsorted(sm, right_mass, side='right')
-        for m, lx, rx in zip(search_masses, hit_lx, hit_rx):
-            if top_n == -1:
-                hits = np.arange(lx, rx)
-            else:
-                hits = top_idx[lx:rx]
-            if len(hits) == 0:
+        mvec = msp[:, 0]
+        hit_lx = np.searchsorted(mvec, left_mass, side='left')
+        hit_rx = np.searchsorted(mvec, right_mass, side='right')
+        for m, lx, rx in zip(ref_masses, hit_lx, hit_rx):
+            if lx == rx:
                 continue
-            for hit in hits:
-                matches[m]['pixel'].append(msiobj.pixels_indices[i])
-                matches[m]['mz'].append(msp[hit, 0])
-                matches[m]['intensity'].append(msp[hit, 1])
-                matches[m]['peak'].append(hit)
-    for m in matches.keys():
-        matches[m]['pixel'] = np.asarray(matches[m]['pixel'])
-        matches[m]['mz'] = np.asarray(matches[m]['mz'])
-        matches[m]['intensity'] = np.asarray(matches[m]['intensity'])
-        matches[m]['peak'] = np.asarray(matches[m]['peak'])
+            else:
+                hits_peak_lx[m] += [lx]
+                hits_peak_rx[m] += [rx]
+                hits_msp_idx[m] += [i]
+
+    # Remove masses with low coverage
+
+    print('Removing hits found in less than {} % of ROI pixels ...'.format(
+        coverage))
+
+    keep_masses = [m for m in hits_msp_idx.keys() if len(hits_msp_idx[m]) / len(
+                   msiobj.pixels_indices) * 100.0 > coverage]
+
+    print('Num. matched masses with coverage >= {} % = {}'.format(
+        np.round(coverage, 2), len(keep_masses)))
+
+    hits_msp_idx = {m: hits_msp_idx[m] for m in keep_masses}
+    hits_peak_lx = {m: hits_peak_lx[m] for m in keep_masses}
+    hits_peak_rx = {m: hits_peak_rx[m] for m in keep_masses}
+
+    lengths = {m: sum([rx - lx for lx, rx in
+                       zip(hits_peak_lx[m], hits_peak_rx[m])])
+               for m in hits_peak_lx.keys()}
+
+    # Rearrange results
+
+    print('Rearranging results ...')
+
+    def assign_vals(idx, lx_, rx_, length):
+
+        mdict = {'pixel': np.zeros(length, dtype=int),
+                 'mz': np.zeros(length, dtype=float),
+                 'intensity': np.zeros(length, dtype=float),
+                 'peak': np.zeros(length, dtype=int)}
+
+        off = 0
+        for j in range(len(idx)):
+            vals_ = msiobj.msdata[idx[j]][lx_[j]:rx_[j], :]
+            n = vals_.shape[0]
+
+            mdict['mz'][off:off + n] = vals_[:, 0]
+            mdict['intensity'][off:off + n] = vals_[:, 1]
+            mdict['pixel'][off:off + n] = msiobj.pixels_indices[idx[j]]
+            mdict['peak'][off:off + n] = np.arange(lx_[j], rx_[j])
+
+            off += n
+
+        return mdict
+
+    matches = {m: assign_vals(hits_msp_idx[m],
+                              hits_peak_lx[m],
+                              hits_peak_rx[m],
+                              lengths[m])
+               for m in tqdm(hits_msp_idx.keys())}
+
     return matches
 
 
@@ -171,6 +189,8 @@ def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
     ref_list = np.delete(ref_list, np.where(np.diff(ref_list) <= 2e-4)[0] + 1)
     ref_list = np.unique(ref_list)
     ref_list = ref_list.astype(np.float32)
+
+    ref_list = ref_list[~np.isnan(ref_list)]
 
     if verbose:
         print('Num. test masses = {}'.format(len(ref_list)))

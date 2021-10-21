@@ -117,16 +117,8 @@ def main():
     print('Searching lock masses within {} ppm ...'.format(
         np.round(params['max_tol'], 2)))
     matches = search_ref_masses(msiobj=msi, ref_masses=ref_masses,
-                                max_tolerance=params['max_tol'], top_n=-1)
-
-    print('Removing hits found in less than {} % of ROI pixels ...'.format(
-        params['min_cov']))
-    matches = {m: matches[m] for m in matches.keys() if
-               len(np.unique(matches[m]['pixel'])) / len(
-                   msi.pixels_indices) * 100.0 >= params['min_cov']}
-
-    print('Num. lock masses with coverage >= {} % = {}'.format(
-        np.round(params['min_cov'], 2), len(matches)))
+                                max_tolerance=params['max_tol'],
+                                coverage=params['min_cov'])
 
     recal = \
         KDEMassRecal(min_pct=params['min_cov'],
