@@ -628,6 +628,30 @@ class KDEMassRecal:
                             format='png')
                 plt.close()
 
+        # Check the extrapolation regions
+
+        print('Saving histogram of num. ref. masses in {}'.format(
+            os.path.join(os.path.dirname(msiobj.filename),
+                         'hist_num_refs.png')))
+        num_refs = np.zeros(np.max(msiobj.pixels_indices) + 1,
+                            dtype=int)
+        for m in self.ref_masses:
+            num_refs[matches[m]['pixel']] += 1
+        num_refs = num_refs[msiobj.pixels_indices]
+        fig = plt.figure(dpi=150, figsize=(8, 6))
+        ax = fig.add_subplot(111)
+        ax.hist(num_refs, log=True, color="grey", edgecolor="black", bins=10)
+        ax.set_xlabel('Num. ref. masses')
+        ax.set_ylabel('Num. pixels')
+        ax.set_title('Number of inlier reference masses')
+        plt.savefig(os.path.join(os.path.dirname(msiobj.filename),
+                                 'hist_num_refs.png'))
+        plt.close(fig=fig)
+
+        print('Num. ref. masses per pixel:')
+        print('Quantiles (0, 0.25, 0.5, 0.75, 1.0) = {}'.format(
+            np.quantile(num_refs, q=[0.0, 0.25, 0.5, 0.75, 1])))
+
         print('Fitting time series ... ')
         if self.__parallel:
             shift_models = \

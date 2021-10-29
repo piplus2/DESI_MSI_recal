@@ -96,6 +96,10 @@ class MSI:
     def msdata(self):
         return self.__msp
 
+    @property
+    def filename(self):
+        return self.__fname
+
     def to_imzml(self, output_path):
         ux = np.sort(np.unique(self.__xy[:, 0]))
         uy = np.sort(np.unique(self.__xy[:, 1]))
