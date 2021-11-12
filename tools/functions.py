@@ -288,7 +288,7 @@ class KDEMassRecal:
         self.__im_dimxy = plot_dim_xy
         self.__plot = plot
 
-        self.__max_njobs = multiprocessing.cpu_count()
+        self.__max_njobs = multiprocessing.cpu_count() - 1
 
     # Private methods ----------------------------------------------------------
 
@@ -655,7 +655,7 @@ class KDEMassRecal:
         print('Fitting time series ... ')
         if self.__parallel:
             shift_models = \
-                Parallel(n_jobs=self.__max_njobs, backend='threading')(
+                Parallel(n_jobs=self.__max_njobs)(  # , backend='threading'
                     delayed(__fit_time_series)(
                         matches[m]['pixel'][inliers[m]],
                         matches[m]['mz'][inliers[m]])
