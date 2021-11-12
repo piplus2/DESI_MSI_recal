@@ -107,7 +107,7 @@ By defaults, KDE bandwidth is set to rule-of-thumb value "silverman", and spline
 smoothing parameter is determined by cross-validation.  
 In some cases, the user may be interested in using a custom value for those
 parameters.  
-The script `test_kde_bw.py` tests various values and plots the results in a 
+The script `check_kde_bw.py` tests various values and plots the results in a 
 subfolder of the input imzML folder.  
 Various values are tested on the 3 ions with the smallest median absolute error
 from the nominal mass, that are detected in more than `MIN_COVERAGE` ROI pixels.
@@ -116,7 +116,7 @@ the subfolder `_calib` of the input folder.
 
 
 ```
-usage: test_kde_bw.py [-h] [--analyzer {tof,orbitrap}] --ion-mode {pos,neg} 
+usage: check_kde_bw.py [-h] [--analyzer {tof,orbitrap}] --ion-mode {pos,neg} 
                       [--search-tol SEARCH_TOL]
                       [--min-coverage MIN_COVERAGE]
                       input roi
@@ -142,7 +142,10 @@ optional arguments:
 
 Example:
 
-![test_kde](./tools/resources/test_params_327.2329.png)
+![test_kde](./tools/resources/test_params_739.4686.png)
 
 The outliers are plotted in red, and the dispersion is reported in the title
-(`disp`).
+(`disp`).  
+In this case, a value of `bw=0.01` is optimal since inliers are detected in
+the initial pixels (low value of `pixel order`). For the `smooth` parameter,
+no difference is observed, so it is suggested to keep it equal to `'cv'`.

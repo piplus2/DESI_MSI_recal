@@ -21,7 +21,6 @@ from sklearn.preprocessing import MinMaxScaler
 from scipy.interpolate import UnivariateSpline
 from sklearn.model_selection import KFold
 import pygam
-import numbers
 from joblib import Parallel, delayed
 from tqdm import tqdm
 
@@ -43,8 +42,8 @@ def __parse_arg():
     parser_.add_argument('--min-coverage', default=75.0, type=float,
                          help='Min. coverage percentage for hits filtering '
                               '(default=75.0).')
-    parser_.add_argument('--num-peaks', default=3, type=int,
-                         help='Number of tested masses (default=3).')
+    parser_.add_argument('--num-peaks', default=10, type=int,
+                         help='Number of tested masses (default=10).')
     return parser_
 
 
@@ -82,7 +81,7 @@ def ts_cv(x, y, s):
     return np.mean(error)
 
 
-def fit_spline_kde(pixels, match_masses, ref_mass, model, kde_bw, smooth):
+def fit_spline_kde(pixels, match_masses, ref_mass, kde_bw, smooth):
 
     grid_size = int(2**10)
 
@@ -97,10 +96,7 @@ def fit_spline_kde(pixels, match_masses, ref_mass, model, kde_bw, smooth):
                 smz_ = match_masses[pixels == s[i]]
                 smz[i] = smz_[np.argmin(np.abs(smz_ - ref_mass))]
         mdl = UnivariateSpline(x=spx, y=smz - ref_mass)
-        use_gam = False
-        use_kde = False
     else:
-        use_kde = True
         data = np.c_[pixels, match_masses - ref_mass].astype(np.float64)
         data = data.astype(float)
         scaler = MinMaxScaler()
@@ -122,49 +118,34 @@ def fit_spline_kde(pixels, match_masses, ref_mass, model, kde_bw, smooth):
             find_kde_max(x=xyi[:, 0], y=xyi[:, 1], kde_values=z,
                          remove_zeros=True)
         if np.var(xmax_kde) == 0:
-            use_gam = False
             mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
         else:
-            if model == 'spline':
-                use_gam = False
-                if not isinstance(smooth,
-                                  numbers.Number) and smooth == 'cv':
-                    s_vals = np.logspace(-3, -1, 20)
-                    mse = []
-                    for s_ in s_vals:
-                        mse.append(
-                            ts_cv(xmax_kde.reshape(-1, 1),
-                                  ymax_kde.reshape(-1, ), s_))
-                    s_value = s_vals[np.argmin(mse)]
-                else:
-                    s_value = smooth
-                mdl = \
-                    UnivariateSpline(x=xmax_kde.reshape(-1, 1),
-                                     y=ymax_kde.reshape(-1, ),
-                                     s=s_value)
-            elif model == 'gam':
-                use_gam = True
-                mdl = pygam.LinearGAM(pygam.s(0, n_splines=5))
-                mdl.gridsearch(X=xmax_kde.reshape(-1, 1), y=ymax_kde,
-                               progress=False)
+            if smooth == 'cv':
+                s_vals = np.logspace(-3, -1, 20)
+                mse = []
+                for s_ in s_vals:
+                    mse.append(
+                        ts_cv(xmax_kde.reshape(-1, 1),
+                              ymax_kde.reshape(-1, ), s_))
+                s_value = s_vals[np.argmin(mse)]
             else:
-                raise ValueError('Invalid model.')
+                s_value = float(smooth)
+            mdl = \
+                UnivariateSpline(x=xmax_kde.reshape(-1, 1),
+                                 y=ymax_kde.reshape(-1, ),
+                                 s=s_value)
+    yhat = mdl(pixels)
 
-    if use_gam:
-        yhat = mdl.predict(pixels.reshape(-1, 1)).ravel()
-    else:
-        yhat = mdl(pixels)
-
-    return yhat, use_kde
+    return yhat
 
 
-def kde_regress(msiobj, matches, model, kde_bw, smooth):
+def kde_regress(msiobj, matches, kde_bw, smooth):
     max_njobs = 5
     parallel = False
 
     def __thread(x_, y_, m_, npx_):
-        yhat_, _ = fit_spline_kde(pixels=x_, match_masses=y_, ref_mass=m_,
-                                  model=model, kde_bw=kde_bw, smooth=smooth)
+        yhat_ = fit_spline_kde(pixels=x_, match_masses=y_, ref_mass=m_,
+                               kde_bw=kde_bw, smooth=smooth)
         # Find outliers
         res_ = y_ - m_ - yhat_
         mad_ = 1.4826 * np.median(np.abs(res_))
@@ -196,10 +177,10 @@ def kde_regress(msiobj, matches, model, kde_bw, smooth):
             del curr_res
     else:
         for m in tqdm(matches.keys()):
-            shift_preds, use_kde = \
+            shift_preds = \
                 fit_spline_kde(pixels=matches[m]['pixel'],
                                match_masses=matches[m]['mz'],
-                               ref_mass=m, model=model, kde_bw=kde_bw,
+                               ref_mass=m, kde_bw=kde_bw,
                                smooth=smooth)
             # Find outliers
             residuals[m] = matches[m]['mz'] - m - shift_preds
@@ -258,7 +239,7 @@ def main():
 
     # Select the reference with the smallest median absolute residual
     mad = \
-        np.asarray([np.median(np.abs(matches[m]['mz'] - m))
+        np.asarray([np.median(np.abs(matches[m]['mz'] - m) / m * 1e6)
                     for m in matches.keys()], dtype=float)
     sel_ref = [list(matches.keys())[i]
                for i in np.argsort(mad)[:np.min([args.num_peaks, len(mad)])]]
@@ -280,7 +261,8 @@ def main():
         for bw in TEST_BW:
             for smooth in SMOOTH:
                 print('Testing bw = {}, smooth = {} ...'.format(bw, smooth))
-                results = kde_regress(msi, sel_matches, 'gam', bw, smooth)
+                results = kde_regress(msi, matches=sel_matches, kde_bw=bw,
+                                      smooth=smooth)
                 ax[k].scatter(sel_matches[mass]['pixel'][~results[1][mass]],
                               sel_matches[mass]['mz'][~results[1][mass]] -
                               mass,
@@ -296,7 +278,8 @@ def main():
                 ax[k].set_visible(True)
                 k += 1
 
-        results = kde_regress(msi, matches=sel_matches, model='gam', smooth='cv', kde_bw='silverman')
+        results = kde_regress(msi, matches=sel_matches, kde_bw='silverman',
+                              smooth='cv')
         ax[k].scatter(sel_matches[mass]['pixel'][~results[1][mass]],
                       sel_matches[mass]['mz'][~results[1][mass]] -
                       mass,
