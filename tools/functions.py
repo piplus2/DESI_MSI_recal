@@ -709,7 +709,7 @@ class KDEMassRecal:
             for i in tqdm(range(len(msiobj.pixels_indices))):
                 x_fit = mz_pred[i, :]
                 y_fit = mass_theor.copy()
-                x_pred = msiobj.msdata[i].mz
+                x_pred = msiobj.msdata[i][:, 0]
 
                 if len(self.ref_masses) == 1:
                     if self.transform == 'sqrt':
