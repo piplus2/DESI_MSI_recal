@@ -43,6 +43,8 @@ def __parse_arg():
     parser_.add_argument('--min-coverage', default=75.0, type=float,
                          help='Min. coverage percentage for hits filtering '
                               '(default=75.0).')
+    parser_.add_argument('--num-peaks', default=3, type=int,
+                         help='Number of tested masses (default=3).')
     return parser_
 
 
@@ -258,7 +260,8 @@ def main():
     mad = \
         np.asarray([np.median(np.abs(matches[m]['mz'] - m))
                     for m in matches.keys()], dtype=float)
-    sel_ref = [list(matches.keys())[i] for i in np.argsort(mad)[:3]]
+    sel_ref = [list(matches.keys())[i]
+               for i in np.argsort(mad)[:np.min(args.num_peaks, len(mad))]]
 
     for mass in sel_ref:
         sel_matches = {m: matches[m] for m in [mass]}
@@ -277,7 +280,7 @@ def main():
         for bw in TEST_BW:
             for smooth in SMOOTH:
                 print('Testing bw = {}, smooth = {} ...'.format(bw, smooth))
-                results = kde_regress(msi, sel_matches, 'spline', bw, smooth)
+                results = kde_regress(msi, sel_matches, 'gam', bw, smooth)
                 ax[k].scatter(sel_matches[mass]['pixel'][~results[1][mass]],
                               sel_matches[mass]['mz'][~results[1][mass]] -
                               mass,
@@ -293,7 +296,7 @@ def main():
                 ax[k].set_visible(True)
                 k += 1
 
-        results = kde_regress(msi, sel_matches, 'spline', 'cv', 'silverman')
+        results = kde_regress(msi, matches=sel_matches, model='gam', smooth='cv', kde_bw='silverman')
         ax[k].scatter(sel_matches[mass]['pixel'][~results[1][mass]],
                       sel_matches[mass]['mz'][~results[1][mass]] -
                       mass,
