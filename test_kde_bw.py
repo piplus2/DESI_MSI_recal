@@ -261,7 +261,7 @@ def main():
         np.asarray([np.median(np.abs(matches[m]['mz'] - m))
                     for m in matches.keys()], dtype=float)
     sel_ref = [list(matches.keys())[i]
-               for i in np.argsort(mad)[:np.min(args.num_peaks, len(mad))]]
+               for i in np.argsort(mad)[:np.min([args.num_peaks, len(mad)])]]
 
     for mass in sel_ref:
         sel_matches = {m: matches[m] for m in [mass]}
