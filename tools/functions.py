@@ -32,6 +32,14 @@ if TYPE_CHECKING:
     from .msi import MSI
 
 
+def check_float(x):
+    try:
+        float(x)
+    except ValueError:
+        return False
+    return True
+
+
 def del_all_files_dir(dirname: str) -> None:
     for filename in os.listdir(dirname):
         file_path = os.path.join(dirname, filename)
@@ -491,8 +499,7 @@ class KDEMassRecal:
             if np.var(xmax_kde) == 0:
                 mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
             else:
-                if not isinstance(self.smooth,
-                                  numbers.Number) and self.smooth == 'cv':
+                if self.smooth == 'cv':
                     s_vals = np.logspace(-4, -1, 20)
                     mse = []
                     for s_ in s_vals:
@@ -501,7 +508,7 @@ class KDEMassRecal:
                                          ymax_kde.reshape(-1, ), s_))
                     s_value = s_vals[np.argmin(mse)]
                 else:
-                    s_value = self.smooth
+                    s_value = float(self.smooth)
                 mdl = \
                     UnivariateSpline(x=xmax_kde.reshape(-1, 1),
                                      y=ymax_kde.reshape(-1, ),

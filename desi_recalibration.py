@@ -13,7 +13,7 @@ from typing import Dict
 import numpy as np
 
 from tools.functions import gen_ref_list, search_ref_masses, KDEMassRecal, \
-    del_all_files_dir
+    del_all_files_dir, check_float
 from tools.msi import MSI
 
 
@@ -26,9 +26,9 @@ def __parse_arg():
                          help='Sample ROI mask CSV file. If set equal to '
                               '\'full\', the entire image is analyzed.')
     parser_.add_argument('--analyzer', choices=['tof', 'orbitrap'],
-                         help='MS analyzer.')
+                         help='MS analyzer.', required=True)
     parser_.add_argument('--ion-mode', choices=['pos', 'neg'],
-                         help='ES Polarization mode.')
+                         help='ES Polarization mode.', required=True)
     parser_.add_argument('--search-tol', default='auto',
                          help='Search tolerance expressed in ppm. If \'auto\', '
                               'default value for MS analyzer is used.')
@@ -63,7 +63,7 @@ def set_params_dict(args_) -> Dict:
         'output': args_.output,
         'roi': args_.roi,
         'analyzer': args_.analyzer,
-        'bw': args_.kde_bw,
+        'bw': float(args_.kde_bw) if check_float(args_.kde_bw) else args_.kde_bw,
         'ion_mode': 'ES-' if args_.ion_mode == 'neg' else 'ES+',
         'max_tol': args_.search_tol if args_.search_tol != 'auto' else
         default_max_tol[args_.analyzer],
@@ -72,7 +72,7 @@ def set_params_dict(args_) -> Dict:
         'max_degree': 1 if args_.analyzer == 'orbitrap' else 5,
         'parallel': args_.parallel,
         'plot': args_.plot,
-        'smooth': args_.smooth,
+        'smooth': float(args_.smooth) if check_float(args_.smooth) else args_.smooth,
         'transform': 'none' if args_.analyzer == 'orbitrap' else 'sqrt'
     }
     return params_
