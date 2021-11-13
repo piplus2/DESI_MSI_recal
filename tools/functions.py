@@ -496,7 +496,7 @@ class KDEMassRecal:
             xmax_kde, ymax_kde = \
                 self.__find_kde_max(x=xyi[:, 0], y=xyi[:, 1], kde_values=z,
                                     remove_zeros=True)
-            if np.var(xmax_kde) == 0:
+            if np.var(ymax_kde) == 0:
                 mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
             else:
                 if self.smooth == 'cv':
