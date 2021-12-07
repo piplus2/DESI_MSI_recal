@@ -40,22 +40,26 @@ python select_roi.py
 
 ![gui](./tools/resources/screenshot.png)
 
-The _centroided_ imzML file is loaded using the `File -> Open raw peaks ...` button
-(shortcut = `CTRL + O`).
+The _centroided_ imzML file is loaded using the `File -> Open raw peaks ...` 
+button (shortcut = `CTRL + O`).
 Once the reference image is displayed, the user can start annotating with the
-selected label (top right checkbox), by drawing a closed contour using the mouse.  
+selected label (top right checkbox), by drawing a closed contour using the 
+mouse.  
 In case of mistakes during the drawing, the user can delete the current curve by
 pressing the `Delete selection` button (B).  
 Once the region is drawn, the user
-can confirm by pressing the `Add selection` button (A). The image is updated showing
-the currently annotated pixels.  
+can confirm by pressing the `Add selection` button (A). The image is updated 
+showing the currently annotated pixels.  
 When enough pixels are annotated with both labels, the image can be segmented
 pressing the `Process...` button (E).  
-The current segmentation mask is saved in a CSV file in the same folder of the `imzML` file by
-pressing the `Save...` button (F). All connected regions smaller than the selected
-value in `Smallest ROI size:` (D) are assigned to the background.  
-The current annotations or segmentation can be reset by pressing the `Reset` button (C).  
-The RGB colors of the image can be controlled through the sliders below the image.
+The current segmentation mask is saved in a CSV file in the same folder of the 
+`imzML` file by pressing the `Save...` button (F). All connected regions smaller
+than the selected value in `Smallest ROI size:` (D) are assigned to the 
+background.  
+The current annotations or segmentation can be reset by pressing the `Reset` 
+button (C).  
+The RGB colors of the image can be controlled through the sliders below the 
+image.
 
 ![video](./tools/resources/screen_rec.gif)
 
@@ -137,15 +141,16 @@ optional arguments:
                         Search tolerance expressed in ppm. If 'auto', default 
                         value for MS analyzer is used.
   --min-coverage MIN_COVERAGE
-                        Min. coverage percentage for hits filtering (default=75.0).
+                        Min. coverage percentage for hits filtering 
+                        (default=75.0).
 ```
 
 Example:
 
 ![test_kde](./tools/resources/test_params_739.4686.png)
 
-The outliers are plotted in red, and the dispersion is reported in the title
-(`disp`).  
+The outliers are plotted in red and the inliers (used to fit the GAM) are
+plotted in blue. The dispersion is reported in the title (`disp`).  
 In this case, a value of `bw=0.01` is optimal since inliers are detected in
 the initial pixels (low value of `pixel order`). For the `smooth` parameter,
 no difference is observed, so it is suggested to keep it equal to `'cv'`.
