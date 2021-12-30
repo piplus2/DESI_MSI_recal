@@ -500,7 +500,7 @@ class KDEMassRecal:
                 mdl = UnivariateSpline(x=xmax_kde, y=ymax_kde)
             else:
                 if self.smooth == 'cv':
-                    s_vals = np.logspace(-4, -1, 20)
+                    s_vals = np.logspace(-5, -1, 30)
                     mse = []
                     for s_ in s_vals:
                         mse.append(
