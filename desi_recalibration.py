@@ -25,6 +25,10 @@ def __parse_arg():
     parser_.add_argument('roi', type=str,
                          help='Sample ROI mask CSV file. If set equal to '
                               '\'full\', the entire image is analyzed.')
+    parser_.add_argument('--db', type=str, default='builtin',
+                         help='Path of the reference masses database. '
+                              'If equal to \'builtin\' a combination of public '
+                              'databases will be used (default=\'builtin\')')
     parser_.add_argument('--analyzer', choices=['tof', 'orbitrap'],
                          help='MS analyzer.', required=True)
     parser_.add_argument('--ion-mode', choices=['pos', 'neg'],
@@ -33,8 +37,13 @@ def __parse_arg():
                          help='Search tolerance expressed in ppm. If \'auto\', '
                               'default value for MS analyzer is used.')
     parser_.add_argument('--kde-bw', default='silverman',
-                         help='KDE bandwidth. It can be numeric or '
-                              '\'silverman\' (default=\'silverman\').')
+                         help='KDE bandwidth. It can be numeric, '
+                              '\'silverman\' or \'silverman_robust\''
+                              ' (default=\'silverman\').')
+    parser_.add_argument('--degree', default='auto',
+                         help='Degree of regression model for pixel masses '
+                              'recalibration. If \'auto\', 1 is used for '
+                              'Orbitrap, 5 is used for Tof (default=auto).')
     parser_.add_argument('--max-res-smooth', default='cv', dest='smooth',
                          help='Smoothing parameter for spline. It represents '
                               'the maximum sum of squared errors. If set to '
@@ -58,21 +67,35 @@ def __parse_arg():
 
 def set_params_dict(args_) -> Dict:
     default_max_tol = {'orbitrap': 20.0, 'tof': 100.0}
+
+    if args_.degree == 'auto':
+        degree = 1 if args_.analyzer == 'orbitrap' else 5
+    else:
+        err_msg = '\'degree\' must be either \'auto\' or an integer.'
+        try:
+            degree = int(args_.degree)
+        except ValueError:
+            print(err_msg)
+            raise
+
     params_ = {
         'input': args_.input,
         'output': args_.output,
         'roi': args_.roi,
         'analyzer': args_.analyzer,
-        'bw': float(args_.kde_bw) if check_float(args_.kde_bw) else args_.kde_bw,
+        'db': args_.db,
+        'bw': float(args_.kde_bw) if check_float(
+            args_.kde_bw) else args_.kde_bw,
         'ion_mode': 'ES-' if args_.ion_mode == 'neg' else 'ES+',
         'max_tol': args_.search_tol if args_.search_tol != 'auto' else
         default_max_tol[args_.analyzer],
         'min_cov': args_.min_coverage,
         'max_disp': args_.max_disp,
-        'max_degree': 1 if args_.analyzer == 'orbitrap' else 5,
+        'max_degree': degree,
         'parallel': args_.parallel,
         'plot': args_.plot,
-        'smooth': float(args_.smooth) if check_float(args_.smooth) else args_.smooth,
+        'smooth': float(args_.smooth) if check_float(
+            args_.smooth) else args_.smooth,
         'transform': 'none' if args_.analyzer == 'orbitrap' else 'sqrt'
     }
     return params_
@@ -112,7 +135,11 @@ def main():
 
     # RECALIBRATION ---------------------------
 
-    ref_masses = gen_ref_list(ion_mode=params['ion_mode'], verbose=True)
+    if params['db'] == 'builtin':
+        ref_masses = gen_ref_list(ion_mode=params['ion_mode'], verbose=True)
+    else:
+        print('Loading mass DB from {}...'.format(params['db']))
+        ref_masses = np.loadtxt(params['db'])
 
     print('Searching lock masses within {} ppm ...'.format(
         np.round(params['max_tol'], 2)))
@@ -126,7 +153,7 @@ def main():
                      max_poly_degree=params['max_degree'],
                      max_disp_ppm=params['max_disp'],
                      kde_bw=params['bw'],
-                     grid_size=2**10, smooth=params['smooth'],
+                     grid_size=2 ** 10, smooth=params['smooth'],
                      parallel=params['parallel'], plot=params['plot'],
                      plot_dir=plots_dir, plot_dim_xy=msi.dim_xy)
     msi = recal.recalibrate(msi, matches)

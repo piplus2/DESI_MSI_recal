@@ -22,6 +22,7 @@ from joblib import Parallel, delayed
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.interpolate import UnivariateSpline
 from scipy.signal import find_peaks
+from scipy.stats import iqr
 from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.model_selection import KFold
 from sklearn.pipeline import Pipeline
@@ -73,7 +74,11 @@ def filter_roi_px(msiobj: 'MSI', roi: np.ndarray) -> 'MSI':
 # in ppm.
 def search_ref_masses(
         msiobj: 'MSI', ref_masses: Union[List[float], np.ndarray],
-        max_tolerance: float, coverage: float) -> Dict:
+        max_tolerance: float, coverage: float = None,
+        min_n_px: int = None, parallel: bool = False) -> Dict:
+    if coverage is None and min_n_px is None:
+        raise ValueError('Either \'coverage\' or \'min_n_px\' must be provided')
+
     print('Searching reference masses ...')
 
     tol_masses = {m: dppm_to_dmz(max_tolerance, m) for m in ref_masses}
@@ -98,14 +103,20 @@ def search_ref_masses(
 
     # Remove masses with low coverage
 
-    print('Removing hits found in less than {} % of ROI pixels ...'.format(
-        coverage))
+    if coverage is not None:
+        print('Removing hits found in less than {} % of ROI pixels ...'.format(
+            coverage))
 
-    keep_masses = [m for m in hits_msp_idx.keys() if len(hits_msp_idx[m]) / len(
-                   msiobj.pixels_indices) * 100.0 > coverage]
+        keep_masses = [m for m in hits_msp_idx.keys() if
+                       len(hits_msp_idx[m]) / len(
+                           msiobj.pixels_indices) * 100.0 > coverage]
+    else:
+        print('Removing hits found in less than {} ROI pixels ...'.format(
+            min_n_px))
+        keep_masses = [m for m in hits_msp_idx.keys() if
+                       len(hits_msp_idx[m]) > min_n_px]
 
-    print('Num. matched masses with coverage >= {} % = {}'.format(
-        np.round(coverage, 2), len(keep_masses)))
+    print('Num. matched masses = {}'.format(len(keep_masses)))
 
     hits_msp_idx = {m: hits_msp_idx[m] for m in keep_masses}
     hits_peak_lx = {m: hits_peak_lx[m] for m in keep_masses}
@@ -140,18 +151,27 @@ def search_ref_masses(
 
         return mdict
 
-    matches = {m: assign_vals(hits_msp_idx[m],
-                              hits_peak_lx[m],
-                              hits_peak_rx[m],
-                              lengths[m])
-               for m in tqdm(hits_msp_idx.keys())}
+    if parallel:
+        matches = Parallel(n_jobs=-1, require='sharedmem')(
+            delayed(assign_vals)(hits_msp_idx[m],
+                                 hits_peak_lx[m],
+                                 hits_peak_rx[m],
+                                 lengths[m])
+            for m in tqdm(hits_msp_idx.keys()))
+        matches = {m: matches[i] for i, m in enumerate(hits_msp_idx.keys())}
+    else:
+        matches = {m: assign_vals(hits_msp_idx[m],
+                                  hits_peak_lx[m],
+                                  hits_peak_rx[m],
+                                  lengths[m])
+                   for m in tqdm(hits_msp_idx.keys())}
 
     return matches
 
 
 def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
-    adducts = {'ES+': [1.0073, 22.9892, 38.9632],
-               'ES-': [-1.0073, 34.9694]}
+    adducts = {'ES+': [1.007276, 22.989218, 38.963158],
+               'ES-': [-1.007276, 34.969402]}  # -19.01839,
 
     if ion_mode == 'ES-':
         ref_tables = ['hmdb_others', 'hmdb_pg', 'hmdb_pi', 'hmdb_ps',
@@ -172,7 +192,7 @@ def gen_ref_list(ion_mode: str, verbose: bool) -> np.ndarray:
         db_masses = db_masses.append(tmp)
         del tmp
     db_masses = np.sort(db_masses['MASS'].to_numpy())
-    db_masses = np.round(db_masses, 4)
+    # db_masses = np.round(db_masses, 4)
     db_masses = np.unique(db_masses)
 
     # Additional masses - often observed in DESI
@@ -249,7 +269,7 @@ class KDEMassRecal:
             transform: str = 'none',
             max_poly_degree: int = 5,
             kde_bw: Union[float, str] = 'silverman',
-            grid_size: Union[int, float] = 2**10,
+            grid_size: Union[int, float] = 2 ** 10,
             smooth: Union[float, str] = 'cv',
             parallel: bool = False,
             plot_dir: Union[str, None] = None,
@@ -259,8 +279,10 @@ class KDEMassRecal:
         if transform not in ['sqrt', 'none']:
             raise ValueError('`transform` can be either \'sqrt\' or \'none\'')
 
-        if kde_bw is str and kde_bw != 'silverman':
-            raise ValueError('`kde_bw` can be numeric or \'silverman\'')
+        if kde_bw is str and kde_bw not in ['silverman', 'silverman_robust']:
+            raise ValueError(
+                '`kde_bw` can be numeric, \'silverman\' or '
+                '\'silverman_robust\'')
         if kde_bw is numbers.Number and kde_bw <= 0.0:
             raise ValueError('`kde_bw` must be positive')
         if smooth is str and smooth != 'cv':
@@ -464,7 +486,7 @@ class KDEMassRecal:
 
         grid_size = int(self.grid_size)
 
-        if np.var(match_masses) <= 1e-6:
+        if np.std(match_masses) <= 1e-6:
             s, u = np.unique(pixels, return_counts=True)
             spx = s
             smz = np.zeros(len(spx))
@@ -483,6 +505,9 @@ class KDEMassRecal:
             data = scaler.transform(data)
             if self.kde_bw == 'silverman':
                 bandwidth = 2.576 * data.std(ddof=1) * data.shape[0] ** (-1 / 5)
+            elif self.kde_bw == 'silverman_robust':
+                bandwidth = 0.9 * np.min([data.std(ddof=1), iqr(data)]) * \
+                            data.shape[0] ** (-1 / 5)
             else:
                 bandwidth = float(self.kde_bw)
             kde = FFTKDE(bw=bandwidth, kernel='tri').fit(data)
@@ -520,6 +545,12 @@ class KDEMassRecal:
     # Public methods -----------------------------------------------------------
 
     def recalibrate(self, msiobj: 'MSI', search_results) -> 'MSI':
+
+        additional_info_dir = os.path.join(os.path.dirname(msiobj.filename),
+                                           '_calib')
+        if not os.path.isdir(additional_info_dir):
+            os.makedirs(additional_info_dir)
+
         matches = \
             {m: search_results[m] for m in search_results.keys() if
              len(np.unique(search_results[m]['pixel'])) /
@@ -587,6 +618,7 @@ class KDEMassRecal:
                  (inliers_pct[m] * 100.0 >= self.min_pct) &
                  (np.abs(disp_ppm[m]) <= self.max_disp_ppm)], dtype=float)
         if len(self.ref_masses) == 0:
+            print(disp_ppm)
             raise RuntimeError('No reference masses found.')
         else:
             print('Using {} reference masses'.format(len(self.ref_masses)))
@@ -637,25 +669,12 @@ class KDEMassRecal:
 
         # Check the extrapolation regions
 
-        print('Saving histogram of num. ref. masses in {}'.format(
-            os.path.join(os.path.dirname(msiobj.filename),
-                         'hist_num_refs.png')))
         num_refs = np.zeros(np.max(msiobj.pixels_indices) + 1,
                             dtype=int)
         for m in self.ref_masses:
             num_refs[matches[m]['pixel']] += 1
         num_refs = num_refs[msiobj.pixels_indices]
-        fig = plt.figure(dpi=150, figsize=(8, 6))
-        ax = fig.add_subplot(111)
-        ax.hist(num_refs, log=True, color="grey", edgecolor="black", bins=10)
-        ax.set_xlabel('Num. ref. masses')
-        ax.set_ylabel('Num. pixels')
-        ax.set_title('Number of inlier reference masses')
-        plt.savefig(os.path.join(os.path.dirname(msiobj.filename),
-                                 'hist_num_refs.png'))
-        plt.close(fig=fig)
-
-        print('Num. ref. masses per pixel:')
+        print('Num. candidate reference masses per pixel:')
         print('Quantiles (0, 0.25, 0.5, 0.75, 1.0) = {}'.format(
             np.quantile(num_refs, q=[0.0, 0.25, 0.5, 0.75, 1])))
 
