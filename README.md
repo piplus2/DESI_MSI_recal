@@ -13,20 +13,20 @@ https://www.biorxiv.org/content/10.1101/2021.03.29.437482v2
 ### Required packages (tested on Python 3.8-3.9)
 
 ```
-pandas==1.2.0
-scikit-learn==0.24.0
-pyimzml==1.4.1
-tqdm==4.55.1
-joblib==1.1.0
-matplotlib==3.3.3
-pygam==0.8.0
-statsmodels==0.13.1
-kdepy==1.1.0
-scipy==1.6.0
-scikit-image==0.18.1
-numpy==1.21.4
-pillow==8.4.0
-pyqt==5.12.3
+joblib>=1.1.0
+KDEpy>=1.1.0
+matplotlib>=3.5.1
+numpy>=1.22.2
+pandas>=1.4.1
+Pillow>=9.0.1
+pygam>=0.8.0
+pyimzML>=1.4.1
+PyQt5>=5.15.6
+scikit_image>=0.19.1
+scikit_learn>=1.0.2
+scipy>=1.8.0
+statsmodels>=0.13.2
+tqdm>=4.62.3
 opencv==4.5.0
 ```
 
