@@ -92,7 +92,7 @@ class PredictThread(QThread):
                 self.mask_, (self.msi_dim_xy[1], self.msi_dim_xy[2]),
                 interpolation=cv2.INTER_NEAREST)
             lbl = np.asarray(mask_all, dtype=int).ravel()
-            lbl = np.digitize(lbl, bins=[0, 1, 2]) - 1
+            lbl = np.digitize(lbl, bins=[0, 1, 2], right=True) - 1
             svm = SVC(kernel='linear')
             svm.fit(self.X[lbl != 0, :], lbl[lbl != 0])
             lbl[lbl == 0] = svm.predict(self.X[lbl == 0, :])
@@ -538,7 +538,7 @@ class MainWindow(QMainWindow):
         pred_mask_ = cv2.resize(
             self.thread.mask_, (s.width(), s.height()),
             interpolation=cv2.INTER_NEAREST)
-        pred_mask_ = np.digitize(pred_mask_, bins=[0, 1, 2]) - 1
+        pred_mask_ = np.digitize(pred_mask_, bins=[0, 1, 2], right=True) - 1
         self.imageWidget.canvas.roi = pred_mask_
         self.imageWidget.canvas.plot_image_and_mask_overlay()
         self.busy_spinner.stopAnimation()

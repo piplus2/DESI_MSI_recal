@@ -237,7 +237,7 @@ class SelectableImage(QWidget):
         scaled_mask = cv2.resize(
             self.roi, (int(scaled_pixmap.width()), int(scaled_pixmap.height())),
             interpolation=cv2.INTER_NEAREST)
-        scaled_mask = np.floor(scaled_mask).astype(int)
+        scaled_mask = np.round(scaled_mask).astype(int)
         self.image = scaled_pixmap
         self.roi = scaled_mask
         self.imageWidget.setFixedSize(self.image.size())
