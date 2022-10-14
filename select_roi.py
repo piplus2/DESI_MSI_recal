@@ -594,6 +594,8 @@ class MainWindow(QMainWindow):
                                    interpolation=cv2.INTER_NEAREST)
             save_mask = np.ceil(save_mask).reshape(h, w)
 
+            # save_mask = np.digitize(save_mask, [0, 1])
+
             print('Removing objects smaller than {} px ...'.format(
                 int(self.boxMinRoi.value())))
             sample_mask = rem_small_obj_roi(save_mask, min_size=int(
