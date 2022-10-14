@@ -92,7 +92,8 @@ class PredictThread(QThread):
                 self.mask_, (self.msi_dim_xy[1], self.msi_dim_xy[2]),
                 interpolation=cv2.INTER_NEAREST)
             lbl = np.asarray(mask_all, dtype=int).ravel()
-            lbl = np.digitize(lbl, bins=[0, 1, 2], right=True) - 1
+            lbl = np.digitize(lbl, bins=[0, 1, 2]) - 1  # right=True
+            print(np.unique(lbl))
             svm = SVC(kernel='linear')
             svm.fit(self.X[lbl != 0, :], lbl[lbl != 0])
             lbl[lbl == 0] = svm.predict(self.X[lbl == 0, :])
@@ -307,6 +308,7 @@ class MainWindow(QMainWindow):
         self.rgb_im = None
         self.msi_dim_xy = None
         self.save_dir = None
+        self.predict_thread = None
         self.thread = None
 
         self.init_actions()
@@ -535,16 +537,19 @@ class MainWindow(QMainWindow):
 
     def process_end(self):
         s = self.imageWidget.canvas.image.size()
+        plt.imshow(self.predict_thread.mask_)
+        plt.title('predictions')
+        plt.show()
         pred_mask_ = cv2.resize(
-            self.thread.mask_, (s.width(), s.height()),
+            self.predict_thread.mask_, (s.width(), s.height()),
             interpolation=cv2.INTER_NEAREST)
-        pred_mask_ = np.digitize(pred_mask_, bins=[0, 1, 2], right=True) - 1
+        pred_mask_ = np.digitize(pred_mask_, bins=[0, 1, 2]) - 1
         self.imageWidget.canvas.roi = pred_mask_
         self.imageWidget.canvas.plot_image_and_mask_overlay()
         self.busy_spinner.stopAnimation()
         self.busy_spinner.close()
-        if self.thread.threadactive:
-            self.thread.stop()
+        if self.predict_thread.threadactive:
+            self.predict_thread.stop()
 
     def process_data(self):
         if np.all(self.imageWidget == 0):
@@ -561,12 +566,12 @@ class MainWindow(QMainWindow):
             p = self.window().rect().center() \
                 - self.busy_spinner.rect().center()
             self.busy_spinner.move(p)
-            self.thread = PredictThread(
+            self.predict_thread = PredictThread(
                 yimat=self.intmat, mask_=self.imageWidget.canvas.roi,
                 msi_dim_xy=self.msi_dim_xy, parent=self)
-            self.thread.finished.connect(self.process_end)
-            self.thread.curr_operation.connect(self.change_spinner_text)
-            self.thread.start()
+            self.predict_thread.finished.connect(self.process_end)
+            self.predict_thread.curr_operation.connect(self.change_spinner_text)
+            self.predict_thread.start()
 
     def end_save(self):
         self.busy_spinner.stopAnimation()
@@ -585,14 +590,9 @@ class MainWindow(QMainWindow):
                 - self.busy_spinner.rect().center()
             self.busy_spinner.move(p)
 
-            # Label the separated ROIs
-            bin_roi = np.asarray(self.imageWidget.canvas.roi != 1, dtype=int)
-
             # Save the final ROI
             h, w, ch = self.rgb_im.shape
-            save_mask = cv2.resize(bin_roi, (w, h),
-                                   interpolation=cv2.INTER_NEAREST)
-            save_mask = np.ceil(save_mask).reshape(h, w)
+            save_mask = np.asarray(self.predict_thread.mask_ != 1, dtype=int)
 
             print('Removing objects smaller than {} px ...'.format(
                 int(self.boxMinRoi.value())))
