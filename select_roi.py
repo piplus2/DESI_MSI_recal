@@ -589,13 +589,9 @@ class MainWindow(QMainWindow):
 
             # Save the final ROI
             h, w, ch = self.rgb_im.shape
-            # save_mask = cv2.resize(np.int(self.imageWidget.canvas.roi != 1), (w, h),
-            #     cv2.INTER_AREA)
-            save_mask = np.asarray(self.predict_thread.mask_ != 1, dtype=int)
-
-            # plt.figure()
-            # plt.imshow(save_mask)
-            # plt.show()
+            save_mask = cv2.resize((self.imageWidget.canvas.roi != 1).astype(np.uint8), (w, h),
+                cv2.INTER_AREA)
+            # save_mask = np.asarray(self.predict_thread.mask_ != 1, dtype=int)
 
             # save_mask = np.digitize(save_mask, [0, 1])
 
