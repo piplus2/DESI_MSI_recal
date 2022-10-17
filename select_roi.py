@@ -537,9 +537,6 @@ class MainWindow(QMainWindow):
 
     def process_end(self):
         s = self.imageWidget.canvas.image.size()
-        plt.imshow(self.predict_thread.mask_)
-        plt.title('predictions')
-        plt.show()
         pred_mask_ = cv2.resize(
             self.predict_thread.mask_, (s.width(), s.height()),
             interpolation=cv2.INTER_NEAREST)
@@ -592,7 +589,9 @@ class MainWindow(QMainWindow):
 
             # Save the final ROI
             h, w, ch = self.rgb_im.shape
-            save_mask = np.asarray(self.predict_thread.mask_ != 1, dtype=int)
+            save_mask = cv2.resize((self.imageWidget.canvas.roi != 1).astype(np.uint8), (w, h),
+                cv2.INTER_AREA)
+            # save_mask = np.asarray(self.predict_thread.mask_ != 1, dtype=int)
 
             # save_mask = np.digitize(save_mask, [0, 1])
 
